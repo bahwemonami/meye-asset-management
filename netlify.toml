@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist/meye-asset-management/browser"
+
+# Redirect all routes to index.html for Angular SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
