@@ -8,16 +8,16 @@ import { RouterLink } from '@angular/router';
   imports: [CommonModule, RouterLink],
   template: `
     <!-- Hero Section -->
-    <section class="relative py-32 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 overflow-hidden">
+    <section class="relative py-24 xs:py-28 sm:py-32 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 overflow-hidden">
       <div class="absolute inset-0 opacity-10">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.3)_1px,transparent_0)] bg-[length:40px_40px]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.3)_1px,transparent_0)] bg-[length:24px_24px] xs:bg-[length:32px_32px] md:bg-[length:40px_40px]"></div>
       </div>
       
       <div class="container-custom relative z-10">
         <div class="max-w-3xl">
-          <span class="inline-block text-accent-400 font-semibold text-sm tracking-wider uppercase mb-4 animate-fade-in">Our Services</span>
-          <h1 class="text-white mb-6 animate-fade-in-up">Private Wealth <span class="text-accent-400">Management</span></h1>
-          <p class="text-xl text-primary-200 animate-fade-in-up animate-delay-200">
+          <span class="inline-block text-accent-400 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4 animate-fade-in">Our Services</span>
+          <h1 class="text-white mb-4 xs:mb-6 animate-fade-in-up">Private Wealth <span class="text-accent-400">Management</span></h1>
+          <p class="text-base xs:text-lg md:text-xl text-primary-200 animate-fade-in-up animate-delay-200">
             Comprehensive investment solutions tailored to your unique financial goals and risk profile.
           </p>
         </div>
@@ -27,22 +27,22 @@ import { RouterLink } from '@angular/router';
     <!-- Who We Serve -->
     <section class="section-padding bg-white">
       <div class="container-custom">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           <div class="reveal">
-            <span class="inline-block text-accent-500 font-semibold text-sm tracking-wider uppercase mb-4">Who We Serve</span>
+            <span class="inline-block text-accent-500 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">Who We Serve</span>
             <h2 class="section-title">Designed for <span class="gradient-text">Discerning Investors</span></h2>
-            <p class="text-dark-600 text-lg mb-6">
+            <p class="text-dark-600 text-sm xs:text-base md:text-lg mb-4 xs:mb-6">
               Our private wealth management services are designed for high-net-worth individuals, families, and institutions who demand excellence in portfolio management.
             </p>
-            <div class="space-y-4">
+            <div class="space-y-3 xs:space-y-4">
               @for (client of clientTypes; track client.title) {
-                <div class="flex items-start space-x-4">
-                  <div class="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
-                    <span [innerHTML]="client.icon" class="text-primary-600"></span>
+                <div class="flex items-start space-x-3 xs:space-x-4">
+                  <div class="w-8 h-8 xs:w-10 xs:h-10 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
+                    <span [innerHTML]="client.icon" class="text-primary-600 [&>svg]:w-4 [&>svg]:h-4 xs:[&>svg]:w-5 xs:[&>svg]:h-5"></span>
                   </div>
                   <div>
-                    <h4 class="font-semibold text-primary-900">{{ client.title }}</h4>
-                    <p class="text-dark-500 text-sm">{{ client.description }}</p>
+                    <h4 class="font-semibold text-primary-900 text-sm xs:text-base">{{ client.title }}</h4>
+                    <p class="text-dark-500 text-xs xs:text-sm">{{ client.description }}</p>
                   </div>
                 </div>
               }
@@ -51,7 +51,7 @@ import { RouterLink } from '@angular/router';
           
           <div class="reveal-right">
             <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                 alt="Wealth Management" class="rounded-2xl shadow-elegant">
+                 alt="Wealth Management" class="rounded-xl xs:rounded-2xl shadow-elegant">
           </div>
         </div>
       </div>
@@ -60,26 +60,26 @@ import { RouterLink } from '@angular/router';
     <!-- Management Cycle -->
     <section class="section-padding bg-primary-50/50">
       <div class="container-custom">
-        <div class="text-center mb-16 reveal">
-          <span class="inline-block text-accent-500 font-semibold text-sm tracking-wider uppercase mb-4">Our Process</span>
+        <div class="text-center mb-8 xs:mb-12 md:mb-16 reveal">
+          <span class="inline-block text-accent-500 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">Our Process</span>
           <h2 class="section-title">The Management <span class="gradient-text">Cycle</span></h2>
           <p class="section-subtitle mx-auto">
             A disciplined, systematic approach to managing your wealth through every market condition.
           </p>
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 xs:gap-4 md:gap-8">
           @for (step of managementCycle; track step.title; let i = $index) {
             <div class="relative reveal" [style.animation-delay.ms]="i * 100">
               @if (i < managementCycle.length - 1) {
-                <div class="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-primary-300 to-primary-200 -z-10"></div>
+                <div class="hidden lg:block absolute top-10 xs:top-12 left-full w-full h-0.5 bg-gradient-to-r from-primary-300 to-primary-200 -z-10"></div>
               }
-              <div class="card p-6 text-center h-full">
-                <div class="w-14 h-14 rounded-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg shadow-lg">
+              <div class="card p-4 xs:p-5 md:p-6 text-center h-full">
+                <div class="w-10 h-10 xs:w-12 xs:h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center mx-auto mb-3 xs:mb-4 text-white font-bold text-sm xs:text-base md:text-lg shadow-lg">
                   {{ i + 1 }}
                 </div>
-                <h3 class="text-lg font-semibold text-primary-900 mb-2">{{ step.title }}</h3>
-                <p class="text-dark-500 text-sm">{{ step.description }}</p>
+                <h3 class="text-sm xs:text-base md:text-lg font-semibold text-primary-900 mb-1 xs:mb-2">{{ step.title }}</h3>
+                <p class="text-dark-500 text-xs xs:text-sm">{{ step.description }}</p>
               </div>
             </div>
           }
@@ -90,33 +90,33 @@ import { RouterLink } from '@angular/router';
     <!-- Investment Philosophy -->
     <section class="section-padding bg-white">
       <div class="container-custom">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           <div class="order-2 lg:order-1 reveal-left">
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 gap-3 xs:gap-4">
               @for (stat of philosophyStats; track stat.label; let i = $index) {
-                <div class="card p-6 text-center" [class.mt-8]="i % 2 === 1">
-                  <div class="text-3xl font-bold text-primary-900 mb-1">{{ stat.value }}</div>
-                  <div class="text-dark-500 text-sm">{{ stat.label }}</div>
+                <div class="card p-4 xs:p-5 md:p-6 text-center" [class.mt-6]="i % 2 === 1" [class.xs:mt-8]="i % 2 === 1">
+                  <div class="text-xl xs:text-2xl md:text-3xl font-bold text-primary-900 mb-0.5 xs:mb-1">{{ stat.value }}</div>
+                  <div class="text-dark-500 text-xs xs:text-sm">{{ stat.label }}</div>
                 </div>
               }
             </div>
           </div>
           
           <div class="order-1 lg:order-2 reveal">
-            <span class="inline-block text-accent-500 font-semibold text-sm tracking-wider uppercase mb-4">Philosophy</span>
+            <span class="inline-block text-accent-500 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">Philosophy</span>
             <h2 class="section-title">Our Investment <span class="gradient-text">Philosophy</span></h2>
-            <p class="text-dark-600 text-lg mb-6">
+            <p class="text-dark-600 text-sm xs:text-base md:text-lg mb-4 xs:mb-6">
               We favor active, disciplined management with the objectives of optimizing performance and minimizing risks.
             </p>
-            <div class="space-y-4">
+            <div class="space-y-3 xs:space-y-4">
               @for (principle of principles; track principle) {
-                <div class="flex items-center space-x-3">
-                  <div class="w-6 h-6 rounded-full bg-accent-100 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-4 h-4 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="flex items-center space-x-2 xs:space-x-3">
+                  <div class="w-5 h-5 xs:w-6 xs:h-6 rounded-full bg-accent-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-3 h-3 xs:w-4 xs:h-4 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                     </svg>
                   </div>
-                  <span class="text-dark-700">{{ principle }}</span>
+                  <span class="text-dark-700 text-xs xs:text-sm md:text-base">{{ principle }}</span>
                 </div>
               }
             </div>
@@ -128,29 +128,29 @@ import { RouterLink } from '@angular/router';
     <!-- Strategies -->
     <section class="section-padding bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 relative overflow-hidden">
       <div class="absolute inset-0 opacity-20">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-accent-500 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-500 rounded-full blur-3xl"></div>
+        <div class="absolute top-0 right-0 w-48 h-48 xs:w-64 xs:h-64 md:w-96 md:h-96 bg-accent-500 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 xs:w-64 xs:h-64 md:w-96 md:h-96 bg-primary-500 rounded-full blur-3xl"></div>
       </div>
       
       <div class="container-custom relative z-10">
-        <div class="text-center mb-16 reveal">
-          <span class="inline-block text-accent-400 font-semibold text-sm tracking-wider uppercase mb-4">Strategies</span>
-          <h2 class="text-white mb-4">Investment <span class="text-accent-400">Strategies</span></h2>
-          <p class="text-primary-200 text-lg max-w-2xl mx-auto">
+        <div class="text-center mb-8 xs:mb-12 md:mb-16 reveal">
+          <span class="inline-block text-accent-400 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">Strategies</span>
+          <h2 class="text-white mb-3 xs:mb-4">Investment <span class="text-accent-400">Strategies</span></h2>
+          <p class="text-primary-200 text-sm xs:text-base md:text-lg max-w-2xl mx-auto">
             Tailored strategies to match your investment objectives and risk tolerance.
           </p>
         </div>
         
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid xs:grid-cols-2 md:grid-cols-3 gap-4 xs:gap-6 md:gap-8">
           @for (strategy of strategies; track strategy.title; let i = $index) {
-            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:-translate-y-1 transition-all duration-300 reveal" 
+            <div class="bg-white/10 backdrop-blur-lg rounded-xl xs:rounded-2xl p-5 xs:p-6 md:p-8 border border-white/10 hover:-translate-y-1 transition-all duration-300 reveal" 
                  [style.animation-delay.ms]="i * 100">
-              <div class="w-12 h-12 rounded-xl bg-accent-500/20 flex items-center justify-center mb-6">
-                <span [innerHTML]="strategy.icon" class="text-accent-400"></span>
+              <div class="w-10 h-10 xs:w-12 xs:h-12 rounded-lg xs:rounded-xl bg-accent-500/20 flex items-center justify-center mb-4 xs:mb-5 md:mb-6">
+                <span [innerHTML]="strategy.icon" class="text-accent-400 [&>svg]:w-5 [&>svg]:h-5 xs:[&>svg]:w-6 xs:[&>svg]:h-6"></span>
               </div>
-              <h3 class="text-xl font-semibold text-white mb-3">{{ strategy.title }}</h3>
-              <p class="text-primary-200 text-sm mb-4">{{ strategy.description }}</p>
-              <div class="flex items-center justify-between text-sm">
+              <h3 class="text-base xs:text-lg md:text-xl font-semibold text-white mb-2 xs:mb-3">{{ strategy.title }}</h3>
+              <p class="text-primary-200 text-xs xs:text-sm mb-3 xs:mb-4">{{ strategy.description }}</p>
+              <div class="flex items-center justify-between text-xs xs:text-sm">
                 <span class="text-primary-300">Risk Level</span>
                 <span class="text-accent-400 font-medium">{{ strategy.riskLevel }}</span>
               </div>
@@ -163,20 +163,20 @@ import { RouterLink } from '@angular/router';
     <!-- Why Choose Us -->
     <section class="section-padding bg-white">
       <div class="container-custom">
-        <div class="text-center mb-16 reveal">
-          <span class="inline-block text-accent-500 font-semibold text-sm tracking-wider uppercase mb-4">Advantages</span>
+        <div class="text-center mb-8 xs:mb-12 md:mb-16 reveal">
+          <span class="inline-block text-accent-500 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">Advantages</span>
           <h2 class="section-title">Why Choose <span class="gradient-text">MEYE?</span></h2>
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid xs:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-6 md:gap-8">
           @for (advantage of advantages; track advantage.title; let i = $index) {
-            <div class="card-bordered p-8 hover:-translate-y-1 transition-all duration-300 reveal" 
+            <div class="card-bordered p-5 xs:p-6 md:p-8 hover:-translate-y-1 transition-all duration-300 reveal" 
                  [style.animation-delay.ms]="i * 100">
-              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-100 to-primary-50 flex items-center justify-center mb-6">
-                <span [innerHTML]="advantage.icon" class="text-primary-600"></span>
+              <div class="w-10 h-10 xs:w-12 xs:h-12 rounded-lg xs:rounded-xl bg-gradient-to-br from-primary-100 to-primary-50 flex items-center justify-center mb-4 xs:mb-5 md:mb-6">
+                <span [innerHTML]="advantage.icon" class="text-primary-600 [&>svg]:w-5 [&>svg]:h-5 xs:[&>svg]:w-6 xs:[&>svg]:h-6"></span>
               </div>
-              <h3 class="text-lg font-semibold text-primary-900 mb-3">{{ advantage.title }}</h3>
-              <p class="text-dark-500 text-sm">{{ advantage.description }}</p>
+              <h3 class="text-sm xs:text-base md:text-lg font-semibold text-primary-900 mb-2 xs:mb-3">{{ advantage.title }}</h3>
+              <p class="text-dark-500 text-xs xs:text-sm">{{ advantage.description }}</p>
             </div>
           }
         </div>
@@ -186,19 +186,19 @@ import { RouterLink } from '@angular/router';
     <!-- CTA -->
     <section class="section-padding bg-primary-50/50">
       <div class="container-custom">
-        <div class="relative bg-gradient-to-br from-primary-800 to-primary-900 rounded-3xl p-12 lg:p-16 overflow-hidden text-center reveal-scale">
+        <div class="relative bg-gradient-to-br from-primary-800 to-primary-900 rounded-2xl xs:rounded-3xl p-6 xs:p-8 md:p-12 lg:p-16 overflow-hidden text-center reveal-scale">
           <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.1)_25%,transparent_25%,transparent_75%,rgba(255,255,255,0.1)_75%)] bg-[length:20px_20px]"></div>
+            <div class="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.1)_25%,transparent_25%,transparent_75%,rgba(255,255,255,0.1)_75%)] bg-[length:16px_16px] xs:bg-[length:20px_20px]"></div>
           </div>
           
           <div class="relative z-10 max-w-2xl mx-auto">
-            <h2 class="text-white mb-6">Ready to <span class="text-accent-400">Get Started?</span></h2>
-            <p class="text-primary-200 text-lg mb-8">
+            <h2 class="text-white mb-4 xs:mb-6">Ready to <span class="text-accent-400">Get Started?</span></h2>
+            <p class="text-primary-200 text-sm xs:text-base md:text-lg mb-6 xs:mb-8">
               Schedule a consultation with our team to discuss how we can help you achieve your financial goals.
             </p>
-            <a routerLink="/contact" class="btn-accent !px-8 !py-4">
+            <a routerLink="/contact" class="btn-accent !px-6 !py-3 xs:!px-8 xs:!py-4">
               Schedule Consultation
-              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 xs:w-5 xs:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
               </svg>
             </a>

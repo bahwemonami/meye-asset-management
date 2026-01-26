@@ -10,29 +10,29 @@ import { RouterLink } from '@angular/router';
     <footer class="bg-primary-950 text-white">
       <!-- Main Footer -->
       <div class="container-custom section-padding">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-8 xs:gap-10 lg:gap-8">
           <!-- Brand Column -->
-          <div class="lg:col-span-1">
-            <a routerLink="/" class="flex items-center space-x-3 mb-6">
-              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-500 to-accent-600 flex items-center justify-center">
-                <span class="text-white font-heading font-bold text-xl">M</span>
+          <div class="xs:col-span-2 lg:col-span-1">
+            <a routerLink="/" class="flex items-center space-x-2 xs:space-x-3 mb-4 xs:mb-6">
+              <div class="w-10 h-10 xs:w-12 xs:h-12 rounded-lg xs:rounded-xl bg-gradient-to-br from-accent-500 to-accent-600 flex items-center justify-center">
+                <span class="text-white font-heading font-bold text-lg xs:text-xl">M</span>
               </div>
               <div class="flex flex-col">
-                <span class="font-heading font-bold text-xl tracking-tight">MEYE</span>
-                <span class="text-xs font-medium tracking-widest uppercase text-primary-400">Asset Management</span>
+                <span class="font-heading font-bold text-lg xs:text-xl tracking-tight">MEYE</span>
+                <span class="text-xxs xs:text-xs font-medium tracking-widest uppercase text-primary-400">Asset Management</span>
               </div>
             </a>
-            <p class="text-primary-300 text-sm leading-relaxed mb-6">
+            <p class="text-primary-300 text-xs xs:text-sm leading-relaxed mb-4 xs:mb-6">
               Personalized and innovative portfolio management aligned with each investor's unique objectives.
             </p>
-            <div class="flex space-x-4">
+            <div class="flex space-x-3 xs:space-x-4">
               @for (social of socialLinks; track social.name) {
                 <a [href]="social.url" 
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="w-10 h-10 rounded-lg bg-primary-800/50 flex items-center justify-center text-primary-400 hover:bg-accent-500 hover:text-white transition-all duration-300"
+                   class="w-9 h-9 xs:w-10 xs:h-10 rounded-lg bg-primary-800/50 flex items-center justify-center text-primary-400 hover:bg-accent-500 hover:text-white transition-all duration-300"
                    [attr.aria-label]="social.name">
-                  <span [innerHTML]="social.icon"></span>
+                  <span [innerHTML]="social.icon" class="[&>svg]:w-4 [&>svg]:h-4 xs:[&>svg]:w-5 xs:[&>svg]:h-5"></span>
                 </a>
               }
             </div>
@@ -40,12 +40,12 @@ import { RouterLink } from '@angular/router';
 
           <!-- Quick Links -->
           <div>
-            <h4 class="font-heading font-semibold text-lg mb-6">Quick Links</h4>
-            <ul class="space-y-3">
+            <h4 class="font-heading font-semibold text-base xs:text-lg mb-4 xs:mb-6">Quick Links</h4>
+            <ul class="space-y-2 xs:space-y-3">
               @for (link of quickLinks; track link.path) {
                 <li>
                   <a [routerLink]="link.path" 
-                     class="text-primary-300 hover:text-accent-400 transition-colors duration-300 text-sm">
+                     class="text-primary-300 hover:text-accent-400 transition-colors duration-300 text-xs xs:text-sm">
                     {{ link.label }}
                   </a>
                 </li>
@@ -55,12 +55,12 @@ import { RouterLink } from '@angular/router';
 
           <!-- Services -->
           <div>
-            <h4 class="font-heading font-semibold text-lg mb-6">Services</h4>
-            <ul class="space-y-3">
+            <h4 class="font-heading font-semibold text-base xs:text-lg mb-4 xs:mb-6">Services</h4>
+            <ul class="space-y-2 xs:space-y-3">
               @for (service of services; track service.label) {
                 <li>
                   <a [routerLink]="service.path" 
-                     class="text-primary-300 hover:text-accent-400 transition-colors duration-300 text-sm">
+                     class="text-primary-300 hover:text-accent-400 transition-colors duration-300 text-xs xs:text-sm">
                     {{ service.label }}
                   </a>
                 </li>
@@ -69,21 +69,21 @@ import { RouterLink } from '@angular/router';
           </div>
 
           <!-- Newsletter -->
-          <div>
-            <h4 class="font-heading font-semibold text-lg mb-6">Newsletter</h4>
-            <p class="text-primary-300 text-sm mb-4">
+          <div class="xs:col-span-2 lg:col-span-1">
+            <h4 class="font-heading font-semibold text-base xs:text-lg mb-4 xs:mb-6">Newsletter</h4>
+            <p class="text-primary-300 text-xs xs:text-sm mb-3 xs:mb-4">
               Subscribe to our newsletter for market insights and updates.
             </p>
-            <form class="space-y-3" (submit)="onNewsletterSubmit($event)">
+            <form class="space-y-2 xs:space-y-3" (submit)="onNewsletterSubmit($event)">
               <div class="relative">
                 <input 
                   type="email" 
                   placeholder="Enter your email"
-                  class="w-full px-4 py-3 bg-primary-800/50 border border-primary-700 rounded-lg text-white placeholder-primary-500 focus:outline-none focus:border-accent-500 focus:ring-1 focus:ring-accent-500 transition-all duration-300 text-sm">
+                  class="w-full px-3 xs:px-4 py-2.5 xs:py-3 bg-primary-800/50 border border-primary-700 rounded-lg text-white placeholder-primary-500 focus:outline-none focus:border-accent-500 focus:ring-1 focus:ring-accent-500 transition-all duration-300 text-xs xs:text-sm">
               </div>
-              <button type="submit" class="btn-accent w-full !py-3">
+              <button type="submit" class="btn-accent w-full !py-2.5 xs:!py-3 !text-xs xs:!text-sm">
                 Subscribe
-                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-3.5 h-3.5 xs:w-4 xs:h-4 ml-1.5 xs:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                 </svg>
               </button>
@@ -94,19 +94,19 @@ import { RouterLink } from '@angular/router';
 
       <!-- Bottom Bar -->
       <div class="border-t border-primary-800">
-        <div class="container-custom py-6">
-          <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p class="text-primary-400 text-sm">
+        <div class="container-custom py-4 xs:py-6">
+          <div class="flex flex-col md:flex-row justify-between items-center space-y-3 xs:space-y-4 md:space-y-0">
+            <p class="text-primary-400 text-xs xs:text-sm text-center md:text-left">
               © {{ currentYear }} MEYE Asset Management. All rights reserved.
             </p>
-            <div class="flex items-center space-x-6">
-              <a href="#" class="text-primary-400 hover:text-accent-400 text-sm transition-colors duration-300">
+            <div class="flex items-center flex-wrap justify-center gap-4 xs:gap-6">
+              <a href="#" class="text-primary-400 hover:text-accent-400 text-xs xs:text-sm transition-colors duration-300">
                 Privacy Policy
               </a>
-              <a href="#" class="text-primary-400 hover:text-accent-400 text-sm transition-colors duration-300">
+              <a href="#" class="text-primary-400 hover:text-accent-400 text-xs xs:text-sm transition-colors duration-300">
                 Terms of Service
               </a>
-              <a href="#" class="text-primary-400 hover:text-accent-400 text-sm transition-colors duration-300">
+              <a href="#" class="text-primary-400 hover:text-accent-400 text-xs xs:text-sm transition-colors duration-300">
                 Legal Notice
               </a>
             </div>
@@ -155,7 +155,6 @@ export class FooterComponent {
 
   onNewsletterSubmit(event: Event) {
     event.preventDefault();
-    // Handle newsletter subscription
     console.log('Newsletter subscription submitted');
   }
 }

@@ -8,40 +8,40 @@ import { RouterLink } from '@angular/router';
   imports: [CommonModule, RouterLink],
   template: `
     <!-- Hero Section -->
-    <section class="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 pt-20">
+    <section class="relative min-h-[60vh] xs:min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 pt-20">
       <!-- Background Elements -->
       <div class="absolute inset-0 opacity-10">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.3)_1px,transparent_0)] bg-[length:40px_40px]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.3)_1px,transparent_0)] bg-[length:24px_24px] xs:bg-[length:32px_32px] md:bg-[length:40px_40px]"></div>
       </div>
       
-      <div class="absolute top-20 right-10 w-72 h-72 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
-      <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow animate-delay-500"></div>
+      <div class="hidden sm:block absolute top-20 right-10 w-48 h-48 xs:w-72 xs:h-72 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="hidden sm:block absolute bottom-0 left-0 w-64 h-64 xs:w-96 xs:h-96 bg-primary-500/20 rounded-full blur-3xl animate-pulse-slow animate-delay-500"></div>
       
-      <div class="container-custom relative z-10">
+      <div class="container-custom relative z-10 py-12 xs:py-16">
         <div class="max-w-4xl mx-auto text-center">
-          <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8 animate-fade-in">
-            <svg class="w-5 h-5 text-accent-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="inline-flex items-center px-3 py-1.5 xs:px-4 xs:py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6 xs:mb-8 animate-fade-in">
+            <svg class="w-4 h-4 xs:w-5 xs:h-5 text-accent-400 mr-1.5 xs:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
             </svg>
-            <span class="text-primary-200 text-sm font-medium">Institutional-Grade Security</span>
+            <span class="text-primary-200 text-xs xs:text-sm font-medium">Institutional-Grade Security</span>
           </div>
           
-          <h1 class="text-white mb-6 animate-fade-in-up">
+          <h1 class="text-white mb-4 xs:mb-6 animate-fade-in-up">
             Digital Proof <span class="text-accent-400">of Control</span>
           </h1>
           
-          <p class="text-xl text-primary-200 mb-8 max-w-2xl mx-auto animate-fade-in-up animate-delay-200">
+          <p class="text-base xs:text-lg md:text-xl text-primary-200 mb-6 xs:mb-8 max-w-2xl mx-auto animate-fade-in-up animate-delay-200 px-2 xs:px-0">
             A modern documentation tool for compliance and transparency. Generate secure, auditable digital records for institutional and legal requirements.
           </p>
           
-          <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-delay-300">
-            <a routerLink="/contact" class="btn-accent !px-8 !py-4">
+          <div class="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center animate-fade-in-up animate-delay-300 px-4 xs:px-0">
+            <a routerLink="/contact" class="btn-accent !px-6 !py-3 xs:!px-8 xs:!py-4">
               Request a Demo
-              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 xs:w-5 xs:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
               </svg>
             </a>
-            <a routerLink="/digital-proof/news" class="btn-secondary !bg-white/10 !border-white/30 !text-white hover:!bg-white/20 !px-8 !py-4">
+            <a routerLink="/digital-proof/news" class="btn-secondary !bg-white/10 !border-white/30 !text-white hover:!bg-white/20 !px-6 !py-3 xs:!px-8 xs:!py-4">
               View News & Updates
             </a>
           </div>
@@ -52,48 +52,48 @@ import { RouterLink } from '@angular/router';
     <!-- What It Is Section -->
     <section class="section-padding bg-white">
       <div class="container-custom">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <div class="reveal">
-            <span class="inline-block text-accent-500 font-semibold text-sm tracking-wider uppercase mb-4">What It Is</span>
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+          <div class="reveal order-2 lg:order-1">
+            <span class="inline-block text-accent-500 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">What It Is</span>
             <h2 class="section-title">Secure Digital <span class="gradient-text">Documentation</span></h2>
-            <p class="text-dark-600 text-lg mb-6">
+            <p class="text-dark-600 text-sm xs:text-base md:text-lg mb-4 xs:mb-6">
               Digital Proof of Control is an optional verification layer designed for institutions, legal firms, and compliance teams who need a modern way to document asset control.
             </p>
-            <p class="text-dark-500 mb-8">
+            <p class="text-dark-500 text-sm xs:text-base mb-6 xs:mb-8">
               This is NOT an investment product. It is a compliance-grade digital certificate that provides audit-ready proof for regulatory and internal review purposes.
             </p>
             
-            <div class="bg-primary-50 rounded-xl p-6 border-l-4 border-accent-500">
-              <h4 class="font-semibold text-primary-900 mb-2">Important Notice</h4>
-              <p class="text-dark-600 text-sm">
+            <div class="bg-primary-50 rounded-lg xs:rounded-xl p-4 xs:p-6 border-l-4 border-accent-500">
+              <h4 class="font-semibold text-primary-900 mb-1 xs:mb-2 text-sm xs:text-base">Important Notice</h4>
+              <p class="text-dark-600 text-xs xs:text-sm">
                 This tool is designed for compliance documentation only. It does not guarantee returns, does not represent an investment, and is not legal advice.
               </p>
             </div>
           </div>
           
-          <div class="reveal-right">
-            <div class="bg-gradient-to-br from-primary-100 to-primary-50 rounded-3xl p-8">
-              <div class="bg-white rounded-2xl p-6 shadow-elegant">
-                <div class="flex items-center justify-between mb-6 pb-6 border-b border-primary-100">
-                  <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center">
-                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="reveal-right order-1 lg:order-2">
+            <div class="bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl xs:rounded-3xl p-4 xs:p-6 md:p-8">
+              <div class="bg-white rounded-xl xs:rounded-2xl p-4 xs:p-5 md:p-6 shadow-elegant">
+                <div class="flex items-center justify-between mb-4 xs:mb-6 pb-4 xs:pb-6 border-b border-primary-100">
+                  <div class="flex items-center space-x-2 xs:space-x-3">
+                    <div class="w-10 h-10 xs:w-12 xs:h-12 rounded-lg xs:rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center">
+                      <svg class="w-5 h-5 xs:w-6 xs:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                       </svg>
                     </div>
                     <div>
-                      <p class="font-semibold text-primary-900">Digital Certificate</p>
-                      <p class="text-dark-500 text-sm">Proof of Control</p>
+                      <p class="font-semibold text-primary-900 text-sm xs:text-base">Digital Certificate</p>
+                      <p class="text-dark-500 text-xs xs:text-sm">Proof of Control</p>
                     </div>
                   </div>
-                  <span class="px-3 py-1 bg-green-100 text-green-700 text-sm font-medium rounded-full">Verified</span>
+                  <span class="px-2 py-0.5 xs:px-3 xs:py-1 bg-green-100 text-green-700 text-xs xs:text-sm font-medium rounded-full">Verified</span>
                 </div>
                 
-                <div class="space-y-4">
+                <div class="space-y-3 xs:space-y-4">
                   @for (field of certificateFields; track field.label) {
                     <div class="flex justify-between items-center">
-                      <span class="text-dark-500 text-sm">{{ field.label }}</span>
-                      <span class="font-medium text-primary-900 text-sm" [class.font-mono]="field.mono">{{ field.value }}</span>
+                      <span class="text-dark-500 text-xs xs:text-sm">{{ field.label }}</span>
+                      <span class="font-medium text-primary-900 text-xs xs:text-sm" [class.font-mono]="field.mono">{{ field.value }}</span>
                     </div>
                   }
                 </div>
@@ -107,28 +107,28 @@ import { RouterLink } from '@angular/router';
     <!-- How It Works Section -->
     <section class="section-padding bg-primary-50/50">
       <div class="container-custom">
-        <div class="text-center mb-16 reveal">
-          <span class="inline-block text-accent-500 font-semibold text-sm tracking-wider uppercase mb-4">Process</span>
+        <div class="text-center mb-8 xs:mb-12 md:mb-16 reveal">
+          <span class="inline-block text-accent-500 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">Process</span>
           <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
           <p class="section-subtitle mx-auto">
             A simple, secure three-step process designed for institutional compliance requirements.
           </p>
         </div>
         
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid xs:grid-cols-2 md:grid-cols-3 gap-4 xs:gap-6 md:gap-8">
           @for (step of processSteps; track step.number; let i = $index) {
             <div class="relative reveal" [style.animation-delay.ms]="i * 150">
               <!-- Connector Line -->
               @if (i < processSteps.length - 1) {
-                <div class="hidden md:block absolute top-16 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary-200 to-primary-300"></div>
+                <div class="hidden md:block absolute top-12 xs:top-14 md:top-16 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary-200 to-primary-300"></div>
               }
               
-              <div class="relative bg-white rounded-2xl p-8 shadow-card text-center">
-                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <span class="text-2xl font-bold text-white">{{ step.number }}</span>
+              <div class="relative bg-white rounded-xl xs:rounded-2xl p-5 xs:p-6 md:p-8 shadow-card text-center">
+                <div class="w-12 h-12 xs:w-14 xs:h-14 md:w-16 md:h-16 rounded-xl xs:rounded-2xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center mx-auto mb-4 xs:mb-5 md:mb-6 shadow-lg">
+                  <span class="text-lg xs:text-xl md:text-2xl font-bold text-white">{{ step.number }}</span>
                 </div>
-                <h3 class="text-xl font-semibold text-primary-900 mb-3">{{ step.title }}</h3>
-                <p class="text-dark-500">{{ step.description }}</p>
+                <h3 class="text-base xs:text-lg md:text-xl font-semibold text-primary-900 mb-2 xs:mb-3">{{ step.title }}</h3>
+                <p class="text-dark-500 text-xs xs:text-sm">{{ step.description }}</p>
               </div>
             </div>
           }
@@ -139,23 +139,23 @@ import { RouterLink } from '@angular/router';
     <!-- Use Cases Section -->
     <section class="section-padding bg-white">
       <div class="container-custom">
-        <div class="text-center mb-16 reveal">
-          <span class="inline-block text-accent-500 font-semibold text-sm tracking-wider uppercase mb-4">Applications</span>
+        <div class="text-center mb-8 xs:mb-12 md:mb-16 reveal">
+          <span class="inline-block text-accent-500 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">Applications</span>
           <h2 class="section-title">Use <span class="gradient-text">Cases</span></h2>
           <p class="section-subtitle mx-auto">
             Designed for institutions, legal teams, and regulated environments.
           </p>
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid xs:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-6 md:gap-8">
           @for (useCase of useCases; track useCase.title; let i = $index) {
-            <div class="card-bordered p-8 group hover:-translate-y-1 transition-all duration-300 reveal" 
+            <div class="card-bordered p-5 xs:p-6 md:p-8 group hover:-translate-y-1 transition-all duration-300 reveal" 
                  [style.animation-delay.ms]="i * 100">
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-100 to-primary-50 flex items-center justify-center mb-6 group-hover:from-accent-100 group-hover:to-accent-50 transition-colors duration-300">
-                <span [innerHTML]="useCase.icon" class="text-primary-600 group-hover:text-accent-600 transition-colors duration-300"></span>
+              <div class="w-11 h-11 xs:w-12 xs:h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gradient-to-br from-primary-100 to-primary-50 flex items-center justify-center mb-4 xs:mb-5 md:mb-6 group-hover:from-accent-100 group-hover:to-accent-50 transition-colors duration-300">
+                <span [innerHTML]="useCase.icon" class="text-primary-600 group-hover:text-accent-600 transition-colors duration-300 [&>svg]:w-5 [&>svg]:h-5 xs:[&>svg]:w-6 xs:[&>svg]:h-6 md:[&>svg]:w-7 md:[&>svg]:h-7"></span>
               </div>
-              <h3 class="text-lg font-semibold text-primary-900 mb-3">{{ useCase.title }}</h3>
-              <p class="text-dark-500 text-sm">{{ useCase.description }}</p>
+              <h3 class="text-base xs:text-lg font-semibold text-primary-900 mb-2 xs:mb-3">{{ useCase.title }}</h3>
+              <p class="text-dark-500 text-xs xs:text-sm">{{ useCase.description }}</p>
             </div>
           }
         </div>
@@ -165,28 +165,28 @@ import { RouterLink } from '@angular/router';
     <!-- Security & Privacy Section -->
     <section class="section-padding bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 relative overflow-hidden">
       <div class="absolute inset-0 opacity-20">
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent-500 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-500 rounded-full blur-3xl"></div>
+        <div class="absolute top-0 left-1/4 w-48 h-48 xs:w-64 xs:h-64 md:w-96 md:h-96 bg-accent-500 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-48 h-48 xs:w-64 xs:h-64 md:w-96 md:h-96 bg-primary-500 rounded-full blur-3xl"></div>
       </div>
       
       <div class="container-custom relative z-10">
-        <div class="text-center mb-16 reveal">
-          <span class="inline-block text-accent-400 font-semibold text-sm tracking-wider uppercase mb-4">Your Protection</span>
-          <h2 class="text-white mb-4">Security & <span class="text-accent-400">Privacy</span></h2>
-          <p class="text-primary-200 text-lg max-w-2xl mx-auto">
+        <div class="text-center mb-8 xs:mb-12 md:mb-16 reveal">
+          <span class="inline-block text-accent-400 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">Your Protection</span>
+          <h2 class="text-white mb-3 xs:mb-4">Security & <span class="text-accent-400">Privacy</span></h2>
+          <p class="text-primary-200 text-sm xs:text-base md:text-lg max-w-2xl mx-auto">
             Your security is our top priority. Here's how we protect your information.
           </p>
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 xs:gap-4 md:gap-6">
           @for (security of securityFeatures; track security.title; let i = $index) {
-            <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 reveal" 
+            <div class="bg-white/5 backdrop-blur-lg rounded-xl xs:rounded-2xl p-4 xs:p-5 md:p-6 border border-white/10 reveal" 
                  [style.animation-delay.ms]="i * 100">
-              <div class="w-12 h-12 rounded-xl bg-accent-500/20 flex items-center justify-center mb-4">
-                <span [innerHTML]="security.icon" class="text-accent-400"></span>
+              <div class="w-10 h-10 xs:w-12 xs:h-12 rounded-lg xs:rounded-xl bg-accent-500/20 flex items-center justify-center mb-3 xs:mb-4">
+                <span [innerHTML]="security.icon" class="text-accent-400 [&>svg]:w-5 [&>svg]:h-5 xs:[&>svg]:w-6 xs:[&>svg]:h-6"></span>
               </div>
-              <h4 class="font-semibold text-white mb-2">{{ security.title }}</h4>
-              <p class="text-primary-300 text-sm">{{ security.description }}</p>
+              <h4 class="font-semibold text-white mb-1 xs:mb-2 text-sm xs:text-base">{{ security.title }}</h4>
+              <p class="text-primary-300 text-xs xs:text-sm">{{ security.description }}</p>
             </div>
           }
         </div>
@@ -197,19 +197,19 @@ import { RouterLink } from '@angular/router';
     <section class="section-padding bg-white">
       <div class="container-custom">
         <div class="max-w-3xl mx-auto">
-          <div class="text-center mb-12 reveal">
-            <span class="inline-block text-accent-500 font-semibold text-sm tracking-wider uppercase mb-4">FAQ</span>
+          <div class="text-center mb-8 xs:mb-12 reveal">
+            <span class="inline-block text-accent-500 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">FAQ</span>
             <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
           </div>
           
-          <div class="space-y-4">
+          <div class="space-y-3 xs:space-y-4">
             @for (faq of faqs; track faq.question; let i = $index) {
               <div class="card-bordered overflow-hidden reveal" [style.animation-delay.ms]="i * 50">
                 <button 
                   (click)="toggleFaq(i)"
-                  class="w-full flex items-center justify-between p-6 text-left hover:bg-primary-50/50 transition-colors duration-300">
-                  <span class="font-semibold text-primary-900 pr-4">{{ faq.question }}</span>
-                  <svg class="w-5 h-5 text-primary-600 flex-shrink-0 transition-transform duration-300"
+                  class="w-full flex items-center justify-between p-4 xs:p-5 md:p-6 text-left hover:bg-primary-50/50 transition-colors duration-300">
+                  <span class="font-semibold text-primary-900 pr-3 xs:pr-4 text-sm xs:text-base">{{ faq.question }}</span>
+                  <svg class="w-4 h-4 xs:w-5 xs:h-5 text-primary-600 flex-shrink-0 transition-transform duration-300"
                        [class.rotate-180]="faq.isOpen"
                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -218,7 +218,7 @@ import { RouterLink } from '@angular/router';
                 <div class="overflow-hidden transition-all duration-300"
                      [class.max-h-0]="!faq.isOpen"
                      [class.max-h-96]="faq.isOpen">
-                  <div class="px-6 pb-6 text-dark-600">
+                  <div class="px-4 xs:px-5 md:px-6 pb-4 xs:pb-5 md:pb-6 text-dark-600 text-sm xs:text-base">
                     {{ faq.answer }}
                   </div>
                 </div>
@@ -232,24 +232,24 @@ import { RouterLink } from '@angular/router';
     <!-- CTA Section -->
     <section class="section-padding bg-primary-50/50">
       <div class="container-custom">
-        <div class="relative bg-gradient-to-br from-primary-800 to-primary-900 rounded-3xl p-12 lg:p-16 overflow-hidden reveal-scale">
+        <div class="relative bg-gradient-to-br from-primary-800 to-primary-900 rounded-2xl xs:rounded-3xl p-6 xs:p-8 md:p-12 lg:p-16 overflow-hidden reveal-scale">
           <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.1)_25%,transparent_25%,transparent_75%,rgba(255,255,255,0.1)_75%)] bg-[length:20px_20px]"></div>
+            <div class="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.1)_25%,transparent_25%,transparent_75%,rgba(255,255,255,0.1)_75%)] bg-[length:16px_16px] xs:bg-[length:20px_20px]"></div>
           </div>
           
           <div class="relative z-10 text-center max-w-3xl mx-auto">
-            <h2 class="text-white mb-6">Ready to Get <span class="text-accent-400">Started?</span></h2>
-            <p class="text-primary-200 text-lg mb-8">
+            <h2 class="text-white mb-4 xs:mb-6">Ready to Get <span class="text-accent-400">Started?</span></h2>
+            <p class="text-primary-200 text-sm xs:text-base md:text-lg mb-6 xs:mb-8">
               Contact our compliance team to learn how Digital Proof of Control can support your documentation needs.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a routerLink="/contact" class="btn-accent !px-8 !py-4">
+            <div class="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center">
+              <a routerLink="/contact" class="btn-accent !px-6 !py-3 xs:!px-8 xs:!py-4">
                 Request a Demo
-                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 xs:w-5 xs:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
               </a>
-              <a routerLink="/contact" class="btn-secondary !bg-white/10 !border-white/30 !text-white hover:!bg-white/20 !px-8 !py-4">
+              <a routerLink="/contact" class="btn-secondary !bg-white/10 !border-white/30 !text-white hover:!bg-white/20 !px-6 !py-3 xs:!px-8 xs:!py-4">
                 Contact Compliance Team
               </a>
             </div>

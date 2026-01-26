@@ -8,16 +8,16 @@ import { RouterLink } from '@angular/router';
   imports: [CommonModule, RouterLink],
   template: `
     <!-- Hero Section -->
-    <section class="relative py-32 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 overflow-hidden">
+    <section class="relative py-24 xs:py-28 sm:py-32 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 overflow-hidden">
       <div class="absolute inset-0 opacity-10">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.3)_1px,transparent_0)] bg-[length:40px_40px]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.3)_1px,transparent_0)] bg-[length:24px_24px] xs:bg-[length:32px_32px] md:bg-[length:40px_40px]"></div>
       </div>
       
       <div class="container-custom relative z-10">
         <div class="max-w-3xl">
-          <span class="inline-block text-accent-400 font-semibold text-sm tracking-wider uppercase mb-4 animate-fade-in">About Us</span>
-          <h1 class="text-white mb-6 animate-fade-in-up">Building Trust Through <span class="text-accent-400">Excellence</span></h1>
-          <p class="text-xl text-primary-200 animate-fade-in-up animate-delay-200">
+          <span class="inline-block text-accent-400 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4 animate-fade-in">About Us</span>
+          <h1 class="text-white mb-4 xs:mb-6 animate-fade-in-up">Building Trust Through <span class="text-accent-400">Excellence</span></h1>
+          <p class="text-base xs:text-lg md:text-xl text-primary-200 animate-fade-in-up animate-delay-200">
             For over 15 years, MEYE Asset Management has been delivering exceptional investment solutions to discerning clients worldwide.
           </p>
         </div>
@@ -27,30 +27,30 @@ import { RouterLink } from '@angular/router';
     <!-- Company Profile -->
     <section class="section-padding bg-white">
       <div class="container-custom">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <div class="reveal">
-            <span class="inline-block text-accent-500 font-semibold text-sm tracking-wider uppercase mb-4">Our Story</span>
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+          <div class="reveal order-2 lg:order-1">
+            <span class="inline-block text-accent-500 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">Our Story</span>
             <h2 class="section-title">A Legacy of <span class="gradient-text">Financial Excellence</span></h2>
-            <p class="text-dark-600 text-lg mb-6">
+            <p class="text-dark-600 text-sm xs:text-base md:text-lg mb-4 xs:mb-6">
               Founded in 2010, MEYE Asset Management emerged from a vision to provide personalized, innovative portfolio management that truly serves the unique objectives of each investor.
             </p>
-            <p class="text-dark-500 mb-6">
+            <p class="text-dark-500 text-sm xs:text-base mb-4 xs:mb-6">
               Our founders, seasoned financial professionals with decades of combined experience, recognized the need for a more client-centric approach to wealth management. Today, we continue that mission with unwavering dedication.
             </p>
-            <p class="text-dark-500">
+            <p class="text-dark-500 text-sm xs:text-base">
               We believe in building lasting relationships based on trust, transparency, and mutual success. Every decision we make is guided by our commitment to your financial well-being.
             </p>
           </div>
           
-          <div class="reveal-right">
+          <div class="reveal-right order-1 lg:order-2">
             <div class="relative">
               <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                    alt="MEYE Asset Management Office"
-                   class="rounded-2xl shadow-elegant">
-              <div class="absolute -bottom-8 -left-8 bg-white rounded-xl p-6 shadow-elegant">
-                <div class="flex items-center space-x-4">
-                  <div class="text-3xl font-bold text-primary-900">15+</div>
-                  <div class="text-dark-600 text-sm">Years of<br>Excellence</div>
+                   class="rounded-xl xs:rounded-2xl shadow-elegant">
+              <div class="absolute -bottom-4 -left-4 xs:-bottom-6 xs:-left-6 md:-bottom-8 md:-left-8 bg-white rounded-lg xs:rounded-xl p-4 xs:p-5 md:p-6 shadow-elegant">
+                <div class="flex items-center space-x-3 xs:space-x-4">
+                  <div class="text-2xl xs:text-3xl font-bold text-primary-900">15+</div>
+                  <div class="text-dark-600 text-xs xs:text-sm">Years of<br>Excellence</div>
                 </div>
               </div>
             </div>
@@ -62,30 +62,30 @@ import { RouterLink } from '@angular/router';
     <!-- Timeline -->
     <section class="section-padding bg-primary-50/50">
       <div class="container-custom">
-        <div class="text-center mb-16 reveal">
-          <span class="inline-block text-accent-500 font-semibold text-sm tracking-wider uppercase mb-4">Our Journey</span>
+        <div class="text-center mb-8 xs:mb-12 md:mb-16 reveal">
+          <span class="inline-block text-accent-500 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">Our Journey</span>
           <h2 class="section-title">Key <span class="gradient-text">Milestones</span></h2>
         </div>
         
         <div class="relative">
           <!-- Timeline Line -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-primary-200 hidden md:block"></div>
+          <div class="absolute left-4 xs:left-6 md:left-1/2 md:transform md:-translate-x-1/2 h-full w-0.5 bg-primary-200"></div>
           
-          <div class="space-y-12">
+          <div class="space-y-6 xs:space-y-8 md:space-y-12">
             @for (milestone of milestones; track milestone.year; let i = $index; let odd = $odd) {
               <div class="relative reveal" [style.animation-delay.ms]="i * 150">
                 <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
-                  <div [class.md:text-right]="!odd" [class.md:order-2]="odd">
-                    <div class="bg-white rounded-2xl p-6 shadow-card inline-block" [class.md:ml-auto]="!odd">
-                      <span class="text-accent-500 font-bold text-lg">{{ milestone.year }}</span>
-                      <h4 class="font-semibold text-primary-900 mt-2 mb-2">{{ milestone.title }}</h4>
-                      <p class="text-dark-500 text-sm">{{ milestone.description }}</p>
+                  <div class="pl-10 xs:pl-14 md:pl-0" [class.md:text-right]="!odd" [class.md:order-2]="odd">
+                    <div class="bg-white rounded-xl xs:rounded-2xl p-4 xs:p-5 md:p-6 shadow-card inline-block" [class.md:ml-auto]="!odd">
+                      <span class="text-accent-500 font-bold text-base xs:text-lg">{{ milestone.year }}</span>
+                      <h4 class="font-semibold text-primary-900 mt-1 xs:mt-2 mb-1 xs:mb-2 text-sm xs:text-base">{{ milestone.title }}</h4>
+                      <p class="text-dark-500 text-xs xs:text-sm">{{ milestone.description }}</p>
                     </div>
                   </div>
                   <div class="hidden md:block" [class.md:order-1]="odd"></div>
                 </div>
                 <!-- Timeline Dot -->
-                <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent-500 rounded-full border-4 border-white shadow hidden md:block" style="top: 50%;"></div>
+                <div class="absolute left-2.5 xs:left-4.5 md:left-1/2 md:transform md:-translate-x-1/2 w-3 h-3 xs:w-4 xs:h-4 bg-accent-500 rounded-full border-2 xs:border-4 border-white shadow" style="top: 50%; transform: translateY(-50%);"></div>
               </div>
             }
           </div>
@@ -96,22 +96,22 @@ import { RouterLink } from '@angular/router';
     <!-- Values -->
     <section class="section-padding bg-white">
       <div class="container-custom">
-        <div class="text-center mb-16 reveal">
-          <span class="inline-block text-accent-500 font-semibold text-sm tracking-wider uppercase mb-4">Our Foundation</span>
+        <div class="text-center mb-8 xs:mb-12 md:mb-16 reveal">
+          <span class="inline-block text-accent-500 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">Our Foundation</span>
           <h2 class="section-title">Core <span class="gradient-text">Values</span></h2>
           <p class="section-subtitle mx-auto">
             The principles that guide every decision we make and every relationship we build.
           </p>
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-6 md:gap-8">
           @for (value of values; track value.title; let i = $index) {
             <div class="text-center reveal" [style.animation-delay.ms]="i * 100">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-100 to-primary-50 flex items-center justify-center mx-auto mb-6">
-                <span [innerHTML]="value.icon" class="text-primary-600"></span>
+              <div class="w-12 h-12 xs:w-14 xs:h-14 md:w-16 md:h-16 rounded-xl xs:rounded-2xl bg-gradient-to-br from-primary-100 to-primary-50 flex items-center justify-center mx-auto mb-4 xs:mb-5 md:mb-6">
+                <span [innerHTML]="value.icon" class="text-primary-600 [&>svg]:w-6 [&>svg]:h-6 xs:[&>svg]:w-7 xs:[&>svg]:h-7 md:[&>svg]:w-8 md:[&>svg]:h-8"></span>
               </div>
-              <h3 class="text-lg font-semibold text-primary-900 mb-3">{{ value.title }}</h3>
-              <p class="text-dark-500 text-sm">{{ value.description }}</p>
+              <h3 class="text-sm xs:text-base md:text-lg font-semibold text-primary-900 mb-2 xs:mb-3">{{ value.title }}</h3>
+              <p class="text-dark-500 text-xs xs:text-sm">{{ value.description }}</p>
             </div>
           }
         </div>
@@ -122,18 +122,18 @@ import { RouterLink } from '@angular/router';
     <section class="section-padding bg-gradient-to-br from-primary-900 to-primary-950">
       <div class="container-custom">
         <div class="text-center max-w-3xl mx-auto reveal">
-          <h2 class="text-white mb-6">Ready to Start Your <span class="text-accent-400">Journey?</span></h2>
-          <p class="text-primary-200 text-lg mb-8">
+          <h2 class="text-white mb-4 xs:mb-6">Ready to Start Your <span class="text-accent-400">Journey?</span></h2>
+          <p class="text-primary-200 text-sm xs:text-base md:text-lg mb-6 xs:mb-8">
             Discover how MEYE Asset Management can help you achieve your financial goals.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a routerLink="/contact" class="btn-accent !px-8 !py-4">
+          <div class="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center">
+            <a routerLink="/contact" class="btn-accent !px-6 !py-3 xs:!px-8 xs:!py-4">
               Contact Us
-              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 xs:w-5 xs:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
               </svg>
             </a>
-            <a routerLink="/team" class="btn-secondary !bg-white/10 !border-white/30 !text-white hover:!bg-white/20 !px-8 !py-4">
+            <a routerLink="/team" class="btn-secondary !bg-white/10 !border-white/30 !text-white hover:!bg-white/20 !px-6 !py-3 xs:!px-8 xs:!py-4">
               Meet Our Team
             </a>
           </div>
