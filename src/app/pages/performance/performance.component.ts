@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -8,317 +8,271 @@ import { RouterLink } from '@angular/router';
   imports: [CommonModule, RouterLink],
   template: `
     <!-- Hero Section -->
-    <section class="relative py-24 xs:py-28 sm:py-32 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 overflow-hidden">
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.3)_1px,transparent_0)] bg-[length:24px_24px] xs:bg-[length:32px_32px] md:bg-[length:40px_40px]"></div>
-      </div>
-      
-      <div class="container-custom relative z-10">
-        <div class="max-w-3xl">
-          <span class="inline-block text-accent-400 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4 animate-fade-in">Performance</span>
-          <h1 class="text-white mb-4 xs:mb-6 animate-fade-in-up">Our <span class="text-accent-400">Returns</span></h1>
-          <p class="text-base xs:text-lg md:text-xl text-primary-200 animate-fade-in-up animate-delay-200">
-            Track record of consistent performance across market cycles.
-          </p>
-        </div>
+    <section class="pt-32 pb-20 bg-primary-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-white">Performance</h1>
       </div>
     </section>
 
-    <!-- Key Metrics -->
-    <section class="py-10 xs:py-12 sm:py-16 bg-white border-b border-primary-100">
-      <div class="container-custom">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-6 md:gap-8">
-          @for (metric of keyMetrics; track metric.label; let i = $index) {
-            <div class="text-center reveal" [style.animation-delay.ms]="i * 100">
-              <div class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-1 xs:mb-2" [class]="metric.color">{{ metric.value }}</div>
-              <div class="text-dark-500 text-xs xs:text-sm">{{ metric.label }}</div>
-              @if (metric.subtext) {
-                <div class="text-xxs xs:text-xs text-dark-400 mt-0.5 xs:mt-1">{{ metric.subtext }}</div>
-              }
-            </div>
-          }
+    <!-- Content Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Equities Section -->
+        <div class="mb-16">
+          <h2 class="text-2xl font-serif font-bold text-primary-900 mb-2">Equities</h2>
+          <p class="text-gray-500 mb-8">As of November 30, 2025</p>
         </div>
-      </div>
-    </section>
 
-    <!-- Performance Chart -->
-    <section class="section-padding bg-white">
-      <div class="container-custom">
-        <div class="grid lg:grid-cols-3 gap-6 xs:gap-8">
-          <div class="lg:col-span-2 reveal">
-            <h2 class="section-title mb-6 xs:mb-8">Historical <span class="gradient-text">Performance</span></h2>
-            
-            <!-- Chart Placeholder -->
-            <div class="bg-primary-50 rounded-xl xs:rounded-2xl p-4 xs:p-6 md:p-8 h-64 xs:h-80 md:h-96 flex items-end">
-              <div class="w-full flex items-end justify-between gap-1.5 xs:gap-2 md:gap-4 h-full">
-                @for (bar of performanceData; track bar.year) {
-                  <div class="flex-1 flex flex-col items-center">
-                    <div class="w-full bg-gradient-to-t from-primary-600 to-primary-400 rounded-t-md xs:rounded-t-lg transition-all duration-500 hover:from-accent-500 hover:to-accent-400"
-                         [style.height.%]="bar.value * 3">
-                    </div>
-                    <div class="mt-2 xs:mt-3 text-xs xs:text-sm text-dark-600 font-medium">{{ bar.year }}</div>
-                    <div class="text-xxs xs:text-xs text-dark-400">{{ bar.value }}%</div>
-                  </div>
-                }
-              </div>
-            </div>
-            
-            <p class="text-xs xs:text-sm text-dark-500 mt-3 xs:mt-4 italic">
-              * Past performance is not indicative of future results. All returns shown are net of fees.
+        <!-- Strategy Description -->
+        <div class="grid lg:grid-cols-3 gap-12 mb-16">
+          <div class="lg:col-span-2">
+            <p class="text-gray-600 leading-relaxed">
+              At MEYE Asset Management, we believe that the price of an asset is not always equal to its intrinsic value and that it is influenced by a multitude of factors, including investors' cognitive biases. Since these biases are known and repeat over time, it is possible to make investment decisions based on these recurring behaviors. We rely on strategies based on the momentum effect, including technical analysis and trend following. The manager uses a top-down approach by first establishing the sectors with the greatest upside potential and then selecting specific securities from these sectors.
             </p>
           </div>
-          
-          <div class="reveal-right space-y-4 xs:space-y-6">
-            <div class="card p-4 xs:p-5 md:p-6">
-              <h3 class="text-base xs:text-lg font-semibold text-primary-900 mb-3 xs:mb-4">Performance Summary</h3>
-              <div class="space-y-3 xs:space-y-4">
-                @for (summary of performanceSummary; track summary.label) {
-                  <div class="flex justify-between items-center py-1.5 xs:py-2 border-b border-primary-50 last:border-0">
-                    <span class="text-dark-600 text-xs xs:text-sm">{{ summary.label }}</span>
-                    <span class="font-semibold text-sm xs:text-base" [class]="summary.positive ? 'text-green-600' : 'text-primary-900'">{{ summary.value }}</span>
-                  </div>
-                }
-              </div>
-            </div>
-            
-            <div class="card-bordered p-4 xs:p-5 md:p-6">
-              <h3 class="text-base xs:text-lg font-semibold text-primary-900 mb-3 xs:mb-4">Risk Metrics</h3>
-              <div class="space-y-3 xs:space-y-4">
-                @for (risk of riskMetrics; track risk.label) {
-                  <div>
-                    <div class="flex justify-between text-xs xs:text-sm mb-1">
-                      <span class="text-dark-600">{{ risk.label }}</span>
-                      <span class="font-medium text-primary-900">{{ risk.value }}</span>
-                    </div>
-                    <div class="h-1.5 xs:h-2 bg-primary-100 rounded-full overflow-hidden">
-                      <div class="h-full bg-gradient-to-r from-primary-500 to-accent-500 rounded-full transition-all duration-500"
-                           [style.width.%]="risk.percentage"></div>
-                    </div>
-                  </div>
-                }
-              </div>
-            </div>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-primary-900 mb-4">Investment Objective</h3>
+            <p class="text-gray-600">The investment objective of the Equities asset class is to generate a return superior to its benchmark index.</p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Strategy Performance -->
-    <section class="section-padding bg-primary-50/50">
-      <div class="container-custom">
-        <div class="text-center mb-8 xs:mb-12 md:mb-16 reveal">
-          <span class="inline-block text-accent-500 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">By Strategy</span>
-          <h2 class="section-title">Strategy <span class="gradient-text">Returns</span></h2>
-          <p class="section-subtitle mx-auto">
-            Performance breakdown by investment strategy.
-          </p>
-        </div>
-        
-        <div class="grid xs:grid-cols-2 md:grid-cols-3 gap-4 xs:gap-6 md:gap-8">
-          @for (strategy of strategyPerformance; track strategy.name; let i = $index) {
-            <div class="card p-5 xs:p-6 md:p-8 reveal" [style.animation-delay.ms]="i * 100">
-              <div class="flex items-center justify-between mb-4 xs:mb-6">
-                <h3 class="text-base xs:text-lg font-semibold text-primary-900">{{ strategy.name }}</h3>
-                <span class="px-2 py-0.5 xs:px-3 xs:py-1 rounded-full text-xxs xs:text-xs font-medium"
-                      [class.bg-green-100]="strategy.risk === 'Low'"
-                      [class.text-green-700]="strategy.risk === 'Low'"
-                      [class.bg-yellow-100]="strategy.risk === 'Medium'"
-                      [class.text-yellow-700]="strategy.risk === 'Medium'"
-                      [class.bg-red-100]="strategy.risk === 'High'"
-                      [class.text-red-700]="strategy.risk === 'High'">
-                  {{ strategy.risk }}
-                </span>
-              </div>
-              
-              <div class="text-2xl xs:text-3xl md:text-4xl font-bold text-green-600 mb-1 xs:mb-2">{{ strategy.ytd }}</div>
-              <div class="text-xs xs:text-sm text-dark-500 mb-4 xs:mb-6">YTD Return</div>
-              
-              <div class="space-y-2 xs:space-y-3">
-                <div class="flex justify-between text-xs xs:text-sm">
-                  <span class="text-dark-500">1 Year</span>
-                  <span class="font-medium text-primary-900">{{ strategy.oneYear }}</span>
-                </div>
-                <div class="flex justify-between text-xs xs:text-sm">
-                  <span class="text-dark-500">3 Year Ann.</span>
-                  <span class="font-medium text-primary-900">{{ strategy.threeYear }}</span>
-                </div>
-                <div class="flex justify-between text-xs xs:text-sm">
-                  <span class="text-dark-500">5 Year Ann.</span>
-                  <span class="font-medium text-primary-900">{{ strategy.fiveYear }}</span>
-                </div>
-                <div class="flex justify-between text-xs xs:text-sm">
-                  <span class="text-dark-500">Inception</span>
-                  <span class="font-medium text-primary-900">{{ strategy.inception }}</span>
-                </div>
-              </div>
-            </div>
-          }
-        </div>
-      </div>
-    </section>
-
-    <!-- Benchmarks -->
-    <section class="section-padding bg-white">
-      <div class="container-custom">
-        <div class="text-center mb-8 xs:mb-12 md:mb-16 reveal">
-          <span class="inline-block text-accent-500 font-semibold text-xs xs:text-sm tracking-wider uppercase mb-3 xs:mb-4">Comparison</span>
-          <h2 class="section-title">Benchmark <span class="gradient-text">Comparison</span></h2>
-        </div>
-        
-        <div class="overflow-x-auto reveal -mx-4 xs:mx-0">
-          <div class="min-w-[600px] px-4 xs:px-0">
+        <!-- Performance Tables -->
+        <div class="mb-16">
+          <h3 class="text-xl font-serif font-bold text-primary-900 mb-6">Returns</h3>
+          
+          <!-- Period Returns -->
+          <div class="overflow-x-auto mb-8">
             <table class="w-full">
               <thead>
-                <tr class="border-b-2 border-primary-100">
-                  <th class="text-left py-3 xs:py-4 px-2 xs:px-4 font-semibold text-primary-900 text-xs xs:text-sm">Strategy/Index</th>
-                  <th class="text-right py-3 xs:py-4 px-2 xs:px-4 font-semibold text-primary-900 text-xs xs:text-sm">YTD</th>
-                  <th class="text-right py-3 xs:py-4 px-2 xs:px-4 font-semibold text-primary-900 text-xs xs:text-sm">1 Year</th>
-                  <th class="text-right py-3 xs:py-4 px-2 xs:px-4 font-semibold text-primary-900 text-xs xs:text-sm">3 Year</th>
-                  <th class="text-right py-3 xs:py-4 px-2 xs:px-4 font-semibold text-primary-900 text-xs xs:text-sm">5 Year</th>
+                <tr class="bg-primary-900 text-white">
+                  <th class="px-4 py-3 text-left"></th>
+                  <th class="px-4 py-3 text-center">1 month</th>
+                  <th class="px-4 py-3 text-center">3 months</th>
+                  <th class="px-4 py-3 text-center">6 months</th>
+                  <th class="px-4 py-3 text-center">YTD</th>
+                  <th class="px-4 py-3 text-center">1 year</th>
+                  <th class="px-4 py-3 text-center">2 years</th>
+                  <th class="px-4 py-3 text-center">5 years</th>
+                  <th class="px-4 py-3 text-center">10 years</th>
+                  <th class="px-4 py-3 text-center">Since Inception</th>
                 </tr>
               </thead>
               <tbody>
-                @for (benchmark of benchmarks; track benchmark.name; let odd = $odd) {
-                  <tr class="border-b border-primary-50" [class.bg-primary-50/50]="benchmark.isMeye">
-                    <td class="py-3 xs:py-4 px-2 xs:px-4">
-                      <span class="text-xs xs:text-sm" [class.font-semibold]="benchmark.isMeye" [class.text-primary-800]="benchmark.isMeye">
-                        {{ benchmark.name }}
-                      </span>
-                      @if (benchmark.isMeye) {
-                        <span class="ml-1 xs:ml-2 px-1.5 py-0.5 xs:px-2 bg-accent-100 text-accent-700 text-xxs xs:text-xs rounded">MEYE</span>
-                      }
-                    </td>
-                    <td class="text-right py-3 xs:py-4 px-2 xs:px-4 text-xs xs:text-sm" [class.text-green-600]="isPositive(benchmark.ytd)">{{ benchmark.ytd }}</td>
-                    <td class="text-right py-3 xs:py-4 px-2 xs:px-4 text-xs xs:text-sm" [class.text-green-600]="isPositive(benchmark.oneYear)">{{ benchmark.oneYear }}</td>
-                    <td class="text-right py-3 xs:py-4 px-2 xs:px-4 text-xs xs:text-sm" [class.text-green-600]="isPositive(benchmark.threeYear)">{{ benchmark.threeYear }}</td>
-                    <td class="text-right py-3 xs:py-4 px-2 xs:px-4 text-xs xs:text-sm" [class.text-green-600]="isPositive(benchmark.fiveYear)">{{ benchmark.fiveYear }}</td>
-                  </tr>
-                }
+                <tr class="border-b">
+                  <td class="px-4 py-3 font-medium">Equities</td>
+                  <td class="px-4 py-3 text-center">0.3%</td>
+                  <td class="px-4 py-3 text-center">2.7%</td>
+                  <td class="px-4 py-3 text-center">8.0%</td>
+                  <td class="px-4 py-3 text-center">18.2%</td>
+                  <td class="px-4 py-3 text-center">14.9%</td>
+                  <td class="px-4 py-3 text-center">30.4%</td>
+                  <td class="px-4 py-3 text-center">14.1%</td>
+                  <td class="px-4 py-3 text-center">12.6%</td>
+                  <td class="px-4 py-3 text-center">12.8%</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="px-4 py-3 font-medium">Benchmark Index</td>
+                  <td class="px-4 py-3 text-center">3.0%</td>
+                  <td class="px-4 py-3 text-center">10.0%</td>
+                  <td class="px-4 py-3 text-center">20.7%</td>
+                  <td class="px-4 py-3 text-center">26.6%</td>
+                  <td class="px-4 py-3 text-center">23.4%</td>
+                  <td class="px-4 py-3 text-center">27.7%</td>
+                  <td class="px-4 py-3 text-center">16.3%</td>
+                  <td class="px-4 py-3 text-center">12.5%</td>
+                  <td class="px-4 py-3 text-center">10.6%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Annual Returns 2012-2020 -->
+          <div class="overflow-x-auto mb-8">
+            <table class="w-full">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="px-4 py-3 text-left"></th>
+                  <th class="px-4 py-3 text-center">2012</th>
+                  <th class="px-4 py-3 text-center">2013</th>
+                  <th class="px-4 py-3 text-center">2014</th>
+                  <th class="px-4 py-3 text-center">2015</th>
+                  <th class="px-4 py-3 text-center">2016</th>
+                  <th class="px-4 py-3 text-center">2017</th>
+                  <th class="px-4 py-3 text-center">2018</th>
+                  <th class="px-4 py-3 text-center">2019</th>
+                  <th class="px-4 py-3 text-center">2020</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b">
+                  <td class="px-4 py-3 font-medium">Equities</td>
+                  <td class="px-4 py-3 text-center">1.2%</td>
+                  <td class="px-4 py-3 text-center">32.0%</td>
+                  <td class="px-4 py-3 text-center">6.7%</td>
+                  <td class="px-4 py-3 text-center">12.7%</td>
+                  <td class="px-4 py-3 text-center">5.9%</td>
+                  <td class="px-4 py-3 text-center">13.1%</td>
+                  <td class="px-4 py-3 text-center">2.7%</td>
+                  <td class="px-4 py-3 text-center">23.1%</td>
+                  <td class="px-4 py-3 text-center">20.8%</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="px-4 py-3 font-medium">Benchmark</td>
+                  <td class="px-4 py-3 text-center">6.9%</td>
+                  <td class="px-4 py-3 text-center">12.7%</td>
+                  <td class="px-4 py-3 text-center">10.4%</td>
+                  <td class="px-4 py-3 text-center">-8.3%</td>
+                  <td class="px-4 py-3 text-center">21.1%</td>
+                  <td class="px-4 py-3 text-center">9.1%</td>
+                  <td class="px-4 py-3 text-center">-8.9%</td>
+                  <td class="px-4 py-3 text-center">23.2%</td>
+                  <td class="px-4 py-3 text-center">7.7%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Annual Returns 2021-2025 -->
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="px-4 py-3 text-left"></th>
+                  <th class="px-4 py-3 text-center">2021</th>
+                  <th class="px-4 py-3 text-center">2022</th>
+                  <th class="px-4 py-3 text-center">2023</th>
+                  <th class="px-4 py-3 text-center">2024</th>
+                  <th class="px-4 py-3 text-center">2025</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b">
+                  <td class="px-4 py-3 font-medium">Equities</td>
+                  <td class="px-4 py-3 text-center">6.6%</td>
+                  <td class="px-4 py-3 text-center">-2.8%</td>
+                  <td class="px-4 py-3 text-center">6.2%</td>
+                  <td class="px-4 py-3 text-center">39.5%</td>
+                  <td class="px-4 py-3 text-center">18.2%</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="px-4 py-3 font-medium">Benchmark</td>
+                  <td class="px-4 py-3 text-center">25.6%</td>
+                  <td class="px-4 py-3 text-center">-7.2%</td>
+                  <td class="px-4 py-3 text-center">13.9%</td>
+                  <td class="px-4 py-3 text-center">24.4%</td>
+                  <td class="px-4 py-3 text-center">26.6%</td>
+                </tr>
               </tbody>
             </table>
           </div>
         </div>
-        
-        <p class="text-xs xs:text-sm text-dark-500 mt-4 xs:mt-6 text-center italic">
-          Data as of December 31, 2025. Past performance does not guarantee future results.
-        </p>
-      </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="section-padding bg-gradient-to-br from-primary-900 to-primary-950">
-      <div class="container-custom">
-        <div class="text-center max-w-3xl mx-auto reveal">
-          <h2 class="text-white mb-4 xs:mb-6">Ready to <span class="text-accent-400">Invest?</span></h2>
-          <p class="text-primary-200 text-sm xs:text-base md:text-lg mb-6 xs:mb-8">
-            Contact us to learn how MEYE can help you achieve superior returns.
+        <!-- Notes -->
+        <div class="bg-gray-50 rounded-lg p-6 mb-16">
+          <h4 class="font-semibold text-primary-900 mb-3">Explanatory Notes</h4>
+          <p class="text-sm text-gray-600">
+            Returns are from the composite of all equities held by MEYE Asset Management private management clients under representative code Q2F2 and are gross of fees. Before January 1, 2019, the benchmark index is composed of 100% S&P/TSX index and thereafter 80% S&P/TSX index and 20% S&P 500 index. Future results will differ from past results. This document does not constitute a recommendation or investment advice and is presented for informational purposes only.
           </p>
-          <div class="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center">
-            <a routerLink="/contact" class="btn-accent !px-6 !py-3 xs:!px-8 xs:!py-4">
-              Schedule Consultation
-              <svg class="w-4 h-4 xs:w-5 xs:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        </div>
+
+        <!-- Overview and Holdings Grid -->
+        <div class="grid lg:grid-cols-2 gap-12 mb-16">
+          <!-- Overview -->
+          <div>
+            <h3 class="text-xl font-serif font-bold text-primary-900 mb-6">Overview</h3>
+            <dl class="space-y-4">
+              <div>
+                <dt class="text-gray-500 text-sm">Creation Date</dt>
+                <dd class="text-primary-900 font-medium">September 1, 2010</dd>
+              </div>
+              <div>
+                <dt class="text-gray-500 text-sm">Management Style</dt>
+                <dd class="text-primary-900 font-medium">Technical and Trend</dd>
+              </div>
+              <div>
+                <dt class="text-gray-500 text-sm">Firm Assets</dt>
+                <dd class="text-primary-900 font-medium">$155 million</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Top Holdings -->
+          <div>
+            <h3 class="text-xl font-serif font-bold text-primary-900 mb-6">Top Individual Holdings</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>Chartwell Retirement Residential</li>
+              <li>Omega Healthcare Investors</li>
+              <li>Fortuna Mining Corp</li>
+              <li>Boston Scientific Corp</li>
+              <li>Wheaton Precious Metal Corp</li>
+              <li>Agnico Eagle Mines Ltd</li>
+              <li>Badger Infrastructure Solutions</li>
+              <li>Intact Financial</li>
+              <li>Manulife Financial International</li>
+              <li>Business Machines Corp</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sectors -->
+        <div class="mb-16">
+          <h3 class="text-xl font-serif font-bold text-primary-900 mb-6">Sectors</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            @for (sector of sectors; track sector.name) {
+              <div class="bg-gray-50 rounded-lg p-4">
+                <p class="text-gray-600 text-sm">{{ sector.name }}</p>
+                <p class="text-primary-900 font-bold text-lg">{{ sector.percentage }}</p>
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Manager and About Grid -->
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Portfolio Manager -->
+          <div class="bg-primary-950 rounded-lg p-8 text-white">
+            <h3 class="text-xl font-serif font-bold mb-6">Portfolio Manager</h3>
+            <p class="text-primary-200 leading-relaxed">
+              Martin Lalonde, MBA, CFA, is the portfolio manager responsible for investment decisions. He has several years of experience in financial markets and worked, before founding MEYE Asset Management, as a senior analyst in investments and mergers and acquisitions for a major Canadian organization.
+            </p>
+            <a routerLink="/team/martin-lalonde" class="inline-flex items-center mt-6 text-accent-400 hover:text-accent-300 font-medium transition-colors">
+              Learn More
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
               </svg>
             </a>
-            <a routerLink="/services" class="btn-secondary !bg-white/10 !border-white/30 !text-white hover:!bg-white/20 !px-6 !py-3 xs:!px-8 xs:!py-4">
-              View Services
+          </div>
+
+          <!-- About -->
+          <div class="bg-gray-50 rounded-lg p-8">
+            <h3 class="text-xl font-serif font-bold text-primary-900 mb-6">About MEYE Asset Management</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Founded in 2010, MEYE Asset Management is a Quebec-based portfolio management firm with approximately $155 million in assets under management. The firm offers high-performing investment strategies to private management clients, advisors, brokers, and financial planners.
+            </p>
+            <a routerLink="/firm-profile" class="inline-flex items-center mt-6 text-primary-900 hover:text-accent-600 font-medium transition-colors">
+              Learn More
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
             </a>
           </div>
         </div>
       </div>
     </section>
-  `,
-  styles: ``
+  `
 })
-export class PerformanceComponent implements AfterViewInit {
-  keyMetrics = [
-    { value: '+18.4%', label: '2025 Return', subtext: 'Net of fees', color: 'text-green-600' },
-    { value: '+12.7%', label: 'Annualized Return', subtext: 'Since inception', color: 'text-green-600' },
-    { value: '0.82', label: 'Sharpe Ratio', subtext: '5-year average', color: 'text-primary-900' },
-    { value: '-11.2%', label: 'Max Drawdown', subtext: 'Since inception', color: 'text-primary-900' }
+export class PerformanceComponent {
+  sectors = [
+    { name: 'Consumer Staples', percentage: '0.0%' },
+    { name: 'Consumer Discretionary', percentage: '0.0%' },
+    { name: 'Energy', percentage: '0.0%' },
+    { name: 'Financials', percentage: '20.7%' },
+    { name: 'Real Estate', percentage: '24.4%' },
+    { name: 'Industrials', percentage: '13.7%' },
+    { name: 'Materials', percentage: '25.8%' },
+    { name: 'Telecom Services', percentage: '0.0%' },
+    { name: 'Utilities', percentage: '0.0%' },
+    { name: 'Healthcare', percentage: '8.3%' },
+    { name: 'Information Technology', percentage: '7.1%' }
   ];
-
-  performanceData = [
-    { year: '2020', value: 14.2 },
-    { year: '2021', value: 22.8 },
-    { year: '2022', value: -8.4 },
-    { year: '2023', value: 16.5 },
-    { year: '2024', value: 19.2 },
-    { year: '2025', value: 18.4 }
-  ];
-
-  performanceSummary = [
-    { label: 'YTD Return', value: '+18.4%', positive: true },
-    { label: '1 Year', value: '+18.4%', positive: true },
-    { label: '3 Year Annualized', value: '+14.2%', positive: true },
-    { label: '5 Year Annualized', value: '+12.7%', positive: true },
-    { label: 'Since Inception', value: '+11.8%', positive: true }
-  ];
-
-  riskMetrics = [
-    { label: 'Volatility', value: '12.4%', percentage: 62 },
-    { label: 'Beta', value: '0.85', percentage: 85 },
-    { label: 'Alpha', value: '3.2%', percentage: 80 },
-    { label: 'Information Ratio', value: '0.72', percentage: 72 }
-  ];
-
-  strategyPerformance = [
-    {
-      name: 'Conservative',
-      risk: 'Low',
-      ytd: '+8.6%',
-      oneYear: '+8.6%',
-      threeYear: '+6.4%',
-      fiveYear: '+5.8%',
-      inception: '+6.2%'
-    },
-    {
-      name: 'Balanced',
-      risk: 'Medium',
-      ytd: '+14.2%',
-      oneYear: '+14.2%',
-      threeYear: '+11.8%',
-      fiveYear: '+10.4%',
-      inception: '+9.8%'
-    },
-    {
-      name: 'Aggressive',
-      risk: 'High',
-      ytd: '+22.8%',
-      oneYear: '+22.8%',
-      threeYear: '+18.6%',
-      fiveYear: '+15.2%',
-      inception: '+14.6%'
-    }
-  ];
-
-  benchmarks = [
-    { name: 'MEYE Balanced', ytd: '+14.2%', oneYear: '+14.2%', threeYear: '+11.8%', fiveYear: '+10.4%', isMeye: true },
-    { name: 'S&P 500', ytd: '+12.4%', oneYear: '+12.4%', threeYear: '+9.2%', fiveYear: '+8.8%', isMeye: false },
-    { name: 'MSCI World', ytd: '+11.8%', oneYear: '+11.8%', threeYear: '+8.6%', fiveYear: '+7.9%', isMeye: false },
-    { name: '60/40 Portfolio', ytd: '+9.6%', oneYear: '+9.6%', threeYear: '+6.8%', fiveYear: '+6.2%', isMeye: false },
-    { name: 'Bloomberg Agg', ytd: '+2.4%', oneYear: '+2.4%', threeYear: '+1.8%', fiveYear: '+2.1%', isMeye: false }
-  ];
-
-  isPositive(value: string): boolean {
-    return value.startsWith('+');
-  }
-
-  ngAfterViewInit() {
-    this.setupScrollAnimations();
-  }
-
-  private setupScrollAnimations() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach((el) => observer.observe(el));
-  }
 }
