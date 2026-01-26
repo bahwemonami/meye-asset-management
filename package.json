@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "download-images": "node scripts/download-rivemont-images.js"
   },
   "prettier": {
     "printWidth": 100,

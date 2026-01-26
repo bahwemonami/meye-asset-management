@@ -1,68 +1,78 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { ImageMappingService } from '../../services/image-mapping.service';
 
 @Component({
   selector: 'app-firm-profile',
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-primary-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl md:text-5xl font-serif font-bold text-white">Firm Profile</h1>
-      </div>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <h1>Profil de la firme</h1>
     </section>
 
     <!-- Content Section -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
-          <div>
-            <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
-              <p>
-                Founded in 2010, MEYE Asset Management is a portfolio management firm offering both traditional and innovative investment strategies to investors.
-              </p>
-              <p>
-                Our objective is to maximize potential returns according to each client's risk profile, while maintaining particular attention to effective volatility management.
-              </p>
-              <p>
-                We also offer comprehensive financial planning services to ensure goal achievement and wealth protection.
-              </p>
-              <p>
-                Contact us to fully benefit from truly active management of your investments.
-              </p>
-            </div>
-            <a routerLink="/contact" 
-               class="inline-flex items-center mt-8 bg-primary-900 text-white px-6 py-3 rounded hover:bg-primary-800 transition-colors font-medium">
-              Contact Us
-              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+    <section class="content-section">
+      <div class="content-container">
+        <div class="profile-content">
+          <div class="profile-text">
+            <p>
+              Fondée en 2010, MEYE Asset Management est une firme de gestion de portefeuille offrant des stratégies de placement à la fois traditionnelles et novatrices aux investisseurs.
+            </p>
+            <p>
+              Notre objectif est de maximiser le rendement potentiel selon le profil de risque de chaque client, tout en gardant une attention particulière à la gestion efficace de la volatilité des marchés.
+            </p>
+            <p>
+              Nous offrons également un service complet de planification financière afin d'assurer l'atteinte des objectifs ainsi que la protection du patrimoine.
+            </p>
+            <p>
+              Contactez-nous afin de profitez pleinement d'une réelle gestion active de vos placements.
+            </p>
+          </div>
+          <div class="profile-cta">
+            <a routerLink="/contact" class="link-with-arrow">
+              Contactez-nous
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
-          </div>
-          <div>
-            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                 alt="Modern office building" 
-                 class="w-full rounded-lg shadow-xl">
           </div>
         </div>
       </div>
     </section>
 
     <!-- Team Preview Section -->
-    <section class="relative">
-      <a routerLink="/our-team" class="block relative group overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-             alt="Our team" 
-             class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 bg-primary-950/60 flex items-center justify-center">
-          <span class="text-white text-2xl md:text-3xl font-serif font-bold border-b-2 border-white pb-2 group-hover:border-accent-400 transition-colors">
-            Discover the Team
-          </span>
+    <section class="team-preview-section">
+      <a routerLink="/our-team" class="team-preview-link">
+        <img [src]="imageService.getImage('team-preview')" alt="Notre équipe" />
+        <div class="team-preview-overlay">
+          <span class="team-preview-text">Découvrez l'équipe</span>
         </div>
       </a>
     </section>
-  `
+  `,
+  styles: [`
+    .profile-content {
+      max-width: 800px;
+    }
+    
+    .profile-text {
+      p {
+        font-size: 1.15rem;
+        line-height: 1.9;
+        margin-bottom: 25px;
+        color: var(--meye-text);
+      }
+    }
+    
+    .profile-cta {
+      margin-top: 50px;
+    }
+  `]
 })
-export class FirmProfileComponent {}
+export class FirmProfileComponent {
+  imageService = inject(ImageMappingService);
+}

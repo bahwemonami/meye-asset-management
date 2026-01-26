@@ -7,54 +7,110 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-primary-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl md:text-5xl font-serif font-bold text-white">Alternative Funds</h1>
-      </div>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <h1>Fonds alternatifs</h1>
     </section>
 
     <!-- Funds Grid Section -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-3 gap-8">
+    <section class="content-section">
+      <div class="content-container">
+        <div class="funds-grid">
           @for (fund of funds; track fund.slug) {
-            <a [routerLink]="['/alternative-funds', fund.slug]" 
-               class="group block bg-gray-50 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-              <div class="aspect-video bg-primary-900 flex items-center justify-center">
-                <span class="text-6xl">{{ fund.icon }}</span>
+            <a [routerLink]="['/alternative-funds', fund.slug]" class="fund-card">
+              <div class="fund-icon">
+                <span>{{ fund.icon }}</span>
               </div>
-              <div class="p-6">
-                <h3 class="text-xl font-serif font-bold text-primary-900 group-hover:text-accent-600 transition-colors">
-                  {{ fund.name }}
-                </h3>
-                <p class="text-gray-600 mt-2 text-sm">{{ fund.description }}</p>
+              <div class="fund-info">
+                <h3>{{ fund.name }}</h3>
+                <p>{{ fund.description }}</p>
               </div>
             </a>
           }
         </div>
       </div>
     </section>
-  `
+  `,
+  styles: [`
+    .funds-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      
+      @media (max-width: 968px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      @media (max-width: 568px) {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .fund-card {
+      background: var(--meye-white);
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        
+        h3 {
+          color: var(--meye-accent);
+        }
+      }
+    }
+    
+    .fund-icon {
+      background: var(--meye-primary-dark);
+      padding: 60px;
+      text-align: center;
+      
+      span {
+        font-size: 4rem;
+      }
+    }
+    
+    .fund-info {
+      padding: 30px;
+      
+      h3 {
+        font-family: 'Georgia', serif;
+        font-size: 1.4rem;
+        color: var(--meye-primary);
+        margin-bottom: 12px;
+        transition: color 0.3s ease;
+      }
+      
+      p {
+        font-size: 0.95rem;
+        color: var(--meye-text-light);
+        line-height: 1.6;
+      }
+    }
+  `]
 })
 export class AlternativeFundsComponent {
   funds = [
     {
       slug: 'long-short',
-      name: 'MEYE Long Short Fund',
-      description: 'A market-neutral strategy seeking positive returns in all market conditions.',
+      name: 'Fonds MEYE Long Short',
+      description: 'Une stratégie neutre au marché visant des rendements positifs dans toutes les conditions de marché.',
       icon: '📈'
     },
     {
       slug: 'crypto',
-      name: 'MEYE Crypto Fund',
-      description: 'Exposure to digital assets with professional risk management.',
+      name: 'Fonds MEYE Crypto',
+      description: 'Exposition aux actifs numériques avec une gestion professionnelle des risques.',
       icon: '₿'
     },
     {
       slug: 'microcap',
-      name: 'MEYE MicroCap Fund',
-      description: 'Investing in high-potential small-cap companies.',
+      name: 'Fonds MEYE MicroCap',
+      description: 'Investissement dans des sociétés à petite capitalisation à fort potentiel.',
       icon: '💎'
     }
   ];

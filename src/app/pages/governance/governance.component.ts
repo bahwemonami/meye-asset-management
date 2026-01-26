@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-governance',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   template: `
     <!-- Hero Section -->
     <section class="pt-32 pb-20 bg-primary-950">

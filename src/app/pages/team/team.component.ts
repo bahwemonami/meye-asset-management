@@ -1,36 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { ImageMappingService } from '../../services/image-mapping.service';
 
 @Component({
   selector: 'app-team',
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-primary-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl md:text-5xl font-serif font-bold text-white">Our Team</h1>
-      </div>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <h1>Notre équipe</h1>
     </section>
 
     <!-- Team Grid Section -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    <section class="content-section">
+      <div class="content-container">
+        <div class="team-grid">
           @for (member of teamMembers; track member.slug) {
-            <a [routerLink]="['/team', member.slug]" 
-               class="group block bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
-              <div class="aspect-[3/4] overflow-hidden">
-                <img [src]="member.image" 
-                     [alt]="member.name"
-                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <a [routerLink]="['/team', member.slug]" class="team-card">
+              <div class="team-card-image">
+                <img [src]="imageService.getImage(member.imageKey)" [alt]="member.name" />
               </div>
-              <div class="p-4">
-                <h3 class="font-serif font-bold text-primary-900 group-hover:text-accent-600 transition-colors">
-                  {{ member.name }}
-                </h3>
-                <p class="text-gray-600 text-sm mt-1">{{ member.title }}</p>
+              <div class="team-card-info">
+                <p class="team-name">{{ member.name }}</p>
+                <p class="team-role">{{ member.title }}</p>
               </div>
             </a>
           }
@@ -40,48 +34,50 @@ import { RouterLink } from '@angular/router';
   `
 })
 export class TeamComponent {
+  imageService = inject(ImageMappingService);
+  
   teamMembers = [
     {
       slug: 'julien-carl-landry',
       name: 'Julien-Carl Landry, Pl.Fin.',
-      title: 'Financial Planner',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      title: 'Planificateur financier',
+      imageKey: 'julien-carl'
     },
     {
       slug: 'martin-lalonde',
       name: 'Martin Lalonde, MBA, CFA',
-      title: 'President and Portfolio Manager',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      title: 'Président et gestionnaire de portefeuille',
+      imageKey: 'martin-lalonde'
     },
     {
       slug: 'jeffrey-veilleux',
       name: 'Jeffrey Veilleux, M.Sc., CIM®',
-      title: 'Portfolio Manager',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      title: 'Gestionnaire de portefeuille',
+      imageKey: 'jeffrey-veilleux'
     },
     {
       slug: 'david-blouin',
       name: 'David Blouin',
-      title: 'Director of Client Relations',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      title: 'Directeur des relations aux clients',
+      imageKey: 'david-blouin'
     },
     {
       slug: 'martin-piche',
       name: 'Martin Piché',
-      title: 'Analyst, Administration and Compliance',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      title: 'Analyste, administration et conformité',
+      imageKey: 'martin-piche'
     },
     {
       slug: 'mathieu-martin',
       name: 'Mathieu Martin, CFA',
-      title: 'Portfolio Manager, MEYE MicroCap Fund',
-      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      title: 'Gestionnaire de portefeuille, Fonds MicroCap',
+      imageKey: 'mathieu-martin'
     },
     {
       slug: 'philippe-jette',
       name: 'Philippe Jetté',
-      title: 'Senior Analyst, MEYE Crypto Fund',
-      image: 'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      title: 'Analyste principal, Fonds Crypto',
+      imageKey: 'philippe-jette'
     }
   ];
 }

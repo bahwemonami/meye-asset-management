@@ -1,166 +1,197 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, ActivatedRoute } from '@angular/router';
+import { ImageMappingService } from '../../services/image-mapping.service';
 
 @Component({
   selector: 'app-private-management',
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-primary-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl md:text-5xl font-serif font-bold text-white">Private Management</h1>
-      </div>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <h1>Gestion privée</h1>
     </section>
 
     <!-- Content Section -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Selector -->
-        <div class="mb-12">
-          <select 
-            (change)="onSectionChange($event)"
-            [value]="currentSection()"
-            class="w-full md:w-auto px-4 py-3 border border-gray-300 rounded-lg text-primary-900 font-medium focus:ring-2 focus:ring-accent-500 focus:border-accent-500">
-            @for (section of sections; track section.id) {
-              <option [value]="section.id">{{ section.title }}</option>
-            }
-          </select>
-        </div>
-
-        <!-- Dynamic Content -->
-        <div class="grid lg:grid-cols-3 gap-12">
-          <div class="lg:col-span-2">
-            <h2 class="text-2xl font-serif font-bold text-primary-900 mb-6">{{ getCurrentSectionTitle() }}</h2>
+    <section class="content-section">
+      <div class="content-container">
+        <div class="two-column-layout">
+          <!-- Main Content -->
+          <div class="main-content">
+            <h2>{{ getCurrentSectionTitle() }}</h2>
             
             @switch (currentSection()) {
               @case ('who') {
-                <div class="space-y-6 text-gray-600">
-                  <p>Private management is for clients with assets of more than $250,000 to invest who are looking for a complete and high-performance solution.</p>
+                <div class="prose-content">
+                  <p>La gestion privée s'adresse à une clientèle ayant des actifs de plus de 250 000 $ à investir et qui recherche une solution complète et performante.</p>
                   
-                  <h4 class="text-lg font-semibold text-primary-900 mt-8">Our clients include:</h4>
-                  <ul class="list-disc list-inside space-y-2">
-                    <li>Entrepreneurs and business executives</li>
-                    <li>Professionals, artists, or athletes</li>
-                    <li>Second-generation wealth holders</li>
-                    <li>Institutions and private companies</li>
-                    <li>Efficient savers</li>
+                  <h4>On compte parmi nos clients :</h4>
+                  <ul>
+                    <li>Des entrepreneurs et des dirigeants d'entreprises</li>
+                    <li>Des professionnels, des artistes ou des sportifs</li>
+                    <li>Des détenteurs de fortune de deuxième génération</li>
+                    <li>Des institutions et des entreprises privées</li>
+                    <li>Des épargnants efficaces</li>
                   </ul>
 
-                  <h4 class="text-lg font-semibold text-primary-900 mt-8">Private management at MEYE offers you:</h4>
-                  <ul class="list-disc list-inside space-y-2">
-                    <li>Professional management</li>
-                    <li>Alignment with a precise investment policy</li>
-                    <li>Tax optimization</li>
-                    <li>Detailed monthly reports</li>
-                    <li>Advantageous management fees</li>
-                    <li>Access to an external multidisciplinary team that can meet all your financial needs, including taxation and accounting</li>
+                  <h4>La gestion privée chez MEYE Asset Management vous offre :</h4>
+                  <ul>
+                    <li>Une gestion professionnelle</li>
+                    <li>Un alignement sur une politique de placement précise</li>
+                    <li>Une optimisation fiscale</li>
+                    <li>Des rapports mensuels détaillés</li>
+                    <li>Des frais de gestion avantageux</li>
+                    <li>Un accès à une équipe externe multidisciplinaire pouvant répondre à tous vos besoins financiers</li>
                   </ul>
 
-                  <p class="mt-8">Do not hesitate to contact us so that we can assess your financial situation and recommend a personalized solution that reflects your needs and investment objectives.</p>
+                  <p>N'hésitez pas à nous contacter afin que nous puissions évaluer votre situation financière et vous recommander une solution personnalisée.</p>
                 </div>
               }
               @case ('cycle') {
-                <div class="space-y-6 text-gray-600">
-                  <p>Our management cycle is a structured approach designed to optimize your investment experience:</p>
-                  <ol class="list-decimal list-inside space-y-4">
-                    <li><strong>Initial Assessment:</strong> Understanding your financial goals, risk tolerance, and investment horizon</li>
-                    <li><strong>Strategy Development:</strong> Creating a customized investment policy aligned with your objectives</li>
-                    <li><strong>Implementation:</strong> Executing the investment strategy with precision and care</li>
-                    <li><strong>Monitoring:</strong> Continuous tracking of portfolio performance and market conditions</li>
-                    <li><strong>Rebalancing:</strong> Regular adjustments to maintain optimal asset allocation</li>
-                    <li><strong>Reporting:</strong> Detailed monthly statements and performance reviews</li>
+                <div class="prose-content">
+                  <p>Notre cycle de gestion est une approche structurée conçue pour optimiser votre expérience d'investissement :</p>
+                  <ol>
+                    <li><strong>Évaluation initiale :</strong> Comprendre vos objectifs financiers, votre tolérance au risque et votre horizon de placement</li>
+                    <li><strong>Développement de stratégie :</strong> Création d'une politique d'investissement personnalisée</li>
+                    <li><strong>Mise en œuvre :</strong> Exécution de la stratégie d'investissement avec précision</li>
+                    <li><strong>Surveillance :</strong> Suivi continu de la performance du portefeuille</li>
+                    <li><strong>Rééquilibrage :</strong> Ajustements réguliers pour maintenir l'allocation optimale</li>
+                    <li><strong>Rapports :</strong> Relevés mensuels détaillés et revues de performance</li>
                   </ol>
                 </div>
               }
               @case ('philosophy') {
-                <div class="space-y-6 text-gray-600">
-                  <p>At MEYE Asset Management, we believe that the price of an asset is not always equal to its intrinsic value and that it is influenced by a multitude of factors, including investors' cognitive biases.</p>
-                  <p>Since these biases are known and repeat over time, it is possible to make investment decisions based on these recurring behaviors.</p>
-                  <p>We rely on strategies based on the momentum effect, including technical analysis and trend following. The manager uses a top-down approach by first establishing the sectors with the greatest upside potential and then selecting specific securities from these sectors.</p>
+                <div class="prose-content">
+                  <p>Chez MEYE Asset Management, nous croyons que le prix d'un actif n'est pas toujours égal à sa valeur intrinsèque et qu'il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs.</p>
+                  <p>Puisque ces biais sont connus et qu'ils se répètent dans le temps, il est possible de prendre des décisions d'investissement basées sur ces comportements récurrents.</p>
+                  <p>Nous nous appuyons sur des stratégies basées sur l'effet momentum, dont l'analyse technique et le suivi de tendance. Le gestionnaire utilise une approche de type descendante en établissant en premier lieu les secteurs dont le potentiel à la hausse est le plus important.</p>
                 </div>
               }
               @case ('methodology') {
-                <div class="space-y-6 text-gray-600">
-                  <p>Our investment methodology combines rigorous analysis with disciplined execution:</p>
-                  <ul class="list-disc list-inside space-y-2">
-                    <li>Macro-economic analysis to identify market trends</li>
-                    <li>Sector rotation based on momentum indicators</li>
-                    <li>Technical analysis for entry and exit points</li>
-                    <li>Risk management through diversification and position sizing</li>
-                    <li>Regular portfolio rebalancing</li>
+                <div class="prose-content">
+                  <p>Notre méthodologie d'investissement combine une analyse rigoureuse avec une exécution disciplinée :</p>
+                  <ul>
+                    <li>Analyse macro-économique pour identifier les tendances du marché</li>
+                    <li>Rotation sectorielle basée sur les indicateurs de momentum</li>
+                    <li>Analyse technique pour les points d'entrée et de sortie</li>
+                    <li>Gestion des risques par la diversification</li>
+                    <li>Rééquilibrage régulier du portefeuille</li>
                   </ul>
                 </div>
               }
               @case ('strategies') {
-                <div class="space-y-6 text-gray-600">
-                  <p>We offer various investment strategies tailored to different client profiles:</p>
-                  <ul class="list-disc list-inside space-y-2">
-                    <li><strong>Growth Strategy:</strong> Focus on capital appreciation through equity investments</li>
-                    <li><strong>Balanced Strategy:</strong> Mix of growth and income-producing assets</li>
-                    <li><strong>Conservative Strategy:</strong> Emphasis on capital preservation with modest growth</li>
-                    <li><strong>Alternative Strategies:</strong> Access to our specialized funds for qualified investors</li>
+                <div class="prose-content">
+                  <p>Nous offrons diverses stratégies d'investissement adaptées à différents profils de clients :</p>
+                  <ul>
+                    <li><strong>Stratégie de croissance :</strong> Accent sur l'appréciation du capital</li>
+                    <li><strong>Stratégie équilibrée :</strong> Mélange de croissance et d'actifs productifs de revenus</li>
+                    <li><strong>Stratégie conservatrice :</strong> Accent sur la préservation du capital</li>
+                    <li><strong>Stratégies alternatives :</strong> Accès à nos fonds spécialisés</li>
                   </ul>
                 </div>
               }
               @case ('why') {
-                <div class="space-y-6 text-gray-600">
-                  <p>Why choose MEYE Asset Management?</p>
-                  <ul class="list-disc list-inside space-y-2">
-                    <li>Over 15 years of proven track record</li>
-                    <li>Personalized service with direct access to portfolio managers</li>
-                    <li>Transparent fee structure</li>
-                    <li>Active management that adapts to market conditions</li>
-                    <li>Comprehensive financial planning services</li>
-                    <li>Strong focus on risk management</li>
+                <div class="prose-content">
+                  <p>Pourquoi choisir MEYE Asset Management ?</p>
+                  <ul>
+                    <li>Plus de 15 ans d'expérience éprouvée</li>
+                    <li>Service personnalisé avec accès direct aux gestionnaires</li>
+                    <li>Structure de frais transparente</li>
+                    <li>Gestion active qui s'adapte aux conditions du marché</li>
+                    <li>Services complets de planification financière</li>
+                    <li>Forte attention à la gestion des risques</li>
                   </ul>
                 </div>
               }
               @case ('cfa') {
-                <div class="space-y-6 text-gray-600">
-                  <p>The CFA (Chartered Financial Analyst) designation is the gold standard in investment management. Here's why choosing a CFA advisor matters:</p>
-                  <ul class="list-disc list-inside space-y-2">
-                    <li>Rigorous education covering investment analysis, portfolio management, and ethics</li>
-                    <li>Commitment to the highest professional standards</li>
-                    <li>Adherence to a strict code of ethics and professional conduct</li>
-                    <li>Continuous professional development requirements</li>
-                    <li>Global recognition of expertise</li>
+                <div class="prose-content">
+                  <p>Le titre CFA (Chartered Financial Analyst) est la référence en matière de gestion de placements. Voici pourquoi choisir un conseiller CFA est important :</p>
+                  <ul>
+                    <li>Formation rigoureuse en analyse d'investissement et gestion de portefeuille</li>
+                    <li>Engagement envers les normes professionnelles les plus élevées</li>
+                    <li>Adhésion à un code d'éthique strict</li>
+                    <li>Exigences de formation continue</li>
+                    <li>Reconnaissance mondiale de l'expertise</li>
                   </ul>
                 </div>
               }
             }
           </div>
 
-          <!-- Contact CTA -->
-          <div>
-            <div class="bg-gray-50 rounded-lg p-6 sticky top-32">
-              <h3 class="text-lg font-semibold text-primary-900 mb-4">Ready to Get Started?</h3>
-              <p class="text-gray-600 mb-6">Contact us to discuss how private management can work for you.</p>
-              <a routerLink="/contact" class="inline-flex items-center bg-primary-900 text-white px-6 py-3 rounded hover:bg-primary-800 transition-colors w-full justify-center">
-                Contact Us
-                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-              </a>
+          <!-- Sidebar -->
+          <div class="sidebar">
+            <div class="sidebar-nav">
+              <ul>
+                @for (section of sections; track section.id) {
+                  <li>
+                    <a 
+                      (click)="currentSection.set(section.id)"
+                      [class.active]="currentSection() === section.id">
+                      {{ section.title }}
+                    </a>
+                  </li>
+                }
+              </ul>
+            </div>
+            <div class="sidebar-cta">
+              <a routerLink="/contact">Contactez-nous</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-  `
+  `,
+  styles: [`
+    .prose-content {
+      h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--meye-primary);
+        margin: 30px 0 15px;
+      }
+      
+      p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+        color: var(--meye-text);
+      }
+      
+      ul, ol {
+        margin: 20px 0;
+        padding-left: 25px;
+        
+        li {
+          margin-bottom: 12px;
+          line-height: 1.7;
+          color: var(--meye-text);
+        }
+      }
+      
+      strong {
+        color: var(--meye-primary);
+      }
+    }
+    
+    .main-content h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--meye-primary);
+    }
+  `]
 })
 export class PrivateManagementComponent implements OnInit {
+  imageService = inject(ImageMappingService);
   currentSection = signal('who');
 
   sections = [
-    { id: 'who', title: 'Who Is Private Management For' },
-    { id: 'cycle', title: 'Management Cycle' },
-    { id: 'philosophy', title: 'Investment Philosophy' },
-    { id: 'methodology', title: 'Management Methodology' },
-    { id: 'strategies', title: 'Investment Strategies' },
-    { id: 'why', title: 'Why MEYE?' },
-    { id: 'cfa', title: 'Why Choose a CFA Advisor?' }
+    { id: 'who', title: 'À qui s\'adresse la gestion privée' },
+    { id: 'cycle', title: 'Cycle de gestion' },
+    { id: 'philosophy', title: 'Philosophie de gestion' },
+    { id: 'methodology', title: 'La méthodologie de gestion' },
+    { id: 'strategies', title: 'Les stratégies de placement' },
+    { id: 'why', title: 'Pourquoi MEYE Asset Management ?' },
+    { id: 'cfa', title: 'Pourquoi choisir un conseiller CFA ?' }
   ];
 
   constructor(private route: ActivatedRoute) {}
@@ -171,11 +202,6 @@ export class PrivateManagementComponent implements OnInit {
         this.currentSection.set(params['section']);
       }
     });
-  }
-
-  onSectionChange(event: Event) {
-    const select = event.target as HTMLSelectElement;
-    this.currentSection.set(select.value);
   }
 
   getCurrentSectionTitle(): string {

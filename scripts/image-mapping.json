@@ -1,0 +1,204 @@
+{
+  "images": [
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/themes/selectrum/src/img/logo-light.svg?v=3",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\logo-light.svg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/",
+      "filename": "logo-light.svg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/themes/selectrum/src/img/icons/user.svg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\user.svg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/",
+      "filename": "user.svg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/themes/selectrum/src/img/logo-light.png",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\logo-light.png",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/",
+      "filename": "logo-light.png"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/home-hero.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\home-hero.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/",
+      "filename": "home-hero.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/image-1.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\image-1.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/",
+      "filename": "image-1.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/team.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\team.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/",
+      "filename": "team.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/06/Clipboard_20250605.png",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\Clipboard_20250605.png",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/",
+      "filename": "Clipboard_20250605.png"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/themes/selectrum/src/img/newsletter-bg.png",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\newsletter-bg.png",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/",
+      "filename": "newsletter-bg.png"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/themes/selectrum/src/img/logo-dark.svg?v=3",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\logo-dark.svg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/profil-de-la-firme/",
+      "filename": "logo-dark.svg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/image-2.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\image-2.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/profil-de-la-firme/",
+      "filename": "image-2.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/team-2.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\team-2.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/profil-de-la-firme/",
+      "filename": "team-2.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/10/thumbnail_Julien-Carl_Rivemont_Finale-34-683x1024.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\thumbnail_Julien-Carl_Rivemont_Finale-34-683x1024.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/notre-equipe/",
+      "filename": "thumbnail_Julien-Carl_Rivemont_Finale-34-683x1024.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/Martin-Lalonde-Portrait.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\Martin-Lalonde-Portrait.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/notre-equipe/",
+      "filename": "Martin-Lalonde-Portrait.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/Jeffrey-Veilleux-Portrait.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\Jeffrey-Veilleux-Portrait.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/notre-equipe/",
+      "filename": "Jeffrey-Veilleux-Portrait.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/David-Blouin-Portrait.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\David-Blouin-Portrait.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/notre-equipe/",
+      "filename": "David-Blouin-Portrait.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/Martin-Piche-Portrait.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\Martin-Piche-Portrait.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/notre-equipe/",
+      "filename": "Martin-Piche-Portrait.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/Mathieu-Martin-Portrait.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\Mathieu-Martin-Portrait.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/notre-equipe/",
+      "filename": "Mathieu-Martin-Portrait.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/Philippe-Jette-Portrait.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\Philippe-Jette-Portrait.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/notre-equipe/",
+      "filename": "Philippe-Jette-Portrait.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/Gestion-privee-hero.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\Gestion-privee-hero.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/gestion-privee/",
+      "filename": "Gestion-privee-hero.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/Rendements-hero.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\Rendements-hero.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/rendements/",
+      "filename": "Rendements-hero.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/12/Clipboard_20251211.png",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\Clipboard_20251211.png",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/rendements/",
+      "filename": "Clipboard_20251211.png"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/Martin-Lalonde-Portrait-1.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\Martin-Lalonde-Portrait-1.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/rendements/",
+      "filename": "Martin-Lalonde-Portrait-1.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/image-4.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\image-4.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/rendements/",
+      "filename": "image-4.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/image-3.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\image-3.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/fonds-alternatifs/",
+      "filename": "image-3.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/contac-hero.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\contac-hero.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/contact/",
+      "filename": "contac-hero.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/05/form-hero.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\form-hero.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/devenir-client/",
+      "filename": "form-hero.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/07/shutterstock_2478343593.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\shutterstock_2478343593.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/gouvernance/",
+      "filename": "shutterstock_2478343593.jpg"
+    },
+    {
+      "originalUrl": "https://rivemont.ca/wp-content/uploads/2025/07/shutterstock_2483012659.jpg",
+      "localPath": "src\\assets\\images\\rivemont\\logo\\shutterstock_2483012659.jpg",
+      "type": "logo",
+      "pageUrl": "https://rivemont.ca/gouvernance/",
+      "filename": "shutterstock_2483012659.jpg"
+    }
+  ],
+  "metadata": {
+    "downloadedAt": "2026-01-26T14:00:18.177Z",
+    "warning": "These images are copyrighted by Rivemont. Use only with permission."
+  }
+}
