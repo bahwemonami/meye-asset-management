@@ -7,7 +7,16 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "download-images": "node scripts/download-rivemont-images.js"
+    "download-images": "node scripts/download-rivemont-images.js",
+    "extract-styles": "node scripts/extract-rivemont-styles.js",
+    "compare-sites": "node scripts/compare-sites.js",
+    "screenshot-comparison": "node scripts/screenshot-comparison.js",
+    "test-all-pages": "node scripts/test-all-pages.js",
+    "test-interactions": "node scripts/test-interactions.js",
+    "test-responsive": "node scripts/test-responsive.js",
+    "test-accessibility": "node scripts/test-accessibility.js",
+    "test-performance": "node scripts/test-performance.js",
+    "analyze-critical": "node scripts/analyze-critical-differences.js"
   },
   "prettier": {
     "printWidth": 100,
@@ -30,7 +39,9 @@
     "@angular/forms": "^21.1.0",
     "@angular/platform-browser": "^21.1.0",
     "@angular/router": "^21.1.0",
+    "aos": "^2.3.4",
     "rxjs": "~7.8.0",
+    "swiper": "^12.0.3",
     "tslib": "^2.3.0",
     "zone.js": "^0.16.0"
   },
@@ -38,7 +49,9 @@
     "@angular/build": "^21.1.1",
     "@angular/cli": "^21.1.1",
     "@angular/compiler-cli": "^21.1.0",
+    "@types/aos": "^3.0.7",
     "autoprefixer": "^10.4.23",
+    "playwright": "^1.58.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
     "typescript": "~5.9.2"

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-01-27T23:21:18.102Z",
+  "rivemontUrl": "https://rivemont.ca/",
+  "meyeUrl": "http://localhost:4200",
+  "metrics": {
+    "rivemont": {
+      "domContentLoaded": 994,
+      "loadComplete": 1302,
+      "resources": 50,
+      "loadTime": 1484
+    },
+    "meye": {
+      "domContentLoaded": 216,
+      "loadComplete": 272,
+      "resources": 28,
+      "loadTime": 222
+    }
+  },
+  "differences": [
+    {
+      "metric": "loadTime",
+      "rivemont": 1484,
+      "meye": 222,
+      "difference": -1262
+    }
+  ]
+}

@@ -1,24 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ImageMappingService } from '../../services/image-mapping.service';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [CommonModule, FormsModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <!-- Page Hero -->
-    <section class="page-hero">
-      <h1>Contact</h1>
+    <!-- Hero Section - Identique à Rivemont -->
+    <section class="template-part-hero">
+      <div class="content">
+        <img [src]="imageService.getImage('contact-hero')" alt="" class="gl-responsive-background gl-responsive-background--desktop gl-img-grey" />
+      </div>
     </section>
 
-    <!-- Content Section -->
+    <!-- Content Section - Identique à Rivemont -->
     <section class="content-section">
       <div class="content-container">
+        <h1>Contact</h1>
+        
         <!-- Addresses -->
         <div class="addresses-section">
           <div class="address-card">
-            <a href="https://maps.app.goo.gl/example1" target="_blank" class="address-link">
+            <a href="https://maps.app.goo.gl/3J5cE5756qnxb7ic9" target="_blank" class="address-link">
               160, boul. de l'Hôpital, bureau 202<br>
               Gatineau, Québec, J8T 8J1
             </a>
@@ -29,13 +35,13 @@ import { FormsModule } from '@angular/forms';
               </div>
               <div class="info-row">
                 <span class="label">Courriel :</span>
-                <a href="mailto:info@meye-am.com">info&#64;meye-am.com</a>
+                <a href="mailto:info@rivemont.ca">info&#64;rivemont.ca</a>
               </div>
             </div>
           </div>
           
           <div class="address-card">
-            <a href="https://maps.app.goo.gl/example2" target="_blank" class="address-link">
+            <a href="https://maps.app.goo.gl/HmpL8Vany252sq3FA" target="_blank" class="address-link">
               19 rue Le Royer Ouest, bureau 300<br>
               Montréal, Québec, H2Y 1W4
             </a>
@@ -46,7 +52,7 @@ import { FormsModule } from '@angular/forms';
               </div>
               <div class="info-row">
                 <span class="label">Courriel :</span>
-                <a href="mailto:info@meye-am.com">info&#64;meye-am.com</a>
+                <a href="mailto:info@rivemont.ca">info&#64;rivemont.ca</a>
               </div>
             </div>
           </div>
@@ -224,6 +230,8 @@ import { FormsModule } from '@angular/forms';
   `]
 })
 export class ContactComponent {
+  imageService = inject(ImageMappingService);
+  
   formData = {
     prenom: '',
     nom: '',

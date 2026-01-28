@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
@@ -7,26 +7,50 @@ import { ImageMappingService } from '../../services/image-mapping.service';
   selector: 'app-performance',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <!-- Page Hero -->
-    <section class="page-hero">
-      <h1>Rendements</h1>
+    <!-- Hero Section - Identique à Rivemont -->
+    <section class="template-part-hero">
+      <div class="content">
+        <h1 class="title">Rendements</h1>
+        <img [src]="imageService.getImage('performance-hero')" alt="" class="gl-responsive-background gl-responsive-background--desktop gl-img-grey" />
+      </div>
     </section>
 
-    <!-- Content Section -->
-    <section class="content-section">
-      <div class="content-container">
-        <!-- Actions Section Header -->
-        <div class="section-header">
-          <h2>Actions</h2>
-          <p class="date-info">Au 30 novembre 2025</p>
+    <!-- Intro Section - Identique à Rivemont -->
+    <section class="section-intro">
+      <div class="content">
+        <h2>Actions</h2>
+        <p class="date-info">Au 31 décembre 2025</p>
+        <div class="image-holder">
+          <img [src]="imageService.getImage('clipboard-1')" alt="" />
         </div>
+      </div>
+    </section>
+
+    <!-- Description Section - Identique à Rivemont -->
+    <section class="description-section">
+      <div class="content">
+        <div class="description gl-text-editor">
+          <p>Chez MEYE ASSET MANAGER, nous croyons que le prix d'un actif n'est pas toujours égal à sa valeur intrinsèque et qu'il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs. Puisque ces biais sont connus et qu'ils se répètent dans le temps, il est possible de prendre des décisions d'investissement basées sur ces comportements récurrents. Nous nous appuyons sur des stratégies basées sur l'effet momentum, dont l'analyse technique et le suivi de tendance. Le gestionnaire utilise une approche de type descendante en établissant en premier lieu les secteurs dont le potentiel à la hausse est le plus important pour ensuite sélectionner les titres spécifiques parmi ces secteurs.</p>
+        </div>
+        <div class="objective">
+          <h2>Objectif de placement</h2>
+          <p>L'objectif de placement de la classe d'actifs Actions est de générer un rendement supérieur à son indice de référence.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table Section - Identique à Rivemont -->
+    <section class="section-table">
+      <div class="content">
+        <h2>Rendements</h2>
 
         <!-- Strategy Description -->
         <div class="strategy-section">
           <div class="strategy-text">
             <p>
-              Chez MEYE Asset Management, nous croyons que le prix d'un actif n'est pas toujours égal à sa valeur intrinsèque et qu'il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs. Puisque ces biais sont connus et qu'ils se répètent dans le temps, il est possible de prendre des décisions d'investissement basées sur ces comportements récurrents.
+              Chez MEYE ASSET MANAGER, nous croyons que le prix d'un actif n'est pas toujours égal à sa valeur intrinsèque et qu'il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs. Puisque ces biais sont connus et qu'ils se répètent dans le temps, il est possible de prendre des décisions d'investissement basées sur ces comportements récurrents.
             </p>
           </div>
           <div class="strategy-objective">
@@ -59,27 +83,27 @@ import { ImageMappingService } from '../../services/image-mapping.service';
               <tbody>
                 <tr>
                   <td class="row-label">Action</td>
-                  <td>0,3 %</td>
-                  <td>2,7 %</td>
-                  <td>8,0 %</td>
-                  <td>18,2 %</td>
-                  <td>14,9 %</td>
-                  <td>30,4 %</td>
-                  <td>14,1 %</td>
-                  <td>12,6 %</td>
-                  <td>12,8 %</td>
+                  <td>-1.9 %</td>
+                  <td>-4.3 %</td>
+                  <td>3.5 %</td>
+                  <td>15.9 %</td>
+                  <td>15.9 %</td>
+                  <td>27.2 %</td>
+                  <td>12.2 %</td>
+                  <td>12.5 %</td>
+                  <td>12.5 %</td>
                 </tr>
                 <tr class="benchmark-row">
-                  <td class="row-label">Indice de référence</td>
-                  <td>3,0 %</td>
-                  <td>10,0 %</td>
-                  <td>20,7 %</td>
-                  <td>26,6 %</td>
-                  <td>23,4 %</td>
-                  <td>27,7 %</td>
-                  <td>16,3 %</td>
-                  <td>12,5 %</td>
-                  <td>10,6 %</td>
+                  <td class="row-label">Indice de reference</td>
+                  <td>0.7 %</td>
+                  <td>5.2 %</td>
+                  <td>17.9 %</td>
+                  <td>27.6 %</td>
+                  <td>27.6 %</td>
+                  <td>26.0 %</td>
+                  <td>16.1 %</td>
+                  <td>12.9 %</td>
+                  <td>10.0 %</td>
                 </tr>
               </tbody>
             </table>
@@ -105,27 +129,27 @@ import { ImageMappingService } from '../../services/image-mapping.service';
               <tbody>
                 <tr>
                   <td class="row-label">Action</td>
-                  <td>1,2 %</td>
-                  <td>32,0 %</td>
-                  <td>6,7 %</td>
-                  <td>12,7 %</td>
-                  <td>5,9 %</td>
-                  <td>13,1 %</td>
-                  <td>2,7 %</td>
-                  <td>23,1 %</td>
-                  <td>20,8 %</td>
+                  <td>1.2%</td>
+                  <td>32.0%</td>
+                  <td>6.7%</td>
+                  <td>12.7%</td>
+                  <td>5.9%</td>
+                  <td>13.1%</td>
+                  <td>2.7%</td>
+                  <td>23.1%</td>
+                  <td>20.8</td>
                 </tr>
                 <tr class="benchmark-row">
-                  <td class="row-label">Indice de référence</td>
-                  <td>6,9 %</td>
-                  <td>12,7 %</td>
-                  <td>10,4 %</td>
-                  <td>-8,3 %</td>
-                  <td>21,1 %</td>
-                  <td>9,1 %</td>
-                  <td>-8,9 %</td>
-                  <td>23,2 %</td>
-                  <td>7,7 %</td>
+                  <td class="row-label">Indice de reference</td>
+                  <td>6.9%</td>
+                  <td>12.7%</td>
+                  <td>10.4%</td>
+                  <td>-8.3%</td>
+                  <td>21.1%</td>
+                  <td>9.1%</td>
+                  <td>-8.9%</td>
+                  <td>23.2%</td>
+                  <td>7.7%</td>
                 </tr>
               </tbody>
             </table>
@@ -147,19 +171,19 @@ import { ImageMappingService } from '../../services/image-mapping.service';
               <tbody>
                 <tr>
                   <td class="row-label">Action</td>
-                  <td>6,6 %</td>
-                  <td>-2,8 %</td>
-                  <td>6,2 %</td>
-                  <td>39,5 %</td>
-                  <td>18,2 %</td>
+                  <td>6.6%</td>
+                  <td>-2.8%</td>
+                  <td>6.2%</td>
+                  <td>39.5%</td>
+                  <td>15.9%</td>
                 </tr>
                 <tr class="benchmark-row">
-                  <td class="row-label">Indice de référence</td>
-                  <td>25,6 %</td>
-                  <td>-7,2 %</td>
-                  <td>13,9 %</td>
-                  <td>24,4 %</td>
-                  <td>26,6 %</td>
+                  <td class="row-label">Indice de reference</td>
+                  <td>25.6</td>
+                  <td>-7.2%</td>
+                  <td>13.9%</td>
+                  <td>24.4%</td>
+                  <td>27.6%</td>
                 </tr>
               </tbody>
             </table>
@@ -170,77 +194,85 @@ import { ImageMappingService } from '../../services/image-mapping.service';
         <div class="notes-section">
           <h4>Notes explicatives</h4>
           <p>
-            Les rendements proviennent du composé de toutes les actions détenues par les clients de MEYE Asset Management en gestion privée et ils sont bruts des frais. Les résultats futurs vont différer de ceux du passé. Ce document ne constitue pas une recommandation ni un conseil lié à un investissement et est présenté à titre d'information seulement.
+            Les rendements proviennent du composé de toutes les actions détenues par les clients de MEYE ASSET MANAGER en gestion privée sous le code de représentant Q2F2 et ils sont bruts des frais. Avant le 1 janvier 2019, l'indice de référence est composé à 100 % de l'indice S&P/TSX et, par la suite, à 80% de l'indice S&P/TSX et 20 % de l'indice S&P 500. Les résultats futurs vont différer de ceux du passé. Ce document ne constitue pas une recommandation ni un conseil lié à un investissement et est présenté à titre d'information seulement.
           </p>
         </div>
+      </div>
+    </section>
 
-        <!-- Overview and Holdings -->
-        <div class="info-grid">
-          <div class="info-card">
-            <h3>Aperçu</h3>
-            <dl>
-              <div class="info-item">
-                <dt>Date de création</dt>
-                <dd>1 septembre 2010</dd>
-              </div>
-              <div class="info-item">
-                <dt>Style de gestion</dt>
-                <dd>Technique et tendance</dd>
-              </div>
-              <div class="info-item">
-                <dt>Actifs de la firme</dt>
-                <dd>155 millions $</dd>
-              </div>
-            </dl>
-          </div>
-
-          <div class="info-card">
-            <h3>Principaux titres individuels</h3>
-            <ul class="holdings-list">
-              @for (holding of topHoldings; track holding) {
-                <li>{{ holding }}</li>
-              }
-            </ul>
-          </div>
+    <!-- Info Section - Identique à Rivemont -->
+    <section class="section-info">
+      <div class="content">
+        <div>
+          <h2>Aperçu</h2>
+          <h3>Date de création</h3>
+          <p>1 septembre 2010</p>
+          <h3>Style de gestion</h3>
+          <p>Technique et tendance</p>
+          <h3>Actifs de la firme</h3>
+          <p>153 millions $</p>
         </div>
-
-        <!-- Sectors -->
-        <div class="sectors-section">
-          <h3>Secteurs d'activité</h3>
-          <div class="sectors-grid">
-            @for (sector of sectors; track sector.name) {
-              <div class="sector-item">
-                <span class="sector-name">{{ sector.name }}</span>
-                <span class="sector-value">{{ sector.percentage }}</span>
-              </div>
+        <div>
+          <h2>Principaux titres individuels</h2>
+          <ul>
+            @for (holding of topHoldings; track holding) {
+              <li>{{ holding }}</li>
             }
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- List Section - Identique à Rivemont -->
+    <section class="section-list">
+      <div class="content">
+        <h2>Secteurs d'activité</h2>
+        <div class="sectors-grid">
+          @for (sector of sectors; track sector.name) {
+            <div class="sector-item">
+              <span class="sector-name">{{ sector.name }}</span>
+              <span class="sector-value">{{ sector.percentage }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Manager Section - Identique à Rivemont -->
+    <section class="template-part-desc-image template-part-desc-image--reverse">
+      <div class="content">
+        <div class="col">
+          <div class="description gl-text-editor">
+            <h2>Gestionnaire</h2>
+            <p>Martin Lalonde, MBA, CFA, est le gestionnaire de portefeuille responsable des décisions de placements. Il possède plusieurs années d'expérience comme intervenant sur les marchés financiers et a œuvré, avant de fonder MEYE ASSET MANAGER, comme analyste principal aux investissements et aux fusions et acquisitions pour un important organisme canadien.</p>
+          </div>
+          <div class="button-holder">
+            <a routerLink="/team/martin-lalonde" class="gl-button" target="_self">En savoir plus</a>
           </div>
         </div>
-
-        <!-- Manager and About -->
-        <div class="info-grid">
-          <div class="info-card dark">
-            <h3>Gestionnaire</h3>
-            <p>Martin Lalonde, MBA, CFA, est le gestionnaire de portefeuille responsable des décisions de placements. Il possède plusieurs années d'expérience comme intervenant sur les marchés financiers.</p>
-            <a routerLink="/our-team" class="link-with-arrow light">
-              En savoir plus
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
+        <div class="col">
+          <div class="image-holder">
+            <img [src]="imageService.getImage('martin-lalonde-1')" alt="" />
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="info-card">
-            <h3>À propos de MEYE Asset Management</h3>
-            <p>Fondée en 2010, MEYE Asset Management est une firme de gestion de portefeuille avec environ 155 millions $ en actifs sous gestion. La firme offre des stratégies de placement performantes.</p>
-            <a routerLink="/firm-profile" class="link-with-arrow">
-              En savoir plus
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
+    <!-- About Section - Identique à Rivemont -->
+    <section class="template-part-desc-image template-part-desc-image--reverse">
+      <div class="content">
+        <div class="col">
+          <div class="description gl-text-editor">
+            <h2>À propos de MEYE ASSET MANAGER</h2>
+            <p>Fondée en 2010, MEYE ASSET MANAGER est une firme de gestion de portefeuille québécoise avec environ 153 millions $ en actifs sous gestion. La firme offre des stratégies de placement performantes à une clientèle de gestion privée, de conseillers, de courtiers et de planificateurs financiers.</p>
+          </div>
+          <div class="button-holder">
+            <a routerLink="/firm-profile" class="gl-button" target="_self">En savoir plus</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="image-holder">
+            <img [src]="imageService.getImage('image-4')" alt="" />
           </div>
         </div>
       </div>
@@ -476,25 +508,28 @@ export class PerformanceComponent {
   
   topHoldings = [
     'Chartwell Retirement Residential',
+    'Global X Copper Miners',
     'Omega Healthcare Investors',
     'Fortuna Mining Corp',
-    'Boston Scientific Corp',
     'Wheaton Precious Metal Corp',
-    'Agnico Eagle Mines Ltd',
+    'Boston Scientific Corp',
     'Badger Infrastructure Solutions',
     'Intact Financial',
-    'Manulife Financial International',
-    'Business Machines Corp'
+    'Agnico Eagle Mines Ltd',
+    'Manulife Financial International'
   ];
-  
+
   sectors = [
-    { name: 'Finance', percentage: '20,7 %' },
-    { name: 'Immobilier', percentage: '24,4 %' },
-    { name: 'Industriel', percentage: '13,7 %' },
-    { name: 'Matériaux', percentage: '25,8 %' },
-    { name: 'Soins de la santé', percentage: '8,3 %' },
-    { name: 'Technologies', percentage: '7,1 %' },
+    { name: 'Biens de consommation de base', percentage: '0,0 %' },
+    { name: 'Consommation discrétionnaire', percentage: '0,0 %' },
     { name: 'Énergie', percentage: '0,0 %' },
-    { name: 'Autres', percentage: '0,0 %' }
+    { name: 'Finance', percentage: '18,0 %' },
+    { name: 'Immobilier', percentage: '20,9 %' },
+    { name: 'Industriel', percentage: '16,3 %' },
+    { name: 'Matériaux', percentage: '32,2 %' },
+    { name: 'Services de télécommunication', percentage: '0,0 %' },
+    { name: 'Services publics', percentage: '0,0 %' },
+    { name: 'Soins de la santé', percentage: '6,7 %' },
+    { name: 'Technologies de l\'information', percentage: '5,8 %' }
   ];
 }

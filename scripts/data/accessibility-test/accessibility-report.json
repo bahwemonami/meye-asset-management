@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-01-27T23:21:54.936Z",
+  "rivemontUrl": "https://rivemont.ca/",
+  "meyeUrl": "http://localhost:4200",
+  "tests": [
+    {
+      "name": "Images sans alt",
+      "rivemont": 14,
+      "meye": 1,
+      "status": "different"
+    },
+    {
+      "name": "Boutons sans label",
+      "rivemont": 2,
+      "meye": 0,
+      "status": "different"
+    },
+    {
+      "name": "Inputs sans label",
+      "rivemont": 6,
+      "meye": 0,
+      "status": "different"
+    }
+  ]
+}

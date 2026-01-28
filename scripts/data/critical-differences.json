@@ -1,0 +1,2712 @@
+[
+  {
+    "element": "header",
+    "selector": "header",
+    "differences": [
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "604.891px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 16,
+    "totalCount": 63
+  },
+  {
+    "element": "navLink",
+    "selector": "header nav a",
+    "differences": [
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 17,
+    "totalCount": 66
+  },
+  {
+    "element": "clientAccessLink",
+    "selector": "header a[href*=\"monportefeuilleplus\"]",
+    "differences": [
+      {
+        "property": "width",
+        "rivemont": "200px",
+        "meye": "276px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "54px",
+        "meye": "70px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "200px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "0px 28.6667px",
+        "meye": "0px 43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingRight",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingLeft",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "borderRadius",
+        "rivemont": "0px 0px 23.3333px 23.3333px",
+        "meye": "0px 0px 35px 35px",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "61.1094px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "905px",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 23,
+    "totalCount": 74
+  },
+  {
+    "element": "heroH1",
+    "selector": "main h1",
+    "differences": [
+      {
+        "property": "width",
+        "rivemont": "961.344px",
+        "meye": "350.469px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "73.3281px",
+        "meye": "219.984px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 19,
+    "totalCount": 65
+  },
+  {
+    "element": "heroCtaBtn",
+    "selector": "main section:first-child a",
+    "differences": [
+      {
+        "property": "width",
+        "rivemont": "242px",
+        "meye": "199.062px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "54px",
+        "meye": "70px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "242px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "0px 28.6667px",
+        "meye": "0px 43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingRight",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingLeft",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "relative",
+        "meye": "static",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "zIndex",
+        "rivemont": "1",
+        "meye": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 24,
+    "totalCount": 70
+  },
+  {
+    "element": "missionSection",
+    "selector": "main section:nth-of-type(2)",
+    "differences": [
+      {
+        "property": "height",
+        "rivemont": "462.156px",
+        "meye": "744.797px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 120px",
+        "meye": "0px 0px 164px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "120px",
+        "meye": "164px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(0, 0, 0)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 20,
+    "totalCount": 66
+  },
+  {
+    "element": "missionH2",
+    "selector": "main section:nth-of-type(2) h2",
+    "differences": [
+      {
+        "property": "width",
+        "rivemont": "618.25px",
+        "meye": "522.5px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 30px",
+        "meye": "0px 0px 45px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "30px",
+        "meye": "45px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(24, 64, 104)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(24, 64, 104)",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 20,
+    "totalCount": 66
+  },
+  {
+    "element": "missionP",
+    "selector": "main section:nth-of-type(2) p",
+    "differences": [
+      {
+        "property": "width",
+        "rivemont": "618.25px",
+        "meye": "522.5px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "44.1875px",
+        "meye": "66.2812px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 20px",
+        "meye": "0px 0px 25px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "20px",
+        "meye": "25px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(24, 64, 104)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(24, 64, 104)",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 21,
+    "totalCount": 67
+  },
+  {
+    "element": "missionLink",
+    "selector": "main section:nth-of-type(2) a",
+    "differences": [
+      {
+        "property": "fontFamily",
+        "rivemont": "peridot-pe-variable, sans-serif",
+        "meye": "\"Peridot PE Variable\", sans-serif",
+        "state": "normal"
+      },
+      {
+        "property": "fontSize",
+        "rivemont": "18px",
+        "meye": "20px",
+        "state": "normal"
+      },
+      {
+        "property": "lineHeight",
+        "rivemont": "21.6px",
+        "meye": "24px",
+        "state": "normal"
+      },
+      {
+        "property": "color",
+        "rivemont": "rgb(255, 255, 255)",
+        "meye": "rgb(24, 64, 104)",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundColor",
+        "rivemont": "rgb(24, 64, 104)",
+        "meye": "rgba(0, 0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "242px",
+        "meye": "157.625px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "54px",
+        "meye": "31px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "242px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "0px 28.6667px",
+        "meye": "0px 0px 5px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingRight",
+        "rivemont": "28.6667px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingBottom",
+        "rivemont": "0px",
+        "meye": "5px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingLeft",
+        "rivemont": "28.6667px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "gap",
+        "rivemont": "normal",
+        "meye": "12px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "borderRadius",
+        "rivemont": "100px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "relative",
+        "meye": "static",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "zIndex",
+        "rivemont": "1",
+        "meye": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "background",
+        "rivemont": "rgb(24, 64, 104) none repeat scroll 0% 0% / auto padding-box border-box",
+        "meye": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 33,
+    "totalCount": 88
+  },
+  {
+    "element": "teamPreviewSection",
+    "selector": "main section:nth-of-type(3)",
+    "differences": [
+      {
+        "property": "height",
+        "rivemont": "576.828px",
+        "meye": "400px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 117px",
+        "meye": "0px 0px 164px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "117px",
+        "meye": "164px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(0, 0, 0)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "static",
+        "meye": "relative",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 21,
+    "totalCount": 67
+  },
+  {
+    "element": "teamPreviewLink",
+    "selector": "main section:nth-of-type(3) a",
+    "differences": [
+      {
+        "property": "fontFamily",
+        "rivemont": "peridot-pe-variable, sans-serif",
+        "meye": "\"Times New Roman\"",
+        "state": "normal"
+      },
+      {
+        "property": "fontSize",
+        "rivemont": "18px",
+        "meye": "16px",
+        "state": "normal"
+      },
+      {
+        "property": "lineHeight",
+        "rivemont": "21.6px",
+        "meye": "16px",
+        "state": "normal"
+      },
+      {
+        "property": "color",
+        "rivemont": "rgb(255, 255, 255)",
+        "meye": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundColor",
+        "rivemont": "rgb(0, 128, 188)",
+        "meye": "rgba(0, 0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "249.609px",
+        "meye": "1265px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "54px",
+        "meye": "400px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "242px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "0px 28.6667px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingRight",
+        "rivemont": "28.6667px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingLeft",
+        "rivemont": "28.6667px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "borderRadius",
+        "rivemont": "100px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "display",
+        "rivemont": "flex",
+        "meye": "block",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "absolute",
+        "meye": "relative",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "446.172px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "76.6667px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "76.6667px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "938.734px",
+        "state": "normal"
+      },
+      {
+        "property": "zIndex",
+        "rivemont": "1",
+        "meye": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "space-between",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "background",
+        "rivemont": "rgb(0, 128, 188) none repeat scroll 0% 0% / auto padding-box border-box",
+        "meye": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 32,
+    "totalCount": 85
+  },
+  {
+    "element": "performanceSection",
+    "selector": "main section:nth-of-type(4)",
+    "differences": [
+      {
+        "property": "height",
+        "rivemont": "646.688px",
+        "meye": "322px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 109.333px",
+        "meye": "0px 0px 164px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "109.333px",
+        "meye": "164px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(0, 0, 0)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 20,
+    "totalCount": 66
+  },
+  {
+    "element": "performanceH2",
+    "selector": "main section:nth-of-type(4) h2",
+    "differences": [
+      {
+        "property": "width",
+        "rivemont": "1105px",
+        "meye": "1160px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px",
+        "meye": "0px 0px 40px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "0px",
+        "meye": "40px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(24, 64, 104)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(24, 64, 104)",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 20,
+    "totalCount": 66
+  },
+  {
+    "element": "performanceLink",
+    "selector": "main section:nth-of-type(4) a",
+    "differences": [
+      {
+        "property": "width",
+        "rivemont": "242px",
+        "meye": "221.078px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "54px",
+        "meye": "70px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "242px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "0px 28.6667px",
+        "meye": "0px 43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingRight",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingLeft",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "relative",
+        "meye": "static",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "zIndex",
+        "rivemont": "1",
+        "meye": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 24,
+    "totalCount": 70
+  },
+  {
+    "element": "communicationsSection",
+    "selector": "main section:last-child",
+    "differences": [
+      {
+        "property": "height",
+        "rivemont": "472.656px",
+        "meye": "442.094px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "80px 0px",
+        "meye": "104px 0px 85px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingTop",
+        "rivemont": "80px",
+        "meye": "104px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingBottom",
+        "rivemont": "80px",
+        "meye": "85px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(0, 0, 0)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 21,
+    "totalCount": 67
+  },
+  {
+    "element": "communicationsH2",
+    "selector": "main section:last-child h2",
+    "differences": [
+      {
+        "property": "width",
+        "rivemont": "1105px",
+        "meye": "1160px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 43.3333px",
+        "meye": "0px 0px 65px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "43.3333px",
+        "meye": "65px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(24, 64, 104)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(24, 64, 104)",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 20,
+    "totalCount": 69
+  },
+  {
+    "element": "communicationCard",
+    "selector": "main section:last-child a",
+    "differences": [
+      {
+        "property": "width",
+        "rivemont": "1105px",
+        "meye": "366.656px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "280px",
+        "meye": "57px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "280px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(0, 0, 0)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "relative",
+        "meye": "static",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "flex-end",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 20,
+    "totalCount": 66
+  },
+  {
+    "element": "communicationsLink",
+    "selector": "main section:last-child a:last-child",
+    "differences": [
+      {
+        "property": "width",
+        "rivemont": "1105px",
+        "meye": "366.656px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "280px",
+        "meye": "57px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "280px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(0, 0, 0)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "relative",
+        "meye": "static",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "flex-end",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 20,
+    "totalCount": 66
+  },
+  {
+    "element": "newsletterInput",
+    "selector": "footer input[type=\"email\"]",
+    "differences": [
+      {
+        "property": "fontSize",
+        "rivemont": "18px",
+        "meye": "17px",
+        "state": "normal"
+      },
+      {
+        "property": "lineHeight",
+        "rivemont": "normal",
+        "meye": "22.1px",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "292.5px",
+        "meye": "414.953px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "54px",
+        "meye": "70px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "242px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "0px 28.6667px",
+        "meye": "0px 43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingRight",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingLeft",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(24, 64, 104)",
+        "state": "normal"
+      },
+      {
+        "property": "borderRadius",
+        "rivemont": "66.6667px",
+        "meye": "100px",
+        "state": "normal"
+      },
+      {
+        "property": "display",
+        "rivemont": "inline-block",
+        "meye": "block",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "relative",
+        "meye": "static",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "zIndex",
+        "rivemont": "2",
+        "meye": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 27,
+    "totalCount": 77
+  },
+  {
+    "element": "newsletterButton",
+    "selector": "footer button[type=\"submit\"]",
+    "differences": [
+      {
+        "property": "width",
+        "rivemont": "180px",
+        "meye": "140.047px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "54px",
+        "meye": "70px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "180px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "0px 19.3333px",
+        "meye": "0px 29px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingRight",
+        "rivemont": "19.3333px",
+        "meye": "29px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingLeft",
+        "rivemont": "19.3333px",
+        "meye": "29px",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "display",
+        "rivemont": "flex",
+        "meye": "block",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "relative",
+        "meye": "static",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "zIndex",
+        "rivemont": "1",
+        "meye": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 24,
+    "totalCount": 70
+  },
+  {
+    "element": "newsletterH2",
+    "selector": "footer h2",
+    "differences": [
+      {
+        "property": "fontSize",
+        "rivemont": "33.3333px",
+        "meye": "50px",
+        "state": "normal"
+      },
+      {
+        "property": "lineHeight",
+        "rivemont": "33.3333px",
+        "meye": "50px",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "472.5px",
+        "meye": "570px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "66.6562px",
+        "meye": "100px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 35px",
+        "meye": "0px 0px 40px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "35px",
+        "meye": "40px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 23,
+    "totalCount": 69
+  },
+  {
+    "element": "footerNavLink",
+    "selector": "footer nav a",
+    "differences": [
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      }
+    ],
+    "criticalCount": 16,
+    "totalCount": 62
+  }
+]

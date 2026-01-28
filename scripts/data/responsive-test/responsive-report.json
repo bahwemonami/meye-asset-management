@@ -1,0 +1,157 @@
+{
+  "timestamp": "2026-01-27T23:18:26.428Z",
+  "rivemontUrl": "https://rivemont.ca/",
+  "meyeUrl": "http://localhost:4200",
+  "breakpoints": [
+    {
+      "name": "mobile",
+      "width": 320,
+      "height": 568,
+      "rivemont": {
+        "headerHeight": 57,
+        "heroHeight": 0,
+        "missionPadding": "",
+        "footerHeight": 1461,
+        "bodyWidth": 305,
+        "bodyHeight": 4205
+      },
+      "meye": {
+        "headerHeight": 80,
+        "heroHeight": 568,
+        "missionPadding": "0px 20px",
+        "footerHeight": 953,
+        "bodyWidth": 305,
+        "bodyHeight": 3955
+      },
+      "differences": [
+        {
+          "element": "header",
+          "property": "height",
+          "rivemont": 57,
+          "meye": 80,
+          "difference": 23
+        }
+      ]
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "rivemont": {
+        "headerHeight": 62,
+        "heroHeight": 0,
+        "missionPadding": "",
+        "footerHeight": 1477,
+        "bodyWidth": 753,
+        "bodyHeight": 4864
+      },
+      "meye": {
+        "headerHeight": 80,
+        "heroHeight": 1024,
+        "missionPadding": "0px 20px",
+        "footerHeight": 784,
+        "bodyWidth": 753,
+        "bodyHeight": 4383
+      },
+      "differences": [
+        {
+          "element": "header",
+          "property": "height",
+          "rivemont": 62,
+          "meye": 80,
+          "difference": 18
+        }
+      ]
+    },
+    {
+      "name": "desktop-small",
+      "width": 1024,
+      "height": 768,
+      "rivemont": {
+        "headerHeight": 115,
+        "heroHeight": 0,
+        "missionPadding": "",
+        "footerHeight": 816,
+        "bodyWidth": 1009,
+        "bodyHeight": 4019
+      },
+      "meye": {
+        "headerHeight": 100,
+        "heroHeight": 768,
+        "missionPadding": "0px 80px",
+        "footerHeight": 722,
+        "bodyWidth": 1009,
+        "bodyHeight": 3879
+      },
+      "differences": [
+        {
+          "element": "header",
+          "property": "height",
+          "rivemont": 115,
+          "meye": 100,
+          "difference": 15
+        }
+      ]
+    },
+    {
+      "name": "desktop-medium",
+      "width": 1440,
+      "height": 900,
+      "rivemont": {
+        "headerHeight": 117,
+        "heroHeight": 0,
+        "missionPadding": "",
+        "footerHeight": 841,
+        "bodyWidth": 1425,
+        "bodyHeight": 4812
+      },
+      "meye": {
+        "headerHeight": 100,
+        "heroHeight": 900,
+        "missionPadding": "0px 165px",
+        "footerHeight": 672,
+        "bodyWidth": 1425,
+        "bodyHeight": 4017
+      },
+      "differences": [
+        {
+          "element": "header",
+          "property": "height",
+          "rivemont": 117,
+          "meye": 100,
+          "difference": 17
+        }
+      ]
+    },
+    {
+      "name": "desktop-large",
+      "width": 1920,
+      "height": 1080,
+      "rivemont": {
+        "headerHeight": 142,
+        "heroHeight": 0,
+        "missionPadding": "",
+        "footerHeight": 1021,
+        "bodyWidth": 1905,
+        "bodyHeight": 6118
+      },
+      "meye": {
+        "headerHeight": 100,
+        "heroHeight": 1080,
+        "missionPadding": "0px 165px",
+        "footerHeight": 672,
+        "bodyWidth": 1905,
+        "bodyHeight": 4260
+      },
+      "differences": [
+        {
+          "element": "header",
+          "property": "height",
+          "rivemont": 142,
+          "meye": 100,
+          "difference": 42
+        }
+      ]
+    }
+  ]
+}

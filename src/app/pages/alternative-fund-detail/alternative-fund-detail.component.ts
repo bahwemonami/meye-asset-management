@@ -1,70 +1,64 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, ActivatedRoute } from '@angular/router';
+import { ImageMappingService } from '../../services/image-mapping.service';
 
 @Component({
   selector: 'app-alternative-fund-detail',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-primary-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <a routerLink="/alternative-funds" class="inline-flex items-center text-primary-300 hover:text-white mb-6 transition-colors">
-          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-          </svg>
-          Back to Alternative Funds
-        </a>
-        <h1 class="text-4xl md:text-5xl font-serif font-bold text-white">{{ fund?.name }}</h1>
-      </div>
-    </section>
+    <!-- Back Link - Identique à Rivemont -->
+    <div class="content" style="padding: 0px 165px; margin-bottom: 40px;">
+      <a routerLink="/alternative-funds" class="back-link">
+        <img [src]="imageService.getImage('arrow-left-dark')" alt="" />
+        Fonds alternatifs
+      </a>
+    </div>
 
-    <!-- Content Section -->
+    <!-- Content Section - Identique à Rivemont -->
     @if (fund) {
-      <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-3 gap-12">
-            <div class="lg:col-span-2">
-              <h2 class="text-2xl font-serif font-bold text-primary-900 mb-6">Overview</h2>
-              <p class="text-gray-600 text-lg leading-relaxed mb-8">{{ fund.overview }}</p>
+      <section class="page-content">
+        <div class="content">
+          <h1>{{ fund.name }}</h1>
+          
+          <div class="page-content__builder">
+            <div class="description gl-text-editor">
+              <h2>Vue d'ensemble</h2>
+              <p>{{ fund.overview }}</p>
 
-              <h3 class="text-xl font-serif font-bold text-primary-900 mb-4">Investment Objective</h3>
-              <p class="text-gray-600 mb-8">{{ fund.objective }}</p>
+              <h3>Objectif de placement</h3>
+              <p>{{ fund.objective }}</p>
 
-              <h3 class="text-xl font-serif font-bold text-primary-900 mb-4">Strategy</h3>
-              <p class="text-gray-600 mb-8">{{ fund.strategy }}</p>
+              <h3>Stratégie</h3>
+              <p>{{ fund.strategy }}</p>
 
-              <h3 class="text-xl font-serif font-bold text-primary-900 mb-4">Portfolio Manager</h3>
-              <p class="text-gray-600">{{ fund.manager }}</p>
+              <h3>Gestionnaire de portefeuille</h3>
+              <p>{{ fund.manager }}</p>
             </div>
+          </div>
 
-            <div>
-              <div class="bg-gray-50 rounded-lg p-6 sticky top-32">
-                <h3 class="text-lg font-semibold text-primary-900 mb-6">Fund Details</h3>
-                <dl class="space-y-4">
+          <div class="page-content__sidebar">
+            <div class="section-sidebar">
+              <div class="content">
+                <h3>Détails du fonds</h3>
+                <dl>
                   <div>
-                    <dt class="text-gray-500 text-sm">Minimum Investment</dt>
-                    <dd class="text-primary-900 font-medium">{{ fund.minimumInvestment }}</dd>
+                    <dt>Investissement minimum</dt>
+                    <dd>{{ fund.minimumInvestment }}</dd>
                   </div>
                   <div>
-                    <dt class="text-gray-500 text-sm">Management Fee</dt>
-                    <dd class="text-primary-900 font-medium">{{ fund.managementFee }}</dd>
+                    <dt>Frais de gestion</dt>
+                    <dd>{{ fund.managementFee }}</dd>
                   </div>
                   <div>
-                    <dt class="text-gray-500 text-sm">Liquidity</dt>
-                    <dd class="text-primary-900 font-medium">{{ fund.liquidity }}</dd>
+                    <dt>Liquidité</dt>
+                    <dd>{{ fund.liquidity }}</dd>
                   </div>
                 </dl>
 
-                <hr class="my-6">
-
-                <a routerLink="/contact" class="inline-flex items-center bg-primary-900 text-white px-6 py-3 rounded hover:bg-primary-800 transition-colors w-full justify-center">
-                  Request Information
-                  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                  </svg>
-                </a>
+                <a routerLink="/contact" class="gl-button">Demander des renseignements</a>
               </div>
             </div>
           </div>
@@ -74,38 +68,39 @@ import { RouterLink, ActivatedRoute } from '@angular/router';
   `
 })
 export class AlternativeFundDetailComponent implements OnInit {
+  imageService = inject(ImageMappingService);
   fund: any;
 
   private funds: any = {
     'long-short': {
-      name: 'MEYE Long Short Fund',
-      overview: 'The MEYE Long Short Fund is designed to generate positive returns regardless of market direction. By taking both long and short positions, the fund aims to capture alpha while minimizing market exposure.',
-      objective: 'To generate consistent positive returns with low correlation to traditional equity markets.',
-      strategy: 'The fund employs a market-neutral strategy, taking long positions in undervalued securities while shorting overvalued ones. This approach seeks to profit from both rising and falling stock prices.',
-      manager: 'Martin Lalonde, MBA, CFA, oversees the fund strategy with support from the investment team.',
-      minimumInvestment: '$100,000',
-      managementFee: '1.5%',
-      liquidity: 'Monthly'
+      name: 'Fonds MEYE Long Short',
+      overview: 'Le Fonds MEYE Long Short est conçu pour générer des rendements positifs indépendamment de la direction du marché. En prenant à la fois des positions longues et courtes, le fonds vise à capturer de l\'alpha tout en minimisant l\'exposition au marché.',
+      objective: 'Générer des rendements positifs constants avec une faible corrélation aux marchés boursiers traditionnels.',
+      strategy: 'Le fonds emploie une stratégie neutre au marché, prenant des positions longues sur des titres sous-évalués tout en vendant à découvert ceux qui sont surévalués. Cette approche cherche à profiter à la fois des hausses et des baisses des prix des actions.',
+      manager: 'Martin Lalonde, MBA, CFA, supervise la stratégie du fonds avec le soutien de l\'équipe d\'investissement.',
+      minimumInvestment: '100 000 $',
+      managementFee: '1,5 %',
+      liquidity: 'Mensuelle'
     },
     'crypto': {
-      name: 'MEYE Crypto Fund',
-      overview: 'The MEYE Crypto Fund provides institutional-grade exposure to digital assets. The fund is actively managed to navigate the volatile cryptocurrency markets while implementing robust risk management.',
-      objective: 'To provide exposure to the cryptocurrency market with professional risk management and custody solutions.',
-      strategy: 'Active management across major cryptocurrencies with dynamic allocation based on market conditions, technical analysis, and fundamental research.',
-      manager: 'Philippe Jetté leads the crypto fund as Senior Analyst, bringing deep expertise in digital assets and blockchain technology.',
-      minimumInvestment: '$50,000',
-      managementFee: '2.0%',
-      liquidity: 'Monthly'
+      name: 'Fonds MEYE Crypto',
+      overview: 'Le Fonds MEYE Crypto offre une exposition de niveau institutionnel aux actifs numériques. Le fonds est géré activement pour naviguer dans les marchés de cryptomonnaies volatils tout en mettant en œuvre une gestion des risques robuste.',
+      objective: 'Offrir une exposition au marché des cryptomonnaies avec une gestion professionnelle des risques et des solutions de garde.',
+      strategy: 'Gestion active sur les principales cryptomonnaies avec allocation dynamique basée sur les conditions du marché, l\'analyse technique et la recherche fondamentale.',
+      manager: 'Philippe Jetté dirige le fonds crypto en tant qu\'analyste principal, apportant une expertise approfondie en actifs numériques et en technologie blockchain.',
+      minimumInvestment: '50 000 $',
+      managementFee: '2,0 %',
+      liquidity: 'Mensuelle'
     },
     'microcap': {
-      name: 'MEYE MicroCap Fund',
-      overview: 'The MEYE MicroCap Fund focuses on identifying high-potential small-cap companies before they are discovered by mainstream investors. Through rigorous research, the fund seeks to uncover hidden value.',
-      objective: 'To achieve superior long-term capital appreciation by investing in undervalued micro-cap companies with strong growth potential.',
-      strategy: 'Bottom-up stock selection with emphasis on companies with strong fundamentals, capable management teams, and significant growth catalysts.',
-      manager: 'Mathieu Martin, CFA, manages the MicroCap Fund, bringing specialized expertise in small-cap research and analysis.',
-      minimumInvestment: '$100,000',
-      managementFee: '1.75%',
-      liquidity: 'Quarterly'
+      name: 'Fonds MEYE MicroCap',
+      overview: 'Le Fonds MEYE MicroCap se concentre sur l\'identification de sociétés à petite capitalisation à fort potentiel avant qu\'elles ne soient découvertes par les investisseurs grand public. Grâce à une recherche rigoureuse, le fonds cherche à découvrir de la valeur cachée.',
+      objective: 'Atteindre une appréciation du capital à long terme supérieure en investissant dans des sociétés micro-cap sous-évaluées avec un fort potentiel de croissance.',
+      strategy: 'Sélection d\'actions de bas en haut avec accent sur les sociétés ayant des fondamentaux solides, des équipes de gestion compétentes et des catalyseurs de croissance significatifs.',
+      manager: 'Mathieu Martin, CFA, gère le Fonds MicroCap, apportant une expertise spécialisée en recherche et analyse de petites capitalisations.',
+      minimumInvestment: '100 000 $',
+      managementFee: '1,75 %',
+      liquidity: 'Trimestrielle'
     }
   };
 

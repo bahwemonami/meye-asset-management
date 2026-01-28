@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 /**
  * Service de mapping des images disponibles dans les stocks
- * vers les sections appropriées de MEYE Asset Management
+ * vers les sections appropriées de MEYE ASSET MANAGER
  */
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,10 @@ export class ImageMappingService {
     'logo-light-png': '/assets/images/rivemont/logo/logo-light.png',
     'user-icon': '/assets/images/rivemont/logo/user.svg',
     
+    // Icons
+    'arrow-left-dark': '/assets/images/rivemont/icons/arrow-left-dark.svg',
+    'arrow-left-blue': '/assets/images/rivemont/icons/arrow-left-blue.svg',
+    
     // Hero Images
     'home-hero': '/assets/images/rivemont/logo/home-hero.jpg',
     'form-hero': '/assets/images/rivemont/logo/form-hero.jpg',
@@ -29,6 +33,7 @@ export class ImageMappingService {
     // Team Images
     'team-preview': '/assets/images/rivemont/logo/team.jpg',
     'team-preview-2': '/assets/images/rivemont/logo/team-2.jpg',
+    'team-2': '/assets/images/rivemont/logo/team-2.jpg',
     
     // Team Portraits
     'martin-lalonde': '/assets/images/rivemont/logo/Martin-Lalonde-Portrait.jpg',
@@ -46,12 +51,14 @@ export class ImageMappingService {
     'image-2': '/assets/images/rivemont/logo/image-2.jpg',
     'image-3': '/assets/images/rivemont/logo/image-3.jpg',
     'image-4': '/assets/images/rivemont/logo/image-4.jpg',
+    'gestion-privee-hero': '/assets/images/rivemont/logo/Gestion-privee-hero.jpg',
     'shutterstock-1': '/assets/images/rivemont/logo/shutterstock_2483012659.jpg',
     'shutterstock-2': '/assets/images/rivemont/logo/shutterstock_2478343593.jpg',
     
     // Autres
     'clipboard-1': '/assets/images/rivemont/logo/Clipboard_20250605.png',
     'clipboard-2': '/assets/images/rivemont/logo/Clipboard_20251211.png',
+    'performance-chart': '/assets/images/rivemont/logo/Clipboard_20250605.png',
   };
 
   /**

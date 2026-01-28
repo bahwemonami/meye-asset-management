@@ -1,0 +1,7794 @@
+[
+  {
+    "element": "header",
+    "selector": "header",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "115.109px",
+        "meye": "115.094px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "632.5px 57.5547px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "604.891px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "navLink",
+    "selector": "header nav a",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "0px 0px",
+        "state": "normal"
+      },
+      {
+        "property": "transition",
+        "rivemont": "all",
+        "meye": "color 0.3s",
+        "state": "normal"
+      },
+      {
+        "property": "transitionProperty",
+        "rivemont": "all",
+        "meye": "color",
+        "state": "normal"
+      },
+      {
+        "property": "transitionDuration",
+        "rivemont": "0s",
+        "meye": "0.3s",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "clientAccessLink",
+    "selector": "header a[href*=\"monportefeuilleplus\"]",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "200px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "0px 28.6667px",
+        "meye": "0px 43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingRight",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingLeft",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "borderRadius",
+        "rivemont": "0px 0px 23.3333px 23.3333px",
+        "meye": "0px 0px 35px 35px",
+        "state": "normal"
+      },
+      {
+        "property": "borderBottomLeftRadius",
+        "rivemont": "23.3333px",
+        "meye": "35px",
+        "state": "normal"
+      },
+      {
+        "property": "borderBottomRightRadius",
+        "rivemont": "23.3333px",
+        "meye": "35px",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "100px 27px",
+        "state": "normal"
+      },
+      {
+        "property": "transition",
+        "rivemont": "0.35s",
+        "meye": "color 0.3s",
+        "state": "normal"
+      },
+      {
+        "property": "transitionProperty",
+        "rivemont": "all",
+        "meye": "color",
+        "state": "normal"
+      },
+      {
+        "property": "transitionDuration",
+        "rivemont": "0.35s",
+        "meye": "0.3s",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "61.1094px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "905px",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "heroH1",
+    "selector": "main h1",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "961.344px",
+        "meye": "350.469px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "73.3281px",
+        "meye": "219.984px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "480.672px 36.6641px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "heroCtaBtn",
+    "selector": "main section:first-child a",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "242px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "0px 28.6667px",
+        "meye": "0px 43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingRight",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingLeft",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "121px 27px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "relative",
+        "meye": "static",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "zIndex",
+        "rivemont": "1",
+        "meye": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "missionSection",
+    "selector": "main section:nth-of-type(2)",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "462.156px",
+        "meye": "742.391px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 120px",
+        "meye": "0px 0px 164px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "120px",
+        "meye": "164px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(0, 0, 0)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "632.5px 231.078px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "missionH2",
+    "selector": "main section:nth-of-type(2) h2",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "618.25px",
+        "meye": "522.5px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 30px",
+        "meye": "0px 0px 45px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "30px",
+        "meye": "45px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(24, 64, 104)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(24, 64, 104)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "309.125px 26px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "missionP",
+    "selector": "main section:nth-of-type(2) p",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "618.25px",
+        "meye": "522.5px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "44.1875px",
+        "meye": "66.2812px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 20px",
+        "meye": "0px 0px 25px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "20px",
+        "meye": "25px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(24, 64, 104)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(24, 64, 104)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "309.125px 22.0938px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "missionLink",
+    "selector": "main section:nth-of-type(2) a",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "color",
+        "rivemont": "rgb(255, 255, 255)",
+        "meye": "rgb(24, 64, 104)",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundColor",
+        "rivemont": "rgb(24, 64, 104)",
+        "meye": "rgba(0, 0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "242px",
+        "meye": "145.062px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "54px",
+        "meye": "28.5938px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "242px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "0px 28.6667px",
+        "meye": "0px 0px 5px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingRight",
+        "rivemont": "28.6667px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingBottom",
+        "rivemont": "0px",
+        "meye": "5px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingLeft",
+        "rivemont": "28.6667px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "gap",
+        "rivemont": "normal",
+        "meye": "12px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "borderRadius",
+        "rivemont": "100px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderTopLeftRadius",
+        "rivemont": "100px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderTopRightRadius",
+        "rivemont": "100px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderBottomLeftRadius",
+        "rivemont": "100px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderBottomRightRadius",
+        "rivemont": "100px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "121px 27px",
+        "state": "normal"
+      },
+      {
+        "property": "transition",
+        "rivemont": "0.35s",
+        "meye": "border-color 0.3s, color 0.3s",
+        "state": "normal"
+      },
+      {
+        "property": "transitionProperty",
+        "rivemont": "all",
+        "meye": "border-color, color",
+        "state": "normal"
+      },
+      {
+        "property": "transitionDuration",
+        "rivemont": "0.35s",
+        "meye": "0.3s, 0.3s",
+        "state": "normal"
+      },
+      {
+        "property": "transitionTimingFunction",
+        "rivemont": "ease",
+        "meye": "ease, ease",
+        "state": "normal"
+      },
+      {
+        "property": "transitionDelay",
+        "rivemont": "0s",
+        "meye": "0s, 0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "relative",
+        "meye": "static",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "zIndex",
+        "rivemont": "1",
+        "meye": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "background",
+        "rivemont": "rgb(24, 64, 104) none repeat scroll 0% 0% / auto padding-box border-box",
+        "meye": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "teamPreviewSection",
+    "selector": "main section:nth-of-type(3)",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "576.828px",
+        "meye": "400px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 117px",
+        "meye": "0px 0px 164px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "117px",
+        "meye": "164px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(0, 0, 0)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "632.5px 288.414px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "static",
+        "meye": "relative",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "teamPreviewLink",
+    "selector": "main section:nth-of-type(3) a",
+    "differences": [
+      {
+        "property": "fontFamily",
+        "rivemont": "peridot-pe-variable, sans-serif",
+        "meye": "\"Times New Roman\"",
+        "state": "normal"
+      },
+      {
+        "property": "fontSize",
+        "rivemont": "18px",
+        "meye": "16px",
+        "state": "normal"
+      },
+      {
+        "property": "lineHeight",
+        "rivemont": "21.6px",
+        "meye": "16px",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "color",
+        "rivemont": "rgb(255, 255, 255)",
+        "meye": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundColor",
+        "rivemont": "rgb(0, 128, 188)",
+        "meye": "rgba(0, 0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "249.609px",
+        "meye": "1265px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "54px",
+        "meye": "400px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "242px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "0px 28.6667px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingRight",
+        "rivemont": "28.6667px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingLeft",
+        "rivemont": "28.6667px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "borderRadius",
+        "rivemont": "100px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderTopLeftRadius",
+        "rivemont": "100px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderTopRightRadius",
+        "rivemont": "100px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderBottomLeftRadius",
+        "rivemont": "100px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderBottomRightRadius",
+        "rivemont": "100px",
+        "meye": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "124.805px 27px",
+        "state": "normal"
+      },
+      {
+        "property": "transition",
+        "rivemont": "0.35s",
+        "meye": "all",
+        "state": "normal"
+      },
+      {
+        "property": "transitionDuration",
+        "rivemont": "0.35s",
+        "meye": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "display",
+        "rivemont": "flex",
+        "meye": "block",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "absolute",
+        "meye": "relative",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "446.172px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "76.6667px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "76.6667px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "938.734px",
+        "state": "normal"
+      },
+      {
+        "property": "zIndex",
+        "rivemont": "1",
+        "meye": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "space-between",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "background",
+        "rivemont": "rgb(0, 128, 188) none repeat scroll 0% 0% / auto padding-box border-box",
+        "meye": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflow",
+        "rivemont": "visible",
+        "meye": "hidden",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "performanceSection",
+    "selector": "main section:nth-of-type(4)",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "646.688px",
+        "meye": "306px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 109.333px",
+        "meye": "0px 0px 164px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "109.333px",
+        "meye": "164px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(0, 0, 0)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "632.5px 323.344px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "performanceH2",
+    "selector": "main section:nth-of-type(4) h2",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "1105px",
+        "meye": "1160px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px",
+        "meye": "0px 0px 40px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "0px",
+        "meye": "40px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(24, 64, 104)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(24, 64, 104)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "552.5px 26px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "performanceLink",
+    "selector": "main section:nth-of-type(4) a",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "242px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "121px 27px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "communicationsSection",
+    "selector": "main section:last-child",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "472.656px",
+        "meye": "442.094px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "80px 0px",
+        "meye": "104px 0px 85px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingTop",
+        "rivemont": "80px",
+        "meye": "104px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingBottom",
+        "rivemont": "80px",
+        "meye": "85px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(0, 0, 0)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "632.5px 316.328px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "communicationsH2",
+    "selector": "main section:last-child h2",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "1105px",
+        "meye": "1160px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 43.3333px",
+        "meye": "0px 0px 65px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "43.3333px",
+        "meye": "65px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(24, 64, 104)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(24, 64, 104)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "552.5px 26px",
+        "state": "normal"
+      },
+      {
+        "property": "transitionDuration",
+        "rivemont": "0.6s",
+        "meye": "0.6s, 0.6s",
+        "state": "normal"
+      },
+      {
+        "property": "transitionTimingFunction",
+        "rivemont": "ease",
+        "meye": "ease, ease",
+        "state": "normal"
+      },
+      {
+        "property": "transitionDelay",
+        "rivemont": "0s",
+        "meye": "0s, 0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "communicationCard",
+    "selector": "main section:last-child a",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "1105px",
+        "meye": "366.656px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "280px",
+        "meye": "57px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "280px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(0, 0, 0)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "552.5px 140px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "relative",
+        "meye": "static",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "flex-end",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "hidden",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "hidden",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "communicationsLink",
+    "selector": "main section:last-child a:last-child",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "1105px",
+        "meye": "366.656px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "280px",
+        "meye": "57px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "280px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(0, 0, 0)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(0, 0, 0)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "552.5px 140px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "relative",
+        "meye": "static",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "flex-end",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "hidden",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "hidden",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "newsletterInput",
+    "selector": "footer input[type=\"email\"]",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "292.5px",
+        "meye": "375px",
+        "state": "normal"
+      },
+      {
+        "property": "height",
+        "rivemont": "54px",
+        "meye": "70px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "242px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "0px 28.6667px",
+        "meye": "0px 43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingRight",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingLeft",
+        "rivemont": "28.6667px",
+        "meye": "43px",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(24, 64, 104)",
+        "state": "normal"
+      },
+      {
+        "property": "borderRadius",
+        "rivemont": "66.6667px",
+        "meye": "100px",
+        "state": "normal"
+      },
+      {
+        "property": "borderTopLeftRadius",
+        "rivemont": "66.6667px",
+        "meye": "100px",
+        "state": "normal"
+      },
+      {
+        "property": "borderTopRightRadius",
+        "rivemont": "66.6667px",
+        "meye": "100px",
+        "state": "normal"
+      },
+      {
+        "property": "borderBottomLeftRadius",
+        "rivemont": "66.6667px",
+        "meye": "100px",
+        "state": "normal"
+      },
+      {
+        "property": "borderBottomRightRadius",
+        "rivemont": "66.6667px",
+        "meye": "100px",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "146.25px 27px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "display",
+        "rivemont": "inline-block",
+        "meye": "block",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "relative",
+        "meye": "static",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "zIndex",
+        "rivemont": "2",
+        "meye": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "clip",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "clip",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "newsletterButton",
+    "selector": "footer button[type=\"submit\"]",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "180px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "54px",
+        "state": "normal"
+      },
+      {
+        "property": "padding",
+        "rivemont": "0px 19.3333px",
+        "meye": "0px 29px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingRight",
+        "rivemont": "19.3333px",
+        "meye": "29px",
+        "state": "normal"
+      },
+      {
+        "property": "paddingLeft",
+        "rivemont": "19.3333px",
+        "meye": "29px",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "90px 27px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "display",
+        "rivemont": "flex",
+        "meye": "block",
+        "state": "normal"
+      },
+      {
+        "property": "position",
+        "rivemont": "relative",
+        "meye": "static",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "zIndex",
+        "rivemont": "1",
+        "meye": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "center",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "newsletterH2",
+    "selector": "footer h2",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "width",
+        "rivemont": "472.5px",
+        "meye": "570px",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "margin",
+        "rivemont": "0px 0px 35px",
+        "meye": "0px 0px 40px",
+        "state": "normal"
+      },
+      {
+        "property": "marginBottom",
+        "rivemont": "35px",
+        "meye": "40px",
+        "state": "normal"
+      },
+      {
+        "property": "border",
+        "rivemont": "0px none rgb(255, 255, 255)",
+        "meye": "0px solid rgb(229, 231, 235)",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "236.25px 33.3281px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  },
+  {
+    "element": "footerNavLink",
+    "selector": "footer nav a",
+    "differences": [
+      {
+        "property": "textTransform",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "0px",
+        "state": "normal"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "rgb(255, 255, 255)",
+        "state": "normal"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "0px 0px",
+        "state": "normal"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "ease",
+        "state": "normal"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "0s",
+        "state": "normal"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "1",
+        "state": "normal"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "top",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "right",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "left",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "row",
+        "state": "normal"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "none",
+        "state": "normal"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "normal",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "repeat",
+        "state": "normal"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "scroll",
+        "state": "normal"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "visible",
+        "state": "normal"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "auto",
+        "state": "normal"
+      },
+      {
+        "property": "textTransform",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "textDecoration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "maxHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "minHeight",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderWidth",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderStyle",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "borderColor",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "transformOrigin",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationName",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDuration",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationTimingFunction",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDelay",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationIterationCount",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "animationDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "top",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "right",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "bottom",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "left",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "flexDirection",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "justifyContent",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "alignItems",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateColumns",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridTemplateRows",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "gridGap",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundRepeat",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "backgroundAttachment",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowX",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "overflowY",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "pointerEvents",
+        "rivemont": "",
+        "state": "hover"
+      },
+      {
+        "property": "userSelect",
+        "rivemont": "",
+        "state": "hover"
+      }
+    ]
+  }
+]

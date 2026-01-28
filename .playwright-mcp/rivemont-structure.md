@@ -1,0 +1,120 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link [ref=e6] [cursor=pointer]:
+          - /url: https://rivemont.ca
+        - generic [ref=e7]:
+          - navigation [ref=e8]:
+            - list [ref=e9]:
+              - listitem [ref=e10]:
+                - menuitem "Switch to En" [ref=e11] [cursor=pointer]:
+                  - generic [ref=e12]: En
+          - button [ref=e13] [cursor=pointer]
+    - link "Passez à l'action" [ref=e17] [cursor=pointer]:
+      - /url: https://rivemont.ca/devenir-client/
+    - main [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e21]:
+          - heading "Passion. Rigueur. Résultats." [level=1] [ref=e23]
+          - link "En savoir plus" [ref=e24] [cursor=pointer]:
+            - /url: https://rivemont.ca/profil-de-la-firme/
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - heading "Notre mission" [level=2] [ref=e29]
+            - paragraph [ref=e30]: Rivemont a comme mission d’offrir une gestion de portefeuille personnalisée et innovante, alignée sur les objectifs uniques de chaque investisseur.
+            - paragraph [ref=e31]: Nous favorisons une gestion active et disciplinée, avec comme objectifs d’optimiser la performance et minimiser les risques.
+            - paragraph [ref=e32]: Faire de chaque relation un partenariat durable et fructueux, en privilégiant la rigueur, l’éthique et la transparence.
+          - link "En savoir plus" [ref=e34] [cursor=pointer]:
+            - /url: https://rivemont.ca/profil-de-la-firme/
+        - link "Découvrez l’équipe" [ref=e40] [cursor=pointer]:
+          - /url: https://rivemont.ca/notre-equipe/
+        - generic [ref=e42]:
+          - heading "Rendements" [level=2] [ref=e44]
+          - link "Notre rendement" [ref=e47] [cursor=pointer]:
+            - /url: https://rivemont.ca/rendements/
+        - generic [ref=e49]:
+          - heading "Communications" [level=2] [ref=e50]
+          - generic [ref=e57]:
+            - link "Lettre financière Volume 16 numéro 3" [ref=e59] [cursor=pointer]:
+              - /url: https://rivemont.ca/communication/volume-16-numero-3/
+              - generic [ref=e60]:
+                - generic [ref=e62]: Lettre financière
+                - generic [ref=e63]: Volume 16 numéro 3
+            - link "Lettre financière Volume 16 numéro 2" [ref=e65] [cursor=pointer]:
+              - /url: https://rivemont.ca/communication/volume-16-numero-2/
+              - generic [ref=e66]:
+                - generic [ref=e68]: Lettre financière
+                - generic [ref=e69]: Volume 16 numéro 2
+            - link "Lettre financière Volume 16 numéro 1" [ref=e71] [cursor=pointer]:
+              - /url: https://rivemont.ca/communication/volume-16-numero-1/
+              - generic [ref=e72]:
+                - generic [ref=e74]: Lettre financière
+                - generic [ref=e75]: Volume 16 numéro 1
+          - link "Tous les articles" [ref=e77] [cursor=pointer]:
+            - /url: https://rivemont.ca/communications/
+    - contentinfo [ref=e78]:
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - generic [ref=e81]:
+            - img [ref=e83]
+            - generic [ref=e84]:
+              - heading "Inscrivez-vous à notre lettre financière" [level=2] [ref=e85]
+              - generic [ref=e87]:
+                - generic [ref=e88]:
+                  - status
+                  - list
+                - form "Contact form" [ref=e89]:
+                  - generic [ref=e90]:
+                    - textbox "Adresse courriel" [ref=e93]
+                    - button "Inscription" [ref=e94] [cursor=pointer]
+          - generic [ref=e96]:
+            - heading "Passez à l’action, devenez client." [level=2] [ref=e97]
+            - link "En savoir plus" [ref=e99] [cursor=pointer]:
+              - /url: https://rivemont.ca/devenir-client/
+        - generic [ref=e100]:
+          - link [ref=e102] [cursor=pointer]:
+            - /url: https://rivemont.ca
+          - navigation [ref=e104]:
+            - list [ref=e105]:
+              - listitem [ref=e106]:
+                - link "Gestion privée" [ref=e107] [cursor=pointer]:
+                  - /url: https://rivemont.ca/gestion-privee/
+              - listitem [ref=e108]:
+                - link "Rendements" [ref=e109] [cursor=pointer]:
+                  - /url: https://rivemont.ca/rendements/
+              - listitem [ref=e110]:
+                - link "Fonds alternatifs" [ref=e111] [cursor=pointer]:
+                  - /url: https://rivemont.ca/fonds-alternatifs/
+              - listitem [ref=e112]:
+                - link "Contact" [ref=e113] [cursor=pointer]:
+                  - /url: https://rivemont.ca/contact/
+          - navigation [ref=e115]:
+            - list [ref=e116]:
+              - listitem [ref=e117]:
+                - link [ref=e118] [cursor=pointer]:
+                  - /url: https://www.facebook.com/profile.php?id=100063975098177
+                  - img [ref=e119]
+              - listitem [ref=e121]:
+                - link [ref=e122] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UCJADkkF5DoZC17lm3S0jMqw
+                  - img [ref=e123]
+              - listitem [ref=e125]:
+                - link [ref=e126] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/les-investissements-rivemont/?originalSubdomain=fr
+                  - img [ref=e127]
+          - link "Connexion" [ref=e130] [cursor=pointer]:
+            - /url: https://monportefeuilleplus.ca/login
+        - paragraph [ref=e132]: © 2026, Les investissements Rivemont. Tous droits réservés.
+  - dialog "Nous utilisons des témoins" [ref=e133]:
+    - generic [ref=e134]:
+      - generic [ref=e135]:
+        - heading "Nous utilisons des témoins" [level=2] [ref=e136]
+        - paragraph [ref=e137]: Nous utilisons des cookies pour améliorer votre expérience de navigation, diffuser des publicités ou des contenus personnalisés et analyser notre trafic. En cliquant sur « Tout accepter », vous consentez à notre utilisation des cookies.
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - button "Tout accepter" [ref=e140] [cursor=pointer]
+          - button "Tout rejeter" [ref=e141] [cursor=pointer]
+        - button "Gérer les préférences" [ref=e143] [cursor=pointer]
+    - link "Politique de confidentialité" [ref=e147] [cursor=pointer]:
+      - /url: /politique-de-confidentialite/

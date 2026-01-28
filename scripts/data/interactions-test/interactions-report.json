@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-01-27T23:13:56.328Z",
+  "rivemontUrl": "https://rivemont.ca/",
+  "meyeUrl": "http://localhost:4200",
+  "interactions": [
+    {
+      "name": "navLink",
+      "selector": "header nav a:first-child",
+      "status": "missing-meye"
+    },
+    {
+      "name": "clientAccessLink",
+      "selector": "header .client-access-link",
+      "status": "missing-rivemont"
+    },
+    {
+      "name": "heroCtaBtn",
+      "selector": ".hero-section .hero-cta-btn",
+      "status": "missing-rivemont"
+    },
+    {
+      "name": "missionLink",
+      "selector": ".mission-section .link-with-arrow",
+      "status": "missing-rivemont"
+    },
+    {
+      "name": "teamPreviewLink",
+      "selector": ".team-preview-section a",
+      "status": "missing-rivemont"
+    },
+    {
+      "name": "performanceLink",
+      "selector": ".performance-section a",
+      "status": "missing-rivemont"
+    },
+    {
+      "name": "communicationCard",
+      "selector": ".communication-card:first-child",
+      "status": "missing-rivemont"
+    },
+    {
+      "name": "newsletterInput",
+      "selector": "footer input[type=\"email\"]",
+      "action": "focus",
+      "status": "match",
+      "differencesCount": 0,
+      "differences": []
+    },
+    {
+      "name": "newsletterButton",
+      "selector": "footer button[type=\"submit\"]",
+      "action": "hover",
+      "status": "different",
+      "differencesCount": 1,
+      "differences": [
+        {
+          "property": "backgroundColor",
+          "rivemont": "rgb(81, 178, 214)",
+          "meye": "rgb(24, 64, 104)"
+        }
+      ]
+    },
+    {
+      "name": "footerNavLink",
+      "selector": "footer nav a:first-child",
+      "action": "hover",
+      "status": "different",
+      "differencesCount": 1,
+      "differences": [
+        {
+          "property": "borderColor",
+          "rivemont": "rgb(255, 255, 255)",
+          "meye": "rgb(229, 231, 235)"
+        }
+      ]
+    }
+  ]
+}

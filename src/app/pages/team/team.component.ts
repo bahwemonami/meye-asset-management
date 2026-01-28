@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
@@ -7,26 +7,28 @@ import { ImageMappingService } from '../../services/image-mapping.service';
   selector: 'app-team',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'page-team bg-primary'
+  },
   template: `
-    <!-- Page Hero -->
-    <section class="page-hero">
-      <h1>Notre équipe</h1>
-    </section>
-
-    <!-- Team Grid Section -->
-    <section class="content-section">
-      <div class="content-container">
-        <div class="team-grid">
+    <!-- Section Team - Identique à Rivemont -->
+    <section class="section-team">
+      <div class="content">
+        <h1 class="title" data-aos="fade">Notre équipe</h1>
+        <div class="members">
           @for (member of teamMembers; track member.slug) {
-            <a [routerLink]="['/team', member.slug]" class="team-card">
-              <div class="team-card-image">
-                <img [src]="imageService.getImage(member.imageKey)" [alt]="member.name" />
-              </div>
-              <div class="team-card-info">
-                <p class="team-name">{{ member.name }}</p>
-                <p class="team-role">{{ member.title }}</p>
-              </div>
-            </a>
+            <div class="member-holder" data-aos="fade-up">
+              <a [routerLink]="['/team', member.slug]" [title]="member.name" class="member">
+                <img [src]="imageService.getImage(member.imageKey)" class="member-photo" [alt]="member.name" loading="lazy" />
+                <div class="member-overlay">
+                  <div class="member-info">
+                    <p class="member-name">{{ member.name }}</p>
+                    <p class="member-title">{{ member.title }}</p>
+                  </div>
+                </div>
+              </a>
+            </div>
           }
         </div>
       </div>
@@ -70,13 +72,13 @@ export class TeamComponent {
     {
       slug: 'mathieu-martin',
       name: 'Mathieu Martin, CFA',
-      title: 'Gestionnaire de portefeuille, Fonds MicroCap',
+      title: 'Gestionnaire de portefeuille, Fonds MEYE MicroCap',
       imageKey: 'mathieu-martin'
     },
     {
       slug: 'philippe-jette',
       name: 'Philippe Jetté',
-      title: 'Analyste principal, Fonds Crypto',
+      title: 'Analyste principal, Fonds MEYE Crypto',
       imageKey: 'philippe-jette'
     }
   ];

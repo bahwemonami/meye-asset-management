@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -6,10 +6,13 @@ import { RouterLink } from '@angular/router';
   selector: 'app-alternative-funds',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <!-- Page Hero -->
-    <section class="page-hero">
-      <h1>Fonds alternatifs</h1>
+    <!-- Hero Section - Identique à Rivemont -->
+    <section class="template-part-hero">
+      <div class="content">
+        <h1 class="title">Fonds alternatifs</h1>
+      </div>
     </section>
 
     <!-- Funds Grid Section -->

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ImageMappingService } from '../../services/image-mapping.service';
@@ -7,6 +7,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
   selector: 'app-become-client',
   standalone: true,
   imports: [CommonModule, FormsModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <!-- Hero Section with Background -->
     <section class="become-client-hero">

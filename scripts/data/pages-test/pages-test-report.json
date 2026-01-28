@@ -1,0 +1,179 @@
+{
+  "timestamp": "2026-01-27T23:13:10.074Z",
+  "baseUrl": "http://localhost:4200",
+  "pages": [
+    {
+      "name": "home",
+      "path": "",
+      "url": "http://localhost:4200",
+      "status": "success",
+      "checks": {
+        "hasHeader": true,
+        "hasFooter": true,
+        "hasMain": true,
+        "h1Count": 1,
+        "h2Count": 4,
+        "linksCount": 44,
+        "imagesCount": 8,
+        "errors": [],
+        "hasherosection": true,
+        "hasmissionsection": true,
+        "hasteampreviewsection": true,
+        "hasperformancesection": true,
+        "hascommunicationssection": true
+      },
+      "screenshot": "C:\\Users\\axell\\Desktop\\NTMLAPOLICE\\RHENGINEERZ\\DIVERS\\DEFIDRAIN\\DRAIN\\meye-asset-management\\scripts\\data\\pages-test\\home.png"
+    },
+    {
+      "name": "firm-profile",
+      "path": "/firm-profile",
+      "url": "http://localhost:4200/firm-profile",
+      "status": "success",
+      "checks": {
+        "hasHeader": true,
+        "hasFooter": true,
+        "hasMain": true,
+        "h1Count": 1,
+        "h2Count": 1,
+        "linksCount": 38,
+        "imagesCount": 6,
+        "errors": [],
+        "hasteampreviewsection": true,
+        "haspagehero": true,
+        "hascontentsection": true
+      },
+      "screenshot": "C:\\Users\\axell\\Desktop\\NTMLAPOLICE\\RHENGINEERZ\\DIVERS\\DEFIDRAIN\\DRAIN\\meye-asset-management\\scripts\\data\\pages-test\\firm-profile.png"
+    },
+    {
+      "name": "team",
+      "path": "/our-team",
+      "url": "http://localhost:4200/our-team",
+      "status": "success",
+      "checks": {
+        "hasHeader": true,
+        "hasFooter": true,
+        "hasMain": true,
+        "h1Count": 1,
+        "h2Count": 1,
+        "linksCount": 43,
+        "imagesCount": 12,
+        "errors": [],
+        "haspagehero": true,
+        "hascontentsection": true
+      },
+      "screenshot": "C:\\Users\\axell\\Desktop\\NTMLAPOLICE\\RHENGINEERZ\\DIVERS\\DEFIDRAIN\\DRAIN\\meye-asset-management\\scripts\\data\\pages-test\\team.png"
+    },
+    {
+      "name": "governance",
+      "path": "/governance",
+      "url": "http://localhost:4200/governance",
+      "status": "success",
+      "checks": {
+        "hasHeader": true,
+        "hasFooter": true,
+        "hasMain": true,
+        "h1Count": 1,
+        "h2Count": 5,
+        "linksCount": 40,
+        "imagesCount": 5,
+        "errors": []
+      },
+      "screenshot": "C:\\Users\\axell\\Desktop\\NTMLAPOLICE\\RHENGINEERZ\\DIVERS\\DEFIDRAIN\\DRAIN\\meye-asset-management\\scripts\\data\\pages-test\\governance.png"
+    },
+    {
+      "name": "private-management",
+      "path": "/private-management",
+      "url": "http://localhost:4200/private-management",
+      "status": "success",
+      "checks": {
+        "hasHeader": true,
+        "hasFooter": true,
+        "hasMain": true,
+        "h1Count": 1,
+        "h2Count": 2,
+        "linksCount": 44,
+        "imagesCount": 5,
+        "errors": [],
+        "haspagehero": true,
+        "hascontentsection": true
+      },
+      "screenshot": "C:\\Users\\axell\\Desktop\\NTMLAPOLICE\\RHENGINEERZ\\DIVERS\\DEFIDRAIN\\DRAIN\\meye-asset-management\\scripts\\data\\pages-test\\private-management.png"
+    },
+    {
+      "name": "performance",
+      "path": "/performance",
+      "url": "http://localhost:4200/performance",
+      "status": "success",
+      "checks": {
+        "hasHeader": true,
+        "hasFooter": true,
+        "hasMain": true,
+        "h1Count": 1,
+        "h2Count": 2,
+        "linksCount": 38,
+        "imagesCount": 5,
+        "errors": [],
+        "haspagehero": true,
+        "hascontentsection": true
+      },
+      "screenshot": "C:\\Users\\axell\\Desktop\\NTMLAPOLICE\\RHENGINEERZ\\DIVERS\\DEFIDRAIN\\DRAIN\\meye-asset-management\\scripts\\data\\pages-test\\performance.png"
+    },
+    {
+      "name": "communications",
+      "path": "/communications",
+      "url": "http://localhost:4200/communications",
+      "status": "success",
+      "checks": {
+        "hasHeader": true,
+        "hasFooter": true,
+        "hasMain": true,
+        "h1Count": 1,
+        "h2Count": 1,
+        "linksCount": 39,
+        "imagesCount": 5,
+        "errors": [],
+        "haspagehero": true,
+        "hascontentsection": true
+      },
+      "screenshot": "C:\\Users\\axell\\Desktop\\NTMLAPOLICE\\RHENGINEERZ\\DIVERS\\DEFIDRAIN\\DRAIN\\meye-asset-management\\scripts\\data\\pages-test\\communications.png"
+    },
+    {
+      "name": "alternative-funds",
+      "path": "/alternative-funds",
+      "url": "http://localhost:4200/alternative-funds",
+      "status": "success",
+      "checks": {
+        "hasHeader": true,
+        "hasFooter": true,
+        "hasMain": true,
+        "h1Count": 1,
+        "h2Count": 1,
+        "linksCount": 39,
+        "imagesCount": 5,
+        "errors": [],
+        "haspagehero": true,
+        "hascontentsection": true
+      },
+      "screenshot": "C:\\Users\\axell\\Desktop\\NTMLAPOLICE\\RHENGINEERZ\\DIVERS\\DEFIDRAIN\\DRAIN\\meye-asset-management\\scripts\\data\\pages-test\\alternative-funds.png"
+    },
+    {
+      "name": "contact",
+      "path": "/contact",
+      "url": "http://localhost:4200/contact",
+      "status": "success",
+      "checks": {
+        "hasHeader": true,
+        "hasFooter": true,
+        "hasMain": true,
+        "h1Count": 1,
+        "h2Count": 2,
+        "linksCount": 42,
+        "imagesCount": 5,
+        "errors": [],
+        "haspagehero": true,
+        "hascontentsection": true
+      },
+      "screenshot": "C:\\Users\\axell\\Desktop\\NTMLAPOLICE\\RHENGINEERZ\\DIVERS\\DEFIDRAIN\\DRAIN\\meye-asset-management\\scripts\\data\\pages-test\\contact.png"
+    }
+  ]
+}

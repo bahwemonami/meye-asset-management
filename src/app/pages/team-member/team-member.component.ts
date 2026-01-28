@@ -1,41 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, ActivatedRoute } from '@angular/router';
+import { ImageMappingService } from '../../services/image-mapping.service';
 
 @Component({
   selector: 'app-team-member',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-primary-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <a routerLink="/our-team" class="inline-flex items-center text-primary-300 hover:text-white mb-6 transition-colors">
-          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-          </svg>
-          Back to Team
-        </a>
-        <h1 class="text-4xl md:text-5xl font-serif font-bold text-white">{{ member?.name }}</h1>
-        <p class="text-primary-300 text-xl mt-2">{{ member?.title }}</p>
-      </div>
-    </section>
+    <!-- Back Link - Identique à Rivemont -->
+    <div class="content" style="padding: 0px 165px; margin-bottom: 40px;">
+      <a routerLink="/our-team" class="back-link">
+        <img [src]="imageService.getImage('arrow-left-dark')" alt="" />
+        Toute l'équipe
+      </a>
+    </div>
 
-    <!-- Content Section -->
+    <!-- Content Section - Identique à Rivemont -->
     @if (member) {
-      <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-3 gap-12">
-            <div>
-              <img [src]="member.image" 
-                   [alt]="member.name"
-                   class="w-full rounded-lg shadow-xl">
+      <section class="template-part-desc-image template-part-desc-image--reverse">
+        <div class="content">
+          <div class="col">
+            <div class="description gl-text-editor">
+              <h1>{{ member.name }}</h1>
+              <h2>{{ member.title }}</h2>
+              @for (paragraph of member.bioParagraphs; track $index) {
+                <p>{{ paragraph }}</p>
+              }
             </div>
-            <div class="lg:col-span-2">
-              <h2 class="text-2xl font-serif font-bold text-primary-900 mb-6">Biography</h2>
-              <div class="prose prose-lg text-gray-600">
-                <p>{{ member.bio }}</p>
-              </div>
+          </div>
+          <div class="col">
+            <div class="image-holder">
+              <img [src]="imageService.getImage(member.imageKey)" [alt]="member.name" width="557" height="665" class="attachment-large size-large" />
             </div>
           </div>
         </div>
@@ -44,50 +41,67 @@ import { RouterLink, ActivatedRoute } from '@angular/router';
   `
 })
 export class TeamMemberComponent implements OnInit {
+  imageService = inject(ImageMappingService);
   member: any;
 
   private teamMembers: any = {
     'julien-carl-landry': {
       name: 'Julien-Carl Landry, Pl.Fin.',
-      title: 'Financial Planner',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      bio: 'Julien-Carl Landry is a certified Financial Planner with extensive experience in wealth management and financial planning. He specializes in helping clients achieve their long-term financial goals through comprehensive planning strategies.'
+      title: 'Planificateur financier',
+      imageKey: 'julien-carl',
+      bioParagraphs: [
+        'Julien-Carl Landry est planificateur financier chez MEYE ASSET MANAGER. Il a œuvré comme planificateur financier à la Banque Nationale au cours des dernières années et représente un atout majeur pour notre clientèle.'
+      ]
     },
     'martin-lalonde': {
       name: 'Martin Lalonde, MBA, CFA',
-      title: 'President and Portfolio Manager',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      bio: 'Martin Lalonde, MBA, CFA, is the portfolio manager responsible for investment decisions. He has several years of experience in financial markets and worked, before founding MEYE Asset Management, as a senior analyst in investments and mergers and acquisitions for a major Canadian organization.'
+      title: 'Président et gestionnaire de portefeuille',
+      imageKey: 'martin-lalonde',
+      bioParagraphs: [
+        'Martin Lalonde est le président-fondateur de MEYE ASSET MANAGER et gestionnaire de portefeuille. Il possède plusieurs années d\'expérience comme intervenant sur les marchés financiers et a œuvré, avant de fonder MEYE ASSET MANAGER, comme analyste principal aux investissements et aux fusions et acquisitions pour un important organisme canadien.',
+        'En tant que gestionnaire de portefeuille, M. Lalonde est responsable de l\'ensemble des stratégies de la firme. Dans ce rôle, il est responsable de bâtir les portefeuilles incluant la supervision des pondérations parmi les différentes catégories d\'actifs ainsi que le choix des titres.',
+        'M. Lalonde est titulaire d\'une maitrise en administration des affaires (MBA) de l\'Université d\'Ottawa et d\'une spécialisation en commerce international de l\'École supérieure de commerce de Reims, en France. Il détient le titre de CFA (Chartered Financial Analyst).'
+      ]
     },
     'jeffrey-veilleux': {
       name: 'Jeffrey Veilleux, M.Sc., CIM®',
-      title: 'Portfolio Manager',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      bio: 'Jeffrey Veilleux holds a Master of Science degree and the CIM® designation. He brings analytical rigor and deep market knowledge to portfolio management, helping clients navigate complex investment landscapes.'
+      title: 'Gestionnaire de portefeuille',
+      imageKey: 'jeffrey-veilleux',
+      bioParagraphs: [
+        'Jeffrey Veilleux, M.Sc., CIM®, est gestionnaire de portefeuille chez MEYE ASSET MANAGER. Il apporte une rigueur analytique et une connaissance approfondie des marchés à la gestion de portefeuille.'
+      ]
     },
     'david-blouin': {
       name: 'David Blouin',
-      title: 'Director of Client Relations',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      bio: 'David Blouin leads client relations at MEYE Asset Management, ensuring that every client receives personalized attention and exceptional service. His focus is on building lasting relationships based on trust and transparency.'
+      title: 'Directeur des relations aux clients',
+      imageKey: 'david-blouin',
+      bioParagraphs: [
+        'David Blouin dirige les relations aux clients chez MEYE ASSET MANAGER, veillant à ce que chaque client reçoive une attention personnalisée et un service exceptionnel.'
+      ]
     },
     'martin-piche': {
       name: 'Martin Piché',
-      title: 'Analyst, Administration and Compliance',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      bio: 'Martin Piché oversees administration and compliance functions, ensuring that all operations meet regulatory requirements and industry best practices. His attention to detail helps maintain the highest standards of governance.'
+      title: 'Analyste, administration et conformité',
+      imageKey: 'martin-piche',
+      bioParagraphs: [
+        'Martin Piché supervise les fonctions d\'administration et de conformité, veillant à ce que toutes les opérations respectent les exigences réglementaires et les meilleures pratiques de l\'industrie.'
+      ]
     },
     'mathieu-martin': {
       name: 'Mathieu Martin, CFA',
-      title: 'Portfolio Manager, MEYE MicroCap Fund',
-      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      bio: 'Mathieu Martin, CFA, manages the MEYE MicroCap Fund, specializing in identifying high-potential small-cap investment opportunities. His deep research capabilities help uncover hidden value in the market.'
+      title: 'Gestionnaire de portefeuille, Fonds Rivemont MicroCap',
+      imageKey: 'mathieu-martin',
+      bioParagraphs: [
+        'Mathieu Martin, CFA, gère le Fonds Rivemont MicroCap, spécialisé dans l\'identification d\'opportunités d\'investissement à petite capitalisation à fort potentiel.'
+      ]
     },
     'philippe-jette': {
       name: 'Philippe Jetté',
-      title: 'Senior Analyst, MEYE Crypto Fund',
-      image: 'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      bio: 'Philippe Jetté is the senior analyst for the MEYE Crypto Fund, bringing expertise in digital assets and blockchain technology. He helps navigate the evolving cryptocurrency landscape for institutional investors.'
+      title: 'Analyste principal, Fonds Rivemont Crypto',
+      imageKey: 'philippe-jette',
+      bioParagraphs: [
+        'Philippe Jetté est l\'analyste principal du Fonds Rivemont Crypto, apportant son expertise en actifs numériques et en technologie blockchain.'
+      ]
     }
   };
 

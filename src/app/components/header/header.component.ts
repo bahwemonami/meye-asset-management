@@ -1,4 +1,4 @@
-import { Component, HostListener, signal, inject } from '@angular/core';
+import { Component, HostListener, signal, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
@@ -7,177 +7,186 @@ import { ImageMappingService } from '../../services/image-mapping.service';
   selector: 'app-header',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <!-- Banner / Header MEYE Asset Management -->
+    <!-- Banner / Header MEYE ASSET MANAGER -->
     <header 
       id="site-header"
-      class="site-header"
+      class="site-header site-header--cta-header"
       [class.scrolled]="isScrolled()">
-      <div class="header-container">
-        <!-- Logo -->
-        <a routerLink="/" class="logo-link">
-          <img [src]="isScrolled() ? '/assets/images/meye-logo.svg' : '/assets/images/meye-logo-white.svg'" alt="MEYE Asset Management" />
-        </a>
-
-        <!-- Navigation Desktop -->
-        <nav class="header-nav">
-          <ul class="nav-menu">
-            <li>
-              <a routerLink="/private-management">Gestion privée</a>
-            </li>
-            <li>
-              <a routerLink="/performance">Rendements</a>
-            </li>
-            <li>
-              <a routerLink="/contact">Contact</a>
-            </li>
-          </ul>
-          
+      <div class="content">
+        <div class="col col-1">
+          <!-- Logo -->
+          <a routerLink="/" class="logo-holder" aria-label="MEYE ASSET MANAGER - Retour à l'accueil">
+            <img [src]="isScrolled() ? imageService.getImage('logo-dark') : imageService.getImage('logo-light')" alt="MEYE ASSET MANAGER" />
+          </a>
+        </div>
+        <div class="col col-2">
           <!-- Accès client -->
-          <a href="https://monportefeuilleplus.ca/login" class="client-access-link" target="_blank">
+          <a href="https://monportefeuilleplus.ca/login" class="gl-button gl-button--blue-dark" target="_blank">
+            <img [src]="imageService.getImage('user-icon')" alt="" width="300" height="150" />
             Accès client
           </a>
           
-          <!-- Language Toggle -->
-          <button class="language-toggle" type="button">
-            <span>En</span>
-          </button>
+          <!-- Navigation Desktop -->
+          <nav js-site-nav="container" aria-label="Navigation principale">
+            <ul id="menu-header" class="menu" role="menubar">
+              <li>
+                <a routerLink="/private-management">Gestion privée</a>
+              </li>
+              <li>
+                <a routerLink="/performance">Rendements</a>
+              </li>
+              <li>
+                <a routerLink="/financial-planning">Planification financière</a>
+              </li>
+              <li>
+                <a routerLink="/contact">Contact</a>
+              </li>
+              <li>
+                <a href="https://rivemont.ca/en/" title="Switch to En" aria-label="Switch to En" role="menuitem">
+                  <span>En</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
           
-          <!-- Menu Toggle -->
+          <!-- Menu Toggle Hamburger -->
           <button 
-            class="menu-toggle"
+            class="hamburger"
+            [class.active]="isMenuOpen()"
             type="button"
+            js-site-nav-mobile="opener"
             (click)="toggleMenu()"
             [attr.aria-expanded]="isMenuOpen()"
-            aria-label="Toggle menu">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              @if (!isMenuOpen()) {
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-              } @else {
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-              }
-            </svg>
+            [attr.aria-label]="isMenuOpen() ? 'Fermer le menu' : 'Ouvrir le menu'"
+            aria-controls="site-mobile-nav">
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
-        </nav>
+        </div>
       </div>
     </header>
 
     <!-- Bouton "Passez à l'action" -->
-    <a routerLink="/become-client" class="action-button">
+    <a routerLink="/become-client" class="action-button" aria-label="Passez à l'action - Devenir client">
       Passez à l'action
     </a>
 
-    <!-- Menu Overlay Full Screen -->
+    <!-- Menu Mobile Full Screen -->
     <div 
-      class="menu-overlay"
+      class="site-mobile-nav site-mobile-nav--cta-header"
+      id="site-mobile-nav"
+      js-site-nav-mobile="container"
       [class.active]="isMenuOpen()"
       (click)="closeMenu()">
-      <div class="menu-content" (click)="$event.stopPropagation()">
-        <!-- Menu Header -->
-        <div class="menu-header">
-          <a routerLink="/" (click)="closeMenu()" class="menu-logo">
-            <img src="/assets/images/meye-logo.svg" alt="MEYE Asset Management" />
-          </a>
-          <div class="menu-header-actions">
-            <a href="https://monportefeuilleplus.ca/login" class="menu-client-access" target="_blank">
+      <div class="content" (click)="$event.stopPropagation()">
+        <!-- Row 1: Logo + Accès client + Hamburger -->
+        <div class="row row-1">
+          <div class="col col-1">
+            <a routerLink="/" class="logo-holder" (click)="closeMenu()">
+              <img [src]="imageService.getImage('logo-light-png')" alt="" />
+            </a>
+            <a href="https://monportefeuilleplus.ca/login" class="gl-button gl-button--blue-dark" target="_blank">
+              <img [src]="imageService.getImage('user-icon')" alt="" width="300" height="150" />
               Accès client
             </a>
-            <button (click)="closeMenu()" class="menu-close" aria-label="Close menu">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-              </svg>
+          </div>
+          <div class="col col-2">
+            <button 
+              class="hamburger"
+              [class.active]="isMenuOpen()"
+              type="button"
+              js-site-nav-mobile="opener"
+              (click)="toggleMenu()"
+              aria-label="Close menu">
+              <span></span>
+              <span></span>
+              <span></span>
             </button>
           </div>
         </div>
 
-        <!-- Menu Navigation -->
-        <nav class="menu-navigation">
-          <div class="menu-section">
-            <h3 class="menu-section-title">
-              <a routerLink="/firm-profile" (click)="closeMenu()">La firme</a>
-            </h3>
-            <ul class="menu-section-links">
-              <li>
-                <a routerLink="/firm-profile" (click)="closeMenu()">Profil de la firme</a>
-              </li>
-              <li>
-                <a routerLink="/our-team" (click)="closeMenu()">Notre équipe</a>
-              </li>
-              <li>
-                <a routerLink="/governance" (click)="closeMenu()">Gouvernance</a>
-              </li>
-            </ul>
+        <!-- Row 2: Navigation en 3 colonnes -->
+        <div class="row row-2">
+          <div class="col col-1">
+            <nav>
+              <ul id="menu-big-menu-col-1" class="menu">
+                <li>
+                  <a routerLink="/firm-profile" (click)="closeMenu()">La firme</a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a routerLink="/firm-profile" (click)="closeMenu()">Profil de la firme</a>
+                    </li>
+                    <li>
+                      <a routerLink="/our-team" (click)="closeMenu()">Notre équipe</a>
+                    </li>
+                    <li>
+                      <a routerLink="/governance" (click)="closeMenu()">Gouvernance</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
           </div>
-
-          <div class="menu-section">
-            <h3 class="menu-section-title">
-              <a routerLink="/private-management" (click)="closeMenu()">Gestion privée</a>
-            </h3>
-            <ul class="menu-section-links">
-              <li>
-                <a routerLink="/private-management" [queryParams]="{section: 'who'}" (click)="closeMenu()">
-                  À qui s'adresse la gestion privée
-                </a>
-              </li>
-              <li>
-                <a routerLink="/private-management" [queryParams]="{section: 'cycle'}" (click)="closeMenu()">
-                  Le cycle de gestion
-                </a>
-              </li>
-              <li>
-                <a routerLink="/private-management" [queryParams]="{section: 'philosophy'}" (click)="closeMenu()">
-                  Notre philosophie de placement
-                </a>
-              </li>
-              <li>
-                <a routerLink="/private-management" [queryParams]="{section: 'methodology'}" (click)="closeMenu()">
-                  La méthodologie de gestion
-                </a>
-              </li>
-              <li>
-                <a routerLink="/private-management" [queryParams]="{section: 'strategies'}" (click)="closeMenu()">
-                  Les stratégies de placement
-                </a>
-              </li>
-              <li>
-                <a routerLink="/private-management" [queryParams]="{section: 'why'}" (click)="closeMenu()">
-                  Pourquoi MEYE Asset Management ?
-                </a>
-              </li>
-              <li>
-                <a routerLink="/private-management" [queryParams]="{section: 'cfa'}" (click)="closeMenu()">
-                  Pourquoi choisir un conseiller détenteur du titre CFA* ?
-                </a>
-              </li>
-            </ul>
+          <div class="col col-2">
+            <nav>
+              <ul id="menu-big-menu-col-2" class="menu">
+                <li>
+                  <a routerLink="/private-management" (click)="closeMenu()">Gestion privée</a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a routerLink="/private-management" (click)="closeMenu()">À qui s'adresse la gestion privée</a>
+                    </li>
+                    <li>
+                      <a routerLink="/private-management" [queryParams]="{section: 'cycle'}" (click)="closeMenu()">Le cycle de gestion</a>
+                    </li>
+                    <li>
+                      <a routerLink="/private-management" [queryParams]="{section: 'philosophy'}" (click)="closeMenu()">Notre philosophie de gestion</a>
+                    </li>
+                    <li>
+                      <a routerLink="/private-management" [queryParams]="{section: 'methodology'}" (click)="closeMenu()">La méthodologie de gestion</a>
+                    </li>
+                    <li>
+                      <a routerLink="/private-management" [queryParams]="{section: 'strategies'}" (click)="closeMenu()">Les stratégies de placement</a>
+                    </li>
+                    <li>
+                      <a routerLink="/private-management" [queryParams]="{section: 'why'}" (click)="closeMenu()">Pourquoi MEYE ASSET MANAGER ?</a>
+                    </li>
+                    <li>
+                      <a routerLink="/private-management" [queryParams]="{section: 'cfa'}" (click)="closeMenu()">Pourquoi choisir un conseiller détenteur du titre CFA* ?</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
           </div>
-
-          <div class="menu-section">
-            <ul class="menu-section-main-links">
-              <li>
-                <a routerLink="/performance" (click)="closeMenu()">Rendements</a>
-              </li>
-              <li>
-                <a routerLink="/communications" (click)="closeMenu()">Communications</a>
-              </li>
-              <li>
-                <a routerLink="/alternative-funds" (click)="closeMenu()">Fonds alternatifs</a>
-              </li>
-              <li>
-                <a routerLink="/contact" (click)="closeMenu()">Contact</a>
-              </li>
-            </ul>
+          <div class="col col-3">
+            <nav js-site-nav="container">
+              <ul id="menu-big-menu-col-4" class="menu">
+                <li>
+                  <a routerLink="/performance" (click)="closeMenu()">Rendements</a>
+                </li>
+                <li>
+                  <a routerLink="/communications" (click)="closeMenu()">Communications</a>
+                </li>
+                <li>
+                  <a routerLink="/alternative-funds" (click)="closeMenu()">Fonds alternatifs</a>
+                </li>
+                <li>
+                  <a routerLink="/contact" (click)="closeMenu()">Contact</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-        </nav>
+        </div>
 
-        <!-- Menu CTA -->
-        <div class="menu-cta">
-          <p class="menu-cta-text">Passez à l'action, devenez client.</p>
-          <a routerLink="/become-client" (click)="closeMenu()" class="menu-cta-link">
+        <!-- Row 3: CTA -->
+        <div class="row row-3">
+          <p>Passez à l'action, devenez client.</p>
+          <a routerLink="/become-client" class="gl-button" target="_self" (click)="closeMenu()">
             En savoir plus
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
           </a>
         </div>
       </div>
@@ -231,8 +240,8 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     .nav-menu a {
       color: #1a1a1a;
       text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
+      font-size: 17px;
+      font-weight: 400;
       transition: color 0.3s ease;
     }
 
@@ -248,8 +257,8 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     .client-access-link {
       color: #1a1a1a;
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 18px;
+      font-weight: 400;
       transition: color 0.3s ease;
     }
 
@@ -267,7 +276,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
       color: #1a1a1a;
       cursor: pointer;
       font-size: 0.9rem;
-      font-weight: 500;
+      font-weight: 400;
     }
 
     .site-header:not(.scrolled) .language-toggle {
@@ -382,8 +391,8 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     .menu-client-access {
       color: #ffffff;
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 18px;
+      font-weight: 400;
       transition: color 0.3s ease;
     }
 

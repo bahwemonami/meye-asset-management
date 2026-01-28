@@ -1,47 +1,57 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, ActivatedRoute } from '@angular/router';
+import { ImageMappingService } from '../../services/image-mapping.service';
 
 @Component({
   selector: 'app-financial-letter',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-primary-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <a routerLink="/communications" class="inline-flex items-center text-primary-300 hover:text-white mb-6 transition-colors">
-          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-          </svg>
-          Back to Communications
+    <!-- Back Link and Header - Identique à Rivemont -->
+    <div class="content" style="padding: 0px 165px; margin-bottom: 40px;">
+      <div class="post-header">
+        <a routerLink="/communications" class="back-link">
+          <img [src]="imageService.getImage('arrow-left-blue')" alt="" />
+          Communications
         </a>
-        <span class="block text-accent-400 font-medium mb-2">Financial Letter</span>
-        <h1 class="text-4xl md:text-5xl font-serif font-bold text-white">{{ letter?.title }}</h1>
-        @if (letter?.date) {
-          <p class="text-primary-300 mt-4">{{ letter.date }}</p>
-        }
+        <h1>{{ letter?.title }}</h1>
+        <div class="post-category gl-pill">Lettre financière</div>
       </div>
-    </section>
+    </div>
 
-    <!-- Content Section -->
+    <!-- Content Section - Identique à Rivemont -->
     @if (letter) {
-      <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="prose prose-lg max-w-none text-gray-600">
-            <p>{{ letter.content }}</p>
+      <section class="post-content">
+        <div class="content">
+          <div class="post-description gl-text-editor">
+            @for (paragraph of letter.contentParagraphs; track $index) {
+              <p>{{ paragraph }}</p>
+            }
+            
+            @if (letter.pdfUrl) {
+              <a [href]="letter.pdfUrl" target="_blank" class="gl-button" style="margin-top: 30px;">
+                {{ letter.title }}
+              </a>
+            }
           </div>
+        </div>
+      </section>
 
-          <!-- CTA -->
-          <div class="mt-16 bg-primary-950 rounded-lg p-8 text-center">
-            <h3 class="text-xl font-serif font-bold text-white mb-4">Want to learn more?</h3>
-            <p class="text-primary-200 mb-6">Contact us to discuss how we can help you achieve your financial goals.</p>
-            <a routerLink="/contact" class="inline-flex items-center bg-accent-600 text-white px-6 py-3 rounded hover:bg-accent-700 transition-colors">
-              Contact Us
-              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-              </svg>
-            </a>
+      <!-- Related Posts - Identique à Rivemont -->
+      <section class="section-related">
+        <div class="content">
+          <h2>Vous aimerez peut-être</h2>
+          <div class="related-posts">
+            @for (related of relatedLetters; track related.slug) {
+              <a [routerLink]="['/communications', related.slug]" class="related-post">
+                <div class="post-category gl-pill">Lettre financière</div>
+                <h3>{{ related.title }}</h3>
+                <p><strong>{{ related.date }} –</strong> {{ related.excerpt }}</p>
+              </a>
+            }
+            <a routerLink="/communications" class="gl-button">Toutes les communications</a>
           </div>
         </div>
       </section>
@@ -49,38 +59,36 @@ import { RouterLink, ActivatedRoute } from '@angular/router';
   `
 })
 export class FinancialLetterComponent implements OnInit {
+  imageService = inject(ImageMappingService);
   letter: any;
+  relatedLetters: any[] = [];
 
   private letters: any = {
-    'volume-16-number-3': {
-      title: 'Volume 16 Number 3',
+    'volume-16-numero-3': {
+      title: 'Volume 16 numéro 3',
       date: 'Q2 2025',
-      content: 'The second quarter of 2025 was, for us, one of the most interesting and entertaining in recent years. In active management, the goal is to add value to portfolios. The more external and macroeconomic events there are, the more opportunities to distinguish ourselves from the benchmark index and improve potential performance multiply. This quarter has been particularly eventful with significant market movements that required careful navigation and strategic positioning. Our team has worked diligently to capitalize on opportunities while managing risk appropriately for our clients.'
+      pdfUrl: 'https://rivemont.ca/wp-content/uploads/2025/07/Lettre-financiere-Volume-16-numero-3-1.pdf',
+      contentParagraphs: [
+        'Bonjour à toutes et à tous,',
+        'Le second trimestre de 2025 aura été, pour nous, l\'un des plus intéressants et divertissants des dernières années. Il faut savoir que lorsqu\'on fait de la gestion active, l\'objectif est d\'ajouter de la valeur aux portefeuilles. Plus il y a d\'événements externes et macroéconomiques, plus les occasions de se distinguer de l\'indice de référence et d\'améliorer la performance potentielle se multiplient. Et, disons-le franchement, il s\'en est passé des choses au cours des trois derniers mois. Nous allons d\'ailleurs en approfondir plusieurs dans la présente communication.',
+        'Mais avant, j\'aimerais souhaiter la bienvenue à Julien-Carl Landry, qui se joint à notre organisation. Julien-Carl a œuvré comme planificateur financier à la Banque Nationale au cours des dernières années et représentera sans aucun doute un atout majeur pour notre clientèle. J\'en profiterai également pour vous expliquer le virage que MEYE ASSET MANAGER est en train d\'amorcer afin de mieux servir une clientèle de plus en plus sophistiquée.',
+        'Comme à l\'habitude, nous conclurons en présentant nos perspectives sur les marchés et nos plus importantes positions.',
+        'Bonne lecture !'
+      ]
     },
-    'volume-16-number-2': {
-      title: 'Volume 16 Number 2',
-      date: 'April 24, 2025',
-      content: 'Before diving into the main topic, I am pleased to announce that the first annual investor meeting for the Montreal region will take place on June 5th. This event will be held at the Club St-Denis. We look forward to meeting with our valued clients and discussing our investment outlook, portfolio strategies, and answering any questions you may have. These meetings are an important part of maintaining the strong relationships we have built with our clients over the years.'
+    'volume-16-numero-2': {
+      title: 'Volume 16 numéro 2',
+      date: '24 avril 2025',
+      contentParagraphs: [
+        'Avant de plonger dans le vif du sujet, je suis heureux de vous annoncer que c\'est le 5 juin prochain qu\'aura lieu la première assemblée annuelle des investisseurs, pour la région de Montréal. Cet événement se déroulera au Club St-Denis.'
+      ]
     },
-    'volume-16-number-1': {
-      title: 'Volume 16 Number 1',
-      date: 'February 3, 2025',
-      content: 'I delayed writing this communication as long as possible to include the very latest geopolitical events (but before the tariffs unfortunately). Over the coming years, these will have major impacts on investment strategies that will prove optimal. Indeed, for now 15 years, MEYE Asset Management has as its objective to build portfolios whose primary goal is to maximize return for a given risk. The current environment requires careful consideration of global factors and their potential impact on various asset classes.'
-    },
-    'volume-15-number-4': {
-      title: 'Volume 15 Number 4',
-      date: 'October 20, 2024',
-      content: 'As I write these lines on October 20, 2024, the major indexes are at their historic highs, and gold is surpassing its highest peaks. We are in what is called a bull market for all assets. These periods are relatively rare, and one of the objectives of a portfolio manager like MEYE Asset Management is to take full advantage of them. Our positioning has allowed us to participate in this market rally while maintaining appropriate risk controls.'
-    },
-    'volume-15-number-3': {
-      title: 'Volume 15 Number 3',
-      date: 'July 2024',
-      content: 'Sailing enthusiasts know very well: it is always easier to sail when the wind is at your back. This is exactly what happened this year. A strong tailwind that pushed most equity assets to unprecedented highs. In North America, for more than 200 years now, the stock market has offered its participants an average annual return of nearly 10%. When it comes to wealth building, this is the most powerful and constant trade wind there is.'
-    },
-    'volume-15-number-2': {
-      title: 'Volume 15 Number 2',
-      date: 'April 29, 2024',
-      content: 'As I write these lines, the government has just announced a considerable increase in capital gains taxation in the country, without an income floor for corporations and trusts. This decision is, in my opinion, extremely bad for investment and risk-taking in Canada, and will have negative long-term consequences on the vigor and health of the economy in the country. We continue to monitor regulatory changes and adjust our strategies accordingly to best serve our clients.'
+    'volume-16-numero-1': {
+      title: 'Volume 16 numéro 1',
+      date: '3 février 2025',
+      contentParagraphs: [
+        'J\'ai retardé le plus possible la rédaction de cette communication afin d\'y inclure les tout derniers événements géopolitiques actuels (Mais avant les tarifs malheureusement). Au cours des prochaines années, ceux-ci auront des impacts majeurs sur les stratégies d\'investissement qui s\'avéreront optimales. En effet, depuis maintenant 15 ans, MEYE ASSET MANAGER a comme objectif de construire des portefeuilles dont le but premier est de maximiser le rendement pour un risque donné.'
+      ]
     }
   };
 
@@ -90,6 +98,17 @@ export class FinancialLetterComponent implements OnInit {
     this.route.params.subscribe(params => {
       const slug = params['slug'];
       this.letter = this.letters[slug];
+      
+      // Related letters (exclure la lettre actuelle)
+      this.relatedLetters = Object.values(this.letters)
+        .filter((l: any) => l.title !== this.letter?.title)
+        .slice(0, 3)
+        .map((l: any) => ({
+          slug: Object.keys(this.letters).find(key => this.letters[key] === l),
+          title: l.title,
+          date: l.date,
+          excerpt: l.contentParagraphs?.[0]?.substring(0, 150) + '...'
+        }));
     });
   }
 }
