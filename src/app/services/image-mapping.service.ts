@@ -56,7 +56,7 @@ export class ImageMappingService {
     'shutterstock-2': '/assets/images/rivemont/logo/shutterstock_2478343593.jpg',
     
     // Autres
-    'clipboard-1': '/assets/images/rivemont/logo/Clipboard_20250605.png',
+    'clipboard-1': '/assets/images/rivemont/logo/Clipboard_20260126.png',
     'clipboard-2': '/assets/images/rivemont/logo/Clipboard_20251211.png',
     'performance-chart': '/assets/images/rivemont/logo/Clipboard_20250605.png',
   };

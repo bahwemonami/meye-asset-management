@@ -1,0 +1,694 @@
+/* ============================================================================
+   PERFORMANCE / RENDEMENTS PAGE - Styles Pixel Perfect 1:1 identiques à rivemont.ca
+   ============================================================================ */
+
+/* Template Rendements Page Container - Conteneur principal */
+.template-rendements-page-container {
+  box-sizing: border-box;
+}
+
+/* Hero Section - Identique à Rivemont */
+.template-part-hero {
+  margin-bottom: max(80px, 6.25vw);
+  
+  @media only screen and (max-width: 1189px) {
+    margin-bottom: 40px;
+  }
+  
+  .content {
+    background-color: #51b2d6;
+    border-radius: 0 0 24px 24px;
+    box-sizing: border-box;
+    display: flex;
+    height: max(300px, 28.28125vw);
+    justify-content: center;
+    overflow: hidden;
+    padding: max(160px, 13.5416666667vw) 14px max(60px, 5.2083333333vw);
+    position: relative;
+    
+    @media only screen and (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+      border-radius: 0 0 max(50px, 3.6458333333vw) max(50px, 3.6458333333vw);
+    }
+    
+    @media only screen and (min-width: 1280px) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    
+    @media only screen and (min-width: 1600px) {
+      padding-left: 8.59375vw;
+      padding-right: 8.59375vw;
+    }
+    
+    /* Gradient overlay - Identique à Rivemont */
+    &:after {
+      background: linear-gradient(180deg, #184068, transparent);
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      mix-blend-mode: multiply;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 5;
+    }
+    
+    .title {
+      color: #fff;
+      font-family: peridot-pe-variable, sans-serif;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.04em;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      z-index: 6;
+      
+      @media only screen and (min-width: 768px) {
+        font-size: max(45px, 3.125vw);
+      }
+    }
+    
+    img.gl-responsive-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+  }
+}
+
+/* Section Intro */
+.template-rendements-page-container .section-intro {
+  margin-bottom: 55px;
+  
+  @media only screen and (min-width: 768px) {
+    margin-bottom: max(170px, 10.4166666667vw);
+  }
+  
+  .content {
+    box-sizing: border-box;
+    padding-left: 14px;
+    padding-right: 14px;
+    
+    @media only screen and (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    
+    @media only screen and (min-width: 1280px) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    
+    @media only screen and (min-width: 1600px) {
+      padding-left: 8.59375vw;
+      padding-right: 8.59375vw;
+    }
+    
+    .description {
+      text-align: center;
+      
+      h2 {
+        color: #184068;
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.04em;
+        margin-bottom: max(12px, 0.625vw);
+        text-transform: none;
+        
+        @media only screen and (min-width: 768px) {
+          font-size: max(45px, 3.125vw);
+        }
+      }
+      
+      p {
+        color: #184068;
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 1.3em;
+        
+        @media only screen and (min-width: 768px) {
+          font-size: max(17px, 1.0416666667vw);
+        }
+      }
+    }
+    
+    .image-holder {
+      margin: max(32px, 2.0833333333vw) auto 0;
+      max-width: max(700px, 65.15625vw);
+      
+      img {
+        height: auto;
+        vertical-align: bottom;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Description Section */
+.template-rendements-page-container .description-section {
+  @media only screen and (min-width: 768px) {
+    margin-bottom: max(140px, 7.2916666667vw);
+  }
+  
+  .content {
+    box-sizing: border-box;
+    padding-left: 14px;
+    padding-right: 14px;
+    
+    @media only screen and (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    
+    @media only screen and (min-width: 1280px) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    
+    @media only screen and (min-width: 1600px) {
+      padding-left: 8.59375vw;
+      padding-right: 8.59375vw;
+    }
+    
+    .col {
+      box-sizing: border-box;
+      
+      &:first-child {
+        align-self: center;
+        width: 100%;
+        
+        @media only screen and (min-width: 768px) {
+          padding-right: 9.6354166667vw;
+        }
+        
+        .description :last-child {
+          margin-bottom: 0;
+        }
+        
+        .description p {
+          color: #184068;
+          font-family: peridot-pe-variable, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          letter-spacing: 0;
+          line-height: 1.3em;
+          
+          @media only screen and (min-width: 768px) {
+            font-size: max(17px, 1.0416666667vw);
+          }
+        }
+      }
+      
+      &:nth-child(2) {
+        @media only screen and (min-width: 768px) {
+          flex-shrink: 0;
+          width: max(330px, 19.7916666667vw);
+        }
+        
+        .banner {
+          background-color: #184068;
+          border-radius: 2.8125vw;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: center;
+          margin-top: 80px;
+          padding: 40px 33px;
+          text-align: center;
+          width: 100%;
+          
+          @media only screen and (min-width: 650px) {
+            padding: max(70px, 4.84375vw) max(30px, 2.8645833333vw);
+          }
+          
+          @media only screen and (min-width: 768px) {
+            margin-top: 0;
+          }
+          
+          .banner-description {
+            h2 {
+              color: #fff;
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 23px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 1.04em;
+              margin-bottom: max(30px, 3.125vw);
+              text-transform: none;
+              
+              @media only screen and (min-width: 768px) {
+                font-size: max(27px, 1.6666666667vw);
+              }
+            }
+            
+            p {
+              color: #fff;
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              letter-spacing: 0;
+              line-height: 1.3em;
+              
+              @media only screen and (min-width: 768px) {
+                font-size: max(17px, 1.0416666667vw);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Section Table */
+.template-rendements-page-container .section-table {
+  box-sizing: border-box;
+  padding: max(80px, 8.0729166667vw) 14px;
+  
+  @media only screen and (min-width: 768px) {
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-bottom: max(115px, 6.9791666667vw);
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+  @media only screen and (min-width: 1600px) {
+    padding-left: 8.59375vw;
+    padding-right: 8.59375vw;
+  }
+  
+  .content {
+    margin: 0 auto;
+    max-width: max(1300px, 67.7083333333vw);
+    
+    .description.description--top {
+      margin-bottom: max(24px, 2.34375vw);
+      text-align: center;
+      
+      h2 {
+        color: #184068;
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.04em;
+        text-transform: none;
+        
+        @media only screen and (min-width: 768px) {
+          font-size: max(45px, 3.125vw);
+        }
+      }
+    }
+    
+    .description.description--bottom {
+      h4 {
+        color: #0080bc;
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.04em;
+        margin-bottom: max(24px, 1.5625vw);
+        text-transform: none;
+        
+        @media only screen and (min-width: 768px) {
+          font-size: max(27px, 1.6666666667vw);
+        }
+      }
+      
+      p {
+        color: #184068;
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 1.3em;
+        
+        @media only screen and (min-width: 768px) {
+          font-size: max(17px, 1.0416666667vw);
+        }
+      }
+    }
+    
+    .table-holder {
+      margin-bottom: max(52px, 2.7083333333vw);
+      overflow: auto;
+      
+      .table {
+        min-width: 1000px;
+        width: 100%;
+        
+        .tbody .row,
+        .thead .row {
+          display: flex;
+          width: 100%;
+          
+          .col {
+            width: 100%;
+            
+            &:first-child {
+              width: 220%;
+            }
+          }
+        }
+        
+        .thead {
+          background-color: #3278b6;
+          
+          .row .col {
+            box-sizing: border-box;
+            color: #fff;
+            font-family: peridot-pe-variable, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 1.3em;
+            padding: max(3px, 0.15625vw) 0 max(7px, 0.3645833333vw);
+            text-align: center;
+            
+            @media only screen and (min-width: 768px) {
+              font-size: max(17px, 1.0416666667vw);
+            }
+          }
+        }
+        
+        .tbody .row {
+          &:nth-child(odd) .col {
+            font-weight: 700;
+          }
+          
+          .col {
+            color: #184068;
+            font-family: peridot-pe-variable, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 1.3em;
+            padding: max(3px, 0.15625vw) 0 max(7px, 0.3645833333vw);
+            text-align: center;
+            
+            @media only screen and (min-width: 768px) {
+              font-size: max(17px, 1.0416666667vw);
+            }
+            
+            &:first-child {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Section Info */
+.template-rendements-page-container .section-info {
+  @media only screen and (min-width: 768px) {
+    margin-bottom: max(115px, 6.9791666667vw);
+  }
+  
+  .content {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 14px;
+    padding-right: 14px;
+    
+    @media only screen and (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    
+    @media only screen and (min-width: 850px) {
+      flex-wrap: nowrap;
+    }
+    
+    @media only screen and (min-width: 1280px) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    
+    @media only screen and (min-width: 1600px) {
+      padding-left: 8.59375vw;
+      padding-right: 8.59375vw;
+    }
+    
+    .col {
+      box-sizing: border-box;
+      
+      &:first-child {
+        flex-shrink: 0;
+        margin-top: 40px;
+        max-width: 100%;
+        order: 1;
+        width: 100%;
+        
+        @media only screen and (min-width: 850px) {
+          margin-top: 0;
+          max-width: max(430px, 29.0104166667vw);
+          order: 0;
+        }
+        
+        .banner {
+          border-radius: max(20px, 1.0416666667vw);
+          box-sizing: border-box;
+          display: flex;
+          min-height: 34.6354166667vw;
+          overflow: hidden;
+          padding: 24px;
+          position: relative;
+          width: 100%;
+          
+          @media only screen and (min-width: 650px) {
+            padding: max(24px, 7.3333333333vw);
+          }
+          
+          @media only screen and (min-width: 850px) {
+            padding: 4.5833333333vw;
+          }
+          
+          .banner-image {
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            object-fit: cover;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            z-index: 0;
+          }
+          
+          .banner-content {
+            background-color: #fff;
+            border-radius: max(20px, 1.0416666667vw);
+            padding: max(55px, 3.6458333333vw) max(25px, 3.125vw);
+            position: relative;
+            text-align: center;
+            width: 100%;
+            z-index: 3;
+            
+            :last-child {
+              margin-bottom: 0;
+            }
+            
+            h2 {
+              color: #184068;
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 23px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 1.04em;
+              margin-bottom: max(30px, 2.0833333333vw);
+              text-transform: none;
+              
+              @media only screen and (min-width: 768px) {
+                font-size: max(27px, 1.6666666667vw);
+              }
+            }
+            
+            h3 {
+              color: #184068;
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 1.04em;
+              margin-bottom: max(6px, 0.4166666667vw);
+              text-transform: none;
+              
+              @media only screen and (min-width: 768px) {
+                font-size: max(22px, 1.25vw);
+              }
+            }
+            
+            p {
+              color: #184068;
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              letter-spacing: 0;
+              line-height: 1.3em;
+              margin-bottom: max(30px, 2.0833333333vw);
+              
+              @media only screen and (min-width: 768px) {
+                font-size: max(17px, 1.0416666667vw);
+              }
+            }
+          }
+        }
+      }
+      
+      &:nth-child(2) {
+        width: 100%;
+        
+        @media only screen and (min-width: 850px) {
+          padding-left: 30px;
+        }
+        
+        @media only screen and (min-width: 1024px) {
+          padding-left: 7.8125vw;
+        }
+        
+        .description h2 {
+          color: #184068;
+          font-family: peridot-pe-variable, sans-serif;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 1.04em;
+          margin-bottom: max(36px, 2.5vw);
+          text-transform: none;
+          
+          @media only screen and (min-width: 768px) {
+            font-size: max(45px, 3.125vw);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Section List */
+.template-rendements-page-container .section-list {
+  background-color: #184068;
+  box-sizing: border-box;
+  margin-bottom: 80px;
+  padding: max(80px, 7.8125vw) 14px;
+  
+  @media only screen and (min-width: 768px) {
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-bottom: max(125px, 7.96875vw);
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+  @media only screen and (min-width: 1600px) {
+    padding-left: 8.59375vw;
+    padding-right: 8.59375vw;
+  }
+  
+  .content {
+    box-sizing: border-box;
+    
+    @media only screen and (min-width: 1024px) {
+      padding: 0 6.5104166667vw;
+    }
+    
+    .title {
+      color: #fff;
+      font-family: peridot-pe-variable, sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.04em;
+      margin-bottom: max(40px, 4.6875vw);
+      text-transform: none;
+      
+      @media only screen and (min-width: 768px) {
+        font-size: max(38px, 2.6041666667vw);
+        text-align: center;
+      }
+    }
+    
+    .list .row {
+      box-sizing: border-box;
+      margin-bottom: max(17px, 1.0416666667vw);
+      
+      @media only screen and (min-width: 768px) {
+        display: flex;
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      .col {
+        color: #fff;
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.04em;
+        text-transform: none;
+        
+        @media only screen and (min-width: 768px) {
+          font-size: max(25px, 1.5625vw);
+        }
+        
+        &:first-child {
+          margin-bottom: 13px;
+          
+          @media only screen and (min-width: 768px) {
+            margin-bottom: 0;
+            width: 70%;
+          }
+        }
+        
+        &:nth-child(2) {
+          @media only screen and (max-width: 767px) {
+            font-weight: 400;
+          }
+          
+          @media only screen and (min-width: 768px) {
+            text-align: right;
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}

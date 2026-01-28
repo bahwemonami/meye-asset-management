@@ -1,0 +1,128 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e6] [cursor=pointer]:
+        - /url: https://rivemont.ca
+      - generic [ref=e7]:
+        - navigation [ref=e8]:
+          - list [ref=e9]:
+            - listitem [ref=e105]:
+              - link "Gestion privée" [ref=e106] [cursor=pointer]:
+                - /url: https://rivemont.ca/gestion-privee/
+            - listitem [ref=e107]:
+              - link "Rendements" [ref=e108] [cursor=pointer]:
+                - /url: https://rivemont.ca/rendements/
+            - listitem [ref=e109]:
+              - link "Planification financière" [ref=e110] [cursor=pointer]:
+                - /url: https://rivemont.ca/planification-financiere/
+            - listitem [ref=e111]:
+              - link "Contact" [ref=e112] [cursor=pointer]:
+                - /url: https://rivemont.ca/contact/
+            - listitem [ref=e10]:
+              - menuitem "Switch to En" [ref=e11] [cursor=pointer]:
+                - generic [ref=e12]: En
+        - button [ref=e13] [cursor=pointer]
+  - link "Passez à l'action" [ref=e17] [cursor=pointer]:
+    - /url: https://rivemont.ca/devenir-client/
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - heading "Gestion privée" [level=1] [ref=e22]
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - heading "À qui s’adresse la gestion privée" [level=2] [ref=e27]
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - paragraph [ref=e32]: La gestion privée s’adresse à une clientèle ayant des actifs de plus de 250 000 $ à investir et qui recherche une solution complète et performante.
+              - heading "On compte parmi nos clients :" [level=4] [ref=e33]
+              - list [ref=e34]:
+                - listitem [ref=e35]: Des entrepreneurs et des dirigeants d’entreprises;
+                - listitem [ref=e36]: Des professionnels, des artistes ou des sportifs;
+                - listitem [ref=e37]: Des détenteurs de fortune de deuxième génération;
+                - listitem [ref=e38]: Des institutions et des entreprises privées.
+                - listitem [ref=e39]: Des épargnants efficaces.
+              - heading "La gestion privée chez Rivemont vous offre :" [level=4] [ref=e40]
+              - list [ref=e41]:
+                - listitem [ref=e42]: Une gestion professionnelle
+                - listitem [ref=e43]: Un alignement sur une politique de placement précise
+                - listitem [ref=e44]: Une optimisation fiscale
+                - listitem [ref=e45]: Des rapports mensuels détaillés
+                - listitem [ref=e46]: Des frais de gestion avantageux
+                - listitem [ref=e47]: Un accès à une équipe externe multidisciplinaire pouvant répondre à tous vos besoins financiers, notamment la fiscalité et la comptabilité.
+              - paragraph [ref=e48]: N’hésitez pas à nous contacter afin que nous puissions évaluer votre situation financière et vous recommander une solution personnalisée qui reflète vos besoins et vos objectifs de placements.
+            - link "Contactez-nous" [ref=e49] [cursor=pointer]:
+              - /url: https://rivemont.ca/contact/
+        - list [ref=e116]:
+          - listitem [ref=e117]:
+            - link "À qui s’adresse la gestion privée" [ref=e118] [cursor=pointer]:
+              - /url: https://rivemont.ca/gestion-privee/
+          - listitem [ref=e119]:
+            - link "Cycle de gestion" [ref=e120] [cursor=pointer]:
+              - /url: "?sub-page=cycle-de-gestion"
+          - listitem [ref=e121]:
+            - link "Philosophie de gestion" [ref=e122] [cursor=pointer]:
+              - /url: "?sub-page=philosophie-de-gestion"
+          - listitem [ref=e123]:
+            - link "La méthodologie de gestion" [ref=e124] [cursor=pointer]:
+              - /url: "?sub-page=la-methodologie-de-gestion"
+          - listitem [ref=e125]:
+            - link "Les stratégies de placement" [ref=e126] [cursor=pointer]:
+              - /url: "?sub-page=les-strategies-de-placement"
+          - listitem [ref=e127]:
+            - link "Pourquoi Rivemont ?" [ref=e128] [cursor=pointer]:
+              - /url: "?sub-page=pourquoi-rivemont"
+          - listitem [ref=e129]:
+            - link "Pourquoi choisir un conseiller détenteur du titre CFA* ?" [ref=e130] [cursor=pointer]:
+              - /url: "?sub-page=pourquoi-choisir-un-conseiller-detenteur-du-titre-cfa"
+  - contentinfo [ref=e50]:
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - img [ref=e55]
+          - generic [ref=e56]:
+            - heading "Inscrivez-vous à notre lettre financière" [level=2] [ref=e57]
+            - generic [ref=e59]:
+              - generic [ref=e60]:
+                - status
+                - list
+              - form "Contact form" [ref=e61]:
+                - generic [ref=e62]:
+                  - textbox "Adresse courriel" [ref=e65]
+                  - button "Inscription" [ref=e66] [cursor=pointer]
+        - generic [ref=e68]:
+          - heading "Passez à l’action, devenez client." [level=2] [ref=e69]
+          - link "En savoir plus" [ref=e71] [cursor=pointer]:
+            - /url: https://rivemont.ca/devenir-client/
+      - generic [ref=e72]:
+        - link [ref=e74] [cursor=pointer]:
+          - /url: https://rivemont.ca
+        - navigation [ref=e76]:
+          - list [ref=e77]:
+            - listitem [ref=e78]:
+              - link "Gestion privée" [ref=e79] [cursor=pointer]:
+                - /url: https://rivemont.ca/gestion-privee/
+            - listitem [ref=e80]:
+              - link "Rendements" [ref=e81] [cursor=pointer]:
+                - /url: https://rivemont.ca/rendements/
+            - listitem [ref=e82]:
+              - link "Fonds alternatifs" [ref=e83] [cursor=pointer]:
+                - /url: https://rivemont.ca/fonds-alternatifs/
+            - listitem [ref=e84]:
+              - link "Contact" [ref=e85] [cursor=pointer]:
+                - /url: https://rivemont.ca/contact/
+        - navigation [ref=e87]:
+          - list [ref=e88]:
+            - listitem [ref=e89]:
+              - link [ref=e90] [cursor=pointer]:
+                - /url: https://www.facebook.com/profile.php?id=100063975098177
+                - img [ref=e91]
+            - listitem [ref=e93]:
+              - link [ref=e94] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCJADkkF5DoZC17lm3S0jMqw
+                - img [ref=e95]
+            - listitem [ref=e97]:
+              - link [ref=e98] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/les-investissements-rivemont/?originalSubdomain=fr
+                - img [ref=e99]
+        - link "Connexion" [ref=e102] [cursor=pointer]:
+          - /url: https://monportefeuilleplus.ca/login
+      - paragraph [ref=e104]: © 2026, Les investissements Rivemont. Tous droits réservés.

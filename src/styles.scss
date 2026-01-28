@@ -9,6 +9,22 @@
 /* Import AOS (Animate On Scroll) styles */
 @import 'aos/dist/aos.css';
 
+/* Import Design Tokens, Responsive et Animations Rivemont */
+@import 'styles/rivemont/tokens';
+@import 'styles/rivemont/responsive';
+@import 'styles/rivemont/animations';
+
+/* ============================================================================
+   FONT PERIDOT PE VARIABLE - Police exacte de Rivemont
+   ============================================================================ */
+@font-face {
+  font-family: 'peridot-pe-variable';
+  src: url('assets/rivemont/fonts/peridot-pe-variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Skip to content - Accessible mais caché visuellement */
 .skip-to-content {
   position: absolute;
@@ -28,9 +44,6 @@
   }
 }
 
-/* Import de polices - DM Sans comme alternative à Peridot PE Variable */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
 /* Variables de couleurs identiques à Rivemont */
 :root {
   --rivemont-primary: #1a1a1a;
@@ -42,12 +55,6 @@
   --rivemont-white: #ffffff;
   --rivemont-gray-light: #f5f5f5;
   --rivemont-gray: #e5e5e5;
-  
-  /* Couleurs exactes extraites de Rivemont */
-  --rivemont-blue-dark: rgb(24, 64, 104);
-  --rivemont-blue-medium: rgb(0, 128, 188);
-  --rivemont-blue-light: rgb(81, 178, 214);
-  --rivemont-blue-bg: rgb(234, 243, 253);
   
   /* Alias pour compatibilité */
   --meye-primary: var(--rivemont-primary);
@@ -81,18 +88,18 @@ html {
 
 /* Typographie identique à Rivemont */
 body {
-  font-family: "Times New Roman";
-  font-size: 16px;
-  color: var(--rivemont-text);
-  line-height: 16px;
-  background: var(--rivemont-white);
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 17px;
+  color: var(--rivemont-text-primary);
+  line-height: 22.1px;
+  background: var(--rivemont-bg-white);
   text-transform: none;
   text-decoration: none;
 }
 
 /* Titres avec police Peridot PE Variable (identique à Rivemont) */
 h1 {
-  font-family: "DM Sans", peridot-pe-variable, sans-serif;
+  font-family: peridot-pe-variable, sans-serif;
   font-size: 73.3333px;
   font-weight: 700;
   line-height: 73.3333px;
@@ -109,7 +116,7 @@ h1 {
 }
 
 h2 {
-  font-family: "DM Sans", peridot-pe-variable, sans-serif;
+  font-family: peridot-pe-variable, sans-serif;
   font-size: 50px;
   font-weight: 700;
   line-height: 52px;
@@ -142,202 +149,217 @@ h2 {
   }
 
 h3, h4, h5, h6 {
-  font-family: 'Peridot PE Variable', sans-serif;
+  font-family: peridot-pe-variable, sans-serif;
   font-weight: 700;
   line-height: 1.2;
   color: var(--rivemont-primary);
 }
 
 /* Header - Identique à Rivemont */
-#site-header,
-.site-header,
-header {
-  background: transparent;
-  position: absolute;
-  top: 0;
+#site-header {
+  box-sizing: border-box;
   left: 0;
-  right: 0;
+  padding-left: 14px;
+  padding-right: 14px;
+  position: fixed;
+  top: 0;
+  transition: all .35s ease 0ms;
+  width: 100%;
   z-index: 10;
-  transition: 0.35s ease;
-  padding: 0px 165px;
-  font-family: "Times New Roman";
-  text-transform: none;
-  text-decoration: none;
-  height: 141.516px;
-  min-width: 0px;
-  min-height: 0px;
-  max-height: none;
-  border: 0px none rgb(0, 0, 0);
-  border-width: 0px;
-  border-style: none;
-  border-color: rgb(0, 0, 0);
-  flex-direction: row;
-  justify-content: normal;
-  align-items: normal;
-  grid-template-columns: none;
-  grid-template-rows: none;
-  grid-gap: normal;
-  
-  @media (max-width: 1400px) {
-    padding: 0px 80px;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-header {
+    padding-left: 35px;
+    padding-right: 35px;
   }
-  
-  @media (max-width: 1189px) {
-    padding: 0px 40px;
+}
+
+@media only screen and (min-width: 1280px) {
+  #site-header {
+    padding-left: 80px;
+    padding-right: 80px;
   }
-  
-  @media (max-width: 1024px) {
-    padding: 0px 40px;
+}
+
+@media only screen and (min-width: 1600px) {
+  #site-header {
+    padding-left: 8.59375vw;
+    padding-right: 8.59375vw;
   }
-  
-  @media (max-width: 850px) {
-    padding: 0px 20px;
-  }
-  
-  @media (max-width: 768px) {
-    padding: 0px 20px;
-  }
-  
-  &.scrolled {
-    background: var(--rivemont-white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-header {
     position: absolute;
-    transition: background 0.35s ease, box-shadow 0.35s ease;
-    
-    .nav-menu a {
-      color: var(--rivemont-primary);
-      
-      &:hover {
-        color: var(--rivemont-accent);
-      }
-    }
-    
-    .client-access-link {
-      color: rgb(255, 255, 255);
-      background-color: rgb(24, 64, 104);
-    }
-    
-    .menu-toggle svg {
-      stroke: var(--rivemont-primary);
-    }
   }
 }
 
-.header-container,
-header .content {
-  max-width: none !important;
-  margin: 0 auto;
-  padding: 100px 0px 0px !important;
-  display: flex;
+#site-header:not(.site-header--cta-header) .content {
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-header:not(.site-header--cta-header) .content {
+    padding-bottom: 0;
+    padding-top: max(25px, 2.8645833333vw);
+  }
+}
+
+#site-header .content {
   align-items: center;
+  box-sizing: border-box;
+  display: flex;
   justify-content: space-between;
-  height: 141.516px !important;
-  min-height: 0px;
-  
-  @media (max-width: 1440px) {
-    height: 141.516px !important;
-    min-height: 0px;
-    padding: 100px 0px 0px !important;
-  }
-  
-  @media (max-width: 1024px) {
-    height: 141.516px !important;
-    min-height: 0px;
-    padding: 100px 0px 0px !important;
-  }
-  
-  @media (max-width: 768px) {
-    height: auto !important;
-    min-height: 62px;
-    padding: 20px 0px 0px !important;
-  }
-  
-  @media (max-width: 320px) {
-    height: auto !important;
-    min-height: 57px;
-    padding: 15px 0px 0px !important;
-  }
-  
-  .col {
-    &.col-1 {
-      display: block;
-      flex: 0 1 auto;
-      align-items: normal;
-    }
-    
-    &.col-2 {
-      display: flex;
-      flex: 1 1 auto;
-      align-items: center;
-      justify-content: flex-end;
-      gap: normal;
-    }
+  position: relative;
+  width: 100%;
+}
+
+#site-header .content .gl-button:after {
+  content: none;
+}
+
+#site-header .content .col.col-1 .logo-holder {
+  display: block;
+  width: 164px;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-header .content .col.col-1 .logo-holder {
+    width: max(200px, 14.7916666667vw);
   }
 }
 
-.logo-link,
-.logo-holder {
-  display: flex;
+#site-header .content .col.col-1 .logo-holder img {
+  display: inline;
+  height: auto;
+  vertical-align: baseline;
+  width: 100%;
+}
+
+#site-header .content .col.col-2 {
   align-items: center;
-  text-decoration: none;
-  z-index: 10;
-  
-  img {
-    height: 50px;
-    width: auto;
+  display: flex;
+}
+
+#site-header .content .col.col-2 nav {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-header .content .col.col-2 nav {
+    display: block;
   }
 }
 
-.header-nav,
-nav[js-site-nav="container"] {
+#site-header .content .col.col-2 nav .menu {
   display: flex;
-  align-items: center;
-  gap: 40px;
-  
-  @media (max-width: 1024px) {
-    display: none;
+}
+
+#site-header .content .col.col-2 nav .menu li {
+  margin-right: max(45px, 3.125vw);
+}
+
+#site-header .content .col.col-2 nav .menu li:last-child {
+  margin-right: 0;
+}
+
+#site-header .content .col.col-2 nav .menu li a {
+  color: #fff;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.3em;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-header .content .col.col-2 nav .menu li a {
+    font-size: max(17px, 1.0416666667vw);
   }
 }
 
-/* Navigation Menu - Identique à Rivemont */
-header nav .menu,
-.nav-menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
+#site-header .content .col.col-2 nav .menu li a:hover {
+  text-decoration: underline;
+}
+
+#site-header .content .col.col-2 .hamburger {
+  background-color: #fff0;
+  border: none;
+  cursor: pointer;
+  display: block;
+  height: auto;
+  line-height: 0;
+  margin-left: max(64px, 3.3333333333vw);
   padding: 0;
-  gap: 0;
-  
-  li {
-    margin-right: 60px;
-    
-    &:last-child {
-      margin-right: 0;
-    }
+  width: max(27px, 1.40625vw);
+}
+
+#site-header .content .col.col-2 .hamburger span {
+  background-color: #fff;
+  border: none;
+  display: block;
+  height: max(2px, .1041666667vw);
+  margin-bottom: max(6px, .3125vw);
+}
+
+#site-header .content .col.col-2 .hamburger span:last-child {
+  margin-bottom: 0;
+}
+
+#site-button {
+  align-items: center;
+  background-color: #51b2d6;
+  border: none;
+  border-radius: max(100px, 5.2083333333vw);
+  border-bottom-right-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  justify-content: center;
+  line-height: 1.2em;
+  min-height: 42px;
+  min-width: max(178px, 17.8125vw);
+  padding: 0 max(24px, 2.2395833333vw);
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: rotate(-90deg) translate(70%, -50%);
+  transform-origin: right;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all .35s ease 0ms;
+  z-index: 8;
+
+  &::after {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNyIgaGVpZ2h0PSIyNS4yNDMiIHZpZXdCb3g9IjAgMCAyNyAyNS4yNDMiPgogIDxwYXRoIGlkPSJJY29uX2FrYXItYXJyb3ctcmlnaHQiIGRhdGEtbmFtZT0iSWNvbiBha2FyLWFycm93LXJpZ2h0IiBkPSJNNiwxOEgzME0xOS41LDcuNSwzMCwxOCwxOS41LDI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00LjUgLTUuMzc5KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    height: max(16px, 1.09375vw);
+    margin-left: max(12px, 1.09375vw);
+    position: relative;
+    top: max(1px, .1041666667vw);
+    width: max(18px, 1.1979166667vw);
   }
-  
-  a {
-    color: var(--rivemont-white);
-    text-decoration: none;
-    font-family: "DM Sans", peridot-pe-variable, sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: normal;
-    transition: color 0.3s ease;
-    text-transform: none;
-    
-    &:hover {
-      color: rgba(255, 255, 255, 0.7);
-    }
-  }
-  
-  .site-header.scrolled & a {
-    color: var(--rivemont-primary);
-    
-    &:hover {
-      color: var(--rivemont-accent);
-    }
+}
+
+@media only screen and (min-width: 768px) {
+  #site-button {
+    display: inline-flex;
+    font-size: max(18px, 1.0416666667vw);
+    min-height: max(54px, 3.6458333333vw);
+    min-width: max(242px, 17.8125vw);
+    height: max(54px, 3.6458333333vw);
   }
 }
 
@@ -353,7 +375,7 @@ header .gl-button--blue-dark {
   z-index: 10;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  font-family: "DM Sans", peridot-pe-variable, sans-serif;
+  font-family: peridot-pe-variable, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
@@ -470,7 +492,7 @@ header .gl-button--blue-dark {
   width: 342px !important;
   height: 70px !important;
   text-decoration: none !important;
-  font-family: "DM Sans", peridot-pe-variable, sans-serif !important;
+  font-family: peridot-pe-variable, sans-serif !important;
   font-size: 20px !important;
   font-weight: 400 !important;
   line-height: 70px !important;
@@ -554,7 +576,7 @@ header .gl-button--blue-dark {
       
       h1 {
         color: var(--rivemont-white);
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 110px;
         font-weight: 700;
         font-style: italic;
@@ -588,7 +610,7 @@ header .gl-button--blue-dark {
     justify-content: center;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-family: "DM Sans", peridot-pe-variable, sans-serif;
+    font-family: peridot-pe-variable, sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
@@ -632,7 +654,7 @@ header .gl-button--blue-dark {
   gap: 12px;
   color: rgb(24, 64, 104);
   text-decoration: none;
-  font-family: "DM Sans", peridot-pe-variable, sans-serif;
+  font-family: peridot-pe-variable, sans-serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 22.1px;
@@ -705,7 +727,7 @@ header .gl-button--blue-dark {
         
         .description {
           h2 {
-            font-family: "DM Sans", peridot-pe-variable, sans-serif;
+            font-family: peridot-pe-variable, sans-serif;
             font-size: 75px;
             font-weight: 700;
             line-height: 78px;
@@ -722,7 +744,7 @@ header .gl-button--blue-dark {
           }
           
           p {
-            font-family: "DM Sans", peridot-pe-variable, sans-serif;
+            font-family: peridot-pe-variable, sans-serif;
             font-size: 20px;
             font-weight: 400;
             line-height: 26px;
@@ -747,7 +769,7 @@ header .gl-button--blue-dark {
             gap: 21px;
             color: rgb(255, 255, 255);
             text-decoration: none;
-            font-family: "DM Sans", peridot-pe-variable, sans-serif;
+            font-family: peridot-pe-variable, sans-serif;
             font-size: 20px;
             font-weight: 400;
             line-height: 24px;
@@ -884,7 +906,7 @@ header .gl-button--blue-dark {
         justify-content: center;
         color: rgb(255, 255, 255);
         text-decoration: none;
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 20px;
         font-weight: 400;
         line-height: 24px;
@@ -949,7 +971,7 @@ section.section-info {
       gap: 21px !important;
       color: rgb(255, 255, 255) !important;
       text-decoration: none !important;
-      font-family: "DM Sans", peridot-pe-variable, sans-serif !important;
+      font-family: peridot-pe-variable, sans-serif !important;
       font-size: 20px !important;
       font-weight: 400 !important;
       line-height: 24px !important;
@@ -1023,7 +1045,7 @@ section.section-info {
       text-align: center;
       
       h2 {
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 50px;
         font-weight: 700;
         line-height: 52px;
@@ -1060,7 +1082,7 @@ section.section-info {
         justify-content: center;
         color: rgb(255, 255, 255);
         text-decoration: none;
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 20px;
         font-weight: 400;
         line-height: 24px;
@@ -1103,7 +1125,7 @@ section.section-info {
   }
   
   .title {
-    font-family: "DM Sans", peridot-pe-variable, sans-serif;
+    font-family: peridot-pe-variable, sans-serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 52px;
@@ -1270,7 +1292,7 @@ section.section-info {
           padding: 10px 25px !important;
           background: rgb(0, 128, 188) !important;
           border-radius: 100px !important;
-          font-family: "DM Sans", peridot-pe-variable, sans-serif !important;
+          font-family: peridot-pe-variable, sans-serif !important;
           font-size: 16px !important;
           font-weight: 400 !important;
           color: rgb(255, 255, 255) !important;
@@ -1285,7 +1307,7 @@ section.section-info {
       }
       
       .post-title {
-        font-family: "DM Sans", peridot-pe-variable, sans-serif !important;
+        font-family: peridot-pe-variable, sans-serif !important;
         font-size: 40px !important;
         font-weight: 700 !important;
         line-height: 44px !important;
@@ -1350,7 +1372,7 @@ section.section-info {
       gap: 21px;
       color: rgb(255, 255, 255);
       text-decoration: none;
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 20px;
       font-weight: 400;
       line-height: 24px;
@@ -1458,7 +1480,7 @@ section.section-info {
         }
         
         .cta-title {
-          font-family: "DM Sans", peridot-pe-variable, sans-serif;
+          font-family: peridot-pe-variable, sans-serif;
           color: rgb(255, 255, 255);
           font-size: 50px;
           font-weight: 700;
@@ -1491,7 +1513,7 @@ section.section-info {
               height: 70px;
               border: none;
               border-radius: 100px;
-              font-family: "DM Sans", peridot-pe-variable, sans-serif;
+              font-family: peridot-pe-variable, sans-serif;
               font-size: 20px;
               font-weight: 400;
               line-height: normal;
@@ -1523,7 +1545,7 @@ section.section-info {
               color: rgb(255, 255, 255);
               border: none;
               border-radius: 100px;
-              font-family: "DM Sans", peridot-pe-variable, sans-serif;
+              font-family: peridot-pe-variable, sans-serif;
               font-size: 20px;
               font-weight: 400;
               line-height: 24px;
@@ -1564,7 +1586,7 @@ section.section-info {
             justify-content: center;
             color: rgb(255, 255, 255);
             text-decoration: none;
-            font-family: "DM Sans", peridot-pe-variable, sans-serif;
+            font-family: peridot-pe-variable, sans-serif;
             font-size: 20px;
             font-weight: 400;
             line-height: 24px;
@@ -1662,7 +1684,7 @@ section.section-info {
               a {
                 color: rgb(255, 255, 255);
                 text-decoration: none;
-                font-family: "DM Sans", peridot-pe-variable, sans-serif;
+                font-family: peridot-pe-variable, sans-serif;
                 font-size: 20px;
                 font-weight: 400;
                 line-height: 26px;
@@ -1738,7 +1760,7 @@ section.section-info {
           gap: 10px;
           color: rgb(255, 255, 255);
           text-decoration: none;
-          font-family: "DM Sans", peridot-pe-variable, sans-serif;
+          font-family: peridot-pe-variable, sans-serif;
           font-size: 20px;
           font-weight: 400;
           line-height: 24px;
@@ -1784,7 +1806,7 @@ section.section-info {
     
     p {
       color: rgb(255, 255, 255);
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 20px;
       font-weight: 400;
       line-height: 26px;
@@ -1811,7 +1833,7 @@ section.section-info {
   }
   
   h1 {
-    font-family: "DM Sans", peridot-pe-variable, sans-serif;
+    font-family: peridot-pe-variable, sans-serif;
     color: var(--rivemont-white);
     font-size: 73.3333px;
     font-weight: 700;
@@ -1845,7 +1867,7 @@ section.section-info {
   }
   
   h2 {
-    font-family: "DM Sans", peridot-pe-variable, sans-serif;
+    font-family: peridot-pe-variable, sans-serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 52px;
@@ -1862,7 +1884,7 @@ section.section-info {
   }
   
   h3 {
-    font-family: "DM Sans", peridot-pe-variable, sans-serif;
+    font-family: peridot-pe-variable, sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -1872,7 +1894,7 @@ section.section-info {
   }
   
   h4 {
-    font-family: "DM Sans", peridot-pe-variable, sans-serif;
+    font-family: peridot-pe-variable, sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     margin: 30px 0 15px;
@@ -1883,7 +1905,7 @@ section.section-info {
   
   .prose-content {
     p {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 17px;
       font-weight: 400;
       line-height: 22.1px;
@@ -1898,7 +1920,7 @@ section.section-info {
       padding-left: 25px;
       
       li {
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 17px;
         font-weight: 400;
         line-height: 22.1px;
@@ -1936,7 +1958,7 @@ section.section-info {
     border-radius: 8px;
     
     p {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 17px;
       font-weight: 400;
       line-height: 22.1px;
@@ -1960,7 +1982,7 @@ section.section-info {
       a {
         color: rgb(24, 64, 104);
         text-decoration: none;
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 17px;
         font-weight: 400;
         line-height: 22.1px;
@@ -1990,7 +2012,7 @@ section.section-info {
       text-align: center;
       padding: 18px 25px;
       border-radius: 8px;
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 18px;
       font-weight: 400;
       line-height: 21.6px;
@@ -2075,7 +2097,7 @@ section.section-info {
     padding: 15px 20px;
     text-align: left;
     border-bottom: 1px solid var(--meye-gray);
-    font-family: "DM Sans", peridot-pe-variable, sans-serif;
+    font-family: peridot-pe-variable, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 16px;
@@ -2154,7 +2176,7 @@ main:has(.page-team) {
     }
     
     > .title {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 80px;
       font-weight: 700;
       line-height: 83.2px;
@@ -2229,7 +2251,7 @@ main:has(.page-team) {
               text-align: center;
               
               .member-name {
-                font-family: "DM Sans", peridot-pe-variable, sans-serif;
+                font-family: peridot-pe-variable, sans-serif;
                 font-size: 30px;
                 font-weight: 700;
                 line-height: 30px;
@@ -2245,7 +2267,7 @@ main:has(.page-team) {
               }
               
               .member-title {
-                font-family: "DM Sans", peridot-pe-variable, sans-serif;
+                font-family: peridot-pe-variable, sans-serif;
                 font-size: 18px;
                 font-weight: 600;
                 line-height: 18px;
@@ -2338,7 +2360,7 @@ main:has(.page-team) {
     z-index: 1;
     
     .team-name {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 20px;
       font-weight: 700;
       line-height: 26px;
@@ -2349,7 +2371,7 @@ main:has(.page-team) {
     }
     
     .team-role {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 15px;
       font-weight: 400;
       line-height: 20px;
@@ -2428,7 +2450,7 @@ main:has(.page-team) {
               gap: 8px;
               color: rgb(255, 255, 255);
               text-decoration: none;
-              font-family: "DM Sans", peridot-pe-variable, sans-serif;
+              font-family: peridot-pe-variable, sans-serif;
               font-size: 18px;
               font-weight: 400;
               line-height: 21.6px;
@@ -2485,7 +2507,7 @@ main:has(.page-team) {
                 > a {
                   color: var(--rivemont-white);
                   text-decoration: none;
-                  font-family: "DM Sans", peridot-pe-variable, sans-serif;
+                  font-family: peridot-pe-variable, sans-serif;
                   font-size: 1.1rem;
                   font-weight: 600;
                   transition: color 0.3s ease;
@@ -2507,7 +2529,7 @@ main:has(.page-team) {
                     a {
                       color: rgba(255, 255, 255, 0.7);
                       text-decoration: none;
-                      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+                      font-family: peridot-pe-variable, sans-serif;
                       font-size: 0.95rem;
                       font-weight: 400;
                       transition: color 0.3s ease;
@@ -2532,7 +2554,7 @@ main:has(.page-team) {
         
         p {
           color: var(--rivemont-white);
-          font-family: "DM Sans", peridot-pe-variable, sans-serif;
+          font-family: peridot-pe-variable, sans-serif;
           font-size: 1.3rem;
           font-weight: 600;
           margin-bottom: 20px;
@@ -2545,7 +2567,7 @@ main:has(.page-team) {
           justify-content: center;
           color: rgb(255, 255, 255);
           text-decoration: none;
-          font-family: "DM Sans", peridot-pe-variable, sans-serif;
+          font-family: peridot-pe-variable, sans-serif;
           font-size: 20px;
           font-weight: 400;
           line-height: 24px;
@@ -2716,7 +2738,7 @@ main:has(.page-team) {
     }
     
     h2 {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 60px;
       font-weight: 700;
       line-height: 62.4px;
@@ -2732,7 +2754,7 @@ main:has(.page-team) {
     }
     
     .date-info {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 17px;
       font-weight: 400;
       line-height: 22.1px;
@@ -2775,7 +2797,7 @@ main:has(.page-team) {
     
     .description {
       p {
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 17px;
         font-weight: 400;
         line-height: 22.1px;
@@ -2788,7 +2810,7 @@ main:has(.page-team) {
     
     .objective {
       h2 {
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 50px;
         font-weight: 700;
         line-height: 52px;
@@ -2804,7 +2826,7 @@ main:has(.page-team) {
       }
       
       p {
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 17px;
         font-weight: 400;
         line-height: 22.1px;
@@ -2834,7 +2856,7 @@ main:has(.page-team) {
     margin: 0 auto;
     
     h2 {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 60px;
       font-weight: 700;
       line-height: 62.4px;
@@ -2858,7 +2880,7 @@ main:has(.page-team) {
       margin-top: 50px;
       
       h4 {
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 17px;
         font-weight: 600;
         line-height: 22.1px;
@@ -2869,7 +2891,7 @@ main:has(.page-team) {
       }
       
       p {
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 17px;
         font-weight: 400;
         line-height: 22.1px;
@@ -2903,7 +2925,7 @@ main:has(.page-team) {
     }
     
     h2 {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 50px;
       font-weight: 700;
       line-height: 52px;
@@ -2919,7 +2941,7 @@ main:has(.page-team) {
     }
     
     h3 {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 17px;
       font-weight: 600;
       line-height: 22.1px;
@@ -2930,7 +2952,7 @@ main:has(.page-team) {
     }
     
     p {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 17px;
       font-weight: 400;
       line-height: 22.1px;
@@ -2946,7 +2968,7 @@ main:has(.page-team) {
       margin: 0;
       
       li {
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 17px;
         font-weight: 400;
         line-height: 22.1px;
@@ -2994,7 +3016,7 @@ main:has(.page-team) {
     margin: 0 auto;
     
     h2 {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 50px;
       font-weight: 700;
       line-height: 52px;
@@ -3027,7 +3049,7 @@ main:has(.page-team) {
         border-radius: 0px;
         
         .sector-name {
-          font-family: "DM Sans", peridot-pe-variable, sans-serif;
+          font-family: peridot-pe-variable, sans-serif;
           font-size: 17px;
           font-weight: 400;
           line-height: 22.1px;
@@ -3037,7 +3059,7 @@ main:has(.page-team) {
         }
         
         .sector-value {
-          font-family: "DM Sans", peridot-pe-variable, sans-serif;
+          font-family: peridot-pe-variable, sans-serif;
           font-size: 17px;
           font-weight: 400;
           line-height: 22.1px;
@@ -3057,7 +3079,7 @@ main:has(.page-team) {
   gap: 10px;
   color: rgb(24, 64, 104);
   text-decoration: none;
-  font-family: "DM Sans", peridot-pe-variable, sans-serif;
+  font-family: peridot-pe-variable, sans-serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 22.1px;
@@ -3078,7 +3100,7 @@ main:has(.page-team) {
 /* Post Header - Identique à Rivemont (pour financial letters) */
 .post-header {
   h1 {
-    font-family: "DM Sans", peridot-pe-variable, sans-serif;
+    font-family: peridot-pe-variable, sans-serif;
     font-size: 60px;
     font-weight: 700;
     line-height: 62.4px;
@@ -3099,7 +3121,7 @@ main:has(.page-team) {
     background: rgb(234, 243, 253);
     color: rgb(24, 64, 104);
     border-radius: 100px;
-    font-family: "DM Sans", peridot-pe-variable, sans-serif;
+    font-family: peridot-pe-variable, sans-serif;
     font-size: 14px;
     font-weight: 600;
     line-height: 18.2px;
@@ -3129,7 +3151,7 @@ main:has(.page-team) {
     
     .post-description.gl-text-editor {
       p {
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 17px;
         font-weight: 400;
         line-height: 22.1px;
@@ -3140,7 +3162,7 @@ main:has(.page-team) {
       }
       
       h2 {
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 50px;
         font-weight: 700;
         line-height: 52px;
@@ -3156,7 +3178,7 @@ main:has(.page-team) {
       }
       
       h3 {
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 30px;
         font-weight: 700;
         line-height: 33px;
@@ -3201,7 +3223,7 @@ main:has(.page-team) {
     margin: 0 auto;
     
     h2 {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 50px;
       font-weight: 700;
       line-height: 52px;
@@ -3250,7 +3272,7 @@ main:has(.page-team) {
           background: rgb(234, 243, 253);
           color: rgb(24, 64, 104);
           border-radius: 100px;
-          font-family: "DM Sans", peridot-pe-variable, sans-serif;
+          font-family: peridot-pe-variable, sans-serif;
           font-size: 14px;
           font-weight: 600;
           line-height: 18.2px;
@@ -3260,7 +3282,7 @@ main:has(.page-team) {
         }
         
         h3 {
-          font-family: "DM Sans", peridot-pe-variable, sans-serif;
+          font-family: peridot-pe-variable, sans-serif;
           font-size: 30px;
           font-weight: 700;
           line-height: 33px;
@@ -3271,7 +3293,7 @@ main:has(.page-team) {
         }
         
         p {
-          font-family: "DM Sans", peridot-pe-variable, sans-serif;
+          font-family: peridot-pe-variable, sans-serif;
           font-size: 17px;
           font-weight: 400;
           line-height: 22.1px;
@@ -3293,7 +3315,7 @@ main:has(.page-team) {
 .page-content {
   .content {
     h1 {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 60px;
       font-weight: 700;
       line-height: 62.4px;
@@ -3311,7 +3333,7 @@ main:has(.page-team) {
     .page-content__builder {
       .description.gl-text-editor {
         h2 {
-          font-family: "DM Sans", peridot-pe-variable, sans-serif;
+          font-family: peridot-pe-variable, sans-serif;
           font-size: 50px;
           font-weight: 700;
           line-height: 52px;
@@ -3327,7 +3349,7 @@ main:has(.page-team) {
         }
         
         h3 {
-          font-family: "DM Sans", peridot-pe-variable, sans-serif;
+          font-family: peridot-pe-variable, sans-serif;
           font-size: 30px;
           font-weight: 700;
           line-height: 33px;
@@ -3338,7 +3360,7 @@ main:has(.page-team) {
         }
         
         p {
-          font-family: "DM Sans", peridot-pe-variable, sans-serif;
+          font-family: peridot-pe-variable, sans-serif;
           font-size: 17px;
           font-weight: 400;
           line-height: 22.1px;
@@ -3354,7 +3376,7 @@ main:has(.page-team) {
       .section-sidebar {
         .content {
           h3 {
-            font-family: "DM Sans", peridot-pe-variable, sans-serif;
+            font-family: peridot-pe-variable, sans-serif;
             font-size: 30px;
             font-weight: 700;
             line-height: 33px;
@@ -3371,7 +3393,7 @@ main:has(.page-team) {
               margin-bottom: 20px;
               
               dt {
-                font-family: "DM Sans", peridot-pe-variable, sans-serif;
+                font-family: peridot-pe-variable, sans-serif;
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 18.2px;
@@ -3382,7 +3404,7 @@ main:has(.page-team) {
               }
               
               dd {
-                font-family: "DM Sans", peridot-pe-variable, sans-serif;
+                font-family: peridot-pe-variable, sans-serif;
                 font-size: 17px;
                 font-weight: 700;
                 line-height: 22.1px;
@@ -3423,7 +3445,7 @@ main:has(.page-team) {
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 1;
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 75px;
       font-weight: 700;
       line-height: 78px;
@@ -3483,7 +3505,7 @@ main:has(.page-team) {
         padding: 14px 18px;
         border: 2px solid rgb(234, 243, 253);
         border-radius: 8px;
-        font-family: "DM Sans", peridot-pe-variable, sans-serif;
+        font-family: peridot-pe-variable, sans-serif;
         font-size: 17px;
         font-weight: 400;
         line-height: 22.1px;
@@ -3505,7 +3527,7 @@ main:has(.page-team) {
     }
     
     .title {
-      font-family: "DM Sans", peridot-pe-variable, sans-serif;
+      font-family: peridot-pe-variable, sans-serif;
       font-size: 60px;
       font-weight: 700;
       line-height: 62.4px;
@@ -3526,7 +3548,7 @@ main:has(.page-team) {
         .content {
           .description.gl-text-editor {
             p {
-              font-family: "DM Sans", peridot-pe-variable, sans-serif;
+              font-family: peridot-pe-variable, sans-serif;
               font-size: 17px;
               font-weight: 400;
               line-height: 22.1px;
@@ -3537,7 +3559,7 @@ main:has(.page-team) {
             }
             
             h4 {
-              font-family: "DM Sans", peridot-pe-variable, sans-serif;
+              font-family: peridot-pe-variable, sans-serif;
               font-size: 17px;
               font-weight: 600;
               line-height: 22.1px;
@@ -3557,7 +3579,7 @@ main:has(.page-team) {
               padding-left: 25px;
               
               li {
-                font-family: "DM Sans", peridot-pe-variable, sans-serif;
+                font-family: peridot-pe-variable, sans-serif;
                 font-size: 17px;
                 font-weight: 400;
                 line-height: 22.1px;
@@ -3580,7 +3602,7 @@ main:has(.page-team) {
             justify-content: center;
             color: rgb(255, 255, 255);
             text-decoration: none;
-            font-family: "DM Sans", peridot-pe-variable, sans-serif;
+            font-family: peridot-pe-variable, sans-serif;
             font-size: 20px;
             font-weight: 400;
             line-height: 24px;
@@ -3626,7 +3648,7 @@ main:has(.page-team) {
               padding: 15px 20px;
               color: rgb(24, 64, 104);
               text-decoration: none;
-              font-family: "DM Sans", peridot-pe-variable, sans-serif;
+              font-family: peridot-pe-variable, sans-serif;
               font-size: 17px;
               font-weight: 400;
               line-height: 22.1px;

@@ -39,7 +39,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
           <!-- Become Client Column -->
           <div class="cta-col">
             <div class="cta-col-content">
-              <h2 class="cta-title">Passez à l'action, devenez client.</h2>
+              <h2 class="cta-title">Passez à l’action, devenez client.</h2>
               <div class="cta-button">
                 <a routerLink="/become-client" class="gl-button" target="_self">En savoir plus</a>
               </div>
@@ -116,7 +116,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
 
         <!-- Copyright -->
         <div class="copyright">
-          <p>© {{ currentYear }}, MEYE ASSET MANAGER. Tous droits réservés.</p>
+          <p>© {{ currentYear }}, Les investissements Rivemont. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

@@ -1,4 +1,4 @@
-import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
@@ -8,7 +8,10 @@ import { ImageMappingService } from '../../services/image-mapping.service';
   standalone: true,
   imports: [CommonModule, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./performance.component.scss'],
   template: `
+    <div class="template-rendements-page-container">
     <!-- Hero Section - Identique à Rivemont -->
     <section class="template-part-hero">
       <div class="content">
@@ -277,6 +280,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
         </div>
       </div>
     </section>
+    </div>
   `,
   styles: [`
     .section-header {

@@ -1,0 +1,293 @@
+// ============================================================================
+// DESIGN TOKENS RIVEMONT - Valeurs exactes extraites de rivemont.ca
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// COULEURS
+// ----------------------------------------------------------------------------
+:root {
+  // Couleurs principales
+  --rivemont-blue-dark: rgb(24, 64, 104);
+  --rivemont-blue-medium: rgb(0, 128, 188);
+  --rivemont-blue-light: rgb(81, 178, 214);
+  --rivemont-blue-bg: rgb(234, 243, 253);
+  --rivemont-navy-dark: rgb(15, 33, 64);
+  
+  // Couleurs de texte
+  --rivemont-text-primary: rgb(24, 64, 104);
+  --rivemont-text-white: rgb(255, 255, 255);
+  --rivemont-text-gray: rgb(128, 128, 128);
+  
+  // Couleurs de fond
+  --rivemont-bg-white: rgb(255, 255, 255);
+  --rivemont-bg-black: rgb(0, 0, 0);
+  --rivemont-bg-light: rgb(234, 243, 253);
+  
+  // ----------------------------------------------------------------------------
+  // TYPOGRAPHIE
+  // ----------------------------------------------------------------------------
+  --font-primary: 'peridot-pe-variable', sans-serif;
+  
+  // Tailles de police
+  --font-size-hero: 110px;
+  --font-size-h1: 75px;
+  --font-size-h2: 50px;
+  --font-size-h2-large: 60px;
+  --font-size-h3: 30px;
+  --font-size-body: 17px;
+  --font-size-button: 20px;
+  --font-size-nav: 20px;
+  --font-size-small: 14px;
+  --font-size-pill: 16px;
+  
+  // Line heights
+  --line-height-hero: 110px;
+  --line-height-h1: 78px;
+  --line-height-h2: 52px;
+  --line-height-h2-large: 62.4px;
+  --line-height-h3: 33px;
+  --line-height-body: 22.1px;
+  --line-height-button: 24px;
+  --line-height-nav: 26px;
+  
+  // Font weights
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  // ----------------------------------------------------------------------------
+  // ESPACEMENTS
+  // ----------------------------------------------------------------------------
+  --container-max: 1920px;
+  --container-content: 1200px;
+  
+  // Padding horizontal (responsive)
+  --padding-horizontal-xl: 165px;
+  --padding-horizontal-lg: 80px;
+  --padding-horizontal-md: 40px;
+  --padding-horizontal-sm: 20px;
+  
+  // Margins
+  --margin-section: 164px;
+  --margin-section-mobile: 80px;
+  
+  // Gaps
+  --gap-default: 30px;
+  --gap-small: 20px;
+  --gap-large: 60px;
+  
+  // ----------------------------------------------------------------------------
+  // BOUTONS
+  // ----------------------------------------------------------------------------
+  --button-height: 70px;
+  --button-min-width: 342px;
+  --button-padding-x: 43px;
+  --button-radius: 100px;
+  --button-radius-half: 35px;
+  
+  // ----------------------------------------------------------------------------
+  // BORDER RADIUS
+  // ----------------------------------------------------------------------------
+  --radius-none: 0px;
+  --radius-sm: 8px;
+  --radius-md: 20px;
+  --radius-lg: 35px;
+  --radius-xl: 70px;
+  --radius-full: 100px;
+  
+  // ----------------------------------------------------------------------------
+  // TRANSITIONS
+  // ----------------------------------------------------------------------------
+  --transition-fast: 0.3s ease;
+  --transition-default: 0.35s ease;
+  --transition-slow: 0.5s ease;
+  --transition-aos: 0.6s ease;
+  
+  // ----------------------------------------------------------------------------
+  // HEADER
+  // ----------------------------------------------------------------------------
+  --header-height: 141.516px;
+  --header-height-mobile: 62px;
+  --header-padding-top: 100px;
+  --header-padding-top-mobile: 20px;
+  
+  // ----------------------------------------------------------------------------
+  // HERO
+  // ----------------------------------------------------------------------------
+  --hero-height: 945px;
+  --hero-height-mobile: 600px;
+  
+  // ----------------------------------------------------------------------------
+  // FOOTER
+  // ----------------------------------------------------------------------------
+  --footer-cta-height: 450px;
+  --footer-padding: 135px 165px 165px;
+  
+  // ----------------------------------------------------------------------------
+  // Z-INDEX
+  // ----------------------------------------------------------------------------
+  --z-header: 10;
+  --z-action-button: 8;
+  --z-mobile-nav: 9999;
+  --z-hero-content: 7;
+}
+
+// ----------------------------------------------------------------------------
+// BREAKPOINTS (identiques à la référence)
+// ----------------------------------------------------------------------------
+$breakpoint-xl: 1600px;
+$breakpoint-lg: 1400px;
+$breakpoint-md-lg: 1200px;
+$breakpoint-md: 1189px;
+$breakpoint-tablet: 1024px;
+$breakpoint-sm: 968px;
+$breakpoint-mobile: 768px;
+$breakpoint-mobile-sm: 640px;
+$breakpoint-xs: 568px;
+$breakpoint-xxs: 320px;
+
+// ----------------------------------------------------------------------------
+// MIXINS RESPONSIVE
+// ----------------------------------------------------------------------------
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xl {
+    @media only screen and (max-width: $breakpoint-xl) { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media only screen and (max-width: $breakpoint-lg) { @content; }
+  }
+  @else if $breakpoint == md-lg {
+    @media only screen and (max-width: $breakpoint-md-lg) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media only screen and (max-width: $breakpoint-md) { @content; }
+  }
+  @else if $breakpoint == tablet {
+    @media only screen and (max-width: $breakpoint-tablet) { @content; }
+  }
+  @else if $breakpoint == sm {
+    @media only screen and (max-width: $breakpoint-sm) { @content; }
+  }
+  @else if $breakpoint == mobile {
+    @media only screen and (max-width: $breakpoint-mobile) { @content; }
+  }
+  @else if $breakpoint == mobile-sm {
+    @media only screen and (max-width: $breakpoint-mobile-sm) { @content; }
+  }
+  @else if $breakpoint == xs {
+    @media only screen and (max-width: $breakpoint-xs) { @content; }
+  }
+  @else if $breakpoint == xxs {
+    @media only screen and (max-width: $breakpoint-xxs) { @content; }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// MIXINS UTILITAIRES
+// ----------------------------------------------------------------------------
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-button);
+  text-decoration: none;
+  text-transform: none;
+  border-radius: var(--button-radius);
+  padding: 0 var(--button-padding-x);
+  height: var(--button-height);
+  min-width: var(--button-min-width);
+  transition: var(--transition-default);
+  cursor: pointer;
+  border: none;
+}
+
+@mixin button-blue-dark {
+  @include button-base;
+  color: var(--rivemont-text-white);
+  background-color: var(--rivemont-blue-dark);
+  
+  &:hover {
+    background-color: rgb(14, 44, 74);
+  }
+}
+
+@mixin button-blue-medium {
+  @include button-base;
+  color: var(--rivemont-text-white);
+  background-color: var(--rivemont-blue-medium);
+  
+  &:hover {
+    background-color: rgb(0, 100, 160);
+  }
+}
+
+@mixin button-blue-light {
+  @include button-base;
+  color: var(--rivemont-text-white);
+  background-color: var(--rivemont-blue-light);
+  
+  &:hover {
+    background-color: rgb(60, 155, 190);
+  }
+}
+
+@mixin text-body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  color: var(--rivemont-text-primary);
+  text-transform: none;
+  text-decoration: none;
+}
+
+@mixin heading-h1 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-h1);
+  color: var(--rivemont-text-primary);
+  text-transform: none;
+  text-decoration: none;
+  margin: 0;
+}
+
+@mixin heading-h2 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-h2);
+  color: var(--rivemont-text-primary);
+  text-transform: none;
+  text-decoration: none;
+  margin: 0 0 45px;
+}
+
+@mixin heading-h3 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-h3);
+  color: var(--rivemont-text-primary);
+  text-transform: none;
+  text-decoration: none;
+  margin: 0;
+}
+
+@mixin container-padding {
+  padding-left: var(--padding-horizontal-xl);
+  padding-right: var(--padding-horizontal-xl);
+  
+  @include respond-to(lg) {
+    padding-left: var(--padding-horizontal-lg);
+    padding-right: var(--padding-horizontal-lg);
+  }
+  
+  @include respond-to(mobile) {
+    padding-left: var(--padding-horizontal-sm);
+    padding-right: var(--padding-horizontal-sm);
+  }
+}

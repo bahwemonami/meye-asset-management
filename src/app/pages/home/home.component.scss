@@ -1,0 +1,421 @@
+/* ============================================================================
+   HOME PAGE - Styles Pixel Perfect 1:1 identiques à rivemont.ca
+   ============================================================================ */
+
+/* Template Home Page Container - Conteneur principal */
+.template-home-page-container {
+  box-sizing: border-box;
+}
+
+/* Hero Section - Identique à Rivemont */
+.template-home-page-container .section-hero {
+  align-items: center;
+  background-color: #000;
+  border-radius: 0 0 24px 24px;
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin-bottom: 80px;
+  overflow: hidden;
+  padding: 0 17px;
+  position: relative;
+  z-index: 1;
+  
+  @media only screen and (min-width: 768px) {
+    border-radius: 0 0 max(50px, 3.6458333333vw) max(50px, 3.6458333333vw);
+    margin-bottom: max(120px, 8.5416666667vw);
+    min-height: max(54px, 3.6458333333vw);
+  }
+  
+  /* Gradient overlay - Identique à Rivemont */
+  &:after {
+    background: linear-gradient(180deg, #184068, transparent);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+  }
+  
+  .content {
+    position: relative;
+    text-align: center;
+    z-index: 7;
+    
+    .title-holder {
+      box-sizing: border-box;
+      padding: 0 10px;
+      width: 100%;
+      
+      @media only screen and (min-width: 768px) {
+        padding: 0 max(54px, 3.6458333333vw);
+      }
+      
+      * {
+        color: #fff;
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.04em;
+        text-transform: none;
+        
+        @media only screen and (min-width: 768px) {
+          font-size: max(60px, 5.7291666667vw);
+        }
+      }
+    }
+    
+    .gl-button {
+      margin-top: 40px;
+      
+      @media only screen and (min-width: 768px) {
+        margin-top: max(30px, 1.5625vw);
+      }
+    }
+  }
+  
+  img.gl-responsive-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+}
+
+/* Template Part Desc Image - Mission Section */
+.template-home-page-container .template-part-desc-image {
+  margin-bottom: 80px;
+  box-sizing: border-box;
+  padding-left: 14px;
+  padding-right: 14px;
+  
+  @media only screen and (min-width: 768px) {
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-bottom: max(120px, 8.5416666667vw);
+    
+    &:not(.template-part-desc-image--reverse) .content .col:first-child {
+      padding-right: 30px;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    &:not(.template-part-desc-image--reverse) .content .col:first-child {
+      padding-right: 7.8125vw;
+    }
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+  @media only screen and (min-width: 1600px) {
+    padding-left: 8.59375vw;
+    padding-right: 8.59375vw;
+  }
+  
+  .content {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    
+    @media only screen and (min-width: 1024px) {
+      align-items: center;
+    }
+    
+    .col {
+      box-sizing: border-box;
+      
+      &:first-child {
+        width: 100%;
+        margin-bottom: 44px;
+        
+        @media only screen and (min-width: 768px) {
+          margin: 0 !important;
+          width: 53%;
+        }
+        
+        @media only screen and (min-width: 1024px) {
+          width: 65%;
+        }
+        
+        .description:not(.description--title-size-normal) h2 {
+          color: #184068;
+          font-family: peridot-pe-variable, sans-serif;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 1.04em;
+          margin-bottom: max(24px, 2.34375vw);
+          text-transform: none;
+          
+          @media only screen and (min-width: 768px) {
+            font-size: max(45px, 3.90625vw);
+          }
+        }
+        
+        .button-holder {
+          margin-top: 40px;
+          
+          @media only screen and (min-width: 768px) {
+            margin-top: max(50px, 2.6041666667vw);
+          }
+        }
+      }
+      
+      &:nth-child(2) {
+        width: 100%;
+        
+        @media only screen and (min-width: 768px) {
+          width: 47%;
+        }
+        
+        @media only screen and (min-width: 1024px) {
+          width: 35%;
+        }
+        
+        .image-holder {
+          background-color: #000;
+          border-radius: max(20px, 1.0416666667vw);
+          overflow: hidden;
+          padding-top: 119.5%;
+          position: relative;
+          
+          img {
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            object-fit: cover;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            z-index: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Section Info - Team Preview */
+.template-home-page-container .section-info {
+  margin-bottom: max(117px, 8.5416666667vw);
+  
+  .content {
+    position: relative;
+    
+    .image-holder {
+      background-color: #000;
+      border-radius: 0 0 24px 24px;
+      overflow: hidden;
+      padding-top: 45.6%;
+      position: relative;
+      
+      @media only screen and (min-width: 768px) {
+        border-radius: 0 0 max(50px, 3.6458333333vw) max(50px, 3.6458333333vw);
+      }
+      
+      img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        object-fit: cover;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+      }
+    }
+    
+    .gl-button {
+      bottom: 0;
+      justify-content: space-between;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, 50%);
+      white-space: nowrap;
+      
+      @media only screen and (min-width: 1024px) {
+        bottom: 5.9895833333vw;
+        left: auto;
+        right: 5.9895833333vw;
+        transform: none;
+      }
+    }
+  }
+}
+
+/* Section Chart - Performance */
+.template-home-page-container .section-chart {
+  margin-bottom: max(87px, 8.5416666667vw);
+  
+  .content {
+    box-sizing: border-box;
+    padding-left: 14px;
+    padding-right: 14px;
+    
+    @media only screen and (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    
+    @media only screen and (min-width: 1280px) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    
+    @media only screen and (min-width: 1600px) {
+      padding-left: 8.59375vw;
+      padding-right: 8.59375vw;
+    }
+    
+    .description {
+      margin-bottom: max(26px, 2.7083333333vw);
+      text-align: center;
+      
+      h2 {
+        color: #184068;
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.04em;
+        text-transform: none;
+        
+        @media only screen and (min-width: 768px) {
+          font-size: max(45px, 3.90625vw);
+        }
+      }
+    }
+    
+    .image-holder {
+      margin: 0 auto;
+      max-width: max(700px, 65.15625vw);
+      
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+    
+    .button-holder {
+      margin-top: max(42px, 2.7083333333vw);
+      text-align: center;
+    }
+  }
+}
+
+/* Section Posts - Communications */
+.template-home-page-container .section-posts {
+  background-color: #eaf3fd;
+  padding: max(80px, 5.4166666667vw) 0 max(80px, 4.4270833333vw);
+  
+  .content {
+    @media only screen and (min-width: 768px) {
+      box-sizing: border-box;
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+    
+    @media only screen and (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    
+    @media only screen and (min-width: 1280px) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    
+    @media only screen and (min-width: 1600px) {
+      padding-left: 8.59375vw;
+      padding-right: 8.59375vw;
+    }
+    
+    .title {
+      color: #184068;
+      font-family: peridot-pe-variable, sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.04em;
+      margin-bottom: max(26px, 3.3854166667vw);
+      text-align: center;
+      text-transform: none;
+      
+      @media only screen and (min-width: 768px) {
+        font-size: max(45px, 3.90625vw);
+      }
+    }
+    
+    .slider {
+      position: relative;
+      
+      .swiper {
+        overflow: hidden;
+        
+        @media only screen and (max-width: 767px) {
+          box-sizing: border-box;
+          padding-left: 14px;
+          padding-right: 14px;
+        }
+        
+        @media only screen and (min-width: 768px) {
+          border-radius: max(20px, 1.0416666667vw);
+        }
+        
+        .swiper-wrapper {
+          border-radius: inherit;
+          
+          .swiper-slide {
+            border-radius: inherit;
+            opacity: 0.37;
+            transition: opacity 0.35s ease 0ms;
+            
+            @media only screen and (min-width: 768px) {
+              opacity: 1;
+            }
+            
+            &.swiper-slide-active {
+              opacity: 1;
+            }
+            
+            .post {
+              border-radius: inherit;
+              overflow: hidden;
+              position: relative;
+              
+              @media only screen and (min-width: 768px) {
+                align-items: flex-end;
+                background-color: #000;
+                display: flex;
+                min-height: max(240px, 21.875vw);
+              }
+              
+              &:hover .post-info .post-title {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .button-holder {
+      margin-top: max(42px, 2.7083333333vw);
+      text-align: center;
+    }
+  }
+}

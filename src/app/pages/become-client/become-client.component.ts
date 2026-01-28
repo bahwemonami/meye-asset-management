@@ -1,4 +1,4 @@
-import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ImageMappingService } from '../../services/image-mapping.service';
@@ -8,19 +8,20 @@ import { ImageMappingService } from '../../services/image-mapping.service';
   standalone: true,
   imports: [CommonModule, FormsModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./become-client.component.scss'],
   template: `
-    <!-- Hero Section with Background -->
-    <section class="become-client-hero">
-      <div class="hero-background">
-        <img [src]="imageService.getImage('form-hero')" alt="Devenir client" />
-      </div>
-      <div class="hero-content">
-        <h1>Passez à l'action,<br>devenez client.</h1>
+    <div class="template-form-page-container">
+    <!-- Hero Section - Identique à Rivemont -->
+    <section class="template-part-hero">
+      <div class="content">
+        <h1 class="title">Passez à l'action,<br>devenez client.</h1>
+        <img [src]="imageService.getImage('form-hero')" alt="" class="gl-responsive-background gl-responsive-background--desktop gl-img-grey" />
       </div>
     </section>
 
-    <!-- Form Section -->
-    <section class="content-section">
+    <!-- Form Section - Identique à Rivemont -->
+    <section class="section-form">
       <div class="content-container">
         <div class="form-wrapper">
           <form (ngSubmit)="onSubmit()" class="client-form">
@@ -122,6 +123,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
         </div>
       </div>
     </section>
+    </div>
   `,
   styles: [`
     .become-client-hero {

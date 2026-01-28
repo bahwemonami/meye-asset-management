@@ -1,0 +1,398 @@
+// ============================================================================
+// ANIMATIONS - Identiques à Rivemont
+// ============================================================================
+
+// Import des tokens
+@import 'tokens';
+
+// ============================================================================
+// KEYFRAMES
+// ============================================================================
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// ============================================================================
+// HOVER TRANSITIONS - Boutons
+// ============================================================================
+
+.gl-button,
+.gl-button--blue-dark,
+.gl-button--blue-medium,
+.gl-button--blue-light {
+  transition: background-color var(--transition-default), 
+              color var(--transition-default), 
+              transform var(--transition-default),
+              box-shadow var(--transition-default);
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// ============================================================================
+// HOVER TRANSITIONS - Links
+// ============================================================================
+
+a {
+  transition: color var(--transition-fast);
+}
+
+.link-with-arrow {
+  svg {
+    transition: transform var(--transition-fast);
+  }
+  
+  &:hover {
+    svg {
+      transform: translateX(5px);
+    }
+  }
+}
+
+// ============================================================================
+// HOVER TRANSITIONS - Cards
+// ============================================================================
+
+.post,
+.team-card,
+.member {
+  .post-background .post-image,
+  .team-card-image img,
+  .member-photo {
+    transition: transform var(--transition-slow);
+  }
+  
+  &:hover {
+    .post-background .post-image,
+    .team-card-image img,
+    .member-photo {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// ============================================================================
+// HOVER TRANSITIONS - Navigation
+// ============================================================================
+
+.nav-menu a,
+.menu a,
+#menu-header a,
+#menu-footer a {
+  transition: color var(--transition-fast);
+}
+
+// ============================================================================
+// HEADER SCROLL TRANSITION
+// ============================================================================
+
+.site-header {
+  transition: background-color var(--transition-default),
+              box-shadow var(--transition-default),
+              top var(--transition-default);
+}
+
+// ============================================================================
+// MOBILE MENU TRANSITION
+// ============================================================================
+
+.site-mobile-nav {
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  
+  .content {
+    .row {
+      &.row-2 {
+        .col {
+          nav {
+            ul.menu {
+              > li {
+                animation: fadeInUp 0.4s ease forwards;
+                opacity: 0;
+                
+                @for $i from 1 through 10 {
+                  &:nth-child(#{$i}) {
+                    animation-delay: #{$i * 0.05}s;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  &.active {
+    .content {
+      .row {
+        &.row-2 {
+          .col {
+            nav {
+              ul.menu {
+                > li {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ============================================================================
+// FORM INPUT TRANSITIONS
+// ============================================================================
+
+input,
+textarea,
+select {
+  transition: border-color var(--transition-fast),
+              box-shadow var(--transition-fast),
+              background-color var(--transition-fast);
+}
+
+// ============================================================================
+// IMAGE TRANSITIONS
+// ============================================================================
+
+.image-holder img,
+.gl-responsive-background {
+  transition: opacity var(--transition-slow),
+              transform var(--transition-slow);
+}
+
+// ============================================================================
+// AOS CUSTOM ANIMATIONS
+// ============================================================================
+
+[data-aos="fade"] {
+  opacity: 0;
+  transition-property: opacity;
+  
+  &.aos-animate {
+    opacity: 1;
+  }
+}
+
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition-property: opacity, transform;
+  
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-aos="fade-down"] {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition-property: opacity, transform;
+  
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-aos="fade-left"] {
+  opacity: 0;
+  transform: translateX(30px);
+  transition-property: opacity, transform;
+  
+  &.aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+[data-aos="fade-right"] {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition-property: opacity, transform;
+  
+  &.aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+[data-aos="zoom-in"] {
+  opacity: 0;
+  transform: scale(0.9);
+  transition-property: opacity, transform;
+  
+  &.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// ============================================================================
+// SWIPER TRANSITIONS
+// ============================================================================
+
+.swiper-slide {
+  transition: opacity var(--transition-default),
+              transform var(--transition-default);
+}
+
+.swiper-pagination-bullet {
+  transition: opacity var(--transition-fast),
+              background-color var(--transition-fast),
+              transform var(--transition-fast);
+  
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+// ============================================================================
+// HAMBURGER MENU ANIMATION
+// ============================================================================
+
+.hamburger {
+  span {
+    transition: transform var(--transition-fast),
+                opacity var(--transition-fast),
+                background-color var(--transition-fast);
+  }
+  
+  &.active {
+    span {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+      }
+    }
+  }
+}
+
+// ============================================================================
+// SCROLL INDICATOR ANIMATION
+// ============================================================================
+
+.scroll-indicator {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+// ============================================================================
+// LOADING SPINNER
+// ============================================================================
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+// ============================================================================
+// REDUCED MOTION SUPPORT
+// ============================================================================
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,455 @@
+/* ============================================================================
+   GESTION PRIVÉE - Styles Pixel Perfect 1:1 identiques à rivemont.ca
+   ============================================================================ */
+
+/* Template Builder Page Container - Conteneur principal */
+.template-builder-page-container {
+  box-sizing: border-box;
+}
+
+/* Hero Section - Identique à Rivemont */
+.template-part-hero {
+  margin-bottom: max(80px, 6.25vw);
+  
+  @media only screen and (max-width: 1189px) {
+    margin-bottom: 40px;
+  }
+  
+  .content {
+    background-color: #51b2d6;
+    border-radius: 0 0 24px 24px;
+    box-sizing: border-box;
+    display: flex;
+    height: max(300px, 28.28125vw);
+    justify-content: center;
+    overflow: hidden;
+    padding: max(160px, 13.5416666667vw) 14px max(60px, 5.2083333333vw);
+    position: relative;
+    
+    @media only screen and (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+      border-radius: 0 0 max(50px, 3.6458333333vw) max(50px, 3.6458333333vw);
+    }
+    
+    /* Sur écrans larges (≥1600px), le computed donne 70px */
+    @media only screen and (min-width: 1600px) {
+      border-radius: 0 0 70px 70px;
+    }
+    
+    @media only screen and (min-width: 1280px) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    
+    @media only screen and (min-width: 1600px) {
+      padding-left: 8.59375vw;
+      padding-right: 8.59375vw;
+    }
+    
+    /* Gradient overlay - Identique à Rivemont */
+    &:after {
+      background: linear-gradient(180deg, #184068, transparent);
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      mix-blend-mode: multiply;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 5;
+    }
+    
+    .title {
+      color: #fff;
+      font-family: peridot-pe-variable, sans-serif;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.04em;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      z-index: 6;
+      left: 0 !important;
+      right: 0 !important;
+      top: 0 !important;
+      transform: none !important;
+      
+      @media only screen and (min-width: 768px) {
+        font-size: max(45px, 3.125vw);
+      }
+      
+      /* Sur écrans larges (≥1600px), le computed donne 60px */
+      @media only screen and (min-width: 1600px) {
+        font-size: 60px;
+      }
+    }
+    
+    img.gl-responsive-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+  }
+}
+
+/* Page Content - Identique à Rivemont */
+.template-builder-page-container .page-content {
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 80px;
+  padding-left: 14px;
+  padding-right: 14px;
+  
+  @media only screen and (min-width: 768px) {
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-bottom: max(140px, 8.3333333333vw);
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+  @media only screen and (min-width: 1600px) {
+    padding-left: 8.59375vw;
+    padding-right: 8.59375vw;
+  }
+  
+  /* Page Content Builder */
+  .page-content__builder {
+    box-sizing: border-box;
+    width: 100%;
+    
+    @media only screen and (min-width: 1190px) {
+      padding-right: 4.375vw;
+    }
+    
+    /* Page Filter (Select) */
+    .page-filter {
+      margin-bottom: 40px;
+      
+      @media only screen and (min-width: 1190px) {
+        display: none;
+      }
+      
+      .gl-select {
+        width: 100%;
+        padding: 0 16px;
+        height: 52px;
+        border: 1px solid #98d0e9;
+        border-radius: 12px;
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.3em;
+        color: #184068;
+        background-color: #98d0e9;
+        cursor: pointer;
+        transition: all .35s ease 0ms;
+        text-transform: none;
+        box-sizing: border-box;
+        outline: none;
+        
+        @media only screen and (min-width: 768px) {
+          font-size: max(17px, 1.0416666667vw);
+        }
+        
+        &:focus {
+          border-color: #184068;
+          outline: none;
+        }
+      }
+    }
+    
+    /* Section Title */
+    .title {
+      color: #184068;
+      font-family: peridot-pe-variable, sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.04em;
+      margin-bottom: max(30px, 1.875vw);
+      text-transform: none;
+      
+      @media only screen and (min-width: 768px) {
+        font-size: max(45px, 3.125vw);
+      }
+    }
+    
+    /* Builder Sections */
+    .builder-sections {
+      section {
+        margin: max(64px, 3.3854166667vw) 0;
+        
+        &:first-child {
+          margin-top: 0;
+        }
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      
+      .section-description {
+        .content {
+          .description.gl-text-editor {
+            /* Styles globaux pour gl-text-editor */
+            * {
+              margin-bottom: max(20px, 1.3020833333vw);
+            }
+            
+            :last-child {
+              margin-bottom: 0;
+            }
+            
+            p {
+              color: #184068;
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              letter-spacing: 0;
+              line-height: 1.3em;
+              text-transform: none;
+              
+              @media only screen and (min-width: 768px) {
+                font-size: max(17px, 1.0416666667vw);
+              }
+            }
+            
+            h4 {
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 1.04em;
+              text-transform: none;
+              margin: 0 0 max(20px, 1.3020833333vw);
+              
+              @media only screen and (min-width: 768px) {
+                font-size: max(25px, 1.5625vw);
+              }
+              
+              &.text-color--blue,
+              &.text-color--light-blue {
+                color: #51b2d6;
+              }
+            }
+            
+            ul {
+              list-style: none;
+              margin: 0 0 max(20px, 1.3020833333vw);
+              padding: 0;
+              
+              li {
+                align-items: center;
+                color: #184068;
+                display: flex;
+                font-family: peridot-pe-variable, sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: 0;
+                line-height: 1.3em;
+                margin-bottom: max(8px, .625vw);
+                
+                @media only screen and (min-width: 768px) {
+                  font-size: max(17px, 1.0416666667vw);
+                }
+                
+                &:last-child {
+                  margin-bottom: 0;
+                }
+                
+                /* Flèche SVG avant chaque item */
+                &:before {
+                  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNy43NzkiIGhlaWdodD0iMTIuMzk0IiB2aWV3Qm94PSIwIDAgMjcuNzc5IDEyLjM5NCI+CiAgPHBhdGggaWQ9Ikljb25fYWthci1hcnJvdy1yaWdodCIgZGF0YS1uYW1lPSJJY29uIGFrYXItYXJyb3ctcmlnaHQiIGQ9Ik0tOC44NDYsMTIuMjgzSDE2LjkzMk0xMi4xNDksNy41bDQuNzgzLDQuNzgzLTQuNzgzLDQuNzgzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5Ljg0NiAtNi4wODYpIiBmaWxsPSJub25lIiBzdHJva2U9IiMxODQwNjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=);
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  content: "";
+                  display: block;
+                  flex-shrink: 0;
+                  height: max(10px, .5208333333vw);
+                  margin-right: max(24px, 1.25vw);
+                  width: max(25px, 1.3020833333vw);
+                }
+              }
+            }
+            
+            ol {
+              list-style: decimal;
+              padding-left: 25px;
+              
+              li {
+                color: #184068;
+                font-family: peridot-pe-variable, sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: 0;
+                line-height: 1.3em;
+                margin-bottom: max(8px, .625vw);
+                
+                @media only screen and (min-width: 768px) {
+                  font-size: max(17px, 1.0416666667vw);
+                }
+                
+                &:before {
+                  display: none; /* Pas de flèche pour les listes ordonnées */
+                }
+                
+                strong {
+                  font-weight: 700;
+                }
+              }
+            }
+            
+            a:hover {
+              text-decoration: none;
+            }
+          }
+          
+          /* Bouton Contactez-nous */
+          .gl-button {
+            align-items: center;
+            background-color: #0080bc;
+            border: none;
+            border-radius: max(100px, 5.2083333333vw);
+            box-sizing: border-box;
+            color: #fff !important;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: peridot-pe-variable, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400 !important;
+            justify-content: center;
+            line-height: 1.2em;
+            min-height: 42px;
+            min-width: max(178px, 17.8125vw);
+            height: max(42px, 3.6458333333vw);
+            outline: none;
+            padding: 0 max(24px, 2.2395833333vw);
+            position: relative;
+            text-align: center;
+            text-decoration: none !important;
+            transition: all .35s ease 0ms;
+            z-index: 1;
+            margin-top: max(30px, 2.6041666667vw);
+            
+            @media only screen and (min-width: 768px) {
+              font-size: max(18px, 1.0416666667vw);
+              min-height: max(54px, 3.6458333333vw);
+              min-width: max(242px, 17.8125vw);
+              height: max(54px, 3.6458333333vw);
+            }
+            
+            &:hover {
+              background-color: #51b2d6;
+            }
+            
+            /* Flèche SVG après le texte */
+            &:after {
+              background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNyIgaGVpZ2h0PSIyNS4yNDMiIHZpZXdCb3g9IjAgMCAyNyAyNS4yNDMiPgogIDxwYXRoIGlkPSJJY29uX2FrYXItYXJyb3ctcmlnaHQiIGRhdGEtbmFtZT0iSWNvbiBha2FyLWFycm93LXJpZ2h0IiBkPSJNNiwxOEgzME0xOS41LDcuNSwzMCwxOCwxOS41LDI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00LjUgLTUuMzc5KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K);
+              background-repeat: no-repeat;
+              background-size: contain;
+              content: "";
+              display: block;
+              height: max(16px, 1.09375vw);
+              margin-left: max(12px, 1.09375vw);
+              position: relative;
+              top: max(1px, .1041666667vw);
+              width: max(18px, 1.1979166667vw);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* Page Content Sidebar */
+  .page-content__sidebar {
+    box-sizing: border-box;
+    display: none;
+    flex-shrink: 0;
+    width: max(400px, 23.8541666667vw) !important;
+    flex: 0 0 auto !important;
+    
+    @media only screen and (min-width: 1190px) {
+      display: block;
+    }
+    
+    .section-sidebar {
+      background-color: #eaf3fd;
+      border-radius: max(20px, 1.0416666667vw);
+      box-sizing: border-box;
+      padding: max(80px, 5.46875vw) max(30px, 2.8125vw);
+      
+      /* Sur écrans larges (≥1600px), le computed donne 105px 54px */
+      @media only screen and (min-width: 1600px) {
+        padding: 105px 54px;
+        border-radius: 20px;
+      }
+      
+      .content {
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          
+          li {
+            margin-bottom: max(30px, 3.4375vw);
+            text-align: center;
+            
+            &:last-child {
+              margin-bottom: 0;
+            }
+            
+            a {
+              color: #184068;
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 1.04em;
+              text-transform: none;
+              transition: all .35s ease 0ms;
+              text-decoration: none;
+              display: inline;
+              padding: 0;
+              background-color: transparent;
+              border: 0;
+              
+              @media only screen and (min-width: 768px) {
+                font-size: max(22px, 1.25vw);
+              }
+              
+              &:hover {
+                color: #51b2d6;
+                background-color: transparent;
+              }
+            }
+            
+            &.active {
+              a {
+                color: #51b2d6;
+                text-decoration: underline;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

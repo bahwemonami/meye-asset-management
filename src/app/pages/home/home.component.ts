@@ -1,4 +1,4 @@
-import { Component, inject, AfterViewInit, ElementRef, ViewChild, CUSTOM_ELEMENTS_SCHEMA, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject, AfterViewInit, ElementRef, ViewChild, CUSTOM_ELEMENTS_SCHEMA, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
@@ -14,15 +14,18 @@ register();
   imports: [CommonModule, RouterLink],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./home.component.scss'],
   template: `
+    <div class="template-home-page-container">
     <!-- Hero Section -->
-    <section class="hero-section section-hero">
+    <section class="section-hero">
       <img [src]="imageService.getImage('home-hero')" alt="" class="gl-responsive-background gl-responsive-background--desktop gl-img-grey" loading="eager" fetchpriority="high" />
-      <div class="hero-content content">
+      <div class="content">
         <div class="title-holder">
           <h1>Passion. Rigueur. Résultats.</h1>
         </div>
-        <a routerLink="/firm-profile" class="hero-cta-btn gl-button" target="_self" aria-label="En savoir plus sur MEYE ASSET MANAGER">
+        <a routerLink="/firm-profile" class="gl-button" target="_self" aria-label="En savoir plus sur MEYE ASSET MANAGER">
           En savoir plus
         </a>
       </div>
@@ -132,6 +135,7 @@ register();
         </div>
       </div>
     </section>
+    </div>
   `
 })
 export class HomeComponent implements AfterViewInit {

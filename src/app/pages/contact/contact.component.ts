@@ -1,4 +1,4 @@
-import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ImageMappingService } from '../../services/image-mapping.service';
@@ -8,60 +8,66 @@ import { ImageMappingService } from '../../services/image-mapping.service';
   standalone: true,
   imports: [CommonModule, FormsModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./contact.component.scss'],
   template: `
+    <div class="template-contact-page-container">
     <!-- Hero Section - Identique à Rivemont -->
     <section class="template-part-hero">
       <div class="content">
+        <h1 class="title">Contact</h1>
         <img [src]="imageService.getImage('contact-hero')" alt="" class="gl-responsive-background gl-responsive-background--desktop gl-img-grey" />
       </div>
     </section>
 
     <!-- Content Section - Identique à Rivemont -->
-    <section class="content-section">
-      <div class="content-container">
-        <h1>Contact</h1>
-        
-        <!-- Addresses -->
-        <div class="addresses-section">
+    <div class="page-content page-content--contact">
+      <div class="page-content__builder">
+        <!-- Addresses Section -->
+        <div class="addresses-section" data-aos="fade">
           <div class="address-card">
-            <a href="https://maps.app.goo.gl/3J5cE5756qnxb7ic9" target="_blank" class="address-link">
-              160, boul. de l'Hôpital, bureau 202<br>
-              Gatineau, Québec, J8T 8J1
-            </a>
-            <div class="contact-info">
-              <div class="info-row">
-                <span class="label">Tél. :</span>
-                <a href="tel:8192468800">819 246-8800</a>
+            <div class="address-holder">
+              <a href="https://maps.app.goo.gl/3J5cE5756qnxb7ic9" target="_blank" class="address-link">
+                160, boul. de l'Hôpital, bureau 202<br>
+                Gatineau, Québec, J8T 8J1
+              </a>
+            </div>
+            <div class="contacts">
+              <div class="contact">
+                <div class="contact-title">Tél. :&nbsp;</div>
+                <div class="contact-text"><a href="tel:8192468800">819 246-8800</a></div>
               </div>
-              <div class="info-row">
-                <span class="label">Courriel :</span>
-                <a href="mailto:info@rivemont.ca">info&#64;rivemont.ca</a>
+              <div class="contact">
+                <div class="contact-title">Courriel :&nbsp;</div>
+                <div class="contact-text"><a href="mailto:info&#64;meyeasset.ca">info&#64;meyeasset.ca</a></div>
               </div>
             </div>
           </div>
           
           <div class="address-card">
-            <a href="https://maps.app.goo.gl/HmpL8Vany252sq3FA" target="_blank" class="address-link">
-              19 rue Le Royer Ouest, bureau 300<br>
-              Montréal, Québec, H2Y 1W4
-            </a>
-            <div class="contact-info">
-              <div class="info-row">
-                <span class="label">Tél. :</span>
-                <a href="tel:8192468800">819 246-8800</a>
+            <div class="address-holder">
+              <a href="https://maps.app.goo.gl/HmpL8Vany252sq3FA" target="_blank" class="address-link">
+                19 rue Le Royer Ouest, bureau 300<br>
+                Montréal, Québec, H2Y 1W4
+              </a>
+            </div>
+            <div class="contacts">
+              <div class="contact">
+                <div class="contact-title">Tél. :&nbsp;</div>
+                <div class="contact-text"><a href="tel:8192468800">819 246-8800</a></div>
               </div>
-              <div class="info-row">
-                <span class="label">Courriel :</span>
-                <a href="mailto:info@rivemont.ca">info&#64;rivemont.ca</a>
+              <div class="contact">
+                <div class="contact-title">Courriel :&nbsp;</div>
+                <div class="contact-text"><a href="mailto:info&#64;meyeasset.ca">info&#64;meyeasset.ca</a></div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="form-section">
-          <h2>Écrivez-nous</h2>
-          <form (ngSubmit)="onSubmit()" class="contact-form">
+        <!-- Contact Form Section -->
+        <div class="form-section" data-aos="fade-up">
+          <h2 class="form-title">Écrivez-nous</h2>
+          <form (ngSubmit)="onSubmit()" class="contact-form gl-form">
             <div class="form-row">
               <div class="form-group">
                 <input 
@@ -69,6 +75,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                   [(ngModel)]="formData.prenom"
                   name="prenom"
                   placeholder="Prénom"
+                  class="gl-input"
                   required>
               </div>
               <div class="form-group">
@@ -77,6 +84,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                   [(ngModel)]="formData.nom"
                   name="nom"
                   placeholder="Nom"
+                  class="gl-input"
                   required>
               </div>
             </div>
@@ -87,6 +95,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                   [(ngModel)]="formData.courriel"
                   name="courriel"
                   placeholder="Courriel"
+                  class="gl-input"
                   required>
               </div>
               <div class="form-group">
@@ -94,28 +103,45 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                   type="tel" 
                   [(ngModel)]="formData.telephone"
                   name="telephone"
-                  placeholder="Téléphone">
+                  placeholder="Téléphone"
+                  class="gl-input">
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group form-group--full">
               <textarea 
                 [(ngModel)]="formData.message"
                 name="message"
                 placeholder="Message"
                 rows="5"
+                class="gl-textarea"
                 required></textarea>
             </div>
-            <button type="submit" class="btn-submit">Envoyer</button>
+            <div class="form-submit">
+              <button type="submit" class="gl-button gl-button--blue-dark">Envoyer</button>
+            </div>
           </form>
         </div>
       </div>
-    </section>
+    </div>
+    </div>
   `,
   styles: [`
+    .page-content--contact {
+      padding: 0 165px 160px;
+      
+      @media (max-width: 1400px) {
+        padding: 0 80px 120px;
+      }
+      
+      @media (max-width: 768px) {
+        padding: 0 20px 80px;
+      }
+    }
+    
     .addresses-section {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      gap: 60px;
       margin-bottom: 80px;
       
       @media (max-width: 768px) {
@@ -125,35 +151,51 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     }
     
     .address-card {
+      .address-holder {
+        margin-bottom: 25px;
+      }
+      
       .address-link {
         display: block;
-        font-size: 1.1rem;
-        line-height: 1.7;
-        color: var(--meye-primary);
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        color: rgb(24, 64, 104);
         text-decoration: none;
-        margin-bottom: 25px;
+        transition: color 0.3s ease;
         
         &:hover {
-          color: var(--meye-accent);
+          color: rgb(81, 178, 214);
         }
       }
       
-      .contact-info {
-        .info-row {
+      .contacts {
+        .contact {
           display: flex;
-          gap: 10px;
           margin-bottom: 10px;
           
-          .label {
-            color: var(--meye-text-light);
+          .contact-title {
+            font-family: peridot-pe-variable, sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 22.1px;
+            color: rgb(128, 128, 128);
           }
           
-          a {
-            color: var(--meye-primary);
-            text-decoration: none;
-            
-            &:hover {
-              color: var(--meye-accent);
+          .contact-text {
+            a {
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 17px;
+              font-weight: 400;
+              line-height: 22.1px;
+              color: rgb(24, 64, 104);
+              text-decoration: none;
+              transition: color 0.3s ease;
+              
+              &:hover {
+                color: rgb(81, 178, 214);
+              }
             }
           }
         }
@@ -163,9 +205,19 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     .form-section {
       max-width: 800px;
       
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 40px;
+      .form-title {
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 52px;
+        color: rgb(24, 64, 104);
+        margin: 0 0 40px;
+        
+        @media (max-width: 768px) {
+          font-size: 40px;
+          line-height: 44px;
+          margin-bottom: 30px;
+        }
       }
     }
     
@@ -184,47 +236,42 @@ import { ImageMappingService } from '../../services/image-mapping.service';
       .form-group {
         margin-bottom: 20px;
         
-        input,
-        textarea {
-          width: 100%;
-          padding: 16px 20px;
-          border: 2px solid var(--meye-gray);
-          border-radius: 8px;
-          font-size: 1rem;
-          font-family: inherit;
-          transition: border-color 0.3s ease;
-          
-          &:focus {
-            outline: none;
-            border-color: var(--meye-accent);
-          }
-          
-          &::placeholder {
-            color: var(--meye-text-light);
-          }
-        }
-        
-        textarea {
-          resize: vertical;
-          min-height: 150px;
+        &--full {
+          grid-column: 1 / -1;
         }
       }
-    }
-    
-    .btn-submit {
-      background: var(--meye-accent);
-      color: var(--meye-white);
-      border: none;
-      padding: 16px 50px;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
       
-      &:hover {
-        background: var(--meye-accent-light);
-        transform: translateY(-2px);
+      .gl-input,
+      .gl-textarea {
+        width: 100%;
+        padding: 16px 20px;
+        border: 2px solid rgb(234, 243, 253);
+        border-radius: 8px;
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 22.1px;
+        color: rgb(24, 64, 104);
+        background-color: rgb(255, 255, 255);
+        transition: border-color 0.3s ease;
+        
+        &:focus {
+          outline: none;
+          border-color: rgb(24, 64, 104);
+        }
+        
+        &::placeholder {
+          color: rgb(128, 128, 128);
+        }
+      }
+      
+      .gl-textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+      
+      .form-submit {
+        margin-top: 30px;
       }
     }
   `]

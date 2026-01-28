@@ -12,7 +12,8 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     <!-- Banner / Header MEYE ASSET MANAGER -->
     <header 
       id="site-header"
-      class="site-header site-header--cta-header"
+      class="site-header"
+      js-site-header="container"
       [class.scrolled]="isScrolled()">
       <div class="content">
         <div class="col col-1">
@@ -22,12 +23,6 @@ import { ImageMappingService } from '../../services/image-mapping.service';
           </a>
         </div>
         <div class="col col-2">
-          <!-- Accès client -->
-          <a href="https://monportefeuilleplus.ca/login" class="gl-button gl-button--blue-dark" target="_blank">
-            <img [src]="imageService.getImage('user-icon')" alt="" width="300" height="150" />
-            Accès client
-          </a>
-          
           <!-- Navigation Desktop -->
           <nav js-site-nav="container" aria-label="Navigation principale">
             <ul id="menu-header" class="menu" role="menubar">
@@ -70,7 +65,12 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     </header>
 
     <!-- Bouton "Passez à l'action" -->
-    <a routerLink="/become-client" class="action-button" aria-label="Passez à l'action - Devenir client">
+    <a
+      id="site-button"
+      class="gl-button gl-button--blue-light"
+      routerLink="/become-client"
+      target="_self"
+      aria-label="Passez à l'action - Devenir client">
       Passez à l'action
     </a>
 
@@ -137,7 +137,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                   <a routerLink="/private-management" (click)="closeMenu()">Gestion privée</a>
                   <ul class="sub-menu">
                     <li>
-                      <a routerLink="/private-management" (click)="closeMenu()">À qui s'adresse la gestion privée</a>
+                      <a routerLink="/private-management" (click)="closeMenu()">À qui s’adresse la gestion privée</a>
                     </li>
                     <li>
                       <a routerLink="/private-management" [queryParams]="{section: 'cycle'}" (click)="closeMenu()">Le cycle de gestion</a>
@@ -152,7 +152,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                       <a routerLink="/private-management" [queryParams]="{section: 'strategies'}" (click)="closeMenu()">Les stratégies de placement</a>
                     </li>
                     <li>
-                      <a routerLink="/private-management" [queryParams]="{section: 'why'}" (click)="closeMenu()">Pourquoi MEYE ASSET MANAGER ?</a>
+                      <a routerLink="/private-management" [queryParams]="{section: 'why'}" (click)="closeMenu()">Pourquoi Rivemont ?</a>
                     </li>
                     <li>
                       <a routerLink="/private-management" [queryParams]="{section: 'cfa'}" (click)="closeMenu()">Pourquoi choisir un conseiller détenteur du titre CFA* ?</a>
@@ -184,7 +184,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
 
         <!-- Row 3: CTA -->
         <div class="row row-3">
-          <p>Passez à l'action, devenez client.</p>
+          <p>Passez à l’action, devenez client.</p>
           <a routerLink="/become-client" class="gl-button" target="_self" (click)="closeMenu()">
             En savoir plus
           </a>

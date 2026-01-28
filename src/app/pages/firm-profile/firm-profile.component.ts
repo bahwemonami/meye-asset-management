@@ -1,4 +1,4 @@
-import { Component, inject, AfterViewInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject, AfterViewInit, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
@@ -9,6 +9,8 @@ import { AosService } from '../../services/aos.service';
   standalone: true,
   imports: [CommonModule, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./firm-profile.component.scss'],
   template: `
     <!-- Main Content Section - Identique à Rivemont -->
     <section class="template-part-desc-image template-part-desc-image--reverse">
