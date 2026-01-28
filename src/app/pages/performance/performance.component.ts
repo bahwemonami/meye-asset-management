@@ -23,8 +23,10 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     <!-- Intro Section - Identique à Rivemont -->
     <section class="section-intro">
       <div class="content">
-        <h2>Actions</h2>
-        <p class="date-info">Au 31 décembre 2025</p>
+        <div class="description">
+          <h2>Actions</h2>
+          <p>Au 31 décembre 2025</p>
+        </div>
         <div class="image-holder">
           <img [src]="imageService.getImage('clipboard-1')" alt="" />
         </div>
@@ -34,12 +36,18 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     <!-- Description Section - Identique à Rivemont -->
     <section class="description-section">
       <div class="content">
-        <div class="description gl-text-editor">
-          <p>Chez MEYE ASSET MANAGER, nous croyons que le prix d'un actif n'est pas toujours égal à sa valeur intrinsèque et qu'il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs. Puisque ces biais sont connus et qu'ils se répètent dans le temps, il est possible de prendre des décisions d'investissement basées sur ces comportements récurrents. Nous nous appuyons sur des stratégies basées sur l'effet momentum, dont l'analyse technique et le suivi de tendance. Le gestionnaire utilise une approche de type descendante en établissant en premier lieu les secteurs dont le potentiel à la hausse est le plus important pour ensuite sélectionner les titres spécifiques parmi ces secteurs.</p>
+        <div class="col">
+          <div class="description">
+            <p>Chez Rivemont, nous croyons que le prix d’un actif n’est pas toujours égal à sa valeur intrinsèque et qu’il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs. Puisque ces biais sont connus et qu’ils se répètent dans le temps, il est possible de prendre des décisions d’investissement basées sur ces comportements récurrents. Nous nous appuyons sur des stratégies basées sur l’effet momentum, dont l’analyse technique et le suivi de tendance. Le gestionnaire utilise une approche de type descendante en établissant en premier lieu les secteurs dont le potentiel à la hausse est le plus important pour ensuite sélectionner les titres spécifiques parmi ces secteurs.</p>
+          </div>
         </div>
-        <div class="objective">
-          <h2>Objectif de placement</h2>
-          <p>L'objectif de placement de la classe d'actifs Actions est de générer un rendement supérieur à son indice de référence.</p>
+        <div class="col">
+          <div class="banner">
+            <div class="banner-description">
+              <h2>Objectif de placement</h2>
+              <p>L’objectif de placement de la classe d’actifs Actions est de générer un rendement supérieur à son indice de référence.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -47,158 +55,140 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     <!-- Table Section - Identique à Rivemont -->
     <section class="section-table">
       <div class="content">
-        <h2>Rendements</h2>
-
-        <!-- Strategy Description -->
-        <div class="strategy-section">
-          <div class="strategy-text">
-            <p>
-              Chez MEYE ASSET MANAGER, nous croyons que le prix d'un actif n'est pas toujours égal à sa valeur intrinsèque et qu'il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs. Puisque ces biais sont connus et qu'ils se répètent dans le temps, il est possible de prendre des décisions d'investissement basées sur ces comportements récurrents.
-            </p>
+        <div class="description description--top">
+          <h2>Rendements</h2>
+        </div>
+        <div class="table-holder">
+          <div class="table">
+            <div class="thead">
+              <div class="row">
+                <div class="col"></div>
+                <div class="col">1 mois</div>
+                <div class="col">3 mois</div>
+                <div class="col">6 mois</div>
+                <div class="col">AAJ</div>
+                <div class="col">1 an</div>
+                <div class="col">2 ans</div>
+                <div class="col">5 ans</div>
+                <div class="col">10 ans</div>
+                <div class="col">Début</div>
+              </div>
+            </div>
+            <div class="tbody">
+              <div class="row">
+                <div class="col">Action</div>
+                <div class="col">-1.9 %</div>
+                <div class="col">-4.3 %</div>
+                <div class="col">3.5 %</div>
+                <div class="col">15.9 %</div>
+                <div class="col">15.9 %</div>
+                <div class="col">27.2 %</div>
+                <div class="col">12.2 %</div>
+                <div class="col">12.5 %</div>
+                <div class="col">12.5 %</div>
+              </div>
+              <div class="row">
+                <div class="col">Indice de reference</div>
+                <div class="col">0.7 %</div>
+                <div class="col">5.2 %</div>
+                <div class="col">17.9 %</div>
+                <div class="col">27.6 %</div>
+                <div class="col">27.6 %</div>
+                <div class="col">26.0 %</div>
+                <div class="col">16.1 %</div>
+                <div class="col">12.9 %</div>
+                <div class="col">10.0 %</div>
+              </div>
+            </div>
           </div>
-          <div class="strategy-objective">
-            <h3>Objectif de placement</h3>
-            <p>L'objectif de placement de la classe d'actifs Actions est de générer un rendement supérieur à son indice de référence.</p>
+          <div class="table">
+            <div class="thead">
+              <div class="row">
+                <div class="col"></div>
+                <div class="col">2012</div>
+                <div class="col">2013</div>
+                <div class="col">2014</div>
+                <div class="col">2015</div>
+                <div class="col">2016</div>
+                <div class="col">2017</div>
+                <div class="col">2018</div>
+                <div class="col">2019</div>
+                <div class="col">2020</div>
+              </div>
+            </div>
+            <div class="tbody">
+              <div class="row">
+                <div class="col">Action</div>
+                <div class="col">1.2%</div>
+                <div class="col">32.0%</div>
+                <div class="col">6.7%</div>
+                <div class="col">12.7%</div>
+                <div class="col">5.9%</div>
+                <div class="col">13.1%</div>
+                <div class="col">2.7%</div>
+                <div class="col">23.1%</div>
+                <div class="col">20.8</div>
+              </div>
+              <div class="row">
+                <div class="col">Indice de reference</div>
+                <div class="col">6.9%</div>
+                <div class="col">12.7%</div>
+                <div class="col">10.4%</div>
+                <div class="col">-8.3%</div>
+                <div class="col">21.1%</div>
+                <div class="col">9.1%</div>
+                <div class="col">-8.9%</div>
+                <div class="col">23.2%</div>
+                <div class="col">7.7%</div>
+              </div>
+            </div>
+          </div>
+          <div class="table">
+            <div class="thead">
+              <div class="row">
+                <div class="col"></div>
+                <div class="col">2021</div>
+                <div class="col">2022</div>
+                <div class="col">2023</div>
+                <div class="col">2024</div>
+                <div class="col">2025</div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+              </div>
+            </div>
+            <div class="tbody">
+              <div class="row">
+                <div class="col">Action</div>
+                <div class="col">6.6%</div>
+                <div class="col">-2.8%</div>
+                <div class="col">6.2%</div>
+                <div class="col">39.5%</div>
+                <div class="col">15.9%</div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+              </div>
+              <div class="row">
+                <div class="col">Indice de reference</div>
+                <div class="col">25.6</div>
+                <div class="col">-7.2%</div>
+                <div class="col">13.9%</div>
+                <div class="col">24.4%</div>
+                <div class="col">27.6%</div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <!-- Performance Tables -->
-        <div class="tables-section">
-          <h3>Rendements</h3>
-          
-          <!-- Period Returns Table -->
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>1 mois</th>
-                  <th>3 mois</th>
-                  <th>6 mois</th>
-                  <th>AAJ</th>
-                  <th>1 an</th>
-                  <th>2 ans</th>
-                  <th>5 ans</th>
-                  <th>10 ans</th>
-                  <th>Début</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="row-label">Action</td>
-                  <td>-1.9 %</td>
-                  <td>-4.3 %</td>
-                  <td>3.5 %</td>
-                  <td>15.9 %</td>
-                  <td>15.9 %</td>
-                  <td>27.2 %</td>
-                  <td>12.2 %</td>
-                  <td>12.5 %</td>
-                  <td>12.5 %</td>
-                </tr>
-                <tr class="benchmark-row">
-                  <td class="row-label">Indice de reference</td>
-                  <td>0.7 %</td>
-                  <td>5.2 %</td>
-                  <td>17.9 %</td>
-                  <td>27.6 %</td>
-                  <td>27.6 %</td>
-                  <td>26.0 %</td>
-                  <td>16.1 %</td>
-                  <td>12.9 %</td>
-                  <td>10.0 %</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- Annual Returns 2012-2020 -->
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>2012</th>
-                  <th>2013</th>
-                  <th>2014</th>
-                  <th>2015</th>
-                  <th>2016</th>
-                  <th>2017</th>
-                  <th>2018</th>
-                  <th>2019</th>
-                  <th>2020</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="row-label">Action</td>
-                  <td>1.2%</td>
-                  <td>32.0%</td>
-                  <td>6.7%</td>
-                  <td>12.7%</td>
-                  <td>5.9%</td>
-                  <td>13.1%</td>
-                  <td>2.7%</td>
-                  <td>23.1%</td>
-                  <td>20.8</td>
-                </tr>
-                <tr class="benchmark-row">
-                  <td class="row-label">Indice de reference</td>
-                  <td>6.9%</td>
-                  <td>12.7%</td>
-                  <td>10.4%</td>
-                  <td>-8.3%</td>
-                  <td>21.1%</td>
-                  <td>9.1%</td>
-                  <td>-8.9%</td>
-                  <td>23.2%</td>
-                  <td>7.7%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- Annual Returns 2021-2025 -->
-          <div class="table-wrapper">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>2021</th>
-                  <th>2022</th>
-                  <th>2023</th>
-                  <th>2024</th>
-                  <th>2025</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="row-label">Action</td>
-                  <td>6.6%</td>
-                  <td>-2.8%</td>
-                  <td>6.2%</td>
-                  <td>39.5%</td>
-                  <td>15.9%</td>
-                </tr>
-                <tr class="benchmark-row">
-                  <td class="row-label">Indice de reference</td>
-                  <td>25.6</td>
-                  <td>-7.2%</td>
-                  <td>13.9%</td>
-                  <td>24.4%</td>
-                  <td>27.6%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Notes -->
-        <div class="notes-section">
+        <div class="description description--bottom">
           <h4>Notes explicatives</h4>
-          <p>
-            Les rendements proviennent du composé de toutes les actions détenues par les clients de MEYE ASSET MANAGER en gestion privée sous le code de représentant Q2F2 et ils sont bruts des frais. Avant le 1 janvier 2019, l'indice de référence est composé à 100 % de l'indice S&P/TSX et, par la suite, à 80% de l'indice S&P/TSX et 20 % de l'indice S&P 500. Les résultats futurs vont différer de ceux du passé. Ce document ne constitue pas une recommandation ni un conseil lié à un investissement et est présenté à titre d'information seulement.
-          </p>
+          <p>Les rendements proviennent du composé de toutes les actions détenues par les clients de Rivemont en gestion privée sous le code de représentant Q2F2 et ils sont bruts des frais. Avant le 1 janvier 2019, l’indice de référence est composé à 100 % de l’indice S&P/TSX et, par la suite, à 80% de l’indice S&P/TSX et 20 % de l’indice S&P 500. Les résultats futurs vont différer de ceux du passé. Ce document ne constitue pas une recommandation ni un conseil lié à un investissement et est présenté à titre d’information seulement.</p>
         </div>
       </div>
     </section>
@@ -206,22 +196,29 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     <!-- Info Section - Identique à Rivemont -->
     <section class="section-info">
       <div class="content">
-        <div>
-          <h2>Aperçu</h2>
-          <h3>Date de création</h3>
-          <p>1 septembre 2010</p>
-          <h3>Style de gestion</h3>
-          <p>Technique et tendance</p>
-          <h3>Actifs de la firme</h3>
-          <p>153 millions $</p>
+        <div class="col">
+          <div class="banner">
+            <img [src]="imageService.getImage('image-1')" class="banner-image" alt="" />
+            <div class="banner-content">
+              <h2>Aperçu</h2>
+              <h3>Date de création</h3>
+              <p>1 septembre 2010</p>
+              <h3>Style de gestion</h3>
+              <p>Technique et tendance</p>
+              <h3>Actifs de la firme</h3>
+              <p>153 millions $</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <h2>Principaux titres individuels</h2>
-          <ul>
-            @for (holding of topHoldings; track holding) {
-              <li>{{ holding }}</li>
-            }
-          </ul>
+        <div class="col">
+          <div class="description gl-text-editor">
+            <h2>Principaux titres individuels</h2>
+            <ul>
+              @for (holding of topHoldings; track holding) {
+                <li>{{ holding }}</li>
+              }
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -229,12 +226,12 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     <!-- List Section - Identique à Rivemont -->
     <section class="section-list">
       <div class="content">
-        <h2>Secteurs d'activité</h2>
-        <div class="sectors-grid">
+        <h2 class="title">Secteurs d’activité</h2>
+        <div class="list">
           @for (sector of sectors; track sector.name) {
-            <div class="sector-item">
-              <span class="sector-name">{{ sector.name }}</span>
-              <span class="sector-value">{{ sector.percentage }}</span>
+            <div class="row">
+              <div class="col">{{ sector.name }}</div>
+              <div class="col">{{ sector.percentage }}</div>
             </div>
           }
         </div>
@@ -242,12 +239,12 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     </section>
 
     <!-- Manager Section - Identique à Rivemont -->
-    <section class="template-part-desc-image template-part-desc-image--reverse">
+    <section class="template-part-desc-image template-part-desc-image--1 template-part-desc-image--reverse">
       <div class="content">
         <div class="col">
           <div class="description gl-text-editor">
             <h2>Gestionnaire</h2>
-            <p>Martin Lalonde, MBA, CFA, est le gestionnaire de portefeuille responsable des décisions de placements. Il possède plusieurs années d'expérience comme intervenant sur les marchés financiers et a œuvré, avant de fonder MEYE ASSET MANAGER, comme analyste principal aux investissements et aux fusions et acquisitions pour un important organisme canadien.</p>
+            <p>Martin Lalonde, MBA, CFA, est le gestionnaire de portefeuille responsable des décisions de placements. Il possède plusieurs années d’expérience comme intervenant sur les marchés financiers et a œuvré, avant de fonder Rivemont, comme analyste principal aux investissements et aux fusions et acquisitions pour un important organisme canadien.</p>
           </div>
           <div class="button-holder">
             <a routerLink="/team/martin-lalonde" class="gl-button" target="_self">En savoir plus</a>
@@ -262,12 +259,14 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     </section>
 
     <!-- About Section - Identique à Rivemont -->
-    <section class="template-part-desc-image template-part-desc-image--reverse">
+    <section class="template-part-desc-image template-part-desc-image--1 template-part-desc-image--reverse-order-mobile">
       <div class="content">
         <div class="col">
           <div class="description gl-text-editor">
-            <h2>À propos de MEYE ASSET MANAGER</h2>
-            <p>Fondée en 2010, MEYE ASSET MANAGER est une firme de gestion de portefeuille québécoise avec environ 153 millions $ en actifs sous gestion. La firme offre des stratégies de placement performantes à une clientèle de gestion privée, de conseillers, de courtiers et de planificateurs financiers.</p>
+            <div class="description description--title-size-normal">
+              <h2>À propos de Rivemont</h2>
+              <p>Fondée en 2010, Rivemont est une firme de gestion de portefeuille québécoise avec environ 153 millions $ en actifs sous gestion. La firme offre des stratégies de placement performantes à une clientèle de gestion privée, de conseillers, de courtiers et de planificateurs financiers.</p>
+            </div>
           </div>
           <div class="button-holder">
             <a routerLink="/firm-profile" class="gl-button" target="_self">En savoir plus</a>
