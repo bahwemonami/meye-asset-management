@@ -96,6 +96,18 @@ body {
   background: var(--rivemont-bg-white);
   text-transform: none;
   text-decoration: none;
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  width: 100%;
 }
 
 /* Titres avec police Peridot PE Variable (identique à Rivemont) */
@@ -196,15 +208,15 @@ h3, h4, h5, h6 {
   }
 }
 
-#site-header:not(.site-header--cta-header) .content {
+#site-header.site-header--cta-header .content {
   padding-bottom: 16px;
   padding-top: 16px;
 }
 
 @media only screen and (min-width: 1024px) {
-  #site-header:not(.site-header--cta-header) .content {
+  #site-header.site-header--cta-header .content {
     padding-bottom: 0;
-    padding-top: max(25px, 2.8645833333vw);
+    padding-top: max(85px, 5.2083333333vw);
   }
 }
 
@@ -217,8 +229,58 @@ h3, h4, h5, h6 {
   width: 100%;
 }
 
+#site-header .content .gl-button {
+  align-items: center;
+  background-color: #184068;
+  border: none;
+  border-radius: 0 0 max(20px, 1.8229166667vw) max(20px, 1.8229166667vw);
+  box-sizing: border-box;
+  color: #fff !important;
+  cursor: pointer;
+  display: none;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400 !important;
+  justify-content: center;
+  line-height: 1.2em;
+  min-height: 42px;
+  min-width: max(200px, 14.375vw);
+  outline: none;
+  padding: 0 max(24px, 2.2395833333vw);
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-decoration: none !important;
+  transition: all .35s ease 0ms;
+  top: 0;
+  z-index: 1;
+}
+
+#site-header .content .gl-button.gl-button--blue-dark:hover {
+  background-color: #51b2d6;
+}
+
+#site-header .content .gl-button img {
+  margin-right: max(10px, .78125vw);
+  width: max(12px, .78125vw);
+}
+
 #site-header .content .gl-button:after {
   content: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-header .content .gl-button {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #site-header .content .gl-button {
+    font-size: max(18px, 1.0416666667vw);
+    min-height: max(54px, 3.6458333333vw);
+  }
 }
 
 #site-header .content .col.col-1 .logo-holder {
@@ -364,54 +426,6 @@ h3, h4, h5, h6 {
   }
 }
 
-/* Bouton "Accès client" positionné en haut à droite */
-header .gl-button--blue-dark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  position: absolute;
-  top: 0;
-  right: 165px;
-  z-index: 10;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-family: peridot-pe-variable, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24px;
-  background-color: rgb(24, 64, 104);
-  border-radius: 0px 0px 35px 35px;
-  padding: 0px 43px;
-  height: 70px;
-  width: 276px;
-  min-width: 276px;
-  transition: 0.35s ease;
-  text-transform: none;
-  
-  @media (max-width: 1600px) {
-    right: 100px;
-  }
-  
-  @media (max-width: 1200px) {
-    right: 60px;
-  }
-  
-  @media (max-width: 992px) {
-    right: 40px;
-  }
-  
-  img {
-    width: 16px;
-    height: 16px;
-    opacity: 1;
-  }
-  
-  &:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(24, 64, 104);
-  }
-}
 
 .language-toggle {
   background: none;

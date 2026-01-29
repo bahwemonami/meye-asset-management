@@ -1,7 +1,9 @@
-import { Component, HostListener, signal, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, HostListener, signal, inject, ChangeDetectionStrategy, DestroyRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
+import { filter } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +14,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     <!-- Banner / Header MEYE ASSET MANAGER -->
     <header 
       id="site-header"
-      class="site-header"
+      class="site-header site-header--cta-header site-header--background"
       js-site-header="container"
       [class.scrolled]="isScrolled()">
       <div class="content">
@@ -23,6 +25,14 @@ import { ImageMappingService } from '../../services/image-mapping.service';
           </a>
         </div>
         <div class="col col-2">
+          <a
+            *ngIf="isHome()"
+            href="https://monportefeuilleplus.ca/login"
+            class="gl-button gl-button--blue-dark"
+            target="_blank">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC4zNyIgaGVpZ2h0PSIxOC40NzUiIHZpZXdCb3g9IjAgMCAxNC4zNyAxOC40NzUiPgogIDxnIGlkPSJucF9hY2NvdW50XzQ0MDcxNTlfMDAwMDAwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAuODMyIC0xMi41KSI+CiAgICA8cGF0aCBpZD0iUGF0aF8xIiBkYXRhLW5hbWU9IlBhdGggMSIgZD0iTTM3LjQzOCwyMC43MTFhNC4xLDQuMSwwLDEsMSwyLjktMS4yQTQuMSw0LjEsMCwwLDEsMzcuNDM4LDIwLjcxMVptMC02LjE1OGEyLjA1MywyLjA1MywwLDEsMCwxLjQ1MS42QTIuMDUzLDIuMDUzLDAsMCwwLDM3LjQzOCwxNC41NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOS40MjEgMCkiIGZpbGw9IiNmZmYiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzIiIGRhdGEtbmFtZT0iUGF0aCAyIiBkPSJNMzQuMTc1LDU5LjIzN2ExLjAyNywxLjAyNywwLDAsMS0xLjAyNy0xLjAyN1Y1NS4xMzFhMy4wNzksMy4wNzksMCwwLDAtMy4wNzktMy4wNzloLTQuMWEzLjA3OSwzLjA3OSwwLDAsMC0zLjA3OSwzLjA3OVY1OC4yMWExLjAyNywxLjAyNywwLDEsMS0yLjA1MywwVjU1LjEzMUE1LjEzOCw1LjEzOCwwLDAsMSwyNS45NjUsNTBoNC4xQTUuMTM4LDUuMTM4LDAsMCwxLDM1LjIsNTUuMTMxVjU4LjIxYTEuMDI3LDEuMDI3LDAsMCwxLTEuMDI3LDEuMDI3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjguMjYyKSIgZmlsbD0iI2ZmZiIvPgogIDwvZz4KPC9zdmc+Cg==" alt="" />
+            Accès client
+          </a>
           <!-- Navigation Desktop -->
           <nav js-site-nav="container" aria-label="Navigation principale">
             <ul id="menu-header" class="menu" role="menubar">
@@ -88,8 +98,8 @@ import { ImageMappingService } from '../../services/image-mapping.service';
             <a routerLink="/" class="logo-holder" (click)="closeMenu()">
               <img [src]="imageService.getImage('logo-light-png')" alt="" />
             </a>
-            <a href="https://monportefeuilleplus.ca/login" class="gl-button gl-button--blue-dark" target="_blank">
-              <img [src]="imageService.getImage('user-icon')" alt="" width="300" height="150" />
+            <a *ngIf="isHome()" href="https://monportefeuilleplus.ca/login" class="gl-button gl-button--blue-dark" target="_blank">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC4zNyIgaGVpZ2h0PSIxOC40NzUiIHZpZXdCb3g9IjAgMCAxNC4zNyAxOC40NzUiPgogIDxnIGlkPSJucF9hY2NvdW50XzQ0MDcxNTlfMDAwMDAwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAuODMyIC0xMi41KSI+CiAgICA8cGF0aCBpZD0iUGF0aF8xIiBkYXRhLW5hbWU9IlBhdGggMSIgZD0iTTM3LjQzOCwyMC43MTFhNC4xLDQuMSwwLDEsMSwyLjktMS4yQTQuMSw0LjEsMCwwLDEsMzcuNDM4LDIwLjcxMVptMC02LjE1OGEyLjA1MywyLjA1MywwLDEsMCwxLjQ1MS42QTIuMDUzLDIuMDUzLDAsMCwwLDM3LjQzOCwxNC41NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOS40MjEgMCkiIGZpbGw9IiNmZmYiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzIiIGRhdGEtbmFtZT0iUGF0aCAyIiBkPSJNMzQuMTc1LDU5LjIzN2ExLjAyNywxLjAyNywwLDAsMS0xLjAyNy0xLjAyN1Y1NS4xMzFhMy4wNzksMy4wNzksMCwwLDAtMy4wNzktMy4wNzloLTQuMWEzLjA3OSwzLjA3OSwwLDAsMC0zLjA3OSwzLjA3OVY1OC4yMWExLjAyNywxLjAyNywwLDEsMS0yLjA1MywwVjU1LjEzMUE1LjEzOCw1LjEzOCwwLDAsMSwyNS45NjUsNTBoNC4xQTUuMTM4LDUuMTM4LDAsMCwxLDM1LjIsNTUuMTMxVjU4LjIxYTEuMDI3LDEuMDI3LDAsMCwxLTEuMDI3LDEuMDI3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjguMjYyKSIgZmlsbD0iI2ZmZiIvPgogIDwvZz4KPC9zdmc+Cg==" alt="" />
               Accès client
             </a>
           </div>
@@ -516,8 +526,22 @@ import { ImageMappingService } from '../../services/image-mapping.service';
 })
 export class HeaderComponent {
   imageService = inject(ImageMappingService);
+  private router = inject(Router);
+  private destroyRef = inject(DestroyRef);
   isScrolled = signal(false);
   isMenuOpen = signal(false);
+  isHome = signal(this.isHomeUrl(this.router.url));
+
+  constructor() {
+    this.router.events
+      .pipe(
+        filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+        takeUntilDestroyed(this.destroyRef)
+      )
+      .subscribe(event => {
+        this.isHome.set(this.isHomeUrl(event.urlAfterRedirects));
+      });
+  }
 
   @HostListener('window:scroll')
   onWindowScroll() {
@@ -536,5 +560,9 @@ export class HeaderComponent {
   closeMenu() {
     this.isMenuOpen.set(false);
     document.body.style.overflow = '';
+  }
+
+  private isHomeUrl(url: string): boolean {
+    return url === '/' || url === '' || url.startsWith('/?');
   }
 }
