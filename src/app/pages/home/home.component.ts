@@ -67,8 +67,9 @@ register();
         <div class="image-holder">
           <img [src]="imageService.getImage('team-preview')" alt="Notre équipe" class="attachment-full size-full" loading="lazy" />
         </div>
-        <a routerLink="/our-team" class="gl-button" target="_self">
-          Découvrez l'équipe
+        <a routerLink="/our-team" class="gl-button gl-button--team-preview" target="_self">
+          Découvrez l’équipe
+          <span class="gl-button__arrow" aria-hidden="true"></span>
         </a>
       </div>
     </section>
@@ -80,7 +81,7 @@ register();
           <h2>Rendements</h2>
         </div>
         <div class="image-holder" data-aos="fade">
-          <img [src]="imageService.getImage('performance-chart')" alt="Rendements" class="attachment-large size-large" loading="lazy" />
+          <img [src]="imageService.getImage('performance-chart')" alt="Rendements" class="attachment-large size-large" width="729" height="403" loading="eager" />
         </div>
         <div class="button-holder" data-aos="fade-up">
           <a routerLink="/performance" class="gl-button gl-button--blue-dark" target="_self">

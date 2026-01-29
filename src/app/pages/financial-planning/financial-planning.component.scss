@@ -1,0 +1,240 @@
+/* ============================================================================
+   FINANCIAL PLANNING / PLANIFICATION FINANCIÈRE - Styles 1:1 Rivemont
+   ============================================================================ */
+
+.template-builder-page-container .template-part-hero {
+  margin-bottom: max(80px, 6.25vw);
+
+  @media only screen and (max-width: 1189px) {
+    margin-bottom: 40px;
+  }
+}
+
+.template-builder-page-container .template-part-hero .content {
+  background-color: #51b2d6;
+  border-radius: 0 0 24px 24px;
+  box-sizing: border-box;
+  display: flex;
+  height: max(300px, 28.28125vw);
+  justify-content: center;
+  overflow: hidden;
+  padding: max(160px, 13.5416666667vw) 14px max(60px, 5.2083333333vw);
+  position: relative;
+
+  @media only screen and (min-width: 768px) {
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 0 0 max(50px, 3.6458333333vw) max(50px, 3.6458333333vw);
+  }
+
+  @media only screen and (min-width: 1280px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    padding-left: 8.59375vw;
+    padding-right: 8.59375vw;
+  }
+
+  &:after {
+    background: linear-gradient(180deg, #184068, transparent);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .title {
+    color: #fff;
+    font-family: peridot-pe-variable, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.04em;
+    left: 0;
+    position: relative;
+    right: 0;
+    text-align: center;
+    text-transform: none;
+    transform: none;
+    z-index: 6;
+
+    @media only screen and (min-width: 768px) {
+      font-size: max(45px, 3.125vw);
+    }
+  }
+
+  img.gl-responsive-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+}
+
+.template-builder-page-container .page-content {
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 80px;
+  padding-left: 14px;
+  padding-right: 14px;
+
+  @media only screen and (min-width: 768px) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    padding-left: 8.59375vw;
+    padding-right: 8.59375vw;
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: max(140px, 8.3333333333vw);
+  }
+}
+
+.template-builder-page-container .page-content .page-content__builder {
+  box-sizing: border-box;
+  width: 100%;
+
+  @media only screen and (min-width: 1190px) {
+    padding-right: 4.375vw;
+  }
+}
+
+.template-builder-page-container .page-content .page-content__builder .page-filter {
+  margin-bottom: 40px;
+
+  @media only screen and (min-width: 1190px) {
+    display: none;
+  }
+}
+
+.template-builder-page-container .page-content .page-content__builder .title {
+  color: #184068;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.04em;
+  margin-bottom: max(30px, 1.875vw);
+  text-transform: none;
+
+  @media only screen and (min-width: 768px) {
+    font-size: max(45px, 3.125vw);
+  }
+}
+
+.template-builder-page-container .page-content .page-content__builder .builder-sections section {
+  margin: max(64px, 3.3854166667vw) 0;
+}
+
+.template-builder-page-container .page-content .page-content__builder .builder-sections section:first-child {
+  margin-top: 0;
+}
+
+.template-builder-page-container .page-content .page-content__builder .builder-sections section:last-child {
+  margin-bottom: 0;
+}
+
+.template-builder-page-container .page-content .page-content__builder .builder-sections .section-description .content .gl-button {
+  margin-top: max(30px, 2.6041666667vw);
+}
+
+.template-builder-page-container .page-content .page-content__sidebar {
+  box-sizing: border-box;
+  display: none;
+  flex-shrink: 0;
+  width: max(400px, 23.8541666667vw);
+
+  @media only screen and (min-width: 1190px) {
+    display: block;
+  }
+}
+
+.template-builder-page-container .page-content .page-content__sidebar .section-sidebar {
+  background-color: #eaf3fd;
+  border-radius: max(20px, 1.0416666667vw);
+  box-sizing: border-box;
+  padding: max(80px, 5.46875vw) max(30px, 2.8125vw);
+}
+
+.template-builder-page-container .page-content .page-content__sidebar .section-sidebar .content ul li {
+  margin-bottom: max(30px, 3.4375vw);
+  text-align: center;
+}
+
+.template-builder-page-container .page-content .page-content__sidebar .section-sidebar .content ul li.active a {
+  color: #51b2d6;
+  text-decoration: underline;
+}
+
+.template-builder-page-container .page-content .page-content__sidebar .section-sidebar .content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.template-builder-page-container .page-content .page-content__sidebar .section-sidebar .content ul li a {
+  color: #184068;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.04em;
+  background-color: transparent;
+  display: inline;
+  padding: 0;
+  text-transform: none;
+  transition: all 0.35s ease 0ms;
+
+  @media only screen and (min-width: 768px) {
+    font-size: max(22px, 1.25vw);
+  }
+}
+
+.template-builder-page-container .page-content .page-content__sidebar .section-sidebar .content ul li a:hover {
+  color: #51b2d6;
+}
+
+.template-builder-page-container .builder-sections .section-description .gl-button {
+  align-items: center;
+  background-color: #0080bc;
+  border: 0;
+  border-radius: 100px;
+  color: #fff;
+  display: inline-flex;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  height: 54px;
+  justify-content: center;
+  line-height: 21.6px;
+  padding: 0 32.25px;
+  text-decoration: none;
+}
+
+.template-builder-page-container .builder-sections .section-description .gl-button::after {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNyIgaGVpZ2h0PSIyNS4yNDMiIHZpZXdCb3g9IjAgMCAyNyAyNS4yNDMiPgogIDxwYXRoIGlkPSJJY29uX2FrYXItYXJyb3ctcmlnaHQiIGRhdGEtbmFtZT0iSWNvbiBha2FyLWFycm93LXJpZ2h0IiBkPSJNNiwxOEgzME0xOS41LDcuNSwzMCwxOCwxOS41LDI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00LjUgLTUuMzc5KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 16px;
+  margin-left: max(12px, 1.09375vw);
+  width: 18px;
+}

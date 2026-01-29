@@ -11,7 +11,11 @@
 .template-contact-page-container .section-hero {
   background-color: #eaf3fd;
   border-radius: 0 0 24px 24px;
+  display: block;
+  height: auto;
   margin-bottom: max(53px, 9.7916666667vw);
+  padding-left: 0;
+  padding-right: 0;
   padding-bottom: max(80px, 8.3333333333vw);
   padding-top: 68px;
   
@@ -24,6 +28,9 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    max-width: none;
+    width: 100%;
     padding-left: 14px;
     padding-right: 14px;
     
@@ -256,6 +263,151 @@
         font-size: max(40px, 3.3854166667vw);
         text-align: center;
       }
+    }
+  }
+}
+
+/* Contact Form */
+.template-contact-page-container .section-contact {
+  .gl-form-holder,
+  .gl-form {
+    width: 100%;
+  }
+
+  .gl-form-controls {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -9.75px;
+    margin-right: -9.75px;
+  }
+
+  .gl-form-controls--two-col .gl-form-control {
+    box-sizing: border-box;
+    margin-bottom: 26px;
+    padding: 0 9.75px;
+    width: 50%;
+  }
+
+  .gl-form-control {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .gl-input {
+    background-color: #eaf3fd;
+    border: 0;
+    border-radius: 52.5px;
+    color: #184068;
+    font-family: peridot-pe-variable, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    height: 52.5px;
+    line-height: 22.1px;
+    padding: 0 31.5px;
+    width: 100%;
+
+    &::placeholder {
+      color: #184068;
+      opacity: 1;
+    }
+  }
+
+  .gl-textarea {
+    background-color: #eaf3fd;
+    border: 0;
+    border-radius: 25px;
+    color: #184068;
+    font-family: peridot-pe-variable, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    height: 230px;
+    line-height: 22.1px;
+    padding: 30px 31.5px 0;
+    resize: none;
+    width: 100%;
+
+    &::placeholder {
+      color: #184068;
+      opacity: 1;
+    }
+  }
+
+  .gl-form-control--submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+  }
+
+  .gl-form-control--submit .gl-button {
+    align-items: center;
+    background-color: #0080bc;
+    border: 0;
+    border-radius: 100px;
+    color: #fff;
+    display: inline-flex;
+    font-size: 18px;
+    height: 54px;
+    justify-content: center;
+    line-height: 21.6px;
+    min-width: 256.5px;
+    padding: 0 32.25px;
+  }
+
+  .gl-form-control--submit .gl-button::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNyIgaGVpZ2h0PSIyNS4yNDMiIHZpZXdCb3g9IjAgMCAyNyAyNS4yNDMiPgogIDxwYXRoIGlkPSJJY29uX2FrYXItYXJyb3ctcmlnaHQiIGRhdGEtbmFtZT0iSWNvbiBha2FyLWFycm93LXJpZ2h0IiBkPSJNNiwxOEgzME0xOS41LDcuNSwzMCwxOCwxOS41LDI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00LjUgLTUuMzc5KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    height: 16px;
+    margin-left: max(12px, 1.09375vw);
+    width: 18px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .gl-form-controls {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .gl-form-controls--two-col .gl-form-control {
+      margin-bottom: 12px;
+      padding: 0;
+      width: 100%;
+    }
+
+    .gl-input {
+      border-radius: 52px;
+      font-size: 16px;
+      height: 52px;
+      line-height: 20.8px;
+      padding: 0 16px;
+    }
+
+    .gl-textarea {
+      border-radius: 25px;
+      font-size: 16px;
+      line-height: 20.8px;
+      padding: 20px 16px 0;
+    }
+
+    .gl-form-control--submit {
+      justify-content: flex-start;
+      margin-top: 24px;
+    }
+
+    .gl-form-control--submit .gl-button {
+      font-size: 16px;
+      height: 42px;
+      line-height: 19.2px;
+      min-width: 178px;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    .gl-form-control--submit .gl-button::after {
+      margin-left: 12px;
     }
   }
 }

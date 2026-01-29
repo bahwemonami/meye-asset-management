@@ -125,12 +125,249 @@
   }
 }
 
-/* Content Container */
-.content-container {
-  box-sizing: border-box;
+/* Form Holder & Controls - Identique à Rivemont */
+.gl-form-holder:last-child {
+  margin-bottom: 0;
 }
 
-/* Form Wrapper */
-.form-wrapper {
+.gl-form-holder .wpcf7-form-control-wrap {
+  display: block;
+}
+
+.gl-form-holder .wpcf7-response-output {
+  border: none !important;
+  color: #184068;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.3em;
+  margin: max(40px, 2.0833333333vw) 0 0 !important;
+  padding: 0 !important;
+  text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    font-size: max(17px, 1.0416666667vw);
+  }
+}
+
+.gl-form-holder form {
+  position: relative;
+}
+
+.gl-form-holder form .gl-form-controls {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  @media only screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    margin-left: min(-8px, -0.6770833333vw);
+    width: calc(100% + max(16px, 1.3541666667vw));
+  }
+}
+
+.gl-form-holder form .gl-form-controls .gl-form-control {
   box-sizing: border-box;
+  width: 100%;
+
+  @media only screen and (min-width: 768px) {
+    padding: 0 max(8px, 0.6770833333vw);
+  }
+}
+
+.gl-form-holder form .gl-form-controls.gl-form-controls--two-col {
+  flex-wrap: wrap;
+}
+
+.gl-form-holder form .gl-form-controls.gl-form-controls--two-col .gl-form-control {
+  width: 100%;
+
+  @media only screen and (min-width: 768px) {
+    width: 50%;
+  }
+}
+
+.gl-form-holder form .gl-form-controls.gl-form-controls--radio-submit {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gl-form-holder form .gl-form-controls.gl-form-controls--radio-submit .gl-form-control {
+  width: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .gl-form-holder form .gl-form-controls.gl-form-controls--radio-submit .gl-button {
+    margin-top: 30px;
+  }
+}
+
+.gl-form-holder form .gl-form-control {
+  margin-bottom: 12px;
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: max(26px, 1.3541666667vw);
+  }
+}
+
+.gl-form-holder form .gl-form-control.gl-form-control--list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media only screen and (min-width: 1024px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.gl-form-holder form .gl-form-control.gl-form-control--list > label {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: max(54px, 2.8125vw);
+  width: 100%;
+
+  @media only screen and (min-width: 768px) {
+    font-size: max(20px, 1.1979166667vw);
+  }
+
+  @media only screen and (min-width: 1024px) {
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+
+.gl-form-holder form .gl-form-control label {
+  color: #184068;
+  display: block;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.3em;
+  margin-bottom: max(12px, 0.625vw);
+
+  @media only screen and (min-width: 768px) {
+    font-size: max(17px, 1.0416666667vw);
+  }
+}
+
+.gl-form-holder form .gl-form-control input:not([type='checkbox']):not([type='radio']),
+.gl-form-holder form .gl-form-control textarea {
+  background-color: #eaf3fd;
+  border: none;
+  border-radius: max(52px, 3.6458333333vw);
+  box-sizing: border-box;
+  color: #184068;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  height: max(52px, 3.6458333333vw);
+  letter-spacing: 0;
+  line-height: 1.3em;
+  outline: none;
+  padding: 0 max(16px, 2.1875vw);
+  width: 100%;
+
+  @media only screen and (min-width: 768px) {
+    font-size: max(17px, 1.0416666667vw);
+  }
+}
+
+.gl-form-holder form .gl-form-control input:not([type='checkbox']):not([type='radio'])::placeholder,
+.gl-form-holder form .gl-form-control select::placeholder,
+.gl-form-holder form .gl-form-control textarea::placeholder {
+  color: #184068;
+}
+
+.gl-form-holder form .gl-form-control textarea {
+  border-radius: max(25px, 1.3020833333vw);
+  padding-top: max(20px, 2.0833333333vw);
+  resize: none;
+}
+
+.gl-form-holder form .gl-form-control textarea.small {
+  height: max(120px, 7.0833333333vw);
+}
+
+.gl-form-holder form .wpcf7-form-control-wrap .wpcf7-form-control.wpcf7-radio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: min(-12px, -0.625vw);
+}
+
+.gl-form-holder form .wpcf7-form-control-wrap .wpcf7-form-control.wpcf7-radio .wpcf7-list-item {
+  margin: 0 0 max(12px, 0.625vw);
+}
+
+.gl-form-holder form .wpcf7-form-control-wrap .wpcf7-form-control.wpcf7-radio .wpcf7-list-item > label {
+  cursor: pointer;
+  display: block;
+  margin: 0;
+}
+
+.gl-form-holder form .wpcf7-form-control-wrap .wpcf7-form-control.wpcf7-radio .wpcf7-list-item > label input {
+  display: none;
+}
+
+.gl-form-holder form .wpcf7-form-control-wrap .wpcf7-form-control.wpcf7-radio .wpcf7-list-item > label input:checked ~ .wpcf7-list-item-label:after {
+  background-color: #184068;
+  border-color: #184068;
+}
+
+.gl-form-holder form .wpcf7-form-control-wrap .wpcf7-form-control.wpcf7-radio .wpcf7-list-item > label .wpcf7-list-item-label {
+  align-items: center;
+  display: flex;
+  margin-right: max(23px, 1.1979166667vw);
+}
+
+.gl-form-holder form .wpcf7-form-control-wrap .wpcf7-form-control.wpcf7-radio .wpcf7-list-item > label .wpcf7-list-item-label:after {
+  background-color: #eaf3fd;
+  border: none;
+  box-sizing: border-box;
+  content: " ";
+  display: block;
+  flex-shrink: 0;
+  height: max(18px, 0.9375vw);
+  margin-left: max(20px, 1.0416666667vw);
+  outline: none;
+  position: relative;
+  top: max(1px, 0.1041666667vw);
+  width: max(18px, 0.9375vw);
+}
+
+/* Bouton Envoyer - Identique à Rivemont */
+.template-form-page-container .section-form .gl-button {
+  align-items: center;
+  background-color: #184068;
+  border: 0;
+  border-radius: 100px;
+  color: #fff;
+  display: inline-flex;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  height: 54px;
+  justify-content: center;
+  line-height: 21.6px;
+  margin: 0;
+  min-width: 256.5px;
+  padding: 0 32.25px;
+  text-decoration: none;
+  width: auto;
+}
+
+.template-form-page-container .section-form .gl-button::after {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNyIgaGVpZ2h0PSIyNS4yNDMiIHZpZXdCb3g9IjAgMCAyNyAyNS4yNDMiPgogIDxwYXRoIGlkPSJJY29uX2FrYXItYXJyb3ctcmlnaHQiIGRhdGEtbmFtZT0iSWNvbiBha2FyLWFycm93LXJpZ2h0IiBkPSJNNiwxOEgzME0xOS41LDcuNSwzMCwxOCwxOS41LDI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00LjUgLTUuMzc5KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 16px;
+  margin-left: max(12px, 1.09375vw);
+  width: 18px;
 }

@@ -74,6 +74,23 @@
     .gl-button {
       margin-top: 40px;
       
+      @media only screen and (max-width: 767px) {
+        font-size: 16px !important;
+        gap: 0 !important;
+        height: 42px !important;
+        line-height: 19.2px !important;
+        min-height: 42px !important;
+        min-width: 178px !important;
+        padding: 0 24px !important;
+        width: auto !important;
+
+        &::after {
+          height: 16px !important;
+          margin-left: 12px !important;
+          width: 18px !important;
+        }
+      }
+      
       @media only screen and (min-width: 768px) {
         margin-top: max(30px, 1.5625vw);
       }
@@ -167,6 +184,25 @@
         .button-holder {
           margin-top: 40px;
           
+          @media only screen and (max-width: 767px) {
+            .gl-button {
+              font-size: 16px;
+              gap: 0;
+              height: 42px;
+              line-height: 19.2px;
+              min-height: 42px;
+              min-width: 178px;
+              padding: 0 24px;
+              width: auto;
+
+              &::after {
+                height: 16px;
+                margin-left: 12px;
+                width: 18px;
+              }
+            }
+          }
+
           @media only screen and (min-width: 768px) {
             margin-top: max(50px, 2.6041666667vw);
           }
@@ -175,6 +211,7 @@
       
       &:nth-child(2) {
         width: 100%;
+        margin-top: 0;
         
         @media only screen and (min-width: 768px) {
           width: 47%;
@@ -247,12 +284,70 @@
       transform: translate(-50%, 50%);
       white-space: nowrap;
       
+      @media only screen and (max-width: 767px) {
+        font-size: 16px !important;
+        gap: 0 !important;
+        height: 42px !important;
+        line-height: 19.2px !important;
+        min-height: 42px !important;
+        min-width: 220.484375px !important;
+        padding: 0 24px !important;
+        width: 220.484375px !important;
+
+        &::after {
+          height: 16px !important;
+          margin-left: 12px !important;
+          width: 18px !important;
+        }
+      }
+      
       @media only screen and (min-width: 1024px) {
         bottom: 5.9895833333vw;
         left: auto;
         right: 5.9895833333vw;
         transform: none;
       }
+    }
+
+    .gl-button.gl-button--team-preview {
+      @media only screen and (max-width: 767px) {
+        font-size: 16px !important;
+        gap: 0 !important;
+        height: 42px !important;
+        line-height: 19.2px !important;
+        min-height: 42px !important;
+        min-width: 220.484375px !important;
+        padding: 0 24px !important;
+        width: 220.484375px !important;
+
+        &::after {
+          height: 16px !important;
+          margin-left: 12px !important;
+          width: 18px !important;
+        }
+      }
+    }
+
+    .gl-button.gl-button--team-preview::after {
+      height: 16px !important;
+      margin-left: 12px !important;
+      width: 18px !important;
+    }
+
+    .gl-button::after {
+      content: none !important;
+    }
+
+    .gl-button__arrow {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNyIgaGVpZ2h0PSIyNS4yNDMiIHZpZXdCb3g9IjAgMCAyNyAyNS4yNDMiPgogIDxwYXRoIGlkPSJJY29uX2FrYXItYXJyb3ctcmlnaHQiIGRhdGEtbmFtZT0iSWNvbiBha2FyLWFycm93LXJpZ2h0IiBkPSJNNiwxOEgzME0xOS41LDcuNSwzMCwxOCwxOS41LDI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00LjUgLTUuMzc5KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+      flex: 0 0 auto;
+      height: 16px;
+      margin-left: 12px;
+      width: 18px;
     }
   }
 }

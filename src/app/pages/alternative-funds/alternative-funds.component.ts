@@ -1,120 +1,47 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ViewEncapsulation, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { ImageMappingService } from '../../services/image-mapping.service';
 
 @Component({
   selector: 'app-alternative-funds',
   standalone: true,
   imports: [CommonModule, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./alternative-funds.component.scss'],
   template: `
-    <!-- Hero Section - Identique à Rivemont -->
-    <section class="template-part-hero">
-      <div class="content">
-        <h1 class="title">Fonds alternatifs</h1>
-      </div>
-    </section>
-
-    <!-- Funds Grid Section -->
-    <section class="content-section">
-      <div class="content-container">
-        <div class="funds-grid">
-          @for (fund of funds; track fund.slug) {
-            <a [routerLink]="['/alternative-funds', fund.slug]" class="fund-card">
-              <div class="fund-icon">
-                <span>{{ fund.icon }}</span>
-              </div>
-              <div class="fund-info">
-                <h3>{{ fund.name }}</h3>
-                <p>{{ fund.description }}</p>
-              </div>
-            </a>
-          }
+    <div class="template-fonds-page-container">
+      <section class="section-hero">
+        <div class="content">
+          <img
+            [src]="imageService.getImage('image-3')"
+            alt=""
+            class="gl-responsive-background gl-responsive-background--desktop gl-img-grey"
+          />
+          <h1 class="title" data-aos="fade">Fonds alternatifs</h1>
+          <div class="links">
+            <div class="link-holder" data-aos="zoom-in">
+              <a class="link" [routerLink]="['/alternative-funds', 'fonds-rivemont-long-short']">
+                Fonds Rivemont Long Short
+              </a>
+            </div>
+            <div class="link-holder" data-aos="zoom-in">
+              <a class="link" [routerLink]="['/alternative-funds', 'fonds-rivemont-crypto']">
+                Fonds Rivemont Crypto
+              </a>
+            </div>
+            <div class="link-holder" data-aos="zoom-in">
+              <a class="link" [routerLink]="['/alternative-funds', 'fonds-rivemont-microcap']">
+                Fonds Rivemont MicroCap
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   `,
-  styles: [`
-    .funds-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      
-      @media (max-width: 968px) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      
-      @media (max-width: 568px) {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    .fund-card {
-      background: var(--meye-white);
-      border-radius: 12px;
-      overflow: hidden;
-      text-decoration: none;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
-      
-      &:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        
-        h3 {
-          color: var(--meye-accent);
-        }
-      }
-    }
-    
-    .fund-icon {
-      background: var(--meye-primary-dark);
-      padding: 60px;
-      text-align: center;
-      
-      span {
-        font-size: 4rem;
-      }
-    }
-    
-    .fund-info {
-      padding: 30px;
-      
-      h3 {
-        font-family: 'Georgia', serif;
-        font-size: 1.4rem;
-        color: var(--meye-primary);
-        margin-bottom: 12px;
-        transition: color 0.3s ease;
-      }
-      
-      p {
-        font-size: 0.95rem;
-        color: var(--meye-text-light);
-        line-height: 1.6;
-      }
-    }
-  `]
 })
 export class AlternativeFundsComponent {
-  funds = [
-    {
-      slug: 'long-short',
-      name: 'Fonds MEYE Long Short',
-      description: 'Une stratégie neutre au marché visant des rendements positifs dans toutes les conditions de marché.',
-      icon: '📈'
-    },
-    {
-      slug: 'crypto',
-      name: 'Fonds MEYE Crypto',
-      description: 'Exposition aux actifs numériques avec une gestion professionnelle des risques.',
-      icon: '₿'
-    },
-    {
-      slug: 'microcap',
-      name: 'Fonds MEYE MicroCap',
-      description: 'Investissement dans des sociétés à petite capitalisation à fort potentiel.',
-      icon: '💎'
-    }
-  ];
+  imageService = inject(ImageMappingService);
 }

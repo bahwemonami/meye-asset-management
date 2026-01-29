@@ -1,0 +1,98 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e6] [cursor=pointer]:
+        - /url: https://rivemont.ca
+      - generic [ref=e7]:
+        - navigation [ref=e8]:
+          - list [ref=e9]:
+            - listitem [ref=e18]:
+              - menuitem "Switch to En" [ref=e19] [cursor=pointer]:
+                - generic [ref=e20]: En
+        - button [ref=e21] [cursor=pointer]
+  - main [ref=e26]:
+    - generic [ref=e27]:
+      - heading "Planification financière" [level=1] [ref=e30]
+      - generic [ref=e32]:
+        - combobox [ref=e124]:
+          - option "Un outil essentiel pour bâtir votre avenir" [selected]
+          - option "Planification fiscale"
+          - option "Planification pour les propriétaires d’entreprises"
+          - option "Planification successorale"
+        - heading "Un outil essentiel pour bâtir votre avenir" [level=2] [ref=e33]
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - paragraph [ref=e38]:
+              - text: Chez
+              - strong [ref=e39]: Les Investissements Rivemont
+              - text: ", nous considérons la planification financière comme un prolongement naturel de notre rôle de gestionnaire de portefeuille. Elle nous permet de vous accompagner dans vos décisions financières importantes."
+            - paragraph [ref=e40]: "Notre rôle consiste alors à :"
+            - list [ref=e41]:
+              - listitem [ref=e42]: Définir avec vous vos priorités et vos objectifs.
+              - listitem [ref=e43]: Identifier les stratégies les plus appropriées pour les réaliser.
+              - listitem [ref=e44]: Adapter votre plan au fil du temps, selon vos besoins et l’évolution des marchés.
+            - heading "Des solutions concrètes" [level=4] [ref=e45]
+            - paragraph [ref=e46]: "Nous couvrons l’ensemble des aspects nécessaires à une solide planification financière :"
+            - list [ref=e47]:
+              - listitem [ref=e48]: Optimisation fiscale.
+              - listitem [ref=e49]: Planification successorale.
+              - listitem [ref=e50]: Préparation à la retraite.
+              - listitem [ref=e51]: Stratégie de décaissement.
+              - listitem [ref=e52]: Gestion des risques et assurances.
+            - paragraph [ref=e53]
+            - paragraph [ref=e54]: N’hésitez pas à nous contacter afin que nous puissions évaluer votre situation financière et vous recommander une solution personnalisée qui reflète vos besoins et vos objectifs de placements.
+          - link "Contactez-nous" [ref=e55] [cursor=pointer]:
+            - /url: https://rivemont.ca/contact/
+  - contentinfo [ref=e68]:
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - img [ref=e73]
+          - generic [ref=e74]:
+            - heading "Inscrivez-vous à notre lettre financière" [level=2] [ref=e75]
+            - generic [ref=e77]:
+              - generic [ref=e78]:
+                - status
+                - list
+              - form "Contact form" [ref=e79]:
+                - generic [ref=e80]:
+                  - textbox "Adresse courriel" [ref=e83]
+                  - button "Inscription" [ref=e84] [cursor=pointer]
+        - generic [ref=e86]:
+          - heading "Passez à l’action, devenez client." [level=2] [ref=e87]
+          - link "En savoir plus" [ref=e89] [cursor=pointer]:
+            - /url: https://rivemont.ca/devenir-client/
+      - generic [ref=e90]:
+        - link [ref=e92] [cursor=pointer]:
+          - /url: https://rivemont.ca
+        - navigation [ref=e94]:
+          - list [ref=e95]:
+            - listitem [ref=e96]:
+              - link "Gestion privée" [ref=e97] [cursor=pointer]:
+                - /url: https://rivemont.ca/gestion-privee/
+            - listitem [ref=e98]:
+              - link "Rendements" [ref=e99] [cursor=pointer]:
+                - /url: https://rivemont.ca/rendements/
+            - listitem [ref=e100]:
+              - link "Fonds alternatifs" [ref=e101] [cursor=pointer]:
+                - /url: https://rivemont.ca/fonds-alternatifs/
+            - listitem [ref=e102]:
+              - link "Contact" [ref=e103] [cursor=pointer]:
+                - /url: https://rivemont.ca/contact/
+        - navigation [ref=e105]:
+          - list [ref=e106]:
+            - listitem [ref=e107]:
+              - link [ref=e108] [cursor=pointer]:
+                - /url: https://www.facebook.com/profile.php?id=100063975098177
+                - img [ref=e109]
+            - listitem [ref=e111]:
+              - link [ref=e112] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCJADkkF5DoZC17lm3S0jMqw
+                - img [ref=e113]
+            - listitem [ref=e115]:
+              - link [ref=e116] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/les-investissements-rivemont/?originalSubdomain=fr
+                - img [ref=e117]
+        - link "Connexion" [ref=e120] [cursor=pointer]:
+          - /url: https://monportefeuilleplus.ca/login
+      - paragraph [ref=e122]: © 2026, Les investissements Rivemont. Tous droits réservés.

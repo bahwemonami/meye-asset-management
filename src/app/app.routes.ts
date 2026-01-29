@@ -58,7 +58,7 @@ export const routes: Routes = [
   },
   {
     path: 'financial-planning',
-    loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent),
+    loadComponent: () => import('./pages/financial-planning/financial-planning.component').then(m => m.FinancialPlanningComponent),
     title: 'Financial Planning | MEYE ASSET MANAGER'
   },
   {

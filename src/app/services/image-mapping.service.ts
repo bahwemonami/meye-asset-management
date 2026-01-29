@@ -29,6 +29,7 @@ export class ImageMappingService {
     'contact-hero': '/assets/images/rivemont/logo/contac-hero.jpg',
     'performance-hero': '/assets/images/rivemont/logo/Rendements-hero.jpg',
     'private-management-hero': '/assets/images/rivemont/logo/Gestion-privee-hero.jpg',
+    'financial-planning-hero': '/assets/images/rivemont/logo/Planification_financiere-hero_test.jpg',
     
     // Team Images
     'team-preview': '/assets/images/rivemont/logo/team.jpg',
