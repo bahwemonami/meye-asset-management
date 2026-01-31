@@ -99,6 +99,29 @@ body {
   overflow-x: hidden;
 }
 
+/* Main content - Padding-top pour compenser le header absolute sur desktop */
+main#main-content {
+  padding-top: 0;
+  
+  /* Pas de padding-top sur desktop car le header est absolute et ne prend pas d'espace */
+  /* Le padding-top était nécessaire pour un header fixed, mais ici le header est absolute */
+}
+
+/* Template About Page Container */
+.template-about-page-container {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* Template About Page Container - Padding pour compenser le header */
+.template-about-page-container {
+  padding-top: 0;
+  
+  @media only screen and (min-width: 1024px) {
+    padding-top: 0;
+  }
+}
+
 img,
 video,
 iframe {
@@ -168,56 +191,116 @@ h3, h4, h5, h6 {
   color: var(--rivemont-primary);
 }
 
-/* Header - Identique à Rivemont */
+/* ============================================================================
+   HEADER - Styles Pixel Perfect 1:1 identiques à Rivemont.ca
+   ============================================================================ */
+
+/* Base - Header toujours transparent et fixe sur mobile */
+/* IDENTIQUE À RIVEMONT : position fixed sur mobile, absolute sur desktop */
 #site-header {
-  box-sizing: border-box;
-  left: 0;
-  padding-left: 14px;
-  padding-right: 14px;
-  position: fixed;
-  top: 0;
-  transition: all .35s ease 0ms;
-  width: 100%;
-  z-index: 10;
+    background-color: transparent !important;
+    background: transparent !important;
+    box-sizing: border-box;
+    left: 0;
+    padding-left: 14px;
+    padding-right: 14px;
+    position: fixed; /* Mobile : fixed par défaut */
+    top: 0;
+    transition: all .35s ease 0ms;
+    width: 100%;
+    z-index: 10;
 }
 
-@media only screen and (min-width: 768px) {
-  #site-header {
-    padding-left: 35px;
-    padding-right: 35px;
-  }
+/* Desktop : position absolute pour TOUS les headers (comme Rivemont) */
+@media only screen and (min-width:1024px) {
+    #site-header {
+        position: absolute; /* Desktop : absolute par défaut pour tous */
+    }
 }
 
-@media only screen and (min-width: 1280px) {
-  #site-header {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
+@media only screen and (min-width:768px) {
+    #site-header {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
 }
 
-@media only screen and (min-width: 1600px) {
-  #site-header {
-    padding-left: 8.59375vw;
-    padding-right: 8.59375vw;
-  }
+@media only screen and (min-width:1280px) {
+    #site-header {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
 }
 
-@media only screen and (min-width: 1024px) {
-  #site-header {
-    position: absolute;
-  }
+@media only screen and (min-width:1600px) {
+    #site-header {
+        padding-left: 8.59375vw;
+        padding-right: 8.59375vw;
+    }
 }
 
-#site-header.site-header--cta-header .content {
-  padding-bottom: 16px;
-  padding-top: 16px;
+/* ============================================================================
+   PAGES AVEC HERO (home, private-management, performance, financial-planning)
+   ============================================================================ */
+
+/* Les pages avec hero utilisent déjà position: absolute en desktop (défini globalement ci-dessus) */
+/* Pas besoin de règles supplémentaires, le style global s'applique */
+
+/* Padding pour toutes les pages avec hero - même hauteur */
+#site-header.site-header--hero .content,
+#site-header.site-header--cta-header .content,
+#site-header.site-header--private-management .content,
+#site-header.site-header--performance .content,
+#site-header.site-header--financial-planning .content {
+    padding-bottom: 16px;
+    padding-top: 16px;
 }
 
-@media only screen and (min-width: 1024px) {
-  #site-header.site-header--cta-header .content {
-    padding-bottom: 0;
-    padding-top: max(85px, 5.2083333333vw);
-  }
+@media only screen and (min-width:1024px) {
+    #site-header.site-header--hero .content,
+    #site-header.site-header--cta-header .content,
+    #site-header.site-header--private-management .content,
+    #site-header.site-header--performance .content,
+    #site-header.site-header--financial-planning .content {
+        padding-bottom: 0;
+        padding-top: max(85px, 5.2083333333vw);
+    }
+}
+
+/* ============================================================================
+   PAGES SANS HERO (firm-profile, contact, governance, autres)
+   ============================================================================ */
+
+/* Pages sans hero : position fixed même sur desktop (override du style global desktop) */
+@media only screen and (min-width:1024px) {
+    #site-header.site-header--dark,
+    #site-header.site-header--light-background,
+    #site-header.site-header--contact,
+    #site-header.site-header--firm-profile,
+    #site-header.site-header--governance {
+        position: fixed !important; /* Override le absolute global pour ces pages */
+    }
+}
+
+/* Padding pour pages sans hero - même hauteur que HOME */
+#site-header.site-header--dark .content,
+#site-header.site-header--light-background .content,
+#site-header.site-header--contact .content,
+#site-header.site-header--firm-profile .content,
+#site-header.site-header--governance .content {
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+@media only screen and (min-width:1024px) {
+    #site-header.site-header--dark .content,
+    #site-header.site-header--light-background .content,
+    #site-header.site-header--contact .content,
+    #site-header.site-header--firm-profile .content,
+    #site-header.site-header--governance .content {
+        padding-bottom: 0;
+        padding-top: max(85px, 5.2083333333vw);
+    }
 }
 
 #site-header .content {
@@ -230,29 +313,11 @@ h3, h4, h5, h6 {
 }
 
 #site-header .content .gl-button {
-  align-items: center;
-  background-color: #184068;
-  border: none;
   border-radius: 0 0 max(20px, 1.8229166667vw) max(20px, 1.8229166667vw);
-  box-sizing: border-box;
-  color: #fff !important;
-  cursor: pointer;
   display: none;
-  font-family: peridot-pe-variable, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400 !important;
-  justify-content: center;
-  line-height: 1.2em;
-  min-height: 42px;
   min-width: max(200px, 14.375vw);
-  outline: none;
-  padding: 0 max(24px, 2.2395833333vw);
   position: absolute;
   right: 0;
-  text-align: center;
-  text-decoration: none !important;
-  transition: all .35s ease 0ms;
   top: 0;
   z-index: 1;
 }
@@ -295,10 +360,12 @@ h3, h4, h5, h6 {
 }
 
 #site-header .content .col.col-1 .logo-holder img {
-  display: inline;
-  height: auto;
+  display: inline !important;
+  height: auto !important;
   vertical-align: baseline;
-  width: 100%;
+  width: 100% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 #site-header .content .col.col-2 {
@@ -353,8 +420,6 @@ h3, h4, h5, h6 {
   border: none;
   cursor: pointer;
   display: block;
-  height: auto;
-  line-height: 0;
   margin-left: max(64px, 3.3333333333vw);
   padding: 0;
   width: max(27px, 1.40625vw);
@@ -370,6 +435,51 @@ h3, h4, h5, h6 {
 
 #site-header .content .col.col-2 .hamburger span:last-child {
   margin-bottom: 0;
+}
+
+/* ============================================================================
+   COULEURS DU TEXTE ET HAMBURGER SELON LE TYPE DE PAGE
+   ============================================================================ */
+
+/* Par défaut : texte blanc pour pages avec hero et pages sombres */
+#site-header .content .col.col-2 nav .menu li a {
+  color: #fff;
+}
+
+#site-header .content .col.col-2 .hamburger span {
+  background-color: #fff;
+}
+
+/* Pages avec hero : texte blanc (home, private-management, performance, financial-planning) */
+#site-header.site-header--hero .content .col.col-2 nav .menu li a,
+#site-header.site-header--cta-header .content .col.col-2 nav .menu li a,
+#site-header.site-header--private-management .content .col.col-2 nav .menu li a,
+#site-header.site-header--performance .content .col.col-2 nav .menu li a,
+#site-header.site-header--financial-planning .content .col.col-2 nav .menu li a {
+  color: #fff !important;
+}
+
+#site-header.site-header--hero .content .col.col-2 .hamburger span,
+#site-header.site-header--cta-header .content .col.col-2 .hamburger span,
+#site-header.site-header--private-management .content .col.col-2 .hamburger span,
+#site-header.site-header--performance .content .col.col-2 .hamburger span,
+#site-header.site-header--financial-planning .content .col.col-2 .hamburger span {
+  background-color: #fff !important;
+}
+
+/* Pages avec fond blanc (firm-profile, contact, governance) : texte bleu */
+#site-header.site-header--light-background .content .col.col-2 nav .menu li a,
+#site-header.site-header--contact .content .col.col-2 nav .menu li a,
+#site-header.site-header--firm-profile .content .col.col-2 nav .menu li a,
+#site-header.site-header--governance .content .col.col-2 nav .menu li a {
+  color: rgb(24, 64, 104) !important;
+}
+
+#site-header.site-header--light-background .content .col.col-2 .hamburger span,
+#site-header.site-header--contact .content .col.col-2 .hamburger span,
+#site-header.site-header--firm-profile .content .col.col-2 .hamburger span,
+#site-header.site-header--governance .content .col.col-2 .hamburger span {
+  background-color: rgb(24, 64, 104) !important;
 }
 
 #site-button {
@@ -443,10 +553,6 @@ h3, h4, h5, h6 {
   }
 }
 
-.site-header.scrolled .language-toggle {
-  color: var(--meye-primary);
-  border-color: var(--meye-primary);
-}
 
 .menu-toggle,
 .hamburger {
@@ -474,9 +580,6 @@ h3, h4, h5, h6 {
     transform-origin: center;
   }
   
-  .site-header.scrolled & span {
-    background-color: var(--rivemont-primary);
-  }
   
   &.active {
     span {
@@ -704,44 +807,143 @@ h3, h4, h5, h6 {
   }
 }
 
+/* Styles globaux pour gl-text-editor - Identique à Rivemont */
+.gl-text-editor {
+  * {
+    margin-bottom: max(20px, 1.3020833333vw);
+  }
+  
+  :last-child {
+    margin-bottom: 0;
+  }
+  
+  p {
+    color: #184068;
+    font-family: peridot-pe-variable, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.3em;
+    
+    @media only screen and (min-width: 768px) {
+      font-size: max(17px, 1.0416666667vw);
+    }
+  }
+  
+  h1, h2 {
+    color: #184068;
+    font-family: peridot-pe-variable, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+}
+
 /* Mission Section - Identique à Rivemont */
 .template-part-desc-image {
-  padding: 0px 165px;
-  margin-bottom: 164px;
+  box-sizing: border-box;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 0px;
+  margin-bottom: 225px;
+  margin-top: 0px;
   background: rgba(0, 0, 0, 0);
   text-transform: none;
   text-decoration: none;
   
-  @media (max-width: 1400px) {
-    padding: 0px 80px;
+  @media only screen and (min-width: 768px) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    padding-top: 260px; /* Compense le header en position absolute */
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+  @media only screen and (min-width: 1600px) {
+    padding-left: 8.59375vw;
+    padding-right: 8.59375vw;
   }
   
   @media (max-width: 768px) {
-    padding: 0px 20px;
     margin-bottom: 80px;
   }
   
   .content {
+    align-items: flex-start;
     display: flex;
-    align-items: center;
-    gap: normal;
+    flex-wrap: nowrap;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    
+    @media only screen and (min-width: 1024px) {
+      align-items: center;
+    }
     
     @media (max-width: 968px) {
       flex-direction: column;
+      flex-wrap: wrap;
       gap: 40px;
     }
     
     .col {
       &:first-child {
-        flex: 1;
-        padding-right: 60px;
+        flex: 0 1 65%;
+        padding-left: 0px;
+        padding-right: 7.8125vw;
         
         @media (max-width: 968px) {
+          flex: 1 1 100%;
+          padding-left: 0;
           padding-right: 0;
         }
         
         .description {
-          h2 {
+          &.gl-text-editor {
+            h1, h2 {
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 75px;
+              font-weight: 700;
+              line-height: 78px;
+              margin: 0 0 45px;
+              color: rgb(24, 64, 104);
+              text-transform: none;
+              text-decoration: none;
+              
+              @media (max-width: 768px) {
+                font-size: 45px;
+                line-height: 48px;
+                margin-bottom: 30px;
+              }
+            }
+            
+            p {
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 26px;
+              margin: 0 0 25px;
+              color: rgb(24, 64, 104);
+              text-transform: none;
+              text-decoration: none;
+              
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+          
+          h1, h2 {
             font-family: peridot-pe-variable, sans-serif;
             font-size: 75px;
             font-weight: 700;
@@ -816,9 +1018,15 @@ h3, h4, h5, h6 {
         }
       }
       
+      &:nth-child(2),
       &:last-child {
-        flex-shrink: 0;
+        flex: 0 0 35%;
         margin-top: 80px;
+        
+        @media (max-width: 968px) {
+          flex: 1 1 100%;
+          margin-top: 0;
+        }
         
         .image-holder {
           img {
@@ -849,20 +1057,36 @@ h3, h4, h5, h6 {
   &.template-part-desc-image--reverse {
     .content {
       .col:first-child {
-        order: 2;
+        order: 1;
+        flex: 0 1 65%;
+        padding-left: 7.8125vw;
+        padding-right: 0px;
+        
+        @media (max-width: 968px) {
+          flex: 1 1 100%;
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
       
+      .col:nth-child(2),
       .col:last-child {
-        order: 1;
+        order: 0;
+        flex: 0 0 35%;
+        margin-top: 0px !important;
+        
+        @media (max-width: 968px) {
+          flex: 1 1 100%;
+        }
       }
       
       @media (max-width: 968px) {
         .col:first-child {
-          order: 1;
+          order: 0;
         }
         
-        .col:last-child {
-          order: 2;
+        .col:nth-child(2) {
+          order: 1;
         }
       }
     }
@@ -872,6 +1096,255 @@ h3, h4, h5, h6 {
 /* Alias pour compatibilité */
 .mission-section {
   @extend .template-part-desc-image;
+}
+
+/* Template Governance Page Container - Identique à Rivemont */
+.template-gouvernance-page-container {
+  padding-top: 0;
+  margin-top: 0;
+  
+  @media only screen and (min-width: 1024px) {
+    padding-top: 260px; /* Compense le header en position absolute */
+  }
+  
+  .sections {
+    display: block;
+    
+    @media only screen and (min-width: 1024px) {
+      margin-bottom: 150px; /* Espacement entre les sections avec images et les description-sections */
+    }
+    
+    @media (max-width: 1023px) {
+      margin-bottom: 80px;
+    }
+  }
+  
+  /* Les sections template-part-desc-image dans governance n'ont pas de padding-top supplémentaire */
+  .sections .template-part-desc-image {
+    padding-top: 0px !important;
+    
+    @media only screen and (min-width: 1024px) {
+      padding-top: 0px !important; /* Pas de padding-top supplémentaire, déjà géré par le container */
+    }
+    
+    /* Première section : margin-bottom de 227px */
+    &:first-child {
+      margin-bottom: 227px;
+      
+      @media (max-width: 1023px) {
+        margin-bottom: 120px;
+      }
+    }
+    
+    /* Deuxième section : pas de margin-bottom */
+    &:nth-child(2) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+/* Template part desc image - Reverse order mobile */
+.template-part-desc-image--reverse-order-mobile {
+  .content {
+    .col:first-child {
+      order: 0; /* Texte à gauche sur desktop */
+    }
+    
+    .col:nth-child(2) {
+      order: 1; /* Image à droite sur desktop */
+    }
+    
+    @media (max-width: 968px) {
+      .col:first-child {
+        order: 1; /* Texte en dessous sur mobile */
+      }
+      
+      .col:nth-child(2) {
+        order: 0; /* Image au-dessus sur mobile */
+      }
+    }
+  }
+}
+
+/* Description Section - Identique à Rivemont */
+.description-section {
+  padding: 0px;
+  margin-bottom: 0px;
+  background-color: rgb(234, 243, 253);
+  
+  @media only screen and (min-width: 1024px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  
+  @media (max-width: 1023px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .content {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    align-items: normal;
+    gap: 0px;
+    
+    @media only screen and (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    
+    @media only screen and (min-width: 1280px) {
+      padding-left: 165px;
+      padding-right: 165px;
+    }
+    
+    @media (max-width: 968px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .col {
+      &:first-child {
+        flex: 0 1 auto;
+        width: 1195px;
+        max-width: 1195px;
+        padding-right: 85px;
+        
+        @media (max-width: 968px) {
+          flex: 1 1 100%;
+          width: 100%;
+          max-width: 100%;
+          padding-right: 0;
+        }
+      }
+      
+      &:nth-child(2) {
+        flex: 0 0 auto;
+        width: 380px;
+        max-width: 380px;
+        
+        @media (max-width: 968px) {
+          flex: 1 1 100%;
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+    
+    .description {
+      h2, h3 {
+        font-family: peridot-pe-variable, sans-serif;
+        font-weight: 700;
+        line-height: 62.4px;
+        color: rgb(24, 64, 104);
+        margin: 0 0 77px;
+        text-transform: none;
+        text-decoration: none;
+      }
+      
+      h2 {
+        font-size: 60px;
+        line-height: 62.4px;
+        
+        @media (max-width: 768px) {
+          font-size: 45px;
+          line-height: 48px;
+          margin-bottom: 40px;
+        }
+      }
+      
+      h3 {
+        font-size: 60px;
+        line-height: 62.4px;
+        
+        @media (max-width: 768px) {
+          font-size: 30px;
+          line-height: 33px;
+          margin-bottom: 30px;
+        }
+      }
+      
+      p {
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        color: rgb(24, 64, 104);
+        margin-bottom: 28px;
+        margin-top: 0;
+        text-transform: none;
+        text-decoration: none;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+        
+        @media (max-width: 768px) {
+          font-size: 17px;
+          line-height: 22.1px;
+          margin-bottom: 25px;
+          
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    
+    .banner {
+      background-color: rgb(255, 255, 255);
+      border-radius: 54px;
+      padding-top: 93px;
+      padding-bottom: 93px;
+      padding-left: 55px;
+      padding-right: 55px;
+      box-sizing: border-box;
+      box-shadow: none;
+      text-align: center;
+      
+      @media (max-width: 968px) {
+        padding: 40px;
+        border-radius: 24px;
+      }
+      
+      .banner-title {
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 33.28px;
+        color: rgb(24, 64, 104);
+        margin-bottom: 60px;
+        margin-top: 0;
+        text-transform: none;
+        text-decoration: none;
+        text-align: center;
+        
+        @media (max-width: 768px) {
+          font-size: 25px;
+          line-height: 26px;
+          margin-bottom: 30px;
+        }
+      }
+      
+      .gl-button {
+        display: inline-block;
+        width: 270px;
+        min-width: 270px;
+        
+        @media (max-width: 768px) {
+          width: 100%;
+          min-width: auto;
+        }
+      }
+    }
+  }
 }
 
 /* Section CTA - Identique à Rivemont (pour firm-profile et autres pages) */
@@ -888,13 +1361,14 @@ h3, h4, h5, h6 {
     padding: 0px;
     
     .image-holder {
-      position: relative;
-      width: 100%;
-      height: 620px;
+      background-color: #000;
+      border-radius: 0 0 24px 24px;
       overflow: hidden;
+      padding-top: 45.6%;
+      position: relative;
       
-      @media (max-width: 768px) {
-        height: 400px;
+      @media only screen and (min-width: 768px) {
+        border-radius: 0 0 max(50px, 3.6458333333vw) max(50px, 3.6458333333vw);
       }
       
       img.background {
@@ -906,37 +1380,46 @@ h3, h4, h5, h6 {
         object-fit: cover;
         z-index: 0;
       }
-    }
-    
-    .button-holder {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
       
-      .gl-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        font-family: peridot-pe-variable, sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
-        background-color: rgb(0, 128, 188);
-        border-radius: 100px;
-        padding: 0px 43px;
-        height: 70px;
-        min-width: 342px;
-        width: auto;
-        transition: 0.35s;
-        text-transform: none;
+      .button-holder {
+        bottom: 0;
+        justify-content: space-between;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, 50%);
+        white-space: nowrap;
+        z-index: 1;
         
-        &:hover {
+        @media only screen and (min-width: 1024px) {
+          bottom: 5.9895833333vw;
+          left: auto;
+          right: 5.9895833333vw;
+          transform: none;
+        }
+        
+        .gl-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
           color: rgb(255, 255, 255);
+          text-decoration: none;
+          font-family: peridot-pe-variable, sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 24px;
           background-color: rgb(0, 128, 188);
+          border-radius: 100px;
+          padding: 0px 43px;
+          height: 70px;
+          min-width: 342px;
+          width: auto;
+          transition: 0.35s;
+          text-transform: none;
+          
+          &:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(51, 178, 214);
+          }
         }
       }
     }
@@ -1393,40 +1876,67 @@ h3, h4, h5, h6 {
     }
     
     .gl-button {
-      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 21px;
-      color: rgb(255, 255, 255);
-      text-decoration: none;
+      background-color: #0080bc;
+      border: none;
+      border-radius: max(100px, 5.2083333333vw);
+      box-sizing: border-box;
+      color: #fff !important;
+      cursor: pointer;
+      display: inline-flex;
       font-family: peridot-pe-variable, sans-serif;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 24px;
-      background-color: rgb(24, 64, 104);
-      border-radius: 100px;
-      padding: 0px 43px;
-      height: 70px;
-      min-width: 342px;
-      width: auto;
-      transition: 0.35s;
-      text-transform: none;
-      
-      &::after {
-        content: "";
-        width: 23px;
-        height: 21px;
-        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNyIgaGVpZ2h0PSIyNS4yNDMiIHZpZXdCb3g9IjAgMCAyNyAyNS4yNDMiPgogIDxwYXRoIGlkPSJJY29uX2FrYXItYXJyb3ctcmlnaHQiIGRhdGEtbmFtZT0iSWNvbiBha2FyLWFycm93LXJpZ2h0IiBkPSJNNiwxOEgzME0xOS41LDcuNSwzMCwxOCwxOS41LDI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00LjUgLTUuMzc5KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: block;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400 !important;
+      justify-content: center;
+      line-height: 1.2em;
+      min-height: 42px;
+      min-width: max(178px, 17.8125vw);
+      outline: none;
+      padding: 0 max(24px, 2.2395833333vw);
+      position: relative;
+      text-align: center;
+      text-decoration: none !important;
+      transition: all .35s ease 0ms;
+      z-index: 1;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .gl-button {
+        font-size: max(18px, 1.0416666667vw);
+        min-height: max(54px, 3.6458333333vw);
+        min-width: max(242px, 17.8125vw);
       }
-      
-      &:hover {
-        color: rgb(255, 255, 255);
-        background-color: rgb(14, 44, 74);
-      }
+    }
+
+    .gl-button:hover {
+      background-color: #51b2d6;
+    }
+
+    .gl-button:after {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNyIgaGVpZ2h0PSIyNS4yNDMiIHZpZXdCb3g9IjAgMCAyNyAyNS4yNDMiPgogIDxwYXRoIGlkPSJJY29uX2FrYXItYXJyb3ctcmlnaHQiIGRhdGEtbmFtZT0iSWNvbiBha2FyLWFycm93LXJpZ2h0IiBkPSJNNiwxOEgzME0xOS41LDcuNSwzMCwxOCwxOS41LDI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00LjUgLTUuMzc5KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K);
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+      display: block;
+      height: max(16px, 1.09375vw);
+      margin-left: max(12px, 1.09375vw);
+      position: relative;
+      top: max(1px, .1041666667vw);
+      width: max(18px, 1.1979166667vw);
+    }
+
+    .gl-button.gl-button--blue-dark {
+      background-color: #184068;
+    }
+
+    .gl-button.gl-button--blue-dark:hover,
+    .gl-button.gl-button--blue-light {
+      background-color: #51b2d6;
+    }
+
+    .gl-button.gl-button--blue-light:hover {
+      background-color: #0080bc;
     }
   }
 }
@@ -2421,199 +2931,457 @@ main:has(.page-team) {
   }
 }
 
-/* Menu Mobile - Identique à Rivemont */
-.site-mobile-nav {
+/* Styles de base pour les boutons gl-button - depuis menu-hamburguer.html */
+.gl-button {
+  align-items: center;
+  background-color: #0080bc;
+  border: none;
+  border-radius: max(100px, 5.2083333333vw);
+  box-sizing: border-box;
+  color: #fff !important;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400 !important;
+  justify-content: center;
+  line-height: 1.2em;
+  min-height: 42px;
+  min-width: max(178px, 17.8125vw);
+  outline: none;
+  padding: 0 max(24px, 2.2395833333vw);
+  position: relative;
+  text-align: center;
+  text-decoration: none !important;
+  transition: all .35s ease 0ms;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .gl-button {
+    font-size: max(18px, 1.0416666667vw);
+    min-height: max(54px, 3.6458333333vw);
+    min-width: max(242px, 17.8125vw);
+  }
+}
+
+.gl-button:hover {
+  background-color: #51b2d6;
+}
+
+.gl-button:after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNyIgaGVpZ2h0PSIyNS4yNDMiIHZpZXdCb3g9IjAgMCAyNyAyNS4yNDMiPgogIDxwYXRoIGlkPSJJY29uX2FrYXItYXJyb3ctcmlnaHQiIGRhdGEtbmFtZT0iSWNvbiBha2FyLWFycm93LXJpZ2h0IiBkPSJNNiwxOEgzME0xOS41LDcuNSwzMCwxOCwxOS41LDI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00LjUgLTUuMzc5KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: max(16px, 1.09375vw);
+  margin-left: max(12px, 1.09375vw);
+  position: relative;
+  top: max(1px, .1041666667vw);
+  width: max(18px, 1.1979166667vw);
+}
+
+.gl-button.gl-button--blue-dark {
+  background-color: #184068;
+}
+
+.gl-button.gl-button--blue-dark:hover,
+.gl-button.gl-button--blue-light {
+  background-color: #51b2d6;
+}
+
+.gl-button.gl-button--blue-light:hover {
+  background-color: #0080bc;
+}
+
+/* Menu Mobile - Styles exacts depuis menu-hamburguer.html */
+#site-mobile-nav {
+  background-color: rgb(15 33 64/.96);
+  display: none;
+  height: 100%;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--rivemont-primary-dark);
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-  overflow-y: auto;
-  
-  &.active {
-    opacity: 1;
-    visibility: visible;
+  width: 100%;
+  z-index: 11;
+}
+
+#site-mobile-nav.site-mobile-nav--cta-header .content {
+  padding-top: 16px;
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-mobile-nav.site-mobile-nav--cta-header .content {
+    padding-top: max(84px, 5.2083333333vw);
   }
-  
-  .content {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    
-    @media (max-width: 768px) {
-      padding: 20px;
-    }
-    
-    .row {
-      &.row-1 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 40px;
-        padding-bottom: 30px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        
-        .col {
-          &.col-1 {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            
-            .logo-holder {
-              img {
-                height: 40px;
-                width: auto;
-              }
-            }
-            
-            .gl-button--blue-dark {
-              display: inline-flex;
-              align-items: center;
-              gap: 8px;
-              color: rgb(255, 255, 255);
-              text-decoration: none;
-              font-family: peridot-pe-variable, sans-serif;
-              font-size: 18px;
-              font-weight: 400;
-              line-height: 21.6px;
-              background-color: rgb(24, 64, 104);
-              border-radius: 0px 0px 35px 35px;
-              padding: 0px 43px;
-              height: 54px;
-              width: auto;
-              min-width: 200px;
-              transition: 0.35s ease;
-              text-transform: none;
-              
-              img {
-                width: 16px;
-                height: 16px;
-                opacity: 1;
-              }
-            }
-          }
-          
-          &.col-2 {
-            .hamburger {
-              display: flex;
-              
-              span {
-                background-color: var(--rivemont-white);
-              }
-            }
-          }
-        }
-      }
-      
-      &.row-2 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 60px;
-        margin-bottom: 40px;
-        
-        @media (max-width: 968px) {
-          grid-template-columns: 1fr;
-          gap: 40px;
-        }
-        
-        .col {
-          nav {
-            ul.menu {
-              list-style: none;
-              padding: 0;
-              margin: 0;
-              
-              > li {
-                margin-bottom: 20px;
-                
-                > a {
-                  color: var(--rivemont-white);
-                  text-decoration: none;
-                  font-family: peridot-pe-variable, sans-serif;
-                  font-size: 1.1rem;
-                  font-weight: 600;
-                  transition: color 0.3s ease;
-                  text-transform: none;
-                  
-                  &:hover {
-                    color: var(--rivemont-accent);
-                  }
-                }
-                
-                .sub-menu {
-                  list-style: none;
-                  padding: 0;
-                  margin: 15px 0 0 0;
-                  
-                  li {
-                    margin-bottom: 12px;
-                    
-                    a {
-                      color: rgba(255, 255, 255, 0.7);
-                      text-decoration: none;
-                      font-family: peridot-pe-variable, sans-serif;
-                      font-size: 0.95rem;
-                      font-weight: 400;
-                      transition: color 0.3s ease;
-                      text-transform: none;
-                      
-                      &:hover {
-                        color: var(--rivemont-white);
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      
-      &.row-3 {
-        padding-top: 40px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        text-align: center;
-        
-        p {
-          color: var(--rivemont-white);
-          font-family: peridot-pe-variable, sans-serif;
-          font-size: 1.3rem;
-          font-weight: 600;
-          margin-bottom: 20px;
-          text-transform: none;
-        }
-        
-        .gl-button {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          color: rgb(255, 255, 255);
-          text-decoration: none;
-          font-family: peridot-pe-variable, sans-serif;
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 24px;
-          background-color: rgb(0, 128, 188);
-          border-radius: 100px;
-          padding: 0px 43px;
-          height: 70px;
-          min-width: 342px;
-          width: auto;
-          transition: 0.35s;
-          text-transform: none;
-          
-          &:hover {
-            color: rgb(255, 255, 255);
-            background-color: rgb(0, 128, 188);
-          }
-        }
-      }
-    }
+}
+
+#site-mobile-nav .content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  #site-mobile-nav .content {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  #site-mobile-nav .content {
+    padding-left: 8.59375vw;
+    padding-right: 8.59375vw;
+  }
+}
+
+#site-mobile-nav .content .row.row-1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-1 {
+    margin-bottom: 70px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-mobile-nav .content .row.row-1 {
+    align-items: center;
+    margin-bottom: max(100px, 8.3333333333vw);
+  }
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-1 {
+  position: relative;
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder {
+  display: block;
+  width: 164px;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder {
+    width: max(200px, 14.7916666667vw);
+  }
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder img {
+  height: auto;
+  width: 100%;
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-1 .gl-button {
+  margin-top: 30px;
+  min-width: max(200px, 14.375vw);
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-mobile-nav .content .row.row-1 .col.col-1 .gl-button {
+    left: 100%;
+    margin-left: 4.6875vw;
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-1 .gl-button:after {
+  content: none;
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-1 .gl-button img {
+  margin-right: max(12px, .78125vw);
+  position: relative;
+  top: 2px;
+  width: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-1 .col.col-1 .gl-button img {
+    top: 0;
+    width: max(12px, .78125vw);
+  }
+}
+
+/* Supprimer toute barre verticale dans le header du menu mobile (row-1) */
+#site-mobile-nav .content .row.row-1 .col.col-1,
+#site-mobile-nav .content .row.row-1 .col.col-2,
+#site-mobile-nav .content .row.row-1 .col {
+  border-right: none !important;
+  border-left: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-1 .col.col-1,
+  #site-mobile-nav .content .row.row-1 .col.col-2,
+  #site-mobile-nav .content .row.row-1 .col {
+    border-right: none !important;
+    border-left: none !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-mobile-nav .content .row.row-1 .col.col-1,
+  #site-mobile-nav .content .row.row-1 .col.col-2,
+  #site-mobile-nav .content .row.row-1 .col {
+    border-right: none !important;
+    border-left: none !important;
+  }
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-2 .hamburger {
+  background-color: #fff0;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-left: max(64px, 3.3333333333vw);
+  padding: 0;
+  position: relative;
+  right: 4px;
+  top: 3px;
+  width: max(29px, 1.5104166667vw);
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-1 .col.col-2 .hamburger {
+    top: 0;
+  }
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-2 .hamburger span {
+  background-color: #fff;
+  display: block;
+  height: max(2px, .1041666667vw);
+  margin-bottom: max(8px, .4166666667vw);
+  width: 100%;
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-2 .hamburger span:last-child {
+  margin-bottom: 0;
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-2 .hamburger.hamburger--active span:first-child {
+  transform: rotate(-45deg);
+  transform-origin: top right;
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-2 .hamburger.hamburger--active span:nth-child(2) {
+  width: 0;
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-2 .hamburger.hamburger--active span:nth-child(3) {
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+}
+
+#site-mobile-nav .content .row.row-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-2 {
+    margin-bottom: -70px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-mobile-nav .content .row.row-2 {
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+  }
+}
+
+#site-mobile-nav .content .row.row-2 .col {
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-2 .col {
+    margin-bottom: 70px;
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-mobile-nav .content .row.row-2 .col {
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+
+#site-mobile-nav .content .row.row-2 .col.col-1 {
+  padding-left: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-2 .col.col-1 {
+    border-right: 1px solid #fff;
+    padding-right: max(60px, 4.6875vw);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-mobile-nav .content .row.row-2 .col.col-2 {
+    border-right: 1px solid #fff;
+    padding-left: max(60px, 4.6875vw);
+    padding-right: max(60px, 4.6875vw);
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  #site-mobile-nav .content .row.row-2 .col.col-3 {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-mobile-nav .content .row.row-2 .col.col-3 {
+    padding-left: max(60px, 4.6875vw);
+    border-right: none !important;
+  }
+}
+
+/* Supprimer la barre verticale à droite de col-3 dans row-2 */
+#site-mobile-nav .content .row.row-2 .col.col-3 {
+  border-right: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-2 .col.col-3 {
+    border-right: none !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-mobile-nav .content .row.row-2 .col nav {
+    max-width: max(350px, 19.53125vw);
+  }
+}
+
+#site-mobile-nav .content .row.row-2 .col nav .menu>li {
+  border-top: 1px solid #fff;
+  box-sizing: border-box;
+  margin-top: max(25px, 1.8229166667vw);
+  padding-top: max(25px, 1.8229166667vw);
+}
+
+#site-mobile-nav .content .row.row-2 .col nav .menu>li:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#site-mobile-nav .content .row.row-2 .col nav .menu>li>a {
+  color: #fff;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3em;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-2 .col nav .menu>li>a {
+    font-size: max(25px, 1.5625vw);
+  }
+}
+
+#site-mobile-nav .content .row.row-2 .col nav .menu>li .sub-menu {
+  margin-top: max(18px, 1.1458333333vw);
+  list-style: none;
+  padding: 0;
+}
+
+#site-mobile-nav .content .row.row-2 .col nav .menu>li .sub-menu li {
+  margin-bottom: max(18px, 1.1458333333vw);
+}
+
+#site-mobile-nav .content .row.row-2 .col nav .menu>li .sub-menu li:last-child {
+  margin-bottom: 0;
+}
+
+#site-mobile-nav .content .row.row-2 .col nav .menu>li .sub-menu li a {
+  color: #fff;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.3em;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-2 .col nav .menu>li .sub-menu li a {
+    font-size: max(17px, 1.0416666667vw);
+  }
+}
+
+#site-mobile-nav .content .row.row-3 {
+  border-top: 1px solid #fff;
+  box-sizing: border-box;
+  margin-top: 25px;
+  padding: max(40px, 3.125vw) 0;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-3 {
+    align-items: center;
+    display: flex;
+    margin-top: max(70px, 5.2083333333vw);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #site-mobile-nav .content .row.row-3 {
+    justify-content: flex-end;
+  }
+}
+
+#site-mobile-nav .content .row.row-3 p {
+  color: #fff;
+  font-family: peridot-pe-variable, sans-serif;
+  font-size: max(25px, 2.34375vw);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0;
+}
+
+#site-mobile-nav .content .row.row-3 .gl-button {
+  margin-top: 40px;
+  min-width: max(200px, 14.375vw);
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-3 .gl-button {
+    margin-left: max(40px, 3.6458333333vw);
+    margin-top: 0;
   }
 }
 
@@ -3092,55 +3860,9 @@ main:has(.page-team) {
   }
 }
 
-/* Template Part Hero - Identique à Rivemont (pour private-management et autres pages) */
-.template-part-hero {
-  position: relative;
-  margin-bottom: 120px;
-  padding: 0px;
-  background: rgba(0, 0, 0, 0);
-  overflow: hidden;
-  
-  @media (max-width: 768px) {
-    margin-bottom: 80px;
-  }
-  
-  .content {
-    position: relative;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 0px;
-    
-    .title {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      font-family: peridot-pe-variable, sans-serif;
-      font-size: 75px;
-      font-weight: 700;
-      line-height: 78px;
-      color: rgb(255, 255, 255);
-      margin: 0;
-      text-transform: none;
-      text-decoration: none;
-      
-      @media (max-width: 768px) {
-        font-size: 60px;
-        line-height: 63px;
-      }
-    }
-    
-    img.gl-responsive-background {
-      position: relative;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      display: block;
-      z-index: 0;
-    }
-  }
-}
+/* Template Part Hero - Styles maintenant gérés dans les composants individuels */
+/* Les styles globaux ont été supprimés pour éviter les conflits */
+/* Chaque page (private-management, performance, financial-planning) gère ses propres styles */
 
 /* Page Content - Identique à Rivemont (pour private-management) */
 .page-content {
@@ -3385,10 +4107,6 @@ select:focus-visible,
   outline-offset: 2px;
 }
 
-.site-header.scrolled a:focus-visible,
-.site-header.scrolled button:focus-visible {
-  outline-color: var(--rivemont-blue-dark);
-}
 
 /* Focus pour le menu mobile */
 .site-mobile-nav a:focus-visible,

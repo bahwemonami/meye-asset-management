@@ -2,14 +2,19 @@
    FIRM-PROFILE / PROFIL-DE-LA-FIRME PAGE - Styles Pixel Perfect 1:1 identiques à rivemont.ca
    ============================================================================ */
 
+/* Template About Page Container */
+.template-about-page-container {
+  width: 100%;
+}
+
 /* Template Part Desc Image Reverse - Utilise les styles globaux */
 .template-part-desc-image--reverse {
   /* Les styles sont déjà dans les styles globaux */
 }
 
-/* Section CTA */
+/* Section CTA - Clone 1:1 de Rivemont */
 .section-cta {
-  margin-bottom: max(117px, 8.5416666667vw);
+  margin-bottom: 0px;
   
   .content {
     position: relative;
@@ -25,7 +30,7 @@
         border-radius: 0 0 max(50px, 3.6458333333vw) max(50px, 3.6458333333vw);
       }
       
-      img {
+      img.background {
         bottom: 0;
         height: 100%;
         left: 0;
@@ -36,21 +41,22 @@
         width: 100%;
         z-index: 0;
       }
-    }
-    
-    .button-holder {
-      bottom: 0;
-      justify-content: space-between;
-      left: 50%;
-      position: absolute;
-      transform: translate(-50%, 50%);
-      white-space: nowrap;
       
-      @media only screen and (min-width: 1024px) {
-        bottom: 5.9895833333vw;
-        left: auto;
-        right: 5.9895833333vw;
-        transform: none;
+      .button-holder {
+        bottom: 0;
+        justify-content: space-between;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, 50%);
+        white-space: nowrap;
+        z-index: 1;
+        
+        @media only screen and (min-width: 1024px) {
+          bottom: 5.9895833333vw;
+          left: auto;
+          right: 5.9895833333vw;
+          transform: none;
+        }
       }
     }
   }

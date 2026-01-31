@@ -2,6 +2,8 @@ import { Component, inject, ChangeDetectionStrategy, HostBinding } from '@angula
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
+import { TranslationService } from '../../services/translation.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-team',
@@ -15,11 +17,11 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     <!-- Section Team - Identique à Rivemont -->
     <section class="section-team">
       <div class="content">
-        <h1 class="title" data-aos="fade">Notre équipe</h1>
+        <h1 class="title" data-aos="fade">{{ t.get('team.title') }}</h1>
         <div class="members">
           @for (member of teamMembers; track member.slug) {
             <div class="member-holder" data-aos="fade-up">
-              <a [routerLink]="['/team', member.slug]" [title]="member.name" class="member">
+              <a [routerLink]="langService.buildUrl('team/' + member.slug)" [title]="member.name" class="member">
                 <img [src]="imageService.getImage(member.imageKey)" class="member-photo" [alt]="member.name" loading="lazy" />
                 <div class="member-overlay">
                   <div class="member-info">
@@ -37,6 +39,8 @@ import { ImageMappingService } from '../../services/image-mapping.service';
 })
 export class TeamComponent {
   imageService = inject(ImageMappingService);
+  t = inject(TranslationService);
+  langService = inject(LanguageService);
   
   teamMembers = [
     {

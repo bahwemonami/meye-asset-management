@@ -1,6 +1,8 @@
-import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { TranslationService } from '../../services/translation.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-communications',
@@ -11,7 +13,7 @@ import { RouterLink } from '@angular/router';
     <!-- Hero Section - Identique à Rivemont -->
     <section class="template-part-hero">
       <div class="content">
-        <h1 class="title">Communications</h1>
+        <h1 class="title">{{ t.get('communications.title') }}</h1>
       </div>
     </section>
 
@@ -20,7 +22,7 @@ import { RouterLink } from '@angular/router';
       <div class="content-container">
         <!-- Filters -->
         <div class="filters">
-          @for (filter of filters; track filter.id) {
+          @for (filter of filters(); track filter.id) {
             <button 
               (click)="currentFilter.set(filter.id)"
               [class.active]="currentFilter() === filter.id"
@@ -33,7 +35,7 @@ import { RouterLink } from '@angular/router';
         <!-- Articles Grid -->
         <div class="articles-list">
           @for (article of filteredArticles(); track article.slug) {
-            <a [routerLink]="article.slug ? ['/communications', article.slug] : null"
+            <a [routerLink]="article.slug ? [langService.buildUrl('communications'), article.slug] : null"
                [href]="article.externalUrl || null"
                [target]="article.externalUrl ? '_blank' : '_self'"
                class="article-card">
@@ -131,14 +133,16 @@ import { RouterLink } from '@angular/router';
   `]
 })
 export class CommunicationsComponent {
+  t = inject(TranslationService);
+  langService = inject(LanguageService);
   currentFilter = signal('all');
 
-  filters = [
-    { id: 'all', label: 'Tous' },
-    { id: 'journal', label: 'Journal Les Affaires' },
-    { id: 'letter', label: 'Lettre financière' },
-    { id: 'media', label: 'MEYE dans les médias' }
-  ];
+  filters = computed(() => [
+    { id: 'all', label: this.t.get('communications.all') },
+    { id: 'journal', label: this.t.get('communications.journal') },
+    { id: 'letter', label: this.t.get('communications.letter') },
+    { id: 'media', label: this.t.get('communications.media') }
+  ]);
 
   articles = [
     {

@@ -1,115 +1,119 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject, AfterViewInit, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { ImageMappingService } from '../../services/image-mapping.service';
+import { AosService } from '../../services/aos.service';
+import { TranslationService } from '../../services/translation.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-governance',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
   template: `
-    <!-- Hero Section - Identique à Rivemont -->
-    <section class="template-part-hero">
-      <div class="content">
-        <h1 class="title">Gouvernance</h1>
+    <div class="template-gouvernance-page-container">
+      <div class="sections">
+        <!-- Section 1: Registration with Authorities - Image à droite, texte à gauche -->
+        <section class="template-part-desc-image template-part-desc-image--1 template-part-desc-image--reverse">
+          <div class="content">
+            <div class="col">
+              <div class="description gl-text-editor" data-aos="fade">
+                <h1>{{ t.get('governance.registration') }}</h1>
+                <p>{{ t.get('governance.registrationText') }}</p>
+                <p>
+                  You can consult the register of firms and individuals authorized to practice by the Autorité des marchés financiers by visiting the following link:&nbsp;<a href="https://lautorite.qc.ca/en/general-public/registers/register-of-firms-and-individuals-authorized-to-practice" target="_blank" rel="noopener noreferrer">https://lautorite.qc.ca/en/general-public/registers/register-of-firms-and-individuals-authorized-to-practice</a>
+                </p>
+              </div>
+              <div class="button-holder" data-aos="fade-up">
+                <a href="http://lautorite.qc.ca" class="gl-button" target="_blank" rel="noopener noreferrer">
+                  {{ t.get('governance.clickHere') }}
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="image-holder" data-aos="fade-up">
+                <img [src]="imageService.getImage('shutterstock-2')" alt="" width="836" height="998" class="attachment-large size-large" decoding="async" fetchpriority="high" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Protection of your assets - Image à gauche, texte à droite -->
+        <section class="template-part-desc-image template-part-desc-image--1 template-part-desc-image--reverse-order-mobile">
+          <div class="content">
+            <div class="col">
+              <div class="description gl-text-editor" data-aos="fade">
+                <h2>{{ t.get('governance.assetProtection') }}</h2>
+                <p>{{ t.get('governance.assetProtectionText1') }}</p>
+                <p>{{ t.get('governance.assetProtectionText2') }}</p>
+                <p>{{ t.get('governance.assetProtectionText3') }}</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="image-holder" data-aos="fade-up">
+                <img [src]="imageService.getImage('shutterstock-1')" alt="" width="836" height="998" class="attachment-large size-large" decoding="async" />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
 
-    <!-- Content Section -->
-    <section class="content-section">
-      <div class="content-container">
-        <!-- Registration with Authorities -->
-        <div class="two-column-layout mb-16">
-          <div>
-            <h2>Inscription auprès des autorités</h2>
-            <div class="prose-content">
-              <p>
-                MEYE ASSET MANAGER est inscrite à titre de gestionnaire de portefeuille au Québec, en Ontario, en Colombie-Britannique, en Alberta, en Saskatchewan, au Manitoba et au Nouveau-Brunswick, à titre de gestionnaire de fonds d'investissement au Québec et en Ontario, à titre de gestionnaire de portefeuille de produits dérivés au Québec, à titre de courtier sur marché hors cote au Québec, en Ontario, en Saskatchewan, au Manitoba et au Nouveau-Brunswick, et en planification financière au Québec.
-              </p>
-              <p>
-                Vous pouvez consulter le registre des entreprises et des personnes autorisées à exercer par l'Autorité des marchés financiers en visitant le lien suivant : 
-                <a href="#" class="link-with-arrow">Registre des entreprises et des personnes autorisées à exercer</a>
-              </p>
+      <!-- Section 3: Privacy Policy -->
+      <section class="description-section">
+        <div class="content">
+          <div class="col">
+            <div class="description" data-aos="fade">
+              <h2>{{ t.get('governance.privacyPolicy') }}</h2>
+              <p>{{ t.get('governance.privacyPolicyText1') }}</p>
+              <p>{{ t.get('governance.privacyPolicyText2') }}</p>
             </div>
           </div>
-          <div class="sidebar">
-            <div class="sidebar-cta">
-              <a href="#" class="link-with-arrow light">
-                Cliquez ici
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
+          <div class="col">
+            <div class="banner" data-aos="fade-up">
+              <div class="banner-title">{{ t.get('governance.privacyPolicyTitle') }}</div>
+              <a href="#" class="gl-button" target="_blank">
+                {{ t.get('governance.download') }}
               </a>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- Asset Protection -->
-        <div class="info-card mb-16">
-          <h3>Protection des actifs</h3>
-          <div class="prose-content">
-            <p>
-              Les portefeuilles des clients sont gérés par MEYE ASSET MANAGER mais détenus principalement dans des comptes à la Banque Nationale du Canada, plus précisément sa division appelée Réseau indépendant de la Banque Nationale (RIBN). Certains comptes sont détenus chez Interactive Brokers Canada.
-            </p>
-            <p>
-              RIBN est une société financière qui est membre du Fonds canadien de protection des épargnants. Ce dernier protège vos fonds jusqu'à 1 000 000 $ (et plus, dans certains cas), dans le cas très peu probable de l'insolvabilité de l'institution financière.
-            </p>
-            <p>
-              Dans le cadre de son mandat, MEYE ASSET MANAGER transmet des instructions à RIBN, mais n'a en aucun cas accès aux actifs contenus dans votre compte.
-            </p>
-          </div>
-        </div>
-
-        <!-- Privacy Policy -->
-        <div class="two-column-layout mb-16">
-          <div>
-            <h2>Politique de confidentialité</h2>
-            <div class="prose-content">
-              <p>
-                Afin de se conformer à la Loi sur la protection des renseignements personnels et les documents électroniques (« LPRPDE ») et à la Loi sur la protection des renseignements personnels dans le secteur privé (Québec), MEYE ASSET MANAGER a mis en place une politique de confidentialité.
-              </p>
-              <p>
-                Martin Lalonde, responsable de la conformité de MEYE ASSET MANAGER, est responsable de la confidentialité des renseignements personnels.
-              </p>
+      <!-- Section 4: Complaint Handling Policy -->
+      <section class="description-section">
+        <div class="content">
+          <div class="col">
+            <div class="description" data-aos="fade">
+              <h3>{{ t.get('governance.complaintHandling') }}</h3>
+              <p>{{ t.get('governance.complaintHandlingText') }}</p>
             </div>
           </div>
-          <div class="sidebar">
-            <div class="sidebar-nav">
-              <p class="mb-4">Politique de confidentialité</p>
-              <a href="#" class="link-with-arrow">
-                Télécharger
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
+          <div class="col">
+            <div class="banner" data-aos="fade-up">
+              <div class="banner-title">{{ t.get('governance.complaintHandlingSummary') }}</div>
+              <a href="#" class="gl-button" target="_blank">
+                {{ t.get('governance.download') }}
               </a>
             </div>
           </div>
         </div>
-
-        <!-- Complaint Handling Policy -->
-        <div class="two-column-layout">
-          <div>
-            <h2>Politique de traitement des plaintes</h2>
-            <div class="prose-content">
-              <p>
-                Nous nous engageons à garantir que toutes les plaintes sont traitées rapidement, équitablement et de manière transparente. Notre objectif est de résoudre efficacement les situations qui sont à l'origine de vos préoccupations.
-              </p>
-            </div>
-          </div>
-          <div class="sidebar">
-            <div class="sidebar-nav">
-              <p class="mb-4">Résumé de la politique de traitement des plaintes</p>
-              <a href="#" class="link-with-arrow">
-                Télécharger
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  `
+      </section>
+    </div>
+  `,
+  styles: ``
 })
-export class GovernanceComponent {}
+export class GovernanceComponent implements AfterViewInit {
+  imageService = inject(ImageMappingService);
+  aosService = inject(AosService);
+  t = inject(TranslationService);
+  langService = inject(LanguageService);
+
+  ngAfterViewInit() {
+    // Rafraîchir AOS après le chargement de la vue
+    setTimeout(() => {
+      this.aosService.refresh();
+    }, 100);
+  }
+}

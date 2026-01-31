@@ -1,7 +1,9 @@
-import { Component, HostListener, signal, inject, ChangeDetectionStrategy, DestroyRef } from '@angular/core';
+import { Component, signal, inject, ChangeDetectionStrategy, DestroyRef, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
+import { TranslationService } from '../../services/translation.service';
+import { LanguageService } from '../../services/language.service';
 import { filter } from 'rxjs';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
@@ -11,17 +13,26 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   imports: [CommonModule, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <!-- Banner / Header MEYE ASSET MANAGER -->
+    <!-- Banner / Header MEYE ASSET MANAGER - Structure identique à Rivemont -->
     <header 
       id="site-header"
-      class="site-header site-header--cta-header site-header--background"
-      js-site-header="container"
-      [class.scrolled]="isScrolled()">
+      class="site-header"
+      [class.site-header--cta-header]="isHome()"
+      [class.site-header--hero]="isHeroPage()"
+      [class.site-header--dark]="!isHeroPage() && !isLightBackgroundPage()"
+      [class.site-header--light-background]="isLightBackgroundPage()"
+      [class.site-header--contact]="isContact()"
+      [class.site-header--firm-profile]="isFirmProfile()"
+      [class.site-header--governance]="isGovernance()"
+      [class.site-header--private-management]="isPrivateManagement()"
+      [class.site-header--performance]="isPerformance()"
+      [class.site-header--financial-planning]="isFinancialPlanning()"
+      js-site-header="container">
       <div class="content">
         <div class="col col-1">
           <!-- Logo -->
-          <a routerLink="/" class="logo-holder" aria-label="MEYE ASSET MANAGER - Retour à l'accueil">
-            <img [src]="isScrolled() ? imageService.getImage('logo-dark') : imageService.getImage('logo-light')" alt="MEYE ASSET MANAGER" />
+          <a [routerLink]="langService.buildUrl('')" class="logo-holder" aria-label="MEYE ASSET MANAGER - Retour à l'accueil">
+            <img [src]="imageService.getImage(isLightBackgroundPage() ? 'logo-dark' : 'logo-light')" alt="MEYE ASSET MANAGER" />
           </a>
         </div>
         <div class="col col-2">
@@ -31,26 +42,31 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
             class="gl-button gl-button--blue-dark"
             target="_blank">
             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC4zNyIgaGVpZ2h0PSIxOC40NzUiIHZpZXdCb3g9IjAgMCAxNC4zNyAxOC40NzUiPgogIDxnIGlkPSJucF9hY2NvdW50XzQ0MDcxNTlfMDAwMDAwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAuODMyIC0xMi41KSI+CiAgICA8cGF0aCBpZD0iUGF0aF8xIiBkYXRhLW5hbWU9IlBhdGggMSIgZD0iTTM3LjQzOCwyMC43MTFhNC4xLDQuMSwwLDEsMSwyLjktMS4yQTQuMSw0LjEsMCwwLDEsMzcuNDM4LDIwLjcxMVptMC02LjE1OGEyLjA1MywyLjA1MywwLDEsMCwxLjQ1MS42QTIuMDUzLDIuMDUzLDAsMCwwLDM3LjQzOCwxNC41NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOS40MjEgMCkiIGZpbGw9IiNmZmYiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzIiIGRhdGEtbmFtZT0iUGF0aCAyIiBkPSJNMzQuMTc1LDU5LjIzN2ExLjAyNywxLjAyNywwLDAsMS0xLjAyNy0xLjAyN1Y1NS4xMzFhMy4wNzksMy4wNzksMCwwLDAtMy4wNzktMy4wNzloLTQuMWEzLjA3OSwzLjA3OSwwLDAsMC0zLjA3OSwzLjA3OVY1OC4yMWExLjAyNywxLjAyNywwLDEsMS0yLjA1MywwVjU1LjEzMUE1LjEzOCw1LjEzOCwwLDAsMSwyNS45NjUsNTBoNC4xQTUuMTM4LDUuMTM4LDAsMCwxLDM1LjIsNTUuMTMxVjU4LjIxYTEuMDI3LDEuMDI3LDAsMCwxLTEuMDI3LDEuMDI3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjguMjYyKSIgZmlsbD0iI2ZmZiIvPgogIDwvZz4KPC9zdmc+Cg==" alt="" />
-            Accès client
+            {{ t.get('common.clientAccess') }}
           </a>
           <!-- Navigation Desktop -->
           <nav js-site-nav="container" aria-label="Navigation principale">
             <ul id="menu-header" class="menu" role="menubar">
               <li>
-                <a routerLink="/private-management">Gestion privée</a>
+                <a [routerLink]="langService.buildUrl('private-management')">{{ t.get('header.privateManagement') }}</a>
               </li>
               <li>
-                <a routerLink="/performance">Rendements</a>
+                <a [routerLink]="langService.buildUrl('performance')">{{ t.get('header.performance') }}</a>
               </li>
               <li>
-                <a routerLink="/financial-planning">Planification financière</a>
+                <a [routerLink]="langService.buildUrl('financial-planning')">{{ t.get('header.financialPlanning') }}</a>
               </li>
               <li>
-                <a routerLink="/contact">Contact</a>
+                <a [routerLink]="langService.buildUrl('contact')">{{ t.get('header.contact') }}</a>
               </li>
               <li>
-                <a href="https://rivemont.ca/en/" title="Switch to En" aria-label="Switch to En" role="menuitem">
-                  <span>En</span>
+                <a 
+                  (click)="switchLanguage()" 
+                  [title]="currentLanguage() === 'fr' ? t.get('header.switchToEn') : t.get('header.switchToFr')" 
+                  [attr.aria-label]="currentLanguage() === 'fr' ? t.get('header.switchToEn') : t.get('header.switchToFr')" 
+                  role="menuitem"
+                  style="cursor: pointer;">
+                  <span>{{ currentLanguage() === 'fr' ? 'En' : 'Fr' }}</span>
                 </a>
               </li>
             </ul>
@@ -64,7 +80,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
             js-site-nav-mobile="opener"
             (click)="toggleMenu()"
             [attr.aria-expanded]="isMenuOpen()"
-            [attr.aria-label]="isMenuOpen() ? 'Fermer le menu' : 'Ouvrir le menu'"
+            [attr.aria-label]="isMenuOpen() ? t.get('header.closeMenu') : t.get('header.openMenu')"
             aria-controls="site-mobile-nav">
             <span></span>
             <span></span>
@@ -78,10 +94,10 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     <a
       id="site-button"
       class="gl-button gl-button--blue-light"
-      routerLink="/become-client"
+      [routerLink]="langService.buildUrl('become-client')"
       target="_self"
-      aria-label="Passez à l'action - Devenir client">
-      Passez à l'action
+      [attr.aria-label]="t.get('header.takeAction') + ' - ' + t.get('header.becomeClient')">
+      {{ t.get('header.takeAction') }}
     </a>
 
     <!-- Menu Mobile Full Screen -->
@@ -89,28 +105,28 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
       class="site-mobile-nav site-mobile-nav--cta-header"
       id="site-mobile-nav"
       js-site-nav-mobile="container"
-      [class.active]="isMenuOpen()"
+      [style.display]="isMenuOpen() ? 'block' : 'none'"
       (click)="closeMenu()">
       <div class="content" (click)="$event.stopPropagation()">
         <!-- Row 1: Logo + Accès client + Hamburger -->
         <div class="row row-1">
           <div class="col col-1">
-            <a routerLink="/" class="logo-holder" (click)="closeMenu()">
+            <a [routerLink]="langService.buildUrl('')" class="logo-holder" (click)="closeMenu()">
               <img [src]="imageService.getImage('logo-light-png')" alt="" />
             </a>
             <a *ngIf="isHome()" href="https://monportefeuilleplus.ca/login" class="gl-button gl-button--blue-dark" target="_blank">
               <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC4zNyIgaGVpZ2h0PSIxOC40NzUiIHZpZXdCb3g9IjAgMCAxNC4zNyAxOC40NzUiPgogIDxnIGlkPSJucF9hY2NvdW50XzQ0MDcxNTlfMDAwMDAwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAuODMyIC0xMi41KSI+CiAgICA8cGF0aCBpZD0iUGF0aF8xIiBkYXRhLW5hbWU9IlBhdGggMSIgZD0iTTM3LjQzOCwyMC43MTFhNC4xLDQuMSwwLDEsMSwyLjktMS4yQTQuMSw0LjEsMCwwLDEsMzcuNDM4LDIwLjcxMVptMC02LjE1OGEyLjA1MywyLjA1MywwLDEsMCwxLjQ1MS42QTIuMDUzLDIuMDUzLDAsMCwwLDM3LjQzOCwxNC41NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOS40MjEgMCkiIGZpbGw9IiNmZmYiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzIiIGRhdGEtbmFtZT0iUGF0aCAyIiBkPSJNMzQuMTc1LDU5LjIzN2ExLjAyNywxLjAyNywwLDAsMS0xLjAyNy0xLjAyN1Y1NS4xMzFhMy4wNzksMy4wNzksMCwwLDAtMy4wNzktMy4wNzloLTQuMWEzLjA3OSwzLjA3OSwwLDAsMC0zLjA3OSwzLjA3OVY1OC4yMWExLjAyNywxLjAyNywwLDEsMS0yLjA1MywwVjU1LjEzMUE1LjEzOCw1LjEzOCwwLDAsMSwyNS45NjUsNTBoNC4xQTUuMTM4LDUuMTM4LDAsMCwxLDM1LjIsNTUuMTMxVjU4LjIxYTEuMDI3LDEuMDI3LDAsMCwxLTEuMDI3LDEuMDI3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjguMjYyKSIgZmlsbD0iI2ZmZiIvPgogIDwvZz4KPC9zdmc+Cg==" alt="" />
-              Accès client
+              {{ t.get('common.clientAccess') }}
             </a>
           </div>
           <div class="col col-2">
             <button 
               class="hamburger"
-              [class.active]="isMenuOpen()"
+              [class.hamburger--active]="isMenuOpen()"
               type="button"
               js-site-nav-mobile="opener"
               (click)="toggleMenu()"
-              aria-label="Close menu">
+              [attr.aria-label]="t.get('header.closeMenu')">
               <span></span>
               <span></span>
               <span></span>
@@ -124,16 +140,16 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
             <nav>
               <ul id="menu-big-menu-col-1" class="menu">
                 <li>
-                  <a routerLink="/firm-profile" (click)="closeMenu()">La firme</a>
+                  <a href="#" (click)="closeMenu(); $event.preventDefault()">{{ t.get('header.about') }}</a>
                   <ul class="sub-menu">
                     <li>
-                      <a routerLink="/firm-profile" (click)="closeMenu()">Profil de la firme</a>
+                      <a [routerLink]="langService.buildUrl('firm-profile')" (click)="closeMenu()">{{ t.get('header.firmProfile') }}</a>
                     </li>
                     <li>
-                      <a routerLink="/our-team" (click)="closeMenu()">Notre équipe</a>
+                      <a [routerLink]="langService.buildUrl('our-team')" (click)="closeMenu()">{{ t.get('header.ourTeam') }}</a>
                     </li>
                     <li>
-                      <a routerLink="/governance" (click)="closeMenu()">Gouvernance</a>
+                      <a [routerLink]="langService.buildUrl('governance')" (click)="closeMenu()">{{ t.get('header.governance') }}</a>
                     </li>
                   </ul>
                 </li>
@@ -144,28 +160,28 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
             <nav>
               <ul id="menu-big-menu-col-2" class="menu">
                 <li>
-                  <a routerLink="/private-management" (click)="closeMenu()">Gestion privée</a>
+                  <a [routerLink]="langService.buildUrl('private-management')" (click)="closeMenu()">{{ t.get('header.privateManagement') }}</a>
                   <ul class="sub-menu">
                     <li>
-                      <a routerLink="/private-management" (click)="closeMenu()">À qui s’adresse la gestion privée</a>
+                      <a [routerLink]="langService.buildUrl('private-management')" (click)="closeMenu()">{{ t.get('privateManagement.who.title') }}</a>
                     </li>
                     <li>
-                      <a routerLink="/private-management" [queryParams]="{section: 'cycle'}" (click)="closeMenu()">Le cycle de gestion</a>
+                      <a [routerLink]="langService.buildUrl('private-management')" [queryParams]="{section: 'cycle'}" (click)="closeMenu()">{{ t.get('privateManagement.cycle.title') }}</a>
                     </li>
                     <li>
-                      <a routerLink="/private-management" [queryParams]="{section: 'philosophy'}" (click)="closeMenu()">Notre philosophie de gestion</a>
+                      <a [routerLink]="langService.buildUrl('private-management')" [queryParams]="{section: 'philosophy'}" (click)="closeMenu()">{{ t.get('privateManagement.philosophy.title') }}</a>
                     </li>
                     <li>
-                      <a routerLink="/private-management" [queryParams]="{section: 'methodology'}" (click)="closeMenu()">La méthodologie de gestion</a>
+                      <a [routerLink]="langService.buildUrl('private-management')" [queryParams]="{section: 'methodology'}" (click)="closeMenu()">{{ t.get('privateManagement.methodology.title') }}</a>
                     </li>
                     <li>
-                      <a routerLink="/private-management" [queryParams]="{section: 'strategies'}" (click)="closeMenu()">Les stratégies de placement</a>
+                      <a [routerLink]="langService.buildUrl('private-management')" [queryParams]="{section: 'strategies'}" (click)="closeMenu()">{{ t.get('privateManagement.strategies.title') }}</a>
                     </li>
                     <li>
-                      <a routerLink="/private-management" [queryParams]="{section: 'why'}" (click)="closeMenu()">Pourquoi Rivemont ?</a>
+                      <a [routerLink]="langService.buildUrl('private-management')" [queryParams]="{section: 'why'}" (click)="closeMenu()">{{ t.get('privateManagement.why.title') }}</a>
                     </li>
                     <li>
-                      <a routerLink="/private-management" [queryParams]="{section: 'cfa'}" (click)="closeMenu()">Pourquoi choisir un conseiller détenteur du titre CFA* ?</a>
+                      <a [routerLink]="langService.buildUrl('private-management')" [queryParams]="{section: 'cfa'}" (click)="closeMenu()">{{ t.get('privateManagement.cfa.title') }}</a>
                     </li>
                   </ul>
                 </li>
@@ -176,16 +192,16 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
             <nav js-site-nav="container">
               <ul id="menu-big-menu-col-4" class="menu">
                 <li>
-                  <a routerLink="/performance" (click)="closeMenu()">Rendements</a>
+                  <a [routerLink]="langService.buildUrl('performance')" (click)="closeMenu()">{{ t.get('header.performance') }}</a>
                 </li>
                 <li>
-                  <a routerLink="/communications" (click)="closeMenu()">Communications</a>
+                  <a [routerLink]="langService.buildUrl('communications')" (click)="closeMenu()">{{ t.get('header.communications') }}</a>
                 </li>
                 <li>
-                  <a routerLink="/alternative-funds" (click)="closeMenu()">Fonds alternatifs</a>
+                  <a [routerLink]="langService.buildUrl('alternative-funds')" (click)="closeMenu()">{{ t.get('header.alternativeFunds') }}</a>
                 </li>
                 <li>
-                  <a routerLink="/contact" (click)="closeMenu()">Contact</a>
+                  <a [routerLink]="langService.buildUrl('contact')" (click)="closeMenu()">{{ t.get('header.contact') }}</a>
                 </li>
               </ul>
             </nav>
@@ -194,345 +210,443 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
         <!-- Row 3: CTA -->
         <div class="row row-3">
-          <p>Passez à l’action, devenez client.</p>
-          <a routerLink="/become-client" class="gl-button" target="_self" (click)="closeMenu()">
-            En savoir plus
+          <p>{{ t.get('header.takeActionBecomeClient') }}</p>
+          <a [routerLink]="langService.buildUrl('become-client')" class="gl-button" target="_self" (click)="closeMenu()">
+            {{ t.get('common.learnMore') }}
           </a>
         </div>
       </div>
     </div>
   `,
   styles: [`
-    .site-header {
-      background: transparent;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Styles spécifiques au composant - Overrides uniquement si nécessaire */
+    /* Les styles principaux sont dans src/styles.scss */
+    
+    /* FORCER la transparence du header sur toutes les pages */
+    #site-header {
+      background-color: transparent !important;
+      background: transparent !important;
+    }
+    
+    /* Les styles de position sont gérés dans src/styles.scss */
+    /* Pas besoin de styles inline ici, le SCSS global gère tout */
+    
+    /* Logo visible sur toutes les pages */
+    #site-header .content .col.col-1 .logo-holder {
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    
+    #site-header .content .col.col-1 .logo-holder img {
+      opacity: 1 !important;
+      visibility: visible !important;
+      display: inline !important;
+      filter: none !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+    
+    /* Menu Mobile - Styles exacts depuis menu-hamburguer.html */
+    /* Les styles de base sont dans src/styles.scss avec .site-mobile-nav */
+    /* On ajoute seulement les styles spécifiques qui doivent override */
+    #site-mobile-nav {
+      background-color: rgb(15 33 64/.96);
+      z-index: 11;
     }
 
-    .site-header.scrolled {
-      background: #ffffff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    #site-mobile-nav.site-mobile-nav--cta-header .content {
+      padding-top: 16px;
     }
 
-    .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
+    @media only screen and (min-width: 1024px) {
+      #site-mobile-nav.site-mobile-nav--cta-header .content {
+        padding-top: max(84px, 5.2083333333vw);
+      }
+    }
+
+    #site-mobile-nav .content {
+      box-sizing: border-box;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 80px;
-    }
-
-    .logo-link img {
-      height: 40px;
-      width: auto;
-    }
-
-    .header-nav {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .nav-menu {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      gap: 25px;
-    }
-
-    .nav-menu a {
-      color: #1a1a1a;
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: 400;
-      transition: color 0.3s ease;
-    }
-
-    .site-header:not(.scrolled) .nav-menu a {
-      color: #ffffff;
-    }
-
-    .nav-menu a:hover,
-    .nav-menu a.active {
-      color: #c9a961;
-    }
-
-    .client-access-link {
-      color: #1a1a1a;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 400;
-      transition: color 0.3s ease;
-    }
-
-    .site-header:not(.scrolled) .client-access-link {
-      color: #ffffff;
-    }
-
-    .client-access-link:hover {
-      color: #c9a961;
-    }
-
-    .language-toggle {
-      background: none;
-      border: none;
-      color: #1a1a1a;
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: 400;
-    }
-
-    .site-header:not(.scrolled) .language-toggle {
-      color: #ffffff;
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 10px;
-      color: #1a1a1a;
-    }
-
-    .site-header:not(.scrolled) .menu-toggle {
-      color: #ffffff;
-    }
-
-    .menu-toggle svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    @media (max-width: 1024px) {
-      .header-nav {
-        gap: 15px;
-      }
-
-      .nav-menu {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }
-
-    .action-button {
-      position: fixed;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 999;
-      background: #c9a961;
-      color: #ffffff;
-      padding: 15px 8px;
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.1em;
-      transition: background-color 0.3s ease;
-      border-radius: 4px 0 0 4px;
-      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .action-button:hover {
-      background: #b89955;
-    }
-
-    @media (max-width: 768px) {
-      .action-button {
-        display: none;
-      }
-    }
-
-    .menu-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 2000;
-      background: #0a0a0a;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.5s ease, visibility 0.5s ease;
-    }
-
-    .menu-overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .menu-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      flex-direction: column;
       height: 100%;
-      overflow-y: auto;
+      overflow: auto;
+      padding-left: 14px;
+      padding-right: 14px;
     }
 
-    .menu-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 30px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      margin-bottom: 40px;
-    }
-
-    .menu-logo img {
-      height: 40px;
-      width: auto;
-    }
-
-    .menu-header-actions {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .menu-client-access {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 400;
-      transition: color 0.3s ease;
-    }
-
-    .menu-client-access:hover {
-      color: #c9a961;
-    }
-
-    .menu-close {
-      background: none;
-      border: none;
-      color: #ffffff;
-      cursor: pointer;
-      padding: 10px;
-    }
-
-    .menu-close svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    .menu-navigation {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 60px;
-      margin-bottom: 60px;
-    }
-
-    @media (max-width: 968px) {
-      .menu-navigation {
-        grid-template-columns: 1fr;
-        gap: 40px;
+    @media only screen and (min-width: 768px) {
+      #site-mobile-nav .content {
+        padding-left: 35px;
+        padding-right: 35px;
       }
     }
 
-    .menu-section-title a {
-      color: #ffffff;
-      font-size: 1.1rem;
+    @media only screen and (min-width: 1280px) {
+      #site-mobile-nav .content {
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+    }
+
+    @media only screen and (min-width: 1600px) {
+      #site-mobile-nav .content {
+        padding-left: 8.59375vw;
+        padding-right: 8.59375vw;
+      }
+    }
+
+    #site-mobile-nav .content .row.row-1 {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      #site-mobile-nav .content .row.row-1 {
+        margin-bottom: 70px;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      #site-mobile-nav .content .row.row-1 {
+        align-items: center;
+        margin-bottom: max(100px, 8.3333333333vw);
+      }
+    }
+
+    #site-mobile-nav .content .row.row-1 .col.col-1 {
+      position: relative;
+      border-right: none !important;
+    }
+
+    #site-mobile-nav .content .row.row-1 .col.col-2 {
+      border-right: none !important;
+    }
+
+    #site-mobile-nav .content .row.row-1 .col {
+      border-right: none !important;
+    }
+
+    #site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder {
+      display: block;
+      width: 164px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      #site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder {
+        width: max(200px, 14.7916666667vw);
+      }
+    }
+
+    #site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder img {
+      height: auto;
+      width: 100%;
+    }
+
+    #site-mobile-nav .content .row.row-1 .col.col-1 .gl-button {
+      margin-top: 30px;
+      min-width: max(200px, 14.375vw);
+    }
+
+    @media only screen and (min-width: 1024px) {
+      #site-mobile-nav .content .row.row-1 .col.col-1 .gl-button {
+        left: 100%;
+        margin-left: 4.6875vw;
+        margin-top: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    #site-mobile-nav .content .row.row-1 .col.col-1 .gl-button:after {
+      content: none;
+    }
+
+    #site-mobile-nav .content .row.row-1 .col.col-1 .gl-button img {
+      margin-right: max(12px, .78125vw);
+      position: relative;
+      top: 2px;
+      width: 10px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      #site-mobile-nav .content .row.row-1 .col.col-1 .gl-button img {
+        top: 0;
+        width: max(12px, .78125vw);
+      }
+    }
+
+    #site-mobile-nav .content .row.row-1 .col.col-2 .hamburger {
+      background-color: #fff0;
+      border: none;
+      cursor: pointer;
+      display: block;
+      margin-left: max(64px, 3.3333333333vw);
+      padding: 0;
+      position: relative;
+      right: 4px;
+      top: 3px;
+      width: max(29px, 1.5104166667vw);
+    }
+
+    @media only screen and (min-width: 768px) {
+      #site-mobile-nav .content .row.row-1 .col.col-2 .hamburger {
+        top: 0;
+      }
+    }
+
+    #site-mobile-nav .content .row.row-1 .col.col-2 .hamburger span {
+      background-color: #fff;
+      display: block;
+      height: max(2px, .1041666667vw);
+      margin-bottom: max(8px, .4166666667vw);
+      width: 100%;
+    }
+
+    #site-mobile-nav .content .row.row-1 .col.col-2 .hamburger span:last-child {
+      margin-bottom: 0;
+    }
+
+    #site-mobile-nav .content .row.row-1 .col.col-2 .hamburger.hamburger--active span:first-child {
+      transform: rotate(-45deg);
+      transform-origin: top right;
+    }
+
+    #site-mobile-nav .content .row.row-1 .col.col-2 .hamburger.hamburger--active span:nth-child(2) {
+      width: 0;
+    }
+
+    #site-mobile-nav .content .row.row-1 .col.col-2 .hamburger.hamburger--active span:nth-child(3) {
+      transform: rotate(45deg);
+      transform-origin: bottom right;
+    }
+
+    #site-mobile-nav .content .row.row-2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: -50px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      #site-mobile-nav .content .row.row-2 {
+        margin-bottom: -70px;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      #site-mobile-nav .content .row.row-2 {
+        flex-wrap: nowrap;
+        margin-bottom: 0;
+      }
+    }
+
+    #site-mobile-nav .content .row.row-2 .col {
+      box-sizing: border-box;
+      margin-bottom: 50px;
+      width: 100%;
+    }
+
+    @media only screen and (min-width: 768px) {
+      #site-mobile-nav .content .row.row-2 .col {
+        margin-bottom: 70px;
+        width: 45%;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      #site-mobile-nav .content .row.row-2 .col {
+        margin-bottom: 0;
+        width: auto;
+      }
+    }
+
+    #site-mobile-nav .content .row.row-2 .col.col-1 {
+      padding-left: 0;
+    }
+
+    @media only screen and (min-width: 768px) {
+      #site-mobile-nav .content .row.row-2 .col.col-1 {
+        border-right: 1px solid #fff;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      #site-mobile-nav .content .row.row-2 .col.col-2 {
+        border-right: 1px solid #fff;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      #site-mobile-nav .content .row.row-2 .col.col-3 {
+        border-right: none !important;
+      }
+    }
+
+    @media only screen and (max-width: 1023px) {
+      #site-mobile-nav .content .row.row-2 .col.col-3 {
+        padding-left: 0;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      #site-mobile-nav .content .row.row-2 .col nav {
+        max-width: max(350px, 19.53125vw);
+      }
+    }
+
+    #site-mobile-nav .content .row.row-2 .col nav .menu>li {
+      border-top: 1px solid #fff;
+      box-sizing: border-box;
+      margin-top: max(25px, 1.8229166667vw);
+      padding-top: max(25px, 1.8229166667vw);
+    }
+
+    #site-mobile-nav .content .row.row-2 .col nav .menu>li:first-child {
+      border-top: 0;
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    #site-mobile-nav .content .row.row-2 .col nav .menu>li>a {
+      color: #fff;
+      font-family: peridot-pe-variable, sans-serif;
+      font-size: 21px;
+      font-style: normal;
       font-weight: 600;
+      line-height: 1.3em;
       text-decoration: none;
-      transition: color 0.3s ease;
     }
 
-    .menu-section-title a:hover {
-      color: #c9a961;
+    @media only screen and (min-width: 768px) {
+      #site-mobile-nav .content .row.row-2 .col nav .menu>li>a {
+        font-size: max(25px, 1.5625vw);
+      }
     }
 
-    .menu-section-links {
+    #site-mobile-nav .content .row.row-2 .col nav .menu>li .sub-menu {
+      margin-top: max(18px, 1.1458333333vw);
       list-style: none;
-      margin: 20px 0 0 0;
       padding: 0;
     }
 
-    .menu-section-links li {
-      margin-bottom: 15px;
+    #site-mobile-nav .content .row.row-2 .col nav .menu>li .sub-menu li {
+      margin-bottom: max(18px, 1.1458333333vw);
     }
 
-    .menu-section-links a {
-      color: rgba(255, 255, 255, 0.7);
+    #site-mobile-nav .content .row.row-2 .col nav .menu>li .sub-menu li:last-child {
+      margin-bottom: 0;
+    }
+
+    #site-mobile-nav .content .row.row-2 .col nav .menu>li .sub-menu li a {
+      color: #fff;
+      font-family: peridot-pe-variable, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 1.3em;
       text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.3s ease;
     }
 
-    .menu-section-links a:hover {
-      color: #ffffff;
+    @media only screen and (min-width: 768px) {
+      #site-mobile-nav .content .row.row-2 .col nav .menu>li .sub-menu li a {
+        font-size: max(17px, 1.0416666667vw);
+      }
     }
 
-    .menu-section-main-links {
-      list-style: none;
+    #site-mobile-nav .content .row.row-3 {
+      border-top: 1px solid #fff;
+      box-sizing: border-box;
+      margin-top: 25px;
+      padding: max(40px, 3.125vw) 0;
+    }
+
+    @media only screen and (min-width: 768px) {
+      #site-mobile-nav .content .row.row-3 {
+        align-items: center;
+        display: flex;
+        margin-top: max(70px, 5.2083333333vw);
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      #site-mobile-nav .content .row.row-3 {
+        justify-content: flex-end;
+      }
+    }
+
+    #site-mobile-nav .content .row.row-3 p {
+      color: #fff;
+      font-family: peridot-pe-variable, sans-serif;
+      font-size: max(25px, 2.34375vw);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.25;
       margin: 0;
-      padding: 0;
     }
 
-    .menu-section-main-links li {
-      margin-bottom: 20px;
+    #site-mobile-nav .content .row.row-3 .gl-button {
+      margin-top: 40px;
+      min-width: max(200px, 14.375vw);
     }
 
-    .menu-section-main-links a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    .menu-section-main-links a:hover {
-      color: #c9a961;
-    }
-
-    .menu-cta {
-      padding-top: 40px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .menu-cta-text {
-      color: #ffffff;
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .menu-cta-link {
-      display: inline-flex;
-      align-items: center;
-      color: #c9a961;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    .menu-cta-link:hover {
-      color: #b89955;
-    }
-
-    .menu-cta-link svg {
-      margin-left: 10px;
-      width: 20px;
-      height: 20px;
+    @media only screen and (min-width: 768px) {
+      #site-mobile-nav .content .row.row-3 .gl-button {
+        margin-left: max(40px, 3.6458333333vw);
+        margin-top: 0;
+      }
     }
   `]
 })
 export class HeaderComponent {
   imageService = inject(ImageMappingService);
+  t = inject(TranslationService);
+  langService = inject(LanguageService);
   private router = inject(Router);
   private destroyRef = inject(DestroyRef);
-  isScrolled = signal(false);
   isMenuOpen = signal(false);
   isHome = signal(this.isHomeUrl(this.router.url));
+  isFirmProfile = signal(this.isFirmProfileUrl(this.router.url));
+  isContact = signal(this.isContactUrl(this.router.url));
+  isGovernance = signal(this.isGovernanceUrl(this.router.url));
+  isPrivateManagement = signal(this.isPrivateManagementUrl(this.router.url));
+  isPerformance = signal(this.isPerformanceUrl(this.router.url));
+  isFinancialPlanning = signal(this.isFinancialPlanningUrl(this.router.url));
+  currentLanguage = computed(() => this.langService.currentLanguage());
+  
+  // Signaux directs pour le type de page (remplace les computed pour meilleure réactivité avec OnPush)
+  isHeroPage = signal(false);
+  isLightBackgroundPage = signal(false);
+  
+  // Méthode pour mettre à jour les signaux de type de page
+  private updatePageTypeSignals(url: string): void {
+    const isHero = this.isHomeUrl(url) || this.isPrivateManagementUrl(url) || 
+                   this.isPerformanceUrl(url) || this.isFinancialPlanningUrl(url);
+    const isLight = this.isFirmProfileUrl(url) || this.isContactUrl(url) || 
+                    this.isGovernanceUrl(url);
+    
+    this.isHeroPage.set(isHero);
+    this.isLightBackgroundPage.set(isLight);
+  }
 
   constructor() {
+    // Initialiser les valeurs au chargement
+    const currentUrl = this.router.url;
+    this.isHome.set(this.isHomeUrl(currentUrl));
+    this.isFirmProfile.set(this.isFirmProfileUrl(currentUrl));
+    this.isContact.set(this.isContactUrl(currentUrl));
+    this.isGovernance.set(this.isGovernanceUrl(currentUrl));
+    this.isPrivateManagement.set(this.isPrivateManagementUrl(currentUrl));
+    this.isPerformance.set(this.isPerformanceUrl(currentUrl));
+    this.isFinancialPlanning.set(this.isFinancialPlanningUrl(currentUrl));
+    
+    // Mettre à jour les signaux de type de page au chargement initial
+    this.updatePageTypeSignals(currentUrl);
+    
+    // Écouter les changements de route
     this.router.events
       .pipe(
         filter((event): event is NavigationEnd => event instanceof NavigationEnd),
@@ -540,12 +654,16 @@ export class HeaderComponent {
       )
       .subscribe(event => {
         this.isHome.set(this.isHomeUrl(event.urlAfterRedirects));
+        this.isFirmProfile.set(this.isFirmProfileUrl(event.urlAfterRedirects));
+        this.isContact.set(this.isContactUrl(event.urlAfterRedirects));
+        this.isGovernance.set(this.isGovernanceUrl(event.urlAfterRedirects));
+        this.isPrivateManagement.set(this.isPrivateManagementUrl(event.urlAfterRedirects));
+        this.isPerformance.set(this.isPerformanceUrl(event.urlAfterRedirects));
+        this.isFinancialPlanning.set(this.isFinancialPlanningUrl(event.urlAfterRedirects));
+        
+        // Mettre à jour les signaux de type de page à chaque changement de route
+        this.updatePageTypeSignals(event.urlAfterRedirects);
       });
-  }
-
-  @HostListener('window:scroll')
-  onWindowScroll() {
-    this.isScrolled.set(window.scrollY > 50);
   }
 
   toggleMenu() {
@@ -562,7 +680,43 @@ export class HeaderComponent {
     document.body.style.overflow = '';
   }
 
+  switchLanguage() {
+    const newLang = this.currentLanguage() === 'fr' ? 'en' : 'fr';
+    this.langService.setLanguage(newLang);
+  }
+
   private isHomeUrl(url: string): boolean {
-    return url === '/' || url === '' || url.startsWith('/?');
+    const pathWithoutLang = this.langService.getPathWithoutLanguage(url);
+    return pathWithoutLang === '/' || pathWithoutLang === '' || pathWithoutLang === '/fr' || pathWithoutLang === '/en' || pathWithoutLang.startsWith('/?');
+  }
+
+  private isFirmProfileUrl(url: string): boolean {
+    const pathWithoutLang = this.langService.getPathWithoutLanguage(url);
+    return pathWithoutLang === '/firm-profile' || pathWithoutLang.startsWith('/firm-profile');
+  }
+
+  private isContactUrl(url: string): boolean {
+    const pathWithoutLang = this.langService.getPathWithoutLanguage(url);
+    return pathWithoutLang === '/contact' || pathWithoutLang.startsWith('/contact');
+  }
+
+  private isGovernanceUrl(url: string): boolean {
+    const pathWithoutLang = this.langService.getPathWithoutLanguage(url);
+    return pathWithoutLang === '/governance' || pathWithoutLang.startsWith('/governance');
+  }
+
+  private isPrivateManagementUrl(url: string): boolean {
+    const pathWithoutLang = this.langService.getPathWithoutLanguage(url);
+    return pathWithoutLang === '/private-management' || pathWithoutLang.startsWith('/private-management');
+  }
+
+  private isPerformanceUrl(url: string): boolean {
+    const pathWithoutLang = this.langService.getPathWithoutLanguage(url);
+    return pathWithoutLang === '/performance' || pathWithoutLang.startsWith('/performance');
+  }
+
+  private isFinancialPlanningUrl(url: string): boolean {
+    const pathWithoutLang = this.langService.getPathWithoutLanguage(url);
+    return pathWithoutLang === '/financial-planning' || pathWithoutLang.startsWith('/financial-planning');
   }
 }

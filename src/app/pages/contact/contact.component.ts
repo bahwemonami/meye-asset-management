@@ -1,7 +1,10 @@
 import { Component, inject, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
+import { TranslationService } from '../../services/translation.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-contact',
@@ -20,7 +23,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
             </div>
           </div>
           <div class="col">
-            <h1 class="title">Contact</h1>
+            <h1 class="title">{{ t.get('contact.title') }}</h1>
             <div class="rows">
               <div class="row">
                 <p class="address">
@@ -31,11 +34,11 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                 </p>
                 <div class="contacts">
                   <div class="contact">
-                    <div class="contact-title">Tél. : &nbsp;</div>
+                    <div class="contact-title">{{ t.get('contact.phone') }} &nbsp;</div>
                     <div class="contact-text"><a href="tel:819 246-8800">819 246-8800</a></div>
                   </div>
                   <div class="contact">
-                    <div class="contact-title">Courriel : &nbsp;</div>
+                    <div class="contact-title">{{ t.get('contact.email') }} &nbsp;</div>
                     <div class="contact-text"><a href="mailto:info@rivemont.ca">info@rivemont.ca</a></div>
                   </div>
                 </div>
@@ -49,11 +52,11 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                 </p>
                 <div class="contacts">
                   <div class="contact">
-                    <div class="contact-title">Tél. : &nbsp;</div>
+                    <div class="contact-title">{{ t.get('contact.phone') }} &nbsp;</div>
                     <div class="contact-text"><a href="tel:819 246-8800">819 246-8800</a></div>
                   </div>
                   <div class="contact">
-                    <div class="contact-title">Courriel : &nbsp;</div>
+                    <div class="contact-title">{{ t.get('contact.email') }} &nbsp;</div>
                     <div class="contact-text"><a href="mailto:info@rivemont.ca">info@rivemont.ca</a></div>
                   </div>
                 </div>
@@ -65,7 +68,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
 
       <section class="section-contact">
         <div class="content">
-          <h2 class="title">Écrivez-nous</h2>
+          <h2 class="title">{{ t.get('contact.writeToUs') }}</h2>
           <div class="gl-form-holder">
             <form (ngSubmit)="onSubmit()" class="gl-form">
               <div class="gl-form-controls gl-form-controls--two-col">
@@ -74,7 +77,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                     type="text"
                     [(ngModel)]="formData.prenom"
                     name="prenom"
-                    placeholder="Prénom"
+                    [placeholder]="t.get('contact.firstName')"
                     class="gl-input"
                     required>
                 </div>
@@ -83,7 +86,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                     type="text"
                     [(ngModel)]="formData.nom"
                     name="nom"
-                    placeholder="Nom"
+                    [placeholder]="t.get('contact.lastName')"
                     class="gl-input"
                     required>
                 </div>
@@ -94,7 +97,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                     type="email"
                     [(ngModel)]="formData.courriel"
                     name="courriel"
-                    placeholder="Courriel"
+                    [placeholder]="t.get('contact.emailPlaceholder')"
                     class="gl-input"
                     required>
                 </div>
@@ -103,7 +106,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                     type="text"
                     [(ngModel)]="formData.telephone"
                     name="telephone"
-                    placeholder="Téléphone"
+                    [placeholder]="t.get('contact.phonePlaceholder')"
                     class="gl-input">
                 </div>
               </div>
@@ -111,13 +114,13 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                 <textarea
                   [(ngModel)]="formData.message"
                   name="message"
-                  placeholder="Message"
+                  [placeholder]="t.get('contact.message')"
                   rows="5"
                   class="gl-textarea"
                   required></textarea>
               </div>
               <div class="gl-form-control gl-form-control--submit">
-                <button type="submit" class="gl-button gl-button--blue-dark">Envoyer</button>
+                <button type="submit" class="gl-button gl-button--blue-dark">{{ t.get('contact.submit') }}</button>
               </div>
             </form>
           </div>
@@ -128,6 +131,8 @@ import { ImageMappingService } from '../../services/image-mapping.service';
 })
 export class ContactComponent {
   imageService = inject(ImageMappingService);
+  t = inject(TranslationService);
+  langService = inject(LanguageService);
   
   formData = {
     prenom: '',
@@ -139,6 +144,6 @@ export class ContactComponent {
 
   onSubmit() {
     console.log('Formulaire soumis:', this.formData);
-    alert('Merci pour votre message! Nous vous répondrons dans les plus brefs délais.');
+    alert(this.t.get('contact.successMessage'));
   }
 }

@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
+import { languageGuard } from './guards/language.guard';
 
-export const routes: Routes = [
+// Routes internes (sans préfixe de langue)
+const internalRoutes: Routes = [
   {
     path: '',
     loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
@@ -79,6 +81,33 @@ export const routes: Routes = [
   {
     path: '**',
     redirectTo: '',
+    pathMatch: 'full'
+  }
+];
+
+export const routes: Routes = [
+  // Redirection de la racine vers /fr/
+  {
+    path: '',
+    redirectTo: '/fr',
+    pathMatch: 'full'
+  },
+  // Routes avec préfixe /fr/
+  {
+    path: 'fr',
+    children: internalRoutes,
+    canActivate: [languageGuard]
+  },
+  // Routes avec préfixe /en/
+  {
+    path: 'en',
+    children: internalRoutes,
+    canActivate: [languageGuard]
+  },
+  // Redirection pour toutes les autres routes vers /fr/
+  {
+    path: '**',
+    redirectTo: '/fr',
     pathMatch: 'full'
   }
 ];

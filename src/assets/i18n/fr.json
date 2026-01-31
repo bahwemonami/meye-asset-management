@@ -1,0 +1,288 @@
+{
+  "common": {
+    "clientAccess": "Accès client",
+    "learnMore": "En savoir plus",
+    "contactUs": "Contactez-nous",
+    "submit": "Envoyer",
+    "subscribe": "Inscription",
+    "all": "Tous",
+    "close": "Fermer",
+    "open": "Ouvrir",
+    "menu": "Menu"
+  },
+  "header": {
+    "privateManagement": "Gestion privée",
+    "performance": "Rendements",
+    "financialPlanning": "Planification financière",
+    "contact": "Contact",
+    "switchToEn": "Switch to En",
+    "switchToFr": "Switch to Fr",
+    "closeMenu": "Fermer le menu",
+    "openMenu": "Ouvrir le menu",
+    "takeAction": "Passez à l'action",
+    "becomeClient": "Devenir client",
+    "about": "La firme",
+    "firmProfile": "Profil de la firme",
+    "ourTeam": "Notre équipe",
+    "governance": "Gouvernance",
+    "communications": "Communications",
+    "alternativeFunds": "Fonds alternatifs",
+    "takeActionBecomeClient": "Passez à l'action, devenez client."
+  },
+  "footer": {
+    "newsletterTitle": "Inscrivez-vous à notre lettre financière",
+    "emailPlaceholder": "Adresse courriel",
+    "takeActionTitle": "Passez à l'action, devenez client.",
+    "privateManagement": "Gestion privée",
+    "performance": "Rendements",
+    "alternativeFunds": "Fonds alternatifs",
+    "contact": "Contact",
+    "login": "Connexion",
+    "copyright": "© {{year}}, Les investissements Rivemont. Tous droits réservés."
+  },
+  "home": {
+    "heroTitle": "Passion. Rigueur. Résultats.",
+    "mission": "Notre mission",
+    "missionText1": "MEYE ASSET MANAGER a comme mission d'offrir une gestion de portefeuille personnalisée et innovante, alignée sur les objectifs uniques de chaque investisseur.",
+    "missionText2": "Nous favorisons une gestion active et disciplinée, avec comme objectifs d'optimiser la performance et minimiser les risques.",
+    "missionText3": "Faire de chaque relation un partenariat durable et fructueux, en privilégiant la rigueur, l'éthique et la transparence.",
+    "discoverTeam": "Découvrez l'équipe",
+    "performance": "Rendements",
+    "ourPerformance": "Notre rendement",
+    "communications": "Communications",
+    "financialLetter": "Lettre financière",
+    "allArticles": "Tous les articles"
+  },
+  "privateManagement": {
+    "title": "Gestion privée",
+    "who": {
+      "title": "À qui s'adresse la gestion privée",
+      "text1": "La gestion privée s'adresse à une clientèle ayant des actifs de plus de 250 000 $ à investir et qui recherche une solution complète et performante.",
+      "clientsTitle": "On compte parmi nos clients :",
+      "clients": [
+        "Des entrepreneurs et des dirigeants d'entreprises;",
+        "Des professionnels, des artistes ou des sportifs;",
+        "Des détenteurs de fortune de deuxième génération;",
+        "Des institutions et des entreprises privées.",
+        "Des épargnants efficaces."
+      ],
+      "offeringTitle": "La gestion privée chez Rivemont vous offre :",
+      "offering": [
+        "Une gestion professionnelle",
+        "Un alignement sur une politique de placement précise",
+        "Une optimisation fiscale",
+        "Des rapports mensuels détaillés",
+        "Des frais de gestion avantageux",
+        "Un accès à une équipe externe multidisciplinaire pouvant répondre à tous vos besoins financiers, notamment la fiscalité et la comptabilité."
+      ],
+      "text2": "N'hésitez pas à nous contacter afin que nous puissions évaluer votre situation financière et vous recommander une solution personnalisée qui reflète vos besoins et vos objectifs de placements."
+    },
+    "cycle": {
+      "title": "Cycle de gestion",
+      "text": "Notre cycle de gestion est une approche structurée conçue pour optimiser votre expérience d'investissement :",
+      "steps": [
+        "Évaluation initiale : Comprendre vos objectifs financiers, votre tolérance au risque et votre horizon de placement",
+        "Développement de stratégie : Création d'une politique d'investissement personnalisée",
+        "Mise en œuvre : Exécution de la stratégie d'investissement avec précision",
+        "Surveillance : Suivi continu de la performance du portefeuille",
+        "Rééquilibrage : Ajustements réguliers pour maintenir l'allocation optimale",
+        "Rapports : Relevés mensuels détaillés et revues de performance"
+      ]
+    },
+    "philosophy": {
+      "title": "Philosophie de gestion",
+      "text1": "Chez Rivemont, nous croyons que le prix d'un actif n'est pas toujours égal à sa valeur intrinsèque et qu'il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs.",
+      "text2": "Puisque ces biais sont connus et qu'ils se répètent dans le temps, il est possible de prendre des décisions d'investissement basées sur ces comportements récurrents.",
+      "text3": "Nous nous appuyons sur des stratégies basées sur l'effet momentum, dont l'analyse technique et le suivi de tendance. Le gestionnaire utilise une approche de type descendante en établissant en premier lieu les secteurs dont le potentiel à la hausse est le plus important."
+    },
+    "methodology": {
+      "title": "La méthodologie de gestion",
+      "text": "Notre méthodologie d'investissement combine une analyse rigoureuse avec une exécution disciplinée :",
+      "points": [
+        "Analyse macro-économique pour identifier les tendances du marché",
+        "Rotation sectorielle basée sur les indicateurs de momentum",
+        "Analyse technique pour les points d'entrée et de sortie",
+        "Gestion des risques par la diversification",
+        "Rééquilibrage régulier du portefeuille"
+      ]
+    },
+    "strategies": {
+      "title": "Les stratégies de placement",
+      "text": "Nous offrons diverses stratégies d'investissement adaptées à différents profils de clients :",
+      "list": [
+        "Stratégie de croissance : Accent sur l'appréciation du capital",
+        "Stratégie équilibrée : Mélange de croissance et d'actifs productifs de revenus",
+        "Stratégie conservatrice : Accent sur la préservation du capital",
+        "Stratégies alternatives : Accès à nos fonds spécialisés"
+      ]
+    },
+    "why": {
+      "title": "Pourquoi Rivemont ?",
+      "text": "Pourquoi Rivemont ?",
+      "points": [
+        "Plus de 15 ans d'expérience éprouvée",
+        "Service personnalisé avec accès direct aux gestionnaires",
+        "Structure de frais transparente",
+        "Gestion active qui s'adapte aux conditions du marché",
+        "Services complets de planification financière",
+        "Forte attention à la gestion des risques"
+      ]
+    },
+    "cfa": {
+      "title": "Pourquoi choisir un conseiller détenteur du titre CFA* ?",
+      "text": "Le titre CFA (Chartered Financial Analyst) est la référence en matière de gestion de placements. Voici pourquoi choisir un conseiller détenteur du titre CFA* est important :",
+      "points": [
+        "Formation rigoureuse en analyse d'investissement et gestion de portefeuille",
+        "Engagement envers les normes professionnelles les plus élevées",
+        "Adhésion à un code d'éthique strict",
+        "Exigences de formation continue",
+        "Reconnaissance mondiale de l'expertise"
+      ]
+    }
+  },
+  "firmProfile": {
+    "title": "Profil de la firme",
+    "text1": "Fondé en 2010, Rivemont est une firme de gestion de portefeuille offrant des stratégies de placement à la fois traditionnelles et novatrices aux investisseurs.",
+    "text2": "Notre objectif est de maximiser le rendement potentiel selon le profil de risque de chaque client, tout en gardant une attention particulière à la gestion efficace de la volatilité des marchés.",
+    "text3": "Nous offrons également un service complet de planification financière afin d'assurer l'atteinte des objectifs ainsi que la protection du patrimoine.",
+    "text4": "Contactez-nous afin de profitez pleinement d'une réelle gestion active de vos placements.",
+    "traditionalStrategies": "Stratégies traditionnelles pour une clientèle de gestion privée; et",
+    "alternativeStrategiesTitle": "Stratégies alternatives, c'est-à-dire des stratégies axées sur:",
+    "alternativeStrategies": [
+      "Les cryptomonnaies",
+      "Les micro-capitalisations",
+      "Un rendement absolu"
+    ],
+    "discoverTeam": "Découvrez l'équipe"
+  },
+  "performance": {
+    "title": "Rendements",
+    "equities": "Actions",
+    "asOf": "Au 31 décembre 2025",
+    "description": "Description",
+    "descriptionText": "Chez Rivemont, nous croyons que le prix d'un actif n'est pas toujours égal à sa valeur intrinsèque et qu'il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs. Puisque ces biais sont connus et qu'ils se répètent dans le temps, il est possible de prendre des décisions d'investissement basées sur ces comportements récurrents. Nous nous appuyons sur des stratégies basées sur l'effet momentum, dont l'analyse technique et le suivi de tendance. Le gestionnaire utilise une approche de type descendante en établissant en premier lieu les secteurs dont le potentiel à la hausse est le plus important pour ensuite sélectionner les titres spécifiques parmi ces secteurs.",
+    "investmentObjective": "Objectif de placement",
+    "investmentObjectiveText": "L'objectif de placement de la classe d'actifs Actions est de générer un rendement supérieur à son indice de référence.",
+    "performanceTable": "Rendements",
+    "oneMonth": "1 mois",
+    "threeMonths": "3 mois",
+    "sixMonths": "6 mois",
+    "ytd": "AAJ",
+    "oneYear": "1 an",
+    "twoYears": "2 ans",
+    "fiveYears": "5 ans",
+    "tenYears": "10 ans",
+    "inception": "Début",
+    "equitiesLabel": "Action",
+    "benchmark": "Indice de reference",
+    "explanatoryNotes": "Notes explicatives",
+    "explanatoryNotesText": "Les rendements proviennent du composé de toutes les actions détenues par les clients de Rivemont en gestion privée sous le code de représentant Q2F2 et ils sont bruts des frais. Avant le 1 janvier 2019, l'indice de référence est composé à 100 % de l'indice S&P/TSX et, par la suite, à 80% de l'indice S&P/TSX et 20 % de l'indice S&P 500. Les résultats futurs vont différer de ceux du passé. Ce document ne constitue pas une recommandation ni un conseil lié à un investissement et est présenté à titre d'information seulement.",
+    "overview": "Aperçu",
+    "inceptionDate": "Date de création",
+    "inceptionDateValue": "1 septembre 2010",
+    "managementStyle": "Style de gestion",
+    "managementStyleValue": "Technique et tendance",
+    "firmAssets": "Actifs de la firme",
+    "firmAssetsValue": "153 millions $",
+    "topHoldings": "Principaux titres individuels",
+    "activitySectors": "Secteurs d'activité",
+    "manager": "Gestionnaire",
+    "managerText": "Martin Lalonde, MBA, CFA, est le gestionnaire de portefeuille responsable des décisions de placements. Il possède plusieurs années d'expérience comme intervenant sur les marchés financiers et a œuvré, avant de fonder Rivemont, comme analyste principal aux investissements et aux fusions et acquisitions pour un important organisme canadien.",
+    "aboutRivemont": "À propos de Rivemont",
+    "aboutRivemontText": "Fondée en 2010, Rivemont est une firme de gestion de portefeuille québécoise avec environ 153 millions $ en actifs sous gestion. La firme offre des stratégies de placement performantes à une clientèle de gestion privée, de conseillers, de courtiers et de planificateurs financiers."
+  },
+  "financialPlanning": {
+    "title": "Planification financière",
+    "essentialTool": "Un outil essentiel pour bâtir votre avenir",
+    "taxPlanning": "Planification fiscale",
+    "businessOwners": "Planification pour les propriétaires d'entreprises",
+    "estatePlanning": "Planification successorale",
+    "text1": "Chez Les Investissements Rivemont, nous considérons la planification financière comme un prolongement naturel de notre rôle de gestionnaire de portefeuille.",
+    "text1b": "Elle nous permet de vous accompagner dans vos décisions financières importantes.",
+    "ourRole": "Notre rôle consiste alors à :",
+    "rolePoints": [
+      "Définir avec vous vos priorités et vos objectifs.",
+      "Identifier les stratégies les plus appropriées pour les réaliser.",
+      "Adapter votre plan au fil du temps, selon vos besoins et l'évolution des marchés."
+    ],
+    "concreteSolutions": "Des solutions concrètes",
+    "solutionsText": "Nous couvrons l'ensemble des aspects nécessaires à une solide planification financière :",
+    "solutionsPoints": [
+      "Optimisation fiscale.",
+      "Planification successorale.",
+      "Préparation à la retraite.",
+      "Stratégie de décaissement.",
+      "Gestion des risques et assurances."
+    ],
+    "text2": "N'hésitez pas à nous contacter afin que nous puissions évaluer votre situation financière et vous recommander une solution personnalisée qui reflète vos besoins et vos objectifs de placements."
+  },
+  "contact": {
+    "title": "Contact",
+    "address1": "160, boul. de l'Hôpital, bureau 202",
+    "address1City": "Gatineau, Québec, J8T 8J1",
+    "address2": "19 rue Le Royer Ouest, bureau 300",
+    "address2City": "Montréal, Québec, H2Y 1W4",
+    "phone": "Tél. :",
+    "email": "Courriel :",
+    "writeToUs": "Écrivez-nous",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "emailPlaceholder": "Courriel",
+    "phonePlaceholder": "Téléphone",
+    "message": "Message",
+    "submit": "Envoyer",
+    "successMessage": "Merci pour votre message! Nous vous répondrons dans les plus brefs délais."
+  },
+  "becomeClient": {
+    "title": "Passez à l'action, devenez client.",
+    "formTitle": "Devenir client",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Courriel",
+    "phone": "Téléphone",
+    "postalCode": "3 caractères du code postal*",
+    "assetValue": "Valeur approximative des actifs à gérer*",
+    "source": "Comment avez-vous entendu parler de nous ?",
+    "need": "Quel est le besoin à répondre ?",
+    "contactPreference": "Préférence de contact",
+    "phoneOption": "Téléphone",
+    "emailOption": "Courriel",
+    "submit": "Envoyer",
+    "successMessage": "Merci pour votre intérêt! Nous vous contacterons dans les plus brefs délais."
+  },
+  "alternativeFunds": {
+    "title": "Fonds alternatifs",
+    "longShort": "Fonds Rivemont Long Short",
+    "crypto": "Fonds Rivemont Crypto",
+    "microcap": "Fonds Rivemont MicroCap"
+  },
+  "communications": {
+    "title": "Communications",
+    "all": "Tous",
+    "journal": "Journal Les Affaires",
+    "letter": "Lettre financière",
+    "media": "MEYE dans les médias"
+  },
+  "team": {
+    "title": "Notre équipe"
+  },
+  "governance": {
+    "title": "Gouvernance",
+    "registration": "Inscription auprès des autorités",
+    "registrationText": "MEYE ASSET MANAGER est inscrite à titre de gestionnaire de portefeuille au Québec, en Ontario, en Colombie-Britannique, en Alberta, en Saskatchewan, au Manitoba et au Nouveau-Brunswick, à titre de gestionnaire de fonds d'investissement au Québec et en Ontario, à titre de gestionnaire de portefeuille de produits dérivés au Québec, à titre de courtier sur marché hors cote au Québec, en Ontario, en Saskatchewan, au Manitoba et au Nouveau-Brunswick, et en planification financière au Québec.",
+    "registerLink": "Registre des entreprises et des personnes autorisées à exercer",
+    "clickHere": "Cliquez ici",
+    "assetProtection": "Protection des actifs",
+    "assetProtectionText1": "Les portefeuilles des clients sont gérés par MEYE ASSET MANAGER mais détenus principalement dans des comptes à la Banque Nationale du Canada, plus précisément sa division appelée Réseau indépendant de la Banque Nationale (RIBN). Certains comptes sont détenus chez Interactive Brokers Canada.",
+    "assetProtectionText2": "RIBN est une société financière qui est membre du Fonds canadien de protection des épargnants. Ce dernier protège vos fonds jusqu'à 1 000 000 $ (et plus, dans certains cas), dans le cas très peu probable de l'insolvabilité de l'institution financière.",
+    "assetProtectionText3": "Dans le cadre de son mandat, MEYE ASSET MANAGER transmet des instructions à RIBN, mais n'a en aucun cas accès aux actifs contenus dans votre compte.",
+    "privacyPolicy": "Politique de confidentialité",
+    "privacyPolicyText1": "Afin de se conformer à la Loi sur la protection des renseignements personnels et les documents électroniques (« LPRPDE ») et à la Loi sur la protection des renseignements personnels dans le secteur privé (Québec), MEYE ASSET MANAGER a mis en place une politique de confidentialité.",
+    "privacyPolicyText2": "Martin Lalonde, responsable de la conformité de MEYE ASSET MANAGER, est responsable de la confidentialité des renseignements personnels.",
+    "privacyPolicyTitle": "Politique de confidentialité",
+    "download": "Télécharger",
+    "complaintHandling": "Politique de traitement des plaintes",
+    "complaintHandlingText": "Nous nous engageons à garantir que toutes les plaintes sont traitées rapidement, équitablement et de manière transparente. Notre objectif est de résoudre efficacement les situations qui sont à l'origine de vos préoccupations.",
+    "complaintHandlingSummary": "Résumé de la politique de traitement des plaintes"
+  }
+}

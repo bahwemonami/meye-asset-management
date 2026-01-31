@@ -1,9 +1,11 @@
-import { Component, OnInit, signal, inject, AfterViewInit, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, signal, inject, AfterViewInit, ChangeDetectionStrategy, ViewEncapsulation, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ImageMappingService } from '../../services/image-mapping.service';
 import { AosService } from '../../services/aos.service';
+import { TranslationService } from '../../services/translation.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-private-management',
@@ -14,9 +16,9 @@ import { AosService } from '../../services/aos.service';
   template: `
     <!-- Hero Section - Identique à Rivemont -->
     <section class="template-part-hero">
+      <img [src]="imageService.getImage('gestion-privee-hero')" alt="" class="gl-responsive-background gl-responsive-background--desktop gl-img-grey" />
       <div class="content">
-        <h1 class="title">Gestion privée</h1>
-        <img [src]="imageService.getImage('gestion-privee-hero')" alt="" class="gl-responsive-background gl-responsive-background--desktop gl-img-grey" />
+        <h1 class="title">{{ t.get('privateManagement.title') }}</h1>
       </div>
     </section>
 
@@ -27,7 +29,7 @@ import { AosService } from '../../services/aos.service';
         <!-- Page Filter (Select) -->
         <div class="page-filter">
           <select class="gl-select" [ngModel]="currentSection()" (ngModelChange)="onSectionChange($event)">
-            @for (section of sections; track section.id) {
+            @for (section of sections(); track section.id) {
               <option [value]="section.id">{{ section.title }}</option>
             }
           </select>
@@ -43,88 +45,72 @@ import { AosService } from '../../services/aos.service';
               <div class="description gl-text-editor">
                 @switch (currentSection()) {
                   @case ('who') {
-                    <p>La gestion privée s’adresse à une clientèle ayant des actifs de plus de 250 000 $ à investir et qui recherche une solution complète et performante.</p>
+                    <p>{{ t.get('privateManagement.who.text1') }}</p>
                     
-                    <h4 class="text-color--blue text-color--light-blue">On compte parmi nos clients :</h4>
+                    <h4 class="text-color--blue text-color--light-blue">{{ t.get('privateManagement.who.clientsTitle') }}</h4>
                     <ul>
-                      <li>Des entrepreneurs et des dirigeants d’entreprises;</li>
-                      <li>Des professionnels, des artistes ou des sportifs;</li>
-                      <li>Des détenteurs de fortune de deuxième génération;</li>
-                      <li>Des institutions et des entreprises privées.</li>
-                      <li>Des épargnants efficaces.</li>
+                      @for (client of getArray('privateManagement.who.clients'); track $index) {
+                        <li>{{ client }}</li>
+                      }
                     </ul>
 
-                    <h4 class="text-color--light-blue">La gestion privée chez Rivemont vous offre :</h4>
+                    <h4 class="text-color--light-blue">{{ t.get('privateManagement.who.offeringTitle') }}</h4>
                     <ul>
-                      <li>Une gestion professionnelle</li>
-                      <li>Un alignement sur une politique de placement précise</li>
-                      <li>Une optimisation fiscale</li>
-                      <li>Des rapports mensuels détaillés</li>
-                      <li>Des frais de gestion avantageux</li>
-                      <li>Un accès à une équipe externe multidisciplinaire pouvant répondre à tous vos besoins financiers, notamment la fiscalité et la comptabilité.</li>
+                      @for (offering of getArray('privateManagement.who.offering'); track $index) {
+                        <li>{{ offering }}</li>
+                      }
                     </ul>
 
-                    <p>N’hésitez pas à nous contacter afin que nous puissions évaluer votre situation financière et vous recommander une solution personnalisée qui reflète vos besoins et vos objectifs de placements.</p>
+                    <p>{{ t.get('privateManagement.who.text2') }}</p>
                   }
                   @case ('cycle') {
-                    <p>Notre cycle de gestion est une approche structurée conçue pour optimiser votre expérience d’investissement :</p>
+                    <p>{{ t.get('privateManagement.cycle.text') }}</p>
                     <ol>
-                      <li><strong>Évaluation initiale :</strong> Comprendre vos objectifs financiers, votre tolérance au risque et votre horizon de placement</li>
-                      <li><strong>Développement de stratégie :</strong> Création d’une politique d’investissement personnalisée</li>
-                      <li><strong>Mise en œuvre :</strong> Exécution de la stratégie d’investissement avec précision</li>
-                      <li><strong>Surveillance :</strong> Suivi continu de la performance du portefeuille</li>
-                      <li><strong>Rééquilibrage :</strong> Ajustements réguliers pour maintenir l’allocation optimale</li>
-                      <li><strong>Rapports :</strong> Relevés mensuels détaillés et revues de performance</li>
+                      @for (step of getArray('privateManagement.cycle.steps'); track $index) {
+                        <li>{{ step }}</li>
+                      }
                     </ol>
                   }
                   @case ('philosophy') {
-                    <p>Chez Rivemont, nous croyons que le prix d’un actif n’est pas toujours égal à sa valeur intrinsèque et qu’il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs.</p>
-                    <p>Puisque ces biais sont connus et qu’ils se répètent dans le temps, il est possible de prendre des décisions d’investissement basées sur ces comportements récurrents.</p>
-                    <p>Nous nous appuyons sur des stratégies basées sur l’effet momentum, dont l’analyse technique et le suivi de tendance. Le gestionnaire utilise une approche de type descendante en établissant en premier lieu les secteurs dont le potentiel à la hausse est le plus important.</p>
+                    <p>{{ t.get('privateManagement.philosophy.text1') }}</p>
+                    <p>{{ t.get('privateManagement.philosophy.text2') }}</p>
+                    <p>{{ t.get('privateManagement.philosophy.text3') }}</p>
                   }
                   @case ('methodology') {
-                    <p>Notre méthodologie d’investissement combine une analyse rigoureuse avec une exécution disciplinée :</p>
+                    <p>{{ t.get('privateManagement.methodology.text') }}</p>
                     <ul>
-                      <li>Analyse macro-économique pour identifier les tendances du marché</li>
-                      <li>Rotation sectorielle basée sur les indicateurs de momentum</li>
-                      <li>Analyse technique pour les points d’entrée et de sortie</li>
-                      <li>Gestion des risques par la diversification</li>
-                      <li>Rééquilibrage régulier du portefeuille</li>
+                      @for (point of getArray('privateManagement.methodology.points'); track $index) {
+                        <li>{{ point }}</li>
+                      }
                     </ul>
                   }
                   @case ('strategies') {
-                    <p>Nous offrons diverses stratégies d’investissement adaptées à différents profils de clients :</p>
+                    <p>{{ t.get('privateManagement.strategies.text') }}</p>
                     <ul>
-                      <li><strong>Stratégie de croissance :</strong> Accent sur l'appréciation du capital</li>
-                      <li><strong>Stratégie équilibrée :</strong> Mélange de croissance et d’actifs productifs de revenus</li>
-                      <li><strong>Stratégie conservatrice :</strong> Accent sur la préservation du capital</li>
-                      <li><strong>Stratégies alternatives :</strong> Accès à nos fonds spécialisés</li>
+                      @for (strategy of getArray('privateManagement.strategies.list'); track $index) {
+                        <li>{{ strategy }}</li>
+                      }
                     </ul>
                   }
                   @case ('why') {
-                    <p>Pourquoi Rivemont ?</p>
+                    <p>{{ t.get('privateManagement.why.text') }}</p>
                     <ul>
-                      <li>Plus de 15 ans d’expérience éprouvée</li>
-                      <li>Service personnalisé avec accès direct aux gestionnaires</li>
-                      <li>Structure de frais transparente</li>
-                      <li>Gestion active qui s’adapte aux conditions du marché</li>
-                      <li>Services complets de planification financière</li>
-                      <li>Forte attention à la gestion des risques</li>
+                      @for (point of getArray('privateManagement.why.points'); track $index) {
+                        <li>{{ point }}</li>
+                      }
                     </ul>
                   }
                   @case ('cfa') {
-                    <p>Le titre CFA (Chartered Financial Analyst) est la référence en matière de gestion de placements. Voici pourquoi choisir un conseiller détenteur du titre CFA* est important :</p>
+                    <p>{{ t.get('privateManagement.cfa.text') }}</p>
                     <ul>
-                      <li>Formation rigoureuse en analyse d’investissement et gestion de portefeuille</li>
-                      <li>Engagement envers les normes professionnelles les plus élevées</li>
-                      <li>Adhésion à un code d’éthique strict</li>
-                      <li>Exigences de formation continue</li>
-                      <li>Reconnaissance mondiale de l’expertise</li>
+                      @for (point of getArray('privateManagement.cfa.points'); track $index) {
+                        <li>{{ point }}</li>
+                      }
                     </ul>
                   }
                 }
               </div>
-              <a routerLink="/contact" class="gl-button" target="_self">Contactez-nous</a>
+              <a [routerLink]="langService.buildUrl('contact')" class="gl-button" target="_self">{{ t.get('common.contactUs') }}</a>
             </div>
           </section>
         </div>
@@ -135,7 +121,7 @@ import { AosService } from '../../services/aos.service';
         <section class="section-sidebar">
           <div class="content">
             <ul>
-              @for (section of sections; track section.id) {
+              @for (section of sections(); track section.id) {
                 <li [class.active]="currentSection() === section.id">
                   <a (click)="onSectionChange(section.id)" [routerLink]="[]" [queryParams]="getQueryParams(section.id)">
                     {{ section.title }}
@@ -154,19 +140,21 @@ import { AosService } from '../../services/aos.service';
 export class PrivateManagementComponent implements OnInit, AfterViewInit {
   imageService = inject(ImageMappingService);
   aosService = inject(AosService);
+  t = inject(TranslationService);
+  langService = inject(LanguageService);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   currentSection = signal('who');
 
-  sections = [
-    { id: 'who', title: 'À qui s’adresse la gestion privée' },
-    { id: 'cycle', title: 'Cycle de gestion' },
-    { id: 'philosophy', title: 'Philosophie de gestion' },
-    { id: 'methodology', title: 'La méthodologie de gestion' },
-    { id: 'strategies', title: 'Les stratégies de placement' },
-    { id: 'why', title: 'Pourquoi Rivemont ?' },
-    { id: 'cfa', title: 'Pourquoi choisir un conseiller détenteur du titre CFA* ?' }
-  ];
+  sections = computed(() => [
+    { id: 'who', title: this.t.get('privateManagement.who.title') },
+    { id: 'cycle', title: this.t.get('privateManagement.cycle.title') },
+    { id: 'philosophy', title: this.t.get('privateManagement.philosophy.title') },
+    { id: 'methodology', title: this.t.get('privateManagement.methodology.title') },
+    { id: 'strategies', title: this.t.get('privateManagement.strategies.title') },
+    { id: 'why', title: this.t.get('privateManagement.why.title') },
+    { id: 'cfa', title: this.t.get('privateManagement.cfa.title') }
+  ]);
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
@@ -218,6 +206,12 @@ export class PrivateManagementComponent implements OnInit, AfterViewInit {
   }
 
   getCurrentSectionTitle(): string {
-    return this.sections.find(s => s.id === this.currentSection())?.title || '';
+    const section = this.sections().find(s => s.id === this.currentSection());
+    return typeof section?.title === 'string' ? section.title : '';
+  }
+
+  getArray(key: string): string[] {
+    const value = this.t.get(key);
+    return Array.isArray(value) ? value : [];
   }
 }

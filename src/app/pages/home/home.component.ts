@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
 import { AosService } from '../../services/aos.service';
+import { TranslationService } from '../../services/translation.service';
+import { LanguageService } from '../../services/language.service';
 import { register } from 'swiper/element/bundle';
 
 // Enregistrer les éléments Swiper
@@ -23,10 +25,10 @@ register();
       <img [src]="imageService.getImage('home-hero')" alt="" class="gl-responsive-background gl-responsive-background--desktop gl-img-grey" loading="eager" fetchpriority="high" />
       <div class="content">
         <div class="title-holder">
-          <h1>Passion. Rigueur. Résultats.</h1>
+          <h1>{{ t.get('home.heroTitle') }}</h1>
         </div>
-        <a routerLink="/firm-profile" class="gl-button" target="_self" aria-label="En savoir plus sur MEYE ASSET MANAGER">
-          En savoir plus
+        <a [routerLink]="langService.buildUrl('firm-profile')" class="gl-button" target="_self" [attr.aria-label]="t.get('common.learnMore') + ' sur MEYE ASSET MANAGER'">
+          {{ t.get('common.learnMore') }}
         </a>
       </div>
     </section>
@@ -36,20 +38,20 @@ register();
       <div class="content">
         <div class="col">
           <div class="description gl-text-editor" data-aos="fade">
-            <h2>Notre mission</h2>
+            <h2>{{ t.get('home.mission') }}</h2>
             <p>
-              MEYE ASSET MANAGER a comme mission d'offrir une gestion de portefeuille personnalisée et innovante, alignée sur les objectifs uniques de chaque investisseur.
+              {{ t.get('home.missionText1') }}
             </p>
             <p>
-              Nous favorisons une gestion active et disciplinée, avec comme objectifs d'optimiser la performance et minimiser les risques.
+              {{ t.get('home.missionText2') }}
             </p>
             <p>
-              Faire de chaque relation un partenariat durable et fructueux, en privilégiant la rigueur, l'éthique et la transparence.
+              {{ t.get('home.missionText3') }}
             </p>
           </div>
           <div class="button-holder" data-aos="fade-up">
-            <a routerLink="/firm-profile" class="gl-button gl-button--blue-dark" target="_self">
-              En savoir plus
+            <a [routerLink]="langService.buildUrl('firm-profile')" class="gl-button gl-button--blue-dark" target="_self">
+              {{ t.get('common.learnMore') }}
             </a>
           </div>
         </div>
@@ -67,8 +69,8 @@ register();
         <div class="image-holder">
           <img [src]="imageService.getImage('team-preview')" alt="Notre équipe" class="attachment-full size-full" loading="lazy" />
         </div>
-        <a routerLink="/our-team" class="gl-button gl-button--team-preview" target="_self">
-          Découvrez l’équipe
+        <a [routerLink]="langService.buildUrl('our-team')" class="gl-button gl-button--team-preview" target="_self">
+          {{ t.get('home.discoverTeam') }}
           <span class="gl-button__arrow" aria-hidden="true"></span>
         </a>
       </div>
@@ -78,14 +80,14 @@ register();
     <section class="section-chart">
       <div class="content">
         <div class="description" data-aos="fade">
-          <h2>Rendements</h2>
+          <h2>{{ t.get('home.performance') }}</h2>
         </div>
         <div class="image-holder" data-aos="fade">
-          <img [src]="imageService.getImage('performance-chart')" alt="Rendements" class="attachment-large size-large" width="729" height="403" loading="eager" />
+          <img [src]="imageService.getImage('performance-chart')" [alt]="t.get('home.performance')" class="attachment-large size-large" width="729" height="403" loading="eager" />
         </div>
         <div class="button-holder" data-aos="fade-up">
-          <a routerLink="/performance" class="gl-button gl-button--blue-dark" target="_self">
-            Notre rendement
+          <a [routerLink]="langService.buildUrl('performance')" class="gl-button gl-button--blue-dark" target="_self">
+            {{ t.get('home.ourPerformance') }}
           </a>
         </div>
       </div>
@@ -94,7 +96,7 @@ register();
     <!-- Communications Section -->
     <section class="section-posts" #communicationsSection>
       <div class="content">
-        <h2 class="title" [class.visible]="isCommunicationsVisible" data-aos="fade">Communications</h2>
+        <h2 class="title" [class.visible]="isCommunicationsVisible" data-aos="fade">{{ t.get('home.communications') }}</h2>
         <div class="slider" js-slider-posts="container" data-aos="fade-up">
           <swiper-container 
             class="swiper" 
@@ -116,7 +118,7 @@ register();
                   <div class="post-content">
                     <div class="post-info">
                       <div class="post-categories">
-                        <div class="post-category gl-pill">Lettre financière</div>
+                        <div class="post-category gl-pill">{{ t.get('home.financialLetter') }}</div>
                       </div>
                       <div class="post-title">{{ letter.title }}</div>
                     </div>
@@ -132,7 +134,7 @@ register();
           </swiper-container>
         </div>
         <div class="button-holder" data-aos="fade-up">
-          <a routerLink="/communications" class="gl-button gl-button--blue-dark">Tous les articles</a>
+          <a [routerLink]="langService.buildUrl('communications')" class="gl-button gl-button--blue-dark">{{ t.get('home.allArticles') }}</a>
         </div>
       </div>
     </section>
@@ -142,6 +144,8 @@ register();
 export class HomeComponent implements AfterViewInit {
   imageService = inject(ImageMappingService);
   aosService = inject(AosService);
+  t = inject(TranslationService);
+  langService = inject(LanguageService);
   isCommunicationsVisible = false;
   
   @ViewChild('communicationsSection', { static: false }) communicationsSection?: ElementRef;

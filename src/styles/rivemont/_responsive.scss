@@ -8,64 +8,8 @@
 // ============================================================================
 // HEADER RESPONSIVE
 // ============================================================================
-@media only screen and (max-width: $breakpoint-lg) {
-  #site-header,
-  .site-header,
-  header {
-    padding: 0px 80px;
-  }
-  
-  .header-container,
-  header .content {
-    height: 141.516px !important;
-    padding: 100px 0px 0px !important;
-  }
-}
-
-@media only screen and (max-width: $breakpoint-md) {
-  #site-header,
-  .site-header,
-  header {
-    padding: 0px 40px;
-  }
-}
-
-@media only screen and (max-width: $breakpoint-tablet) {
-  #site-header,
-  .site-header,
-  header {
-    padding: 0px 40px;
-  }
-  
-  .header-nav,
-  nav[js-site-nav="container"] {
-    display: none;
-  }
-  
-  .menu-toggle,
-  .hamburger {
-    display: flex;
-  }
-}
-
-@media only screen and (max-width: $breakpoint-mobile) {
-  #site-header,
-  .site-header,
-  header {
-    padding: 0px 20px;
-  }
-  
-  .header-container,
-  header .content {
-    height: auto !important;
-    min-height: 62px;
-    padding: 20px 0px 0px !important;
-  }
-  
-  header .gl-button--blue-dark {
-    display: none;
-  }
-}
+// Les styles du header sont maintenant dans src/styles.scss - copie exacte de Rivemont
+// Pas de styles conflictuels ici
 
 // ============================================================================
 // HERO RESPONSIVE

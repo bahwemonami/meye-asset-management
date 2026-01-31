@@ -1,0 +1,287 @@
+{
+  "common": {
+    "clientAccess": "Client Access",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "submit": "Submit",
+    "subscribe": "Subscribe",
+    "all": "All",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu"
+  },
+  "header": {
+    "privateManagement": "Private Wealth",
+    "performance": "Performance",
+    "financialPlanning": "Financial Planning",
+    "contact": "Contact",
+    "switchToEn": "Switch to En",
+    "switchToFr": "Switch to Fr",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu",
+    "takeAction": "Take action",
+    "becomeClient": "Become a customer",
+    "about": "About",
+    "firmProfile": "Profile",
+    "ourTeam": "Our Team",
+    "governance": "Governance",
+    "communications": "Communications",
+    "alternativeFunds": "Alternative Funds",
+    "takeActionBecomeClient": "Take action, become a customer."
+  },
+  "footer": {
+    "newsletterTitle": "Subscribe to our financial newsletter",
+    "emailPlaceholder": "Email address",
+    "takeActionTitle": "Take action, become a customer.",
+    "privateManagement": "Private Wealth",
+    "performance": "Performance",
+    "alternativeFunds": "Alternative Funds",
+    "contact": "Contact",
+    "login": "Log In",
+    "copyright": "© {{year}}, Rivemont Investments. All rights reserved."
+  },
+  "home": {
+    "heroTitle": "Passion. Rigor. Results.",
+    "mission": "Our Mission",
+    "missionText1": "Rivemont's mission is to offer personalized and innovative portfolio management, aligned with each investor's unique goals.",
+    "missionText2": "We focus on active and disciplined management, with the aim of optimizing performance while minimizing risk.",
+    "missionText3": "Our goal is to build lasting, successful partnerships based on rigour, ethics, and transparency.",
+    "discoverTeam": "Discover Our Team",
+    "performance": "Performance",
+    "ourPerformance": "Our Performance",
+    "communications": "Communications",
+    "financialLetter": "Financial Letter",
+    "allArticles": "View All Posts"
+  },
+  "privateManagement": {
+    "title": "Private Wealth",
+    "who": {
+      "title": "To whom is private wealth intended for?",
+      "text1": "Private wealth management is intended for clients with assets of more than $250,000 to invest who are looking for a complete and performing solution.",
+      "clientsTitle": "Our clients include:",
+      "clients": [
+        "Entrepreneurs and company officers",
+        "Holders of registered accounts (LIRA, RRSP, TFSA)",
+        "Professionals, artists, and athletes",
+        "Second generation wealth inheritors",
+        "Private institutions and companies"
+      ],
+      "offeringTitle": "The private wealth offering at Rivemont provides you with:",
+      "offering": [
+        "Professional management with continuous monitoring",
+        "Portfolio aligned to a precise investment policy",
+        "Fiscal optimization",
+        "Detailed monthly reporting",
+        "Competitive management fees",
+        "Access to an external multidisciplinary team able to help you with all your financial needs, such as financial planning, tax planning and accounting, etc."
+      ],
+      "text2": "Please do not hesitate to contact us so that we can assess your financial situation and recommend a personalized solution which reflects both your needs and investment goals."
+    },
+    "cycle": {
+      "title": "Management Cycle",
+      "text": "Our cycle of management is a structured approach designed to optimize your investment experience:",
+      "steps": [
+        "Initial assessment: Understanding your financial goals, risk tolerance and investment horizon",
+        "Strategy development: Creation of a personalized investment policy",
+        "Implementation: Execution of the investment strategy with precision",
+        "Monitoring: Continuous tracking of portfolio performance",
+        "Rebalancing: Regular adjustments to maintain optimal allocation",
+        "Reporting: Detailed monthly statements and performance reviews"
+      ]
+    },
+    "philosophy": {
+      "title": "Our Investment Philosophy",
+      "text1": "At Rivemont, we believe that the price of an asset is not always equal to its intrinsic value since the price is influenced by several factors, including several cognitive biases on the part of investors.",
+      "text2": "Since these biases are known, and repeat themselves over time, it is possible to make investment decisions based on these recurring behaviors.",
+      "text3": "We rely on momentum-based strategies including technical analysis and trend monitoring. The manager uses a top-down approach by establishing first which sectors have the highest growth potential to subsequently, within these identified sectors, to select specific securities."
+    },
+    "methodology": {
+      "title": "Our Investment Methodology",
+      "text": "Our investment methodology combines rigorous analysis with disciplined execution:",
+      "points": [
+        "Macro-economic analysis to identify market trends",
+        "Sector rotation based on momentum indicators",
+        "Technical analysis for entry and exit points",
+        "Risk management through diversification",
+        "Regular portfolio rebalancing"
+      ]
+    },
+    "strategies": {
+      "title": "Investment Strategies",
+      "text": "We offer various investment strategies adapted to different client profiles:",
+      "list": [
+        "Growth strategy: Focus on capital appreciation",
+        "Balanced strategy: Mix of growth and income-producing assets",
+        "Conservative strategy: Focus on capital preservation",
+        "Alternative strategies: Access to our specialized funds"
+      ]
+    },
+    "why": {
+      "title": "Why Rivemont?",
+      "text": "Why Rivemont?",
+      "points": [
+        "Over 15 years of proven experience",
+        "Personalized service with direct access to managers",
+        "Transparent fee structure",
+        "Active management that adapts to market conditions",
+        "Comprehensive financial planning services",
+        "Strong focus on risk management"
+      ]
+    },
+    "cfa": {
+      "title": "Why choose a CFA Charterholder*?",
+      "text": "The CFA (Chartered Financial Analyst) designation is the reference in portfolio management. Here's why choosing an advisor holding the CFA* designation is important:",
+      "points": [
+        "Rigorous training in investment analysis and portfolio management",
+        "Commitment to the highest professional standards",
+        "Adherence to a strict code of ethics",
+        "Continuing education requirements",
+        "Global recognition of expertise"
+      ]
+    }
+  },
+  "firmProfile": {
+    "title": "Profile",
+    "text1": "Founded in 2010, Rivemont is a portfolio management firm offering both traditional and innovative investment strategies to investors seeking to achieve satisfactory returns along with an effective management of market volatility. At Rivemont, we offer the following investment strategies:",
+    "traditionalStrategies": "Traditional strategies for a private wealth clientele; and",
+    "alternativeStrategiesTitle": "Alternative strategies, meaning strategies focusing on:",
+    "alternativeStrategies": [
+      "The cryptocurrencies",
+      "The micro-capitalisations",
+      "An Absolute Return"
+    ],
+    "text2": "The three alternative funds may be used in the construction of Rivemont clients' portfolios when, in Rivemont's opinion, these investment strategies are suitable for them.",
+    "text3": "As an independent portfolio manager, Rivemont aims to build a long-term, trusting relationship with each of its clients. Do not hesitate to contact us so that we can help you reach your financial goals.",
+    "discoverTeam": "Discover Our Team"
+  },
+  "performance": {
+    "title": "Performance",
+    "equities": "Equities",
+    "asOf": "December 31st, 2025",
+    "description": "Description",
+    "descriptionText": "At Rivemont, we believe that the price of an asset is not always equal to its intrinsic value since the price is influenced by several factors, including several cognitive biases on the part of investors. Since these biases are known, and repeat themselves over time, it is possible to make investment decisions based on these recurring behaviors. We rely on momentum-based strategies including technical analysis and trend monitoring. The manager uses a top-down approach by establishing first which sectors have the highest growth potential to subsequently, within these identified sectors, to select specific securities.",
+    "investmentObjective": "Investment Objective",
+    "investmentObjectiveText": "The investment objective of the equity asset class is to generate a higher return than its benchmark.",
+    "performanceTable": "Performance (%)",
+    "oneMonth": "1 mo.",
+    "threeMonths": "3 mos.",
+    "sixMonths": "6 mos.",
+    "ytd": "YTD",
+    "oneYear": "1 yr",
+    "twoYears": "2 yrs",
+    "fiveYears": "5 yrs",
+    "tenYears": "10 yrs",
+    "inception": "Incept.",
+    "equitiesLabel": "Equities",
+    "benchmark": "Benchmark",
+    "explanatoryNotes": "Explanatory notes",
+    "explanatoryNotesText": "Returns are from the composite of all equities held by the private wealth clients of Rivemont under representative code Q2F2 and are gross of fees. Before January 1, 2019, the benchmark is made up of 100% of the S&P/TSX Composite Index and, thereafter, of 80% of the S&P/TSX Composite Index and 20% of the S&P 500 Index. Future investment results will differ from past results. This document does not constitute a recommendation nor an investment advice and is presented for information purposes only.",
+    "overview": "Overview",
+    "inceptionDate": "Inception Date",
+    "inceptionDateValue": "September 1, 2010",
+    "managementStyle": "Strategy",
+    "managementStyleValue": "Technical and Trend",
+    "firmAssets": "Firm assets",
+    "firmAssetsValue": "$153 million",
+    "topHoldings": "Top individual holdings",
+    "activitySectors": "Sectors of activity",
+    "manager": "Portfolio Manager",
+    "managerText": "Martin Lalonde, MBA, CFA, is the portfolio manager responsible for the investment decisions. He has many years of experience in the financial markets and held, before founding Rivemont Investments, the position of senior analyst, investment, mergers and acquisitions for a major Canadian agency.",
+    "aboutRivemont": "About Rivemont",
+    "aboutRivemontText": "Founded in 2010, Rivemont is a portfolio management firm with around $153 million in assets under management. The firm offers performing investment strategies to a private wealth clientele, brokers, consultants and financial planners."
+  },
+  "financialPlanning": {
+    "title": "Financial Planning",
+    "essentialTool": "An essential tool for building your future",
+    "taxPlanning": "Tax Planning",
+    "businessOwners": "Planning for Business Owners",
+    "estatePlanning": "Estate Planning",
+    "text1": "At Rivemont Investments, we view financial planning as a natural extension of our role as portfolio managers.",
+    "text1b": "It allows us to guide you through your most important financial decisions.",
+    "ourRole": "Our role is to:",
+    "rolePoints": [
+      "Define your priorities and objectives.",
+      "Identify the most appropriate strategies to achieve them.",
+      "Adjust your plan over time according to your needs and changing market conditions."
+    ],
+    "concreteSolutions": "Concrete Solutions",
+    "solutionsText": "We cover all the key aspects required for a solid financial plan:",
+    "solutionsPoints": [
+      "Tax optimization.",
+      "Estate planning.",
+      "Retirement preparation.",
+      "Withdrawal strategies.",
+      "Risk management and insurance."
+    ],
+    "text2": "Please do not hesitate to contact us so that we can assess your financial situation and recommend a personalized solution which reflects both your needs and investment goals."
+  },
+  "contact": {
+    "title": "Contact",
+    "address1": "160 boul. de l'Hôpital, suite 202",
+    "address1City": "Gatineau, Québec J8T 8J1",
+    "address2": "19 rue Le Royer Ouest, suite 300",
+    "address2City": "Montreal, Québec H2Y 1W4",
+    "phone": "Phone :",
+    "email": "Email :",
+    "writeToUs": "Write to Us",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "emailPlaceholder": "Email",
+    "phonePlaceholder": "Phone",
+    "message": "Message",
+    "submit": "Submit",
+    "successMessage": "Thank you for your message! We will respond as soon as possible."
+  },
+  "becomeClient": {
+    "title": "Take action, become a customer",
+    "formTitle": "Become a Customer",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "postalCode": "3 characters of postal code*",
+    "assetValue": "Approximate value of assets to manage*",
+    "source": "How did you hear about us?",
+    "need": "What is the need to address?",
+    "contactPreference": "Preferred method of contact",
+    "phoneOption": "Phone",
+    "emailOption": "Email",
+    "submit": "Submit",
+    "successMessage": "Thank you for your interest! We will contact you as soon as possible."
+  },
+  "alternativeFunds": {
+    "title": "Alternative Funds",
+    "longShort": "Rivemont Long Short Fund",
+    "crypto": "Rivemont Crypto Fund",
+    "microcap": "Rivemont MicroCap Fund"
+  },
+  "communications": {
+    "title": "Communications",
+    "all": "All",
+    "journal": "Journal Les Affaires",
+    "letter": "Financial Letter",
+    "media": "Rivemont in the Media"
+  },
+  "team": {
+    "title": "Our Team"
+  },
+  "governance": {
+    "title": "Governance",
+    "registration": "Duly registered with the authorities",
+    "registrationText": "Rivemont is registered as a portfolio manager in Quebec, Ontario, British Columbia, Alberta, Saskatchewan, Manitoba and New Brunswick, as an investment fund manager in Quebec and Ontario, as a derivatives portfolio manager in Quebec, as an exempt market dealer in Quebec, Ontario, Saskatchewan, Manitoba and New Brunswick and as a financial planner in Quebec.",
+    "registerLink": "Register of firms and individuals authorized to practice",
+    "clickHere": "Click here",
+    "assetProtection": "Protection of your assets",
+    "assetProtectionText1": "The client portfolios are managed by Rivemont but held in accounts at National Bank of Canada, more specifically with a divison called the National Bank Independent Network (NBIN).",
+    "assetProtectionText2": "NBIN is a financial institution that administers assets of more than $200 billion and is a member of the Canadian Investor Protection Fund. That fund protects your assets to a maximum $1,000,000 (and more in certain cases) in the very unlikely possibility of an insolvency of the financial institution.",
+    "assetProtectionText3": "By virtue of its mandate, Rivemont transmit instructions to NBIN to buy and sell securities within your account, but in no circumstances Rivemont have access to the assets held in your account.",
+    "privacyPolicy": "Privacy Policy",
+    "privacyPolicyText1": "In order to comply with the Personal Information Protection and Electronic Documents Act (\"PIPEDA\") and the Act respecting the protection of personal information in the private sector (Quebec), Rivemont has implemented a privacy policy.",
+    "privacyPolicyText2": "Martin Lalonde, Chief Compliance Officer at Rivemont, is the person responsible for the protection of personal information.",
+    "privacyPolicyTitle": "Privacy Policy",
+    "download": "Download",
+    "complaintHandling": "Complaint Handling and Dispute Resolution Policy",
+    "complaintHandlingText": "We are committed to ensuring that every complaint is addressed promptly, fairly, and transparently. Our goal is to effectively resolve the issues that are causing your concerns.",
+    "complaintHandlingSummary": "Summary of our Complaint Handling and Dispute Resolution Policy"
+  }
+}

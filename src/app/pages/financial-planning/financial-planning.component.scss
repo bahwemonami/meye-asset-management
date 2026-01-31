@@ -3,40 +3,28 @@
    ============================================================================ */
 
 .template-builder-page-container .template-part-hero {
-  margin-bottom: max(80px, 6.25vw);
+  background-color: #000;
+  border-radius: 0 0 24px 24px;
+  box-sizing: border-box;
+  display: block;
+  height: 300px;
+  margin-bottom: 80px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+
+  @media only screen and (min-width: 1024px) {
+    height: 543px;
+    border-radius: 0 0 max(50px, 3.6458333333vw) max(50px, 3.6458333333vw);
+    margin-bottom: max(120px, 8.5416666667vw);
+  }
 
   @media only screen and (max-width: 1189px) {
     margin-bottom: 40px;
   }
-}
 
-.template-builder-page-container .template-part-hero .content {
-  background-color: #51b2d6;
-  border-radius: 0 0 24px 24px;
-  box-sizing: border-box;
-  display: flex;
-  height: max(300px, 28.28125vw);
-  justify-content: center;
-  overflow: hidden;
-  padding: max(160px, 13.5416666667vw) 14px max(60px, 5.2083333333vw);
-  position: relative;
-
-  @media only screen and (min-width: 768px) {
-    padding-left: 35px;
-    padding-right: 35px;
-    border-radius: 0 0 max(50px, 3.6458333333vw) max(50px, 3.6458333333vw);
-  }
-
-  @media only screen and (min-width: 1280px) {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-
-  @media only screen and (min-width: 1600px) {
-    padding-left: 8.59375vw;
-    padding-right: 8.59375vw;
-  }
-
+  /* Gradient overlay - Identique à Rivemont */
   &:after {
     background: linear-gradient(180deg, #184068, transparent);
     content: "";
@@ -50,23 +38,48 @@
     z-index: 5;
   }
 
-  .title {
-    color: #fff;
-    font-family: peridot-pe-variable, sans-serif;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.04em;
-    left: 0;
+  .content {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 160px 14px 60px;
     position: relative;
-    right: 0;
     text-align: center;
-    text-transform: none;
-    transform: none;
-    z-index: 6;
+    z-index: 7;
 
     @media only screen and (min-width: 768px) {
-      font-size: max(45px, 3.125vw);
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      padding: 260px 165px 100px;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
+    @media only screen and (min-width: 1600px) {
+      padding-left: 8.59375vw;
+      padding-right: 8.59375vw;
+    }
+
+    .title {
+      color: #fff;
+      font-family: peridot-pe-variable, sans-serif;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.04em;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      z-index: 6;
+
+      @media only screen and (min-width: 768px) {
+        font-size: max(45px, 3.125vw);
+      }
     }
   }
 

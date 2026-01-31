@@ -2,6 +2,8 @@ import { Component, inject, ChangeDetectionStrategy, ViewEncapsulation } from '@
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
+import { TranslationService } from '../../services/translation.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-performance',
@@ -14,9 +16,9 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     <div class="template-rendements-page-container">
     <!-- Hero Section - Identique à Rivemont -->
     <section class="template-part-hero">
+      <img [src]="imageService.getImage('performance-hero')" alt="" class="gl-responsive-background gl-responsive-background--desktop gl-img-grey" />
       <div class="content">
-        <h1 class="title">Rendements</h1>
-        <img [src]="imageService.getImage('performance-hero')" alt="" class="gl-responsive-background gl-responsive-background--desktop gl-img-grey" />
+        <h1 class="title">{{ t.get('performance.title') }}</h1>
       </div>
     </section>
 
@@ -24,8 +26,8 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     <section class="section-intro">
       <div class="content">
         <div class="description">
-          <h2>Actions</h2>
-          <p>Au 31 décembre 2025</p>
+          <h2>{{ t.get('performance.equities') }}</h2>
+          <p>{{ t.get('performance.asOf') }}</p>
         </div>
         <div class="image-holder">
           <img [src]="imageService.getImage('clipboard-1')" alt="" />
@@ -38,14 +40,14 @@ import { ImageMappingService } from '../../services/image-mapping.service';
       <div class="content">
         <div class="col">
           <div class="description">
-            <p>Chez Rivemont, nous croyons que le prix d’un actif n’est pas toujours égal à sa valeur intrinsèque et qu’il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs. Puisque ces biais sont connus et qu’ils se répètent dans le temps, il est possible de prendre des décisions d’investissement basées sur ces comportements récurrents. Nous nous appuyons sur des stratégies basées sur l’effet momentum, dont l’analyse technique et le suivi de tendance. Le gestionnaire utilise une approche de type descendante en établissant en premier lieu les secteurs dont le potentiel à la hausse est le plus important pour ensuite sélectionner les titres spécifiques parmi ces secteurs.</p>
+            <p>{{ t.get('performance.descriptionText') }}</p>
           </div>
         </div>
         <div class="col">
           <div class="banner">
             <div class="banner-description">
-              <h2>Objectif de placement</h2>
-              <p>L’objectif de placement de la classe d’actifs Actions est de générer un rendement supérieur à son indice de référence.</p>
+              <h2>{{ t.get('performance.investmentObjective') }}</h2>
+              <p>{{ t.get('performance.investmentObjectiveText') }}</p>
             </div>
           </div>
         </div>
@@ -56,27 +58,27 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     <section class="section-table">
       <div class="content">
         <div class="description description--top">
-          <h2>Rendements</h2>
+          <h2>{{ t.get('performance.performanceTable') }}</h2>
         </div>
         <div class="table-holder">
           <div class="table">
             <div class="thead">
               <div class="row">
                 <div class="col"></div>
-                <div class="col">1 mois</div>
-                <div class="col">3 mois</div>
-                <div class="col">6 mois</div>
-                <div class="col">AAJ</div>
-                <div class="col">1 an</div>
-                <div class="col">2 ans</div>
-                <div class="col">5 ans</div>
-                <div class="col">10 ans</div>
-                <div class="col">Début</div>
+                <div class="col">{{ t.get('performance.oneMonth') }}</div>
+                <div class="col">{{ t.get('performance.threeMonths') }}</div>
+                <div class="col">{{ t.get('performance.sixMonths') }}</div>
+                <div class="col">{{ t.get('performance.ytd') }}</div>
+                <div class="col">{{ t.get('performance.oneYear') }}</div>
+                <div class="col">{{ t.get('performance.twoYears') }}</div>
+                <div class="col">{{ t.get('performance.fiveYears') }}</div>
+                <div class="col">{{ t.get('performance.tenYears') }}</div>
+                <div class="col">{{ t.get('performance.inception') }}</div>
               </div>
             </div>
             <div class="tbody">
               <div class="row">
-                <div class="col">Action</div>
+                <div class="col">{{ t.get('performance.equitiesLabel') }}</div>
                 <div class="col">-1.9 %</div>
                 <div class="col">-4.3 %</div>
                 <div class="col">3.5 %</div>
@@ -88,7 +90,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                 <div class="col">12.5 %</div>
               </div>
               <div class="row">
-                <div class="col">Indice de reference</div>
+                <div class="col">{{ t.get('performance.benchmark') }}</div>
                 <div class="col">0.7 %</div>
                 <div class="col">5.2 %</div>
                 <div class="col">17.9 %</div>
@@ -118,7 +120,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
             </div>
             <div class="tbody">
               <div class="row">
-                <div class="col">Action</div>
+                <div class="col">{{ t.get('performance.equitiesLabel') }}</div>
                 <div class="col">1.2%</div>
                 <div class="col">32.0%</div>
                 <div class="col">6.7%</div>
@@ -130,7 +132,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                 <div class="col">20.8</div>
               </div>
               <div class="row">
-                <div class="col">Indice de reference</div>
+                <div class="col">{{ t.get('performance.benchmark') }}</div>
                 <div class="col">6.9%</div>
                 <div class="col">12.7%</div>
                 <div class="col">10.4%</div>
@@ -160,7 +162,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
             </div>
             <div class="tbody">
               <div class="row">
-                <div class="col">Action</div>
+                <div class="col">{{ t.get('performance.equitiesLabel') }}</div>
                 <div class="col">6.6%</div>
                 <div class="col">-2.8%</div>
                 <div class="col">6.2%</div>
@@ -172,7 +174,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                 <div class="col"></div>
               </div>
               <div class="row">
-                <div class="col">Indice de reference</div>
+                <div class="col">{{ t.get('performance.benchmark') }}</div>
                 <div class="col">25.6</div>
                 <div class="col">-7.2%</div>
                 <div class="col">13.9%</div>
@@ -187,8 +189,8 @@ import { ImageMappingService } from '../../services/image-mapping.service';
           </div>
         </div>
         <div class="description description--bottom">
-          <h4>Notes explicatives</h4>
-          <p>Les rendements proviennent du composé de toutes les actions détenues par les clients de Rivemont en gestion privée sous le code de représentant Q2F2 et ils sont bruts des frais. Avant le 1 janvier 2019, l’indice de référence est composé à 100 % de l’indice S&P/TSX et, par la suite, à 80% de l’indice S&P/TSX et 20 % de l’indice S&P 500. Les résultats futurs vont différer de ceux du passé. Ce document ne constitue pas une recommandation ni un conseil lié à un investissement et est présenté à titre d’information seulement.</p>
+          <h4>{{ t.get('performance.explanatoryNotes') }}</h4>
+          <p>{{ t.get('performance.explanatoryNotesText') }}</p>
         </div>
       </div>
     </section>
@@ -200,19 +202,19 @@ import { ImageMappingService } from '../../services/image-mapping.service';
           <div class="banner">
             <img [src]="imageService.getImage('image-1')" class="banner-image" alt="" />
             <div class="banner-content">
-              <h2>Aperçu</h2>
-              <h3>Date de création</h3>
-              <p>1 septembre 2010</p>
-              <h3>Style de gestion</h3>
-              <p>Technique et tendance</p>
-              <h3>Actifs de la firme</h3>
-              <p>153 millions $</p>
+              <h2>{{ t.get('performance.overview') }}</h2>
+              <h3>{{ t.get('performance.inceptionDate') }}</h3>
+              <p>{{ t.get('performance.inceptionDateValue') }}</p>
+              <h3>{{ t.get('performance.managementStyle') }}</h3>
+              <p>{{ t.get('performance.managementStyleValue') }}</p>
+              <h3>{{ t.get('performance.firmAssets') }}</h3>
+              <p>{{ t.get('performance.firmAssetsValue') }}</p>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="description gl-text-editor">
-            <h2>Principaux titres individuels</h2>
+            <h2>{{ t.get('performance.topHoldings') }}</h2>
             <ul>
               @for (holding of topHoldings; track holding) {
                 <li>{{ holding }}</li>
@@ -226,7 +228,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
     <!-- List Section - Identique à Rivemont -->
     <section class="section-list">
       <div class="content">
-        <h2 class="title">Secteurs d’activité</h2>
+        <h2 class="title">{{ t.get('performance.activitySectors') }}</h2>
         <div class="list">
           @for (sector of sectors; track sector.name) {
             <div class="row">
@@ -243,11 +245,11 @@ import { ImageMappingService } from '../../services/image-mapping.service';
       <div class="content">
         <div class="col">
           <div class="description gl-text-editor">
-            <h2>Gestionnaire</h2>
-            <p>Martin Lalonde, MBA, CFA, est le gestionnaire de portefeuille responsable des décisions de placements. Il possède plusieurs années d’expérience comme intervenant sur les marchés financiers et a œuvré, avant de fonder Rivemont, comme analyste principal aux investissements et aux fusions et acquisitions pour un important organisme canadien.</p>
+            <h2>{{ t.get('performance.manager') }}</h2>
+            <p>{{ t.get('performance.managerText') }}</p>
           </div>
           <div class="button-holder">
-            <a routerLink="/team/martin-lalonde" class="gl-button" target="_self">En savoir plus</a>
+            <a [routerLink]="langService.buildUrl('team/martin-lalonde-mba-cfa')" class="gl-button" target="_self">{{ t.get('common.learnMore') }}</a>
           </div>
         </div>
         <div class="col">
@@ -264,12 +266,12 @@ import { ImageMappingService } from '../../services/image-mapping.service';
         <div class="col">
           <div class="description gl-text-editor">
             <div class="description description--title-size-normal">
-              <h2>À propos de Rivemont</h2>
-              <p>Fondée en 2010, Rivemont est une firme de gestion de portefeuille québécoise avec environ 153 millions $ en actifs sous gestion. La firme offre des stratégies de placement performantes à une clientèle de gestion privée, de conseillers, de courtiers et de planificateurs financiers.</p>
+              <h2>{{ t.get('performance.aboutRivemont') }}</h2>
+              <p>{{ t.get('performance.aboutRivemontText') }}</p>
             </div>
           </div>
           <div class="button-holder">
-            <a routerLink="/firm-profile" class="gl-button" target="_self">En savoir plus</a>
+            <a [routerLink]="langService.buildUrl('firm-profile')" class="gl-button" target="_self">{{ t.get('common.learnMore') }}</a>
           </div>
         </div>
         <div class="col">
@@ -508,6 +510,8 @@ import { ImageMappingService } from '../../services/image-mapping.service';
 })
 export class PerformanceComponent {
   imageService = inject(ImageMappingService);
+  t = inject(TranslationService);
+  langService = inject(LanguageService);
   
   topHoldings = [
     'Chartwell Retirement Residential',

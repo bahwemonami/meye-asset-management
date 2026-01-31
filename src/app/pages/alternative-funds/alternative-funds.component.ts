@@ -2,6 +2,8 @@ import { Component, ChangeDetectionStrategy, ViewEncapsulation, inject } from '@
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
+import { TranslationService } from '../../services/translation.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-alternative-funds',
@@ -19,21 +21,21 @@ import { ImageMappingService } from '../../services/image-mapping.service';
             alt=""
             class="gl-responsive-background gl-responsive-background--desktop gl-img-grey"
           />
-          <h1 class="title" data-aos="fade">Fonds alternatifs</h1>
+          <h1 class="title" data-aos="fade">{{ t.get('alternativeFunds.title') }}</h1>
           <div class="links">
             <div class="link-holder" data-aos="zoom-in">
-              <a class="link" [routerLink]="['/alternative-funds', 'fonds-rivemont-long-short']">
-                Fonds Rivemont Long Short
+              <a class="link" [routerLink]="langService.buildUrl('alternative-funds/fonds-rivemont-long-short')">
+                {{ t.get('alternativeFunds.longShort') }}
               </a>
             </div>
             <div class="link-holder" data-aos="zoom-in">
-              <a class="link" [routerLink]="['/alternative-funds', 'fonds-rivemont-crypto']">
-                Fonds Rivemont Crypto
+              <a class="link" [routerLink]="langService.buildUrl('alternative-funds/fonds-rivemont-crypto')">
+                {{ t.get('alternativeFunds.crypto') }}
               </a>
             </div>
             <div class="link-holder" data-aos="zoom-in">
-              <a class="link" [routerLink]="['/alternative-funds', 'fonds-rivemont-microcap']">
-                Fonds Rivemont MicroCap
+              <a class="link" [routerLink]="langService.buildUrl('alternative-funds/fonds-rivemont-microcap')">
+                {{ t.get('alternativeFunds.microcap') }}
               </a>
             </div>
           </div>
@@ -44,4 +46,6 @@ import { ImageMappingService } from '../../services/image-mapping.service';
 })
 export class AlternativeFundsComponent {
   imageService = inject(ImageMappingService);
+  t = inject(TranslationService);
+  langService = inject(LanguageService);
 }

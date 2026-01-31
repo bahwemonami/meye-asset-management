@@ -1,7 +1,10 @@
 import { Component, inject, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
+import { TranslationService } from '../../services/translation.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-become-client',
@@ -15,7 +18,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
       <!-- Hero Section - Identique à Rivemont -->
       <section class="template-part-hero">
         <div class="content">
-          <h1 class="title">Passez à l'action,<br>devenez client.</h1>
+          <h1 class="title">{{ t.get('becomeClient.title') }}</h1>
           <img
             [src]="imageService.getImage('form-hero')"
             alt=""
@@ -27,7 +30,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
       <!-- Form Section - Identique à Rivemont -->
       <section class="section-form">
         <div class="content">
-          <h2 class="title">Devenir client</h2>
+          <h2 class="title">{{ t.get('becomeClient.formTitle') }}</h2>
           <div class="gl-form-holder">
             <form (ngSubmit)="onSubmit()" class="gl-form">
               <div class="gl-form-controls gl-form-controls--two-col">
@@ -36,7 +39,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                     type="text"
                     [(ngModel)]="formData.prenom"
                     name="prenom"
-                    placeholder="Prénom"
+                    [placeholder]="t.get('becomeClient.firstName')"
                     required
                   />
                 </div>
@@ -45,7 +48,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                     type="text"
                     [(ngModel)]="formData.nom"
                     name="nom"
-                    placeholder="Nom"
+                    [placeholder]="t.get('becomeClient.lastName')"
                     required
                   />
                 </div>
@@ -57,7 +60,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                     type="email"
                     [(ngModel)]="formData.courriel"
                     name="courriel"
-                    placeholder="Courriel"
+                    [placeholder]="t.get('becomeClient.email')"
                     required
                   />
                 </div>
@@ -66,7 +69,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                     type="text"
                     [(ngModel)]="formData.telephone"
                     name="telephone"
-                    placeholder="Téléphone"
+                    [placeholder]="t.get('becomeClient.phone')"
                   />
                 </div>
                 <div class="gl-form-control">
@@ -74,7 +77,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                     type="text"
                     [(ngModel)]="formData.codePostal"
                     name="codePostal"
-                    placeholder="3 caractères du code postal*"
+                    [placeholder]="t.get('becomeClient.postalCode')"
                     maxlength="3"
                     required
                   />
@@ -86,7 +89,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                   type="text"
                   [(ngModel)]="formData.valeurActifs"
                   name="valeurActifs"
-                  placeholder="Valeur approximative des actifs à gérer*"
+                    [placeholder]="t.get('becomeClient.assetValue')"
                   required
                 />
               </div>
@@ -95,7 +98,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                 <textarea
                   [(ngModel)]="formData.source"
                   name="source"
-                  placeholder="Comment avez-vous entendu parler de nous ?"
+                  [placeholder]="t.get('becomeClient.source')"
                   rows="4"
                   class="small"
                 ></textarea>
@@ -105,7 +108,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                 <textarea
                   [(ngModel)]="formData.besoin"
                   name="besoin"
-                  placeholder="Quel est le besoin à répondre ?"
+                  [placeholder]="t.get('becomeClient.need')"
                   rows="4"
                   class="small"
                 ></textarea>
@@ -113,7 +116,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
 
               <div class="gl-form-controls gl-form-controls--radio-submit">
                 <div class="gl-form-control gl-form-control--list">
-                  <label>Préférence de contact</label>
+                  <label>{{ t.get('becomeClient.contactPreference') }}</label>
                   <span class="wpcf7-form-control-wrap">
                     <span class="wpcf7-form-control wpcf7-radio inline-list">
                       <span class="wpcf7-list-item first">
@@ -124,7 +127,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                             value="telephone"
                             [(ngModel)]="formData.preference"
                           />
-                          <span class="wpcf7-list-item-label">Téléphone</span>
+                          <span class="wpcf7-list-item-label">{{ t.get('becomeClient.phoneOption') }}</span>
                         </label>
                       </span>
                       <span class="wpcf7-list-item last">
@@ -135,14 +138,14 @@ import { ImageMappingService } from '../../services/image-mapping.service';
                             value="courriel"
                             [(ngModel)]="formData.preference"
                           />
-                          <span class="wpcf7-list-item-label">Courriel</span>
+                          <span class="wpcf7-list-item-label">{{ t.get('becomeClient.emailOption') }}</span>
                         </label>
                       </span>
                     </span>
                   </span>
                 </div>
                 <div class="gl-form-control">
-                  <button type="submit" class="gl-button gl-button--blue-dark">Envoyer</button>
+                  <button type="submit" class="gl-button gl-button--blue-dark">{{ t.get('becomeClient.submit') }}</button>
                 </div>
               </div>
             </form>
@@ -154,6 +157,8 @@ import { ImageMappingService } from '../../services/image-mapping.service';
 })
 export class BecomeClientComponent {
   imageService = inject(ImageMappingService);
+  t = inject(TranslationService);
+  langService = inject(LanguageService);
   
   formData = {
     prenom: '',
@@ -169,6 +174,6 @@ export class BecomeClientComponent {
 
   onSubmit() {
     console.log('Formulaire soumis:', this.formData);
-    alert('Merci pour votre intérêt! Nous vous contacterons dans les plus brefs délais.');
+    alert(this.t.get('becomeClient.successMessage'));
   }
 }

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ImageMappingService } from '../../services/image-mapping.service';
+import { TranslationService } from '../../services/translation.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-footer',
@@ -20,17 +22,17 @@ import { ImageMappingService } from '../../services/image-mapping.service';
               <img [src]="imageService.getImage('newsletter-bg')" alt="" loading="lazy" />
             </div>
             <div class="cta-col-content">
-              <h2 class="cta-title">Inscrivez-vous à notre lettre financière</h2>
+              <h2 class="cta-title">{{ t.get('footer.newsletterTitle') }}</h2>
               <div class="cta-form-holder">
                 <form (ngSubmit)="onNewsletterSubmit()" class="newsletter-form">
                   <input 
                     type="email" 
                     [(ngModel)]="newsletterEmail"
                     name="email"
-                    placeholder="Adresse courriel"
+                    [placeholder]="t.get('footer.emailPlaceholder')"
                     required
-                    aria-label="Adresse courriel">
-                  <button type="submit">Inscription</button>
+                    [attr.aria-label]="t.get('footer.emailPlaceholder')">
+                  <button type="submit">{{ t.get('common.subscribe') }}</button>
                 </form>
               </div>
             </div>
@@ -39,9 +41,9 @@ import { ImageMappingService } from '../../services/image-mapping.service';
           <!-- Become Client Column -->
           <div class="cta-col">
             <div class="cta-col-content">
-              <h2 class="cta-title">Passez à l’action, devenez client.</h2>
+              <h2 class="cta-title">{{ t.get('footer.takeActionTitle') }}</h2>
               <div class="cta-button">
-                <a routerLink="/become-client" class="gl-button" target="_self">En savoir plus</a>
+                <a [routerLink]="langService.buildUrl('become-client')" class="gl-button" target="_self">{{ t.get('common.learnMore') }}</a>
               </div>
             </div>
           </div>
@@ -51,7 +53,7 @@ import { ImageMappingService } from '../../services/image-mapping.service';
         <div class="cols">
           <!-- Column 1: Logo -->
           <div class="col col-1">
-            <a routerLink="/" class="logo-holder" aria-label="MEYE ASSET MANAGER - Retour à l'accueil">
+            <a [routerLink]="langService.buildUrl('')" class="logo-holder" aria-label="MEYE ASSET MANAGER - Retour à l'accueil">
               <img [src]="imageService.getImage('logo-light')" alt="MEYE ASSET MANAGER" />
             </a>
           </div>
@@ -61,16 +63,16 @@ import { ImageMappingService } from '../../services/image-mapping.service';
             <nav aria-label="Navigation pied de page">
               <ul id="menu-footer" class="menu" role="list">
                 <li>
-                  <a routerLink="/private-management">Gestion privée</a>
+                  <a [routerLink]="langService.buildUrl('private-management')">{{ t.get('footer.privateManagement') }}</a>
                 </li>
                 <li>
-                  <a routerLink="/performance">Rendements</a>
+                  <a [routerLink]="langService.buildUrl('performance')">{{ t.get('footer.performance') }}</a>
                 </li>
                 <li>
-                  <a routerLink="/alternative-funds">Fonds alternatifs</a>
+                  <a [routerLink]="langService.buildUrl('alternative-funds')">{{ t.get('footer.alternativeFunds') }}</a>
                 </li>
                 <li>
-                  <a routerLink="/contact">Contact</a>
+                  <a [routerLink]="langService.buildUrl('contact')">{{ t.get('footer.contact') }}</a>
                 </li>
               </ul>
             </nav>
@@ -109,14 +111,14 @@ import { ImageMappingService } from '../../services/image-mapping.service';
           <div class="col col-4">
             <a class="gl-button gl-button--blue-light" href="https://monportefeuilleplus.ca/login" target="_blank" rel="noopener noreferrer">
               <img [src]="imageService.getImage('user-icon')" alt="" />
-              Connexion
+              {{ t.get('footer.login') }}
             </a>
           </div>
         </div>
 
         <!-- Copyright -->
         <div class="copyright">
-          <p>© {{ currentYear }}, Les investissements Rivemont. Tous droits réservés.</p>
+          <p>{{ t.get('footer.copyright', {year: currentYear}) }}</p>
         </div>
       </div>
     </footer>
@@ -124,12 +126,14 @@ import { ImageMappingService } from '../../services/image-mapping.service';
 })
 export class FooterComponent {
   imageService = inject(ImageMappingService);
+  t = inject(TranslationService);
+  langService = inject(LanguageService);
   currentYear = new Date().getFullYear();
   newsletterEmail = '';
 
   onNewsletterSubmit() {
     console.log('Newsletter subscription:', this.newsletterEmail);
-    alert('Merci de vous être abonné à notre lettre financière !');
+    alert(this.t.get('footer.newsletterTitle') + ' - ' + this.t.get('common.subscribe'));
     this.newsletterEmail = '';
   }
 }
