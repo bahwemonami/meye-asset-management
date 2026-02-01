@@ -222,8 +222,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     /* Styles spécifiques au composant - Overrides uniquement si nécessaire */
     /* Les styles principaux sont dans src/styles.scss */
     
-    /* FORCER la transparence du header sur toutes les pages */
-    #site-header {
+    /* FORCER la transparence du header sur toutes les pages SAUF gouvernance */
+    #site-header:not(.site-header--governance) {
       background-color: transparent !important;
       background: transparent !important;
     }
@@ -616,18 +616,18 @@ export class HeaderComponent {
   isPerformance = signal(this.isPerformanceUrl(this.router.url));
   isFinancialPlanning = signal(this.isFinancialPlanningUrl(this.router.url));
   currentLanguage = computed(() => this.langService.currentLanguage());
-  
+
   // Signaux directs pour le type de page (remplace les computed pour meilleure réactivité avec OnPush)
   isHeroPage = signal(false);
   isLightBackgroundPage = signal(false);
-  
+
   // Méthode pour mettre à jour les signaux de type de page
   private updatePageTypeSignals(url: string): void {
-    const isHero = this.isHomeUrl(url) || this.isPrivateManagementUrl(url) || 
-                   this.isPerformanceUrl(url) || this.isFinancialPlanningUrl(url);
-    const isLight = this.isFirmProfileUrl(url) || this.isContactUrl(url) || 
-                    this.isGovernanceUrl(url);
-    
+    const isHero = this.isHomeUrl(url) || this.isPrivateManagementUrl(url) ||
+      this.isPerformanceUrl(url) || this.isFinancialPlanningUrl(url);
+    const isLight = this.isFirmProfileUrl(url) || this.isContactUrl(url) ||
+      this.isGovernanceUrl(url);
+
     this.isHeroPage.set(isHero);
     this.isLightBackgroundPage.set(isLight);
   }
@@ -642,10 +642,10 @@ export class HeaderComponent {
     this.isPrivateManagement.set(this.isPrivateManagementUrl(currentUrl));
     this.isPerformance.set(this.isPerformanceUrl(currentUrl));
     this.isFinancialPlanning.set(this.isFinancialPlanningUrl(currentUrl));
-    
+
     // Mettre à jour les signaux de type de page au chargement initial
     this.updatePageTypeSignals(currentUrl);
-    
+
     // Écouter les changements de route
     this.router.events
       .pipe(
@@ -660,7 +660,7 @@ export class HeaderComponent {
         this.isPrivateManagement.set(this.isPrivateManagementUrl(event.urlAfterRedirects));
         this.isPerformance.set(this.isPerformanceUrl(event.urlAfterRedirects));
         this.isFinancialPlanning.set(this.isFinancialPlanningUrl(event.urlAfterRedirects));
-        
+
         // Mettre à jour les signaux de type de page à chaque changement de route
         this.updatePageTypeSignals(event.urlAfterRedirects);
       });

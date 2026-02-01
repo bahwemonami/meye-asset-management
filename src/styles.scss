@@ -1,18 +1,18 @@
+/* Import Design Tokens, Responsive et Animations Rivemont - @use doit être avant @tailwind */
+@use 'styles/rivemont/tokens' as *;
+@use 'styles/rivemont/responsive' as *;
+@use 'styles/rivemont/animations' as *;
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Import Swiper styles */
+/* Import Swiper styles - @import pour les fichiers CSS */
 @import 'swiper/css';
 @import 'swiper/css/pagination';
 
-/* Import AOS (Animate On Scroll) styles */
+/* Import AOS (Animate On Scroll) styles - @import pour les fichiers CSS */
 @import 'aos/dist/aos.css';
-
-/* Import Design Tokens, Responsive et Animations Rivemont */
-@import 'styles/rivemont/tokens';
-@import 'styles/rivemont/responsive';
-@import 'styles/rivemont/animations';
 
 /* ============================================================================
    FONT PERIDOT PE VARIABLE - Police exacte de Rivemont
@@ -280,6 +280,20 @@ h3, h4, h5, h6 {
     #site-header.site-header--governance {
         position: fixed !important; /* Override le absolute global pour ces pages */
     }
+}
+
+/* Header avec background pour la page gouvernance pour éviter que le contenu passe derrière */
+#site-header.site-header--governance {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100 !important; /* Augmenter le z-index pour être sûr qu'il soit au-dessus */
+}
+
+/* S'assurer que le contenu du header a aussi un background blanc sur la page gouvernance */
+#site-header.site-header--governance .content {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
 }
 
 /* Padding pour pages sans hero - même hauteur que HOME */
@@ -1100,11 +1114,15 @@ h3, h4, h5, h6 {
 
 /* Template Governance Page Container - Identique à Rivemont */
 .template-gouvernance-page-container {
-  padding-top: 0;
+  padding-top: 80px; /* Compense le header fixe sur mobile */
   margin-top: 0;
   
+  @media only screen and (min-width: 768px) {
+    padding-top: 100px; /* Compense le header fixe sur tablette */
+  }
+  
   @media only screen and (min-width: 1024px) {
-    padding-top: 260px; /* Compense le header en position absolute */
+    padding-top: 260px; /* Compense le header en position fixed sur desktop */
   }
   
   .sections {

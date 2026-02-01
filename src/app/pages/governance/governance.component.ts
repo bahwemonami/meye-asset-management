@@ -1,6 +1,5 @@
 import { Component, inject, AfterViewInit, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
 import { AosService } from '../../services/aos.service';
 import { TranslationService } from '../../services/translation.service';
@@ -9,7 +8,7 @@ import { LanguageService } from '../../services/language.service';
 @Component({
   selector: 'app-governance',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   template: `
