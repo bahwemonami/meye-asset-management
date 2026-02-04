@@ -1,4 +1,4 @@
-import { Component, signal, inject, ChangeDetectionStrategy, DestroyRef, computed } from '@angular/core';
+import { Component, signal, inject, ChangeDetectionStrategy, DestroyRef, computed, HostListener, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
@@ -27,25 +27,23 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
       [class.site-header--private-management]="isPrivateManagement()"
       [class.site-header--performance]="isPerformance()"
       [class.site-header--financial-planning]="isFinancialPlanning()"
+      [class.site-header--alternative-funds]="isAlternativeFunds()"
+      [class.site-header--become-client]="isBecomeClient()"
+      [class.site-header--hidden]="isHeaderHidden() || isMenuOpen()"
       js-site-header="container">
       <div class="content">
         <div class="col col-1">
           <!-- Logo -->
-          <a [routerLink]="langService.buildUrl('')" class="logo-holder" aria-label="MEYE ASSET MANAGER - Retour à l'accueil">
-            <img [src]="imageService.getImage(isLightBackgroundPage() ? 'logo-dark' : 'logo-light')" alt="MEYE ASSET MANAGER" />
+          <a [routerLink]="langService.buildUrl('')" class="logo-holder" [attr.aria-label]="t.get('accessibility.homeLink')">
+            <div class="logo-text">
+              <span class="logo-meye">MEYE</span>
+              <span class="logo-subtitle">ASSET MANAGEMENT</span>
+            </div>
           </a>
         </div>
         <div class="col col-2">
-          <a
-            *ngIf="isHome()"
-            href="https://monportefeuilleplus.ca/login"
-            class="gl-button gl-button--blue-dark"
-            target="_blank">
-            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC4zNyIgaGVpZ2h0PSIxOC40NzUiIHZpZXdCb3g9IjAgMCAxNC4zNyAxOC40NzUiPgogIDxnIGlkPSJucF9hY2NvdW50XzQ0MDcxNTlfMDAwMDAwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAuODMyIC0xMi41KSI+CiAgICA8cGF0aCBpZD0iUGF0aF8xIiBkYXRhLW5hbWU9IlBhdGggMSIgZD0iTTM3LjQzOCwyMC43MTFhNC4xLDQuMSwwLDEsMSwyLjktMS4yQTQuMSw0LjEsMCwwLDEsMzcuNDM4LDIwLjcxMVptMC02LjE1OGEyLjA1MywyLjA1MywwLDEsMCwxLjQ1MS42QTIuMDUzLDIuMDUzLDAsMCwwLDM3LjQzOCwxNC41NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOS40MjEgMCkiIGZpbGw9IiNmZmYiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzIiIGRhdGEtbmFtZT0iUGF0aCAyIiBkPSJNMzQuMTc1LDU5LjIzN2ExLjAyNywxLjAyNywwLDAsMS0xLjAyNy0xLjAyN1Y1NS4xMzFhMy4wNzksMy4wNzksMCwwLDAtMy4wNzktMy4wNzloLTQuMWEzLjA3OSwzLjA3OSwwLDAsMC0zLjA3OSwzLjA3OVY1OC4yMWExLjAyNywxLjAyNywwLDEsMS0yLjA1MywwVjU1LjEzMUE1LjEzOCw1LjEzOCwwLDAsMSwyNS45NjUsNTBoNC4xQTUuMTM4LDUuMTM4LDAsMCwxLDM1LjIsNTUuMTMxVjU4LjIxYTEuMDI3LDEuMDI3LDAsMCwxLTEuMDI3LDEuMDI3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjguMjYyKSIgZmlsbD0iI2ZmZiIvPgogIDwvZz4KPC9zdmc+Cg==" alt="" />
-            {{ t.get('common.clientAccess') }}
-          </a>
           <!-- Navigation Desktop -->
-          <nav js-site-nav="container" aria-label="Navigation principale">
+          <nav js-site-nav="container" [attr.aria-label]="t.get('accessibility.mainNavigation')">
             <ul id="menu-header" class="menu" role="menubar">
               <li>
                 <a [routerLink]="langService.buildUrl('private-management')">{{ t.get('header.privateManagement') }}</a>
@@ -87,6 +85,15 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
             <span></span>
           </button>
         </div>
+        <!-- Bouton Accès Client - Positionné en haut à droite sur desktop -->
+        <a
+          *ngIf="isHome()"
+          href="https://monportefeuilleplus.ca/login"
+          class="gl-button gl-button--blue-dark gl-button--client-access"
+          target="_blank">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC4zNyIgaGVpZ2h0PSIxOC40NzUiIHZpZXdCb3g9IjAgMCAxNC4zNyAxOC40NzUiPgogIDxnIGlkPSJucF9hY2NvdW50XzQ0MDcxNTlfMDAwMDAwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAuODMyIC0xMi41KSI+CiAgICA8cGF0aCBpZD0iUGF0aF8xIiBkYXRhLW5hbWU9IlBhdGggMSIgZD0iTTM3LjQzOCwyMC43MTFhNC4xLDQuMSwwLDEsMSwyLjktMS4yQTQuMSw0LjEsMCwwLDEsMzcuNDM4LDIwLjcxMVptMC02LjE1OGEyLjA1MywyLjA1MywwLDEsMCwxLjQ1MS42QTIuMDUzLDIuMDUzLDAsMCwwLDM3LjQzOCwxNC41NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOS40MjEgMCkiIGZpbGw9IiNmZmYiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzIiIGRhdGEtbmFtZT0iUGF0aCAyIiBkPSJNMzQuMTc1LDU5LjIzN2ExLjAyNywxLjAyNywwLDAsMS0xLjAyNy0xLjAyN1Y1NS4xMzFhMy4wNzksMy4wNzksMCwwLDAtMy4wNzktMy4wNzloLTQuMWEzLjA3OSwzLjA3OSwwLDAsMC0zLjA3OSwzLjA3OVY1OC4yMWExLjAyNywxLjAyNywwLDEsMS0yLjA1MywwVjU1LjEzMUE1LjEzOCw1LjEzOCwwLDAsMSwyNS45NjUsNTBoNC4xQTUuMTM4LDUuMTM4LDAsMCwxLDM1LjIsNTUuMTMxVjU4LjIxYTEuMDI3LDEuMDI3LDAsMCwxLTEuMDI3LDEuMDI3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjguMjYyKSIgZmlsbD0iI2ZmZiIvPgogIDwvZz4KPC9zdmc+Cg==" alt="" />
+          {{ t.get('common.clientAccess') }}
+        </a>
       </div>
     </header>
 
@@ -111,8 +118,11 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
         <!-- Row 1: Logo + Accès client + Hamburger -->
         <div class="row row-1">
           <div class="col col-1">
-            <a [routerLink]="langService.buildUrl('')" class="logo-holder" (click)="closeMenu()">
-              <img [src]="imageService.getImage('logo-light-png')" alt="" />
+            <a [routerLink]="langService.buildUrl('')" class="logo-holder" (click)="closeMenu()" [attr.aria-label]="t.get('accessibility.homeLink')">
+              <div class="logo-text">
+                <span class="logo-meye">MEYE</span>
+                <span class="logo-subtitle">ASSET MANAGEMENT</span>
+              </div>
             </a>
             <a *ngIf="isHome()" href="https://monportefeuilleplus.ca/login" class="gl-button gl-button--blue-dark" target="_blank">
               <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC4zNyIgaGVpZ2h0PSIxOC40NzUiIHZpZXdCb3g9IjAgMCAxNC4zNyAxOC40NzUiPgogIDxnIGlkPSJucF9hY2NvdW50XzQ0MDcxNTlfMDAwMDAwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAuODMyIC0xMi41KSI+CiAgICA8cGF0aCBpZD0iUGF0aF8xIiBkYXRhLW5hbWU9IlBhdGggMSIgZD0iTTM3LjQzOCwyMC43MTFhNC4xLDQuMSwwLDEsMSwyLjktMS4yQTQuMSw0LjEsMCwwLDEsMzcuNDM4LDIwLjcxMVptMC02LjE1OGEyLjA1MywyLjA1MywwLDEsMCwxLjQ1MS42QTIuMDUzLDIuMDUzLDAsMCwwLDM3LjQzOCwxNC41NTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOS40MjEgMCkiIGZpbGw9IiNmZmYiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzIiIGRhdGEtbmFtZT0iUGF0aCAyIiBkPSJNMzQuMTc1LDU5LjIzN2ExLjAyNywxLjAyNywwLDAsMS0xLjAyNy0xLjAyN1Y1NS4xMzFhMy4wNzksMy4wNzksMCwwLDAtMy4wNzktMy4wNzloLTQuMWEzLjA3OSwzLjA3OSwwLDAsMC0zLjA3OSwzLjA3OVY1OC4yMWExLjAyNywxLjAyNywwLDEsMS0yLjA1MywwVjU1LjEzMUE1LjEzOCw1LjEzOCwwLDAsMSwyNS45NjUsNTBoNC4xQTUuMTM4LDUuMTM4LDAsMCwxLDM1LjIsNTUuMTMxVjU4LjIxYTEuMDI3LDEuMDI3LDAsMCwxLTEuMDI3LDEuMDI3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjguMjYyKSIgZmlsbD0iI2ZmZiIvPgogIDwvZz4KPC9zdmc+Cg==" alt="" />
@@ -180,9 +190,6 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
                     <li>
                       <a [routerLink]="langService.buildUrl('private-management')" [queryParams]="{section: 'why'}" (click)="closeMenu()">{{ t.get('privateManagement.why.title') }}</a>
                     </li>
-                    <li>
-                      <a [routerLink]="langService.buildUrl('private-management')" [queryParams]="{section: 'cfa'}" (click)="closeMenu()">{{ t.get('privateManagement.cfa.title') }}</a>
-                    </li>
                   </ul>
                 </li>
               </ul>
@@ -193,9 +200,6 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
               <ul id="menu-big-menu-col-4" class="menu">
                 <li>
                   <a [routerLink]="langService.buildUrl('performance')" (click)="closeMenu()">{{ t.get('header.performance') }}</a>
-                </li>
-                <li>
-                  <a [routerLink]="langService.buildUrl('communications')" (click)="closeMenu()">{{ t.get('header.communications') }}</a>
                 </li>
                 <li>
                   <a [routerLink]="langService.buildUrl('alternative-funds')" (click)="closeMenu()">{{ t.get('header.alternativeFunds') }}</a>
@@ -601,7 +605,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     }
   `]
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy {
   imageService = inject(ImageMappingService);
   t = inject(TranslationService);
   langService = inject(LanguageService);
@@ -615,21 +619,51 @@ export class HeaderComponent {
   isPrivateManagement = signal(this.isPrivateManagementUrl(this.router.url));
   isPerformance = signal(this.isPerformanceUrl(this.router.url));
   isFinancialPlanning = signal(this.isFinancialPlanningUrl(this.router.url));
+  isAlternativeFunds = signal(this.isAlternativeFundsUrl(this.router.url));
+  isBecomeClient = signal(this.isBecomeClientUrl(this.router.url));
   currentLanguage = computed(() => this.langService.currentLanguage());
 
   // Signaux directs pour le type de page (remplace les computed pour meilleure réactivité avec OnPush)
   isHeroPage = signal(false);
   isLightBackgroundPage = signal(false);
+  
+  // Signal pour cacher le header au scroll
+  isHeaderHidden = signal(false);
+  private lastScrollY = 0;
+  private scrollThreshold = 50; // Seuil en pixels pour déclencher la disparition
 
   // Méthode pour mettre à jour les signaux de type de page
   private updatePageTypeSignals(url: string): void {
-    const isHero = this.isHomeUrl(url) || this.isPrivateManagementUrl(url) ||
-      this.isPerformanceUrl(url) || this.isFinancialPlanningUrl(url);
-    const isLight = this.isFirmProfileUrl(url) || this.isContactUrl(url) ||
+    // Pages avec hero (pour les classes CSS) - Toutes les pages avec section-hero ou template-part-hero
+    const isHero = this.isHomeUrl(url) || 
+      this.isPrivateManagementUrl(url) ||
+      this.isPerformanceUrl(url) || 
+      this.isFinancialPlanningUrl(url) ||
+      this.isAlternativeFundsUrl(url) ||
+      this.isContactUrl(url) ||
+      this.isBecomeClientUrl(url);
+    
+    const isLight = this.isFirmProfileUrl(url) || 
+      this.isContactUrl(url) ||
       this.isGovernanceUrl(url);
 
     this.isHeroPage.set(isHero);
     this.isLightBackgroundPage.set(isLight);
+    
+    // Réinitialiser l'état du header caché quand on quitte la homepage
+    if (!this.isHomeUrl(url)) {
+      this.isHeaderHidden.set(false);
+    }
+  }
+  
+  private isAlternativeFundsUrl(url: string): boolean {
+    const pathWithoutLang = this.langService.getPathWithoutLanguage(url);
+    return pathWithoutLang.startsWith('/alternative-funds');
+  }
+  
+  private isBecomeClientUrl(url: string): boolean {
+    const pathWithoutLang = this.langService.getPathWithoutLanguage(url);
+    return pathWithoutLang === '/become-client' || pathWithoutLang.startsWith('/become-client');
   }
 
   constructor() {
@@ -642,6 +676,8 @@ export class HeaderComponent {
     this.isPrivateManagement.set(this.isPrivateManagementUrl(currentUrl));
     this.isPerformance.set(this.isPerformanceUrl(currentUrl));
     this.isFinancialPlanning.set(this.isFinancialPlanningUrl(currentUrl));
+    this.isAlternativeFunds.set(this.isAlternativeFundsUrl(currentUrl));
+    this.isBecomeClient.set(this.isBecomeClientUrl(currentUrl));
 
     // Mettre à jour les signaux de type de page au chargement initial
     this.updatePageTypeSignals(currentUrl);
@@ -660,10 +696,51 @@ export class HeaderComponent {
         this.isPrivateManagement.set(this.isPrivateManagementUrl(event.urlAfterRedirects));
         this.isPerformance.set(this.isPerformanceUrl(event.urlAfterRedirects));
         this.isFinancialPlanning.set(this.isFinancialPlanningUrl(event.urlAfterRedirects));
+        this.isAlternativeFunds.set(this.isAlternativeFundsUrl(event.urlAfterRedirects));
+        this.isBecomeClient.set(this.isBecomeClientUrl(event.urlAfterRedirects));
 
         // Mettre à jour les signaux de type de page à chaque changement de route
         this.updatePageTypeSignals(event.urlAfterRedirects);
+        
+        // Réinitialiser l'état du header caché lors d'un changement de route
+        this.isHeaderHidden.set(false);
+        this.lastScrollY = window.scrollY || 0;
       });
+  }
+
+  ngOnInit() {
+    // Initialiser la position de scroll
+    this.lastScrollY = window.scrollY || 0;
+  }
+
+  ngOnDestroy() {
+    // Nettoyage si nécessaire
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    // Cacher le header UNIQUEMENT sur la homepage (qui a un hero component avec image)
+    // Les autres pages avec hero (private-management, performance, etc.) gardent le header visible
+    if (!this.isHome()) {
+      // Sur les autres pages, réinitialiser l'état si nécessaire
+      if (this.isHeaderHidden()) {
+        this.isHeaderHidden.set(false);
+      }
+      return;
+    }
+
+    const currentScrollY = window.scrollY || 0;
+    
+    // Si on scroll vers le bas et qu'on dépasse le seuil, cacher le header
+    if (currentScrollY > this.lastScrollY && currentScrollY > this.scrollThreshold) {
+      this.isHeaderHidden.set(true);
+    } 
+    // Si on scroll vers le haut ou qu'on est en haut de page, afficher le header
+    else if (currentScrollY < this.lastScrollY || currentScrollY <= this.scrollThreshold) {
+      this.isHeaderHidden.set(false);
+    }
+    
+    this.lastScrollY = currentScrollY;
   }
 
   toggleMenu() {

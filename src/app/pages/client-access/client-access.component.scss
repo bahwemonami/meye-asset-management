@@ -1,0 +1,174 @@
+/* ============================================================================
+   CLIENT ACCESS PAGE - Styles SCSS Responsive (remplace Tailwind)
+   ============================================================================ */
+
+.client-access-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--rivemont-primary-dark);
+  padding: 100px 20px;
+  
+  @media (max-width: 768px) {
+    padding: 80px 15px;
+    min-height: auto;
+  }
+  
+  @media (max-width: 568px) {
+    padding: 60px 15px;
+  }
+  
+  .content {
+    max-width: 36rem; /* max-w-xl */
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+    
+    @media (min-width: 640px) {
+      padding: 0 1.5rem;
+    }
+    
+    @media (min-width: 1024px) {
+      padding: 0 2rem;
+    }
+    
+    .icon-container {
+      width: 80px;
+      height: 80px;
+      background: var(--rivemont-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+      
+      @media (max-width: 768px) {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 24px;
+      }
+      
+      @media (max-width: 568px) {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+      }
+      
+      svg {
+        width: 40px;
+        height: 40px;
+        color: var(--rivemont-white);
+        
+        @media (max-width: 768px) {
+          width: 35px;
+          height: 35px;
+        }
+        
+        @media (max-width: 568px) {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    
+    h1 {
+      font-family: 'Georgia', serif;
+      font-size: 2.25rem; /* text-4xl */
+      font-weight: 700;
+      color: var(--rivemont-white);
+      margin-bottom: 24px;
+      
+      @media (min-width: 768px) {
+        font-size: 3rem; /* md:text-5xl */
+      }
+      
+      @media (max-width: 568px) {
+        font-size: 1.875rem;
+        margin-bottom: 20px;
+      }
+      
+      @media (max-width: 320px) {
+        font-size: 1.5rem;
+      }
+    }
+    
+    p {
+      font-size: 1.25rem; /* text-xl */
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 32px;
+      
+      @media (max-width: 768px) {
+        font-size: 1.125rem;
+        margin-bottom: 24px;
+      }
+      
+      @media (max-width: 568px) {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+    }
+    
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+      
+      @media (min-width: 640px) {
+        flex-direction: row;
+      }
+      
+      @media (max-width: 568px) {
+        gap: 12px;
+      }
+      
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        
+        @media (max-width: 568px) {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+        }
+        
+        &.btn-primary {
+          background: var(--rivemont-accent);
+          color: var(--rivemont-white);
+          
+          &:hover {
+            background: var(--rivemont-accent-hover);
+          }
+          
+          svg {
+            width: 20px;
+            height: 20px;
+            margin-left: 8px;
+            
+            @media (max-width: 568px) {
+              width: 18px;
+              height: 18px;
+              margin-left: 6px;
+            }
+          }
+        }
+        
+        &.btn-secondary {
+          border: 2px solid var(--rivemont-white);
+          color: var(--rivemont-white);
+          
+          &:hover {
+            background: var(--rivemont-white);
+            color: var(--rivemont-primary-dark);
+          }
+        }
+      }
+    }
+  }
+}

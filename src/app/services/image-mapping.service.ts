@@ -14,9 +14,9 @@ export class ImageMappingService {
    */
   private readonly imageMap: Record<string, string> = {
     // Logos
-    'logo-light': '/assets/images/rivemont/logo/logo-light.svg',
-    'logo-dark': '/assets/images/rivemont/logo/logo-dark.svg',
-    'logo-light-png': '/assets/images/rivemont/logo/logo-light.png',
+    'logo-light': '/assets/images/meye-logo-white.svg',
+    'logo-dark': '/assets/images/meye-logo.svg',
+    'logo-light-png': '/assets/images/meye-logo-white.svg',
     'user-icon': '/assets/images/rivemont/logo/user.svg',
     
     // Icons

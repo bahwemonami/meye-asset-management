@@ -183,7 +183,7 @@
 .template-rendements-page-container .description-section {
   background-color: #eaf3fd;
   margin-bottom: 0;
-  padding: max(80px, 8.073vw) 14px;
+  padding: max(60px, 6.25vw) 14px;
   
   .content {
     box-sizing: border-box;
@@ -193,8 +193,6 @@
     @media only screen and (min-width: 768px) {
       padding-left: 35px;
       padding-right: 35px;
-      display: flex;
-      flex-wrap: nowrap;
     }
     
     @media only screen and (min-width: 1280px) {
@@ -207,61 +205,110 @@
       padding-right: 8.59375vw;
     }
     
+    .content-grid {
+      display: flex;
+      flex-direction: column;
+      gap: max(40px, 2.6041666667vw);
+      
+      @media only screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: max(60px, 4.1666666667vw);
+      }
+    }
+    
     .col {
       box-sizing: border-box;
       
-      &:first-child {
-        align-self: center;
+      &.col-text {
         width: 100%;
         
         @media only screen and (min-width: 768px) {
-          padding-right: 9.6354166667vw;
+          flex: 1 1 auto;
+          padding-right: max(40px, 2.6041666667vw);
         }
         
-        .description :last-child {
-          margin-bottom: 0;
-        }
-        
-        .description p {
-          color: #184068;
-          font-family: peridot-pe-variable, sans-serif;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          letter-spacing: 0;
-          line-height: 1.3em;
-          
-          @media only screen and (min-width: 768px) {
-            font-size: max(17px, 1.0416666667vw);
+          .description {
+            h2 {
+              color: #184068;
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 32px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 1.04em;
+              margin-bottom: max(12px, 0.625vw);
+              margin-top: 0;
+              text-transform: none;
+              text-align: left;
+              
+              @media only screen and (min-width: 768px) {
+                font-size: max(45px, 3.125vw);
+                line-height: 1.04em;
+              }
+            }
+            
+            .date {
+              color: #184068;
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              letter-spacing: 0;
+              line-height: 1.3em;
+              margin-bottom: max(30px, 2.0833333333vw);
+              margin-top: 0;
+              
+              @media only screen and (min-width: 768px) {
+                font-size: max(17px, 1.0416666667vw);
+                line-height: 1.3em;
+              }
+            }
+            
+            p:not(.date) {
+              color: #184068;
+              font-family: peridot-pe-variable, sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              letter-spacing: 0;
+              line-height: 1.6em;
+              margin-bottom: max(20px, 1.3020833333vw);
+              margin-top: 0;
+              
+              @media only screen and (min-width: 768px) {
+                font-size: max(17px, 1.0416666667vw);
+                line-height: max(27.2px, 1.7vw);
+              }
+              
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
           }
-        }
       }
       
-      &:nth-child(2) {
+      &.col-banner {
+        width: 100%;
+        
         @media only screen and (min-width: 768px) {
-          flex-shrink: 0;
-          width: max(330px, 19.7916666667vw);
+          flex: 0 0 max(350px, 22.3958333333vw);
+          max-width: max(350px, 22.3958333333vw);
         }
         
         .banner {
           background-color: #184068;
-          border-radius: 2.8125vw;
+          border-radius: max(20px, 1.3020833333vw);
           box-sizing: border-box;
           display: flex;
           flex-direction: column;
-          height: 100%;
           justify-content: center;
-          margin-top: 80px;
-          padding: 40px 33px;
+          padding: max(40px, 2.6041666667vw) max(30px, 1.953125vw);
           text-align: center;
           width: 100%;
           
-          @media only screen and (min-width: 650px) {
-            padding: max(70px, 4.84375vw) max(30px, 2.8645833333vw);
-          }
-          
           @media only screen and (min-width: 768px) {
-            margin-top: 0;
+            padding: max(50px, 3.2552083333vw) max(35px, 2.28125vw);
           }
           
           .banner-description {
@@ -272,11 +319,12 @@
               font-style: normal;
               font-weight: 700;
               line-height: 1.04em;
-              margin-bottom: max(30px, 3.125vw);
+              margin-bottom: max(20px, 1.3020833333vw);
               text-transform: none;
               
               @media only screen and (min-width: 768px) {
                 font-size: max(27px, 1.6666666667vw);
+                margin-bottom: max(25px, 1.5625vw);
               }
             }
             
@@ -287,7 +335,8 @@
               font-style: normal;
               font-weight: 400;
               letter-spacing: 0;
-              line-height: 1.3em;
+              line-height: 1.5em;
+              margin-bottom: 0;
               
               @media only screen and (min-width: 768px) {
                 font-size: max(17px, 1.0416666667vw);
@@ -303,7 +352,7 @@
 /* Section Table */
 .template-rendements-page-container .section-table {
   box-sizing: border-box;
-  padding: max(80px, 8.0729166667vw) 14px;
+  padding: max(60px, 6.25vw) 14px max(80px, 8.0729166667vw);
   margin-bottom: 0;
   
   @media only screen and (min-width: 768px) {
@@ -378,12 +427,29 @@
     
     .table-holder {
       margin-bottom: max(52px, 2.7083333333vw);
-      overflow: auto;
+      overflow-x: auto;
+      overflow-y: visible;
+      -webkit-overflow-scrolling: touch;
+      
+      @media only screen and (max-width: 767px) {
+        margin-left: -14px;
+        margin-right: -14px;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
       
       .table {
         display: block;
-        min-width: 1000px;
+        min-width: 600px;
         width: 100%;
+        
+        @media only screen and (min-width: 768px) {
+          min-width: 800px;
+        }
+        
+        @media only screen and (min-width: 1024px) {
+          min-width: 1000px;
+        }
         
         .tbody .row,
         .thead .row {
@@ -392,9 +458,22 @@
           
           .col {
             width: 100%;
+            font-size: 14px;
+            
+            @media only screen and (min-width: 568px) {
+              font-size: 15px;
+            }
+            
+            @media only screen and (min-width: 768px) {
+              font-size: 16px;
+            }
             
             &:first-child {
-              width: 220%;
+              width: 200%;
+              
+              @media only screen and (min-width: 768px) {
+                width: 220%;
+              }
             }
           }
         }
@@ -450,27 +529,20 @@
   }
 }
 
-/* Section Info */
-.template-rendements-page-container .section-info {
+/* Section Holdings */
+.template-rendements-page-container .section-holdings {
   background-color: #eaf3fd;
   margin-bottom: 0;
   padding: max(80px, 8.073vw) 14px;
   
   .content {
-    align-items: center;
     box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
     padding-left: 14px;
     padding-right: 14px;
     
     @media only screen and (min-width: 768px) {
       padding-left: 35px;
       padding-right: 35px;
-    }
-    
-    @media only screen and (min-width: 850px) {
-      flex-wrap: nowrap;
     }
     
     @media only screen and (min-width: 1280px) {
@@ -483,136 +555,56 @@
       padding-right: 8.59375vw;
     }
     
-    .col {
-      box-sizing: border-box;
+    .description {
+      max-width: max(800px, 50vw);
+      margin: 0 auto;
       
-      &:first-child {
-        flex-shrink: 0;
-        margin-top: 40px;
-        max-width: 100%;
-        order: 1;
-        width: 100%;
+      h2 {
+        color: #184068;
+        font-family: peridot-pe-variable, sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.04em;
+        margin-bottom: max(36px, 2.5vw);
+        text-transform: none;
         
-        @media only screen and (min-width: 850px) {
-          margin-top: 0;
-          max-width: max(430px, 29.0104166667vw);
-          order: 0;
-        }
-        
-        .banner {
-          border-radius: max(20px, 1.0416666667vw);
-          box-sizing: border-box;
-          display: flex;
-          min-height: 34.6354166667vw;
-          overflow: hidden;
-          padding: 24px;
-          position: relative;
-          width: 100%;
-          
-          @media only screen and (min-width: 650px) {
-            padding: max(24px, 7.3333333333vw);
-          }
-          
-          @media only screen and (min-width: 850px) {
-            padding: 4.5833333333vw;
-          }
-          
-          .banner-image {
-            bottom: 0;
-            height: 100%;
-            left: 0;
-            object-fit: cover;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 100%;
-            z-index: 0;
-          }
-          
-          .banner-content {
-            background-color: #fff;
-            border-radius: max(20px, 1.0416666667vw);
-            padding: max(55px, 3.6458333333vw) max(25px, 3.125vw);
-            position: relative;
-            text-align: center;
-            width: 100%;
-            z-index: 3;
-            
-            :last-child {
-              margin-bottom: 0;
-            }
-            
-            h2 {
-              color: #184068;
-              font-family: peridot-pe-variable, sans-serif;
-              font-size: 23px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 1.04em;
-              margin-bottom: max(30px, 2.0833333333vw);
-              text-transform: none;
-              
-              @media only screen and (min-width: 768px) {
-                font-size: max(27px, 1.6666666667vw);
-              }
-            }
-            
-            h3 {
-              color: #184068;
-              font-family: peridot-pe-variable, sans-serif;
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 1.04em;
-              margin-bottom: max(6px, 0.4166666667vw);
-              text-transform: none;
-              
-              @media only screen and (min-width: 768px) {
-                font-size: max(22px, 1.25vw);
-              }
-            }
-            
-            p {
-              color: #184068;
-              font-family: peridot-pe-variable, sans-serif;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 400;
-              letter-spacing: 0;
-              line-height: 1.3em;
-              margin-bottom: max(30px, 2.0833333333vw);
-              
-              @media only screen and (min-width: 768px) {
-                font-size: max(17px, 1.0416666667vw);
-              }
-            }
-          }
+        @media only screen and (min-width: 768px) {
+          font-size: max(45px, 3.125vw);
         }
       }
       
-      &:nth-child(2) {
-        width: 100%;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
         
-        @media only screen and (min-width: 850px) {
-          padding-left: 30px;
-        }
-        
-        @media only screen and (min-width: 1024px) {
-          padding-left: 7.8125vw;
-        }
-        
-        .description h2 {
+        li {
           color: #184068;
           font-family: peridot-pe-variable, sans-serif;
-          font-size: 32px;
+          font-size: 16px;
           font-style: normal;
-          font-weight: 700;
-          line-height: 1.04em;
-          margin-bottom: max(36px, 2.5vw);
-          text-transform: none;
+          font-weight: 400;
+          letter-spacing: 0;
+          line-height: 1.6em;
+          margin-bottom: max(12px, 0.78125vw);
+          padding-left: max(20px, 1.3020833333vw);
+          position: relative;
           
           @media only screen and (min-width: 768px) {
-            font-size: max(45px, 3.125vw);
+            font-size: max(17px, 1.0416666667vw);
+          }
+          
+          &:before {
+            content: "•";
+            color: #184068;
+            font-weight: 700;
+            left: 0;
+            position: absolute;
+          }
+          
+          &:last-child {
+            margin-bottom: 0;
           }
         }
       }

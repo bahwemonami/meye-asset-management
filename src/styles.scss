@@ -1,4 +1,4 @@
-/* Import Design Tokens, Responsive et Animations Rivemont - @use doit être avant @tailwind */
+/* Import Design Tokens, Responsive et Animations MEYE - @use doit être avant @tailwind */
 @use 'styles/rivemont/tokens' as *;
 @use 'styles/rivemont/responsive' as *;
 @use 'styles/rivemont/animations' as *;
@@ -15,7 +15,7 @@
 @import 'aos/dist/aos.css';
 
 /* ============================================================================
-   FONT PERIDOT PE VARIABLE - Police exacte de Rivemont
+   FONT PERIDOT PE VARIABLE - Police exacte de MEYE ASSET MANAGER
    ============================================================================ */
 @font-face {
   font-family: 'peridot-pe-variable';
@@ -44,7 +44,7 @@
   }
 }
 
-/* Variables de couleurs identiques à Rivemont */
+/* Variables de couleurs identiques à MEYE ASSET MANAGER */
 :root {
   --rivemont-primary: #1a1a1a;
   --rivemont-primary-dark: #0a0a0a;
@@ -85,9 +85,11 @@ a, button {
 html {
   scroll-behavior: smooth;
   overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
-/* Typographie identique à Rivemont */
+/* Typographie identique à MEYE ASSET MANAGER */
 body {
   font-family: peridot-pe-variable, sans-serif;
   font-size: 17px;
@@ -96,44 +98,63 @@ body {
   background: var(--rivemont-bg-white);
   text-transform: none;
   text-decoration: none;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  max-width: 100vw;
+  position: relative;
 }
 
-/* Main content - Padding-top pour compenser le header absolute sur desktop */
+/* Main content - Padding-top conditionnel selon la présence d'un hero */
+/* Les pages AVEC hero (.section-hero ou .template-part-hero) n'ont pas besoin de padding-top 
+   car le header est superposé (position absolute) */
 main#main-content {
-  padding-top: 0;
+  padding-top: 152px; /* Par défaut : padding-top pour compenser le header fixe sur mobile */
   
-  /* Pas de padding-top sur desktop car le header est absolute et ne prend pas d'espace */
-  /* Le padding-top était nécessaire pour un header fixed, mais ici le header est absolute */
+  @media only screen and (min-width: 768px) {
+    padding-top: 200px; /* Hauteur du header sur tablette */
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    padding-top: max(260px, 16.25vw); /* Hauteur du header sur desktop */
+  }
+}
+
+/* Pages AVEC hero : pas de padding-top car le header est superposé (absolute) */
+main#main-content:has(.section-hero),
+main#main-content:has(.template-part-hero) {
+  padding-top: 0 !important;
 }
 
 /* Template About Page Container */
+/* Le padding-top est maintenant géré par main#main-content globalement */
 .template-about-page-container {
   padding-top: 0;
   margin-top: 0;
 }
 
-/* Template About Page Container - Padding pour compenser le header */
-.template-about-page-container {
-  padding-top: 0;
-  
-  @media only screen and (min-width: 1024px) {
-    padding-top: 0;
-  }
-}
-
 img,
 video,
 iframe {
-  max-width: 100%;
-  height: auto;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
 }
 
 iframe {
-  width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
-/* Titres avec police Peridot PE Variable (identique à Rivemont) */
+/* Empêcher les images de déborder */
+img {
+  object-fit: contain;
+}
+
+.gl-responsive-background,
+img[class*="background"] {
+  object-fit: cover !important;
+}
+
+/* Titres avec police Peridot PE Variable (identique à MEYE ASSET MANAGER) */
 h1 {
   font-family: peridot-pe-variable, sans-serif;
   font-size: 73.3333px;
@@ -192,29 +213,213 @@ h3, h4, h5, h6 {
 }
 
 /* ============================================================================
-   HEADER - Styles Pixel Perfect 1:1 identiques à Rivemont.ca
+   HEADER - Styles Pixel Perfect 1:1 identiques à MEYE ASSET MANAGER
    ============================================================================ */
 
-/* Base - Header toujours transparent et fixe sur mobile */
-/* IDENTIQUE À RIVEMONT : position fixed sur mobile, absolute sur desktop */
+/* LOGIQUE GLOBALE : 
+   - Sur les pages AVEC hero : header en position ABSOLUTE pour être superposé sur l'image hero
+   - Sur les pages SANS hero : header en position FIXED pour rester visible
+   Le header ne descend JAMAIS au scroll, il reste TOUJOURS en haut (top: 0) */
 #site-header {
     background-color: transparent !important;
     background: transparent !important;
     box-sizing: border-box;
-    left: 0;
+    left: 0 !important;
     padding-left: 14px;
     padding-right: 14px;
-    position: fixed; /* Mobile : fixed par défaut */
-    top: 0;
+    position: fixed !important; /* Par défaut : toujours fixed pour ne jamais descendre */
+    top: 0 !important; /* TOUJOURS en haut, ne descend jamais */
+    bottom: auto !important; /* S'assurer qu'il n'y a pas de bottom qui pourrait interférer */
+    margin-top: 0 !important; /* Pas de margin-top qui pourrait le déplacer */
+    margin-bottom: 0 !important;
     transition: all .35s ease 0ms;
-    width: 100%;
-    z-index: 10;
+    width: 100% !important;
+    z-index: 100 !important; /* Z-index élevé pour être au-dessus de tout */
+    overflow: hidden; /* Empêcher les débordements invisibles */
+    transform: translateY(0) !important; /* Pas de translation verticale sauf pour le masquage homepage */
+    opacity: 1 !important; /* Toujours visible */
+    pointer-events: auto !important; /* Toujours interactif */
+    will-change: transform, opacity; /* Optimisation pour les animations */
+    
+    /* Override Tailwind CSS si nécessaire */
+    &.fixed,
+    &.absolute,
+    &.sticky {
+        position: fixed !important;
+        top: 0 !important;
+    }
 }
 
-/* Desktop : position absolute pour TOUS les headers (comme Rivemont) */
-@media only screen and (min-width:1024px) {
+/* Pages AVEC hero : header en position ABSOLUTE pour être superposé sur l'image hero */
+/* Le header reste toujours en haut (top: 0) même en absolute */
+#site-header.site-header--hero,
+#site-header.site-header--cta-header,
+#site-header.site-header--private-management,
+#site-header.site-header--performance,
+#site-header.site-header--financial-planning,
+#site-header.site-header--alternative-funds,
+#site-header.site-header--contact,
+#site-header.site-header--become-client {
+    position: absolute !important; /* Absolute pour être superposé au hero */
+    top: 0 !important; /* TOUJOURS en haut, même en absolute */
+    bottom: auto !important; /* S'assurer qu'il n'y a pas de bottom */
+    margin-top: 0 !important; /* Pas de margin-top */
+    margin-bottom: 0 !important;
+    z-index: 100 !important; /* Au-dessus du hero */
+    transform: translateY(0) !important; /* Pas de translation verticale */
+    
+    /* Override Tailwind CSS si nécessaire */
+    &.fixed,
+    &.absolute,
+    &.sticky {
+        position: absolute !important;
+        top: 0 !important;
+    }
+}
+
+/* Cacher le header au scroll UNIQUEMENT sur la homepage (optionnel) */
+/* ET cacher le header quand le menu hamburger est ouvert */
+/* IMPORTANT : Le header reste toujours en haut (top: 0) même quand il est masqué */
+#site-header.site-header--hidden {
+    transform: translateY(-100%) !important; /* Masquer le header vers le haut (pas vers le bas) */
+    top: 0 !important; /* TOUJOURS en haut, même quand masqué */
+    position: fixed !important; /* Rester fixed même quand masqué */
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    
+    /* Sur les pages avec hero, rester absolute même quand masqué */
+    &.site-header--hero,
+    &.site-header--cta-header,
+    &.site-header--private-management,
+    &.site-header--performance,
+    &.site-header--financial-planning,
+    &.site-header--alternative-funds,
+    &.site-header--contact,
+    &.site-header--become-client {
+        position: absolute !important;
+        top: 0 !important;
+    }
+}
+
+/* La homepage sans la classe hidden : header visible */
+#site-header.site-header--cta-header:not(.site-header--hidden) {
+    transform: translateY(0) !important;
+    opacity: 1;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* S'assurer qu'aucune règle CSS inline ne peut faire descendre le header */
+#site-header[style*="top"],
+#site-header[style*="position"],
+#site-header[style*="transform"] {
+    top: 0 !important; /* Override tout style inline qui pourrait changer top */
+    position: fixed !important; /* Override position inline */
+}
+
+/* S'assurer que le header reste en haut sur TOUS les media queries */
+@media only screen and (max-width: 767px) {
     #site-header {
-        position: absolute; /* Desktop : absolute par défaut pour tous */
+        position: fixed !important;
+        top: 0 !important;
+        transform: translateY(0) !important;
+    }
+    
+    #site-header.site-header--hero,
+    #site-header.site-header--cta-header,
+    #site-header.site-header--private-management,
+    #site-header.site-header--performance,
+    #site-header.site-header--financial-planning,
+    #site-header.site-header--alternative-funds,
+    #site-header.site-header--contact,
+    #site-header.site-header--become-client {
+        position: absolute !important;
+        top: 0 !important;
+        transform: translateY(0) !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #site-header {
+        position: fixed !important;
+        top: 0 !important;
+        transform: translateY(0) !important;
+    }
+    
+    #site-header.site-header--hero,
+    #site-header.site-header--cta-header,
+    #site-header.site-header--private-management,
+    #site-header.site-header--performance,
+    #site-header.site-header--financial-planning,
+    #site-header.site-header--alternative-funds,
+    #site-header.site-header--contact,
+    #site-header.site-header--become-client {
+        position: absolute !important;
+        top: 0 !important;
+        transform: translateY(0) !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #site-header {
+        position: fixed !important;
+        top: 0 !important;
+        transform: translateY(0) !important;
+    }
+    
+    #site-header.site-header--hero,
+    #site-header.site-header--cta-header,
+    #site-header.site-header--private-management,
+    #site-header.site-header--performance,
+    #site-header.site-header--financial-planning,
+    #site-header.site-header--alternative-funds,
+    #site-header.site-header--contact,
+    #site-header.site-header--become-client {
+        position: absolute !important;
+        top: 0 !important;
+        transform: translateY(0) !important;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #site-header {
+        position: fixed !important;
+        top: 0 !important;
+        transform: translateY(0) !important;
+    }
+    
+    #site-header.site-header--hero,
+    #site-header.site-header--cta-header,
+    #site-header.site-header--private-management,
+    #site-header.site-header--performance,
+    #site-header.site-header--financial-planning,
+    #site-header.site-header--alternative-funds,
+    #site-header.site-header--contact,
+    #site-header.site-header--become-client {
+        position: absolute !important;
+        top: 0 !important;
+        transform: translateY(0) !important;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    #site-header {
+        position: fixed !important;
+        top: 0 !important;
+        transform: translateY(0) !important;
+    }
+    
+    #site-header.site-header--hero,
+    #site-header.site-header--cta-header,
+    #site-header.site-header--private-management,
+    #site-header.site-header--performance,
+    #site-header.site-header--financial-planning,
+    #site-header.site-header--alternative-funds,
+    #site-header.site-header--contact,
+    #site-header.site-header--become-client {
+        position: absolute !important;
+        top: 0 !important;
+        transform: translateY(0) !important;
     }
 }
 
@@ -271,16 +476,8 @@ h3, h4, h5, h6 {
    PAGES SANS HERO (firm-profile, contact, governance, autres)
    ============================================================================ */
 
-/* Pages sans hero : position fixed même sur desktop (override du style global desktop) */
-@media only screen and (min-width:1024px) {
-    #site-header.site-header--dark,
-    #site-header.site-header--light-background,
-    #site-header.site-header--contact,
-    #site-header.site-header--firm-profile,
-    #site-header.site-header--governance {
-        position: fixed !important; /* Override le absolute global pour ces pages */
-    }
-}
+/* SUPPRIMÉ : Le header est maintenant TOUJOURS FIXE sur toutes les pages */
+/* Plus besoin de règles spécifiques pour les pages sans hero */
 
 /* Header avec background pour la page gouvernance pour éviter que le contenu passe derrière */
 #site-header.site-header--governance {
@@ -327,13 +524,84 @@ h3, h4, h5, h6 {
 }
 
 #site-header .content .gl-button {
-  border-radius: 0 0 max(20px, 1.8229166667vw) max(20px, 1.8229166667vw);
+  border-radius: max(20px, 1.8229166667vw);
   display: none;
-  min-width: max(200px, 14.375vw);
-  position: absolute;
-  right: 0;
-  top: 0;
+  min-width: auto;
+  position: relative;
+  right: auto;
+  top: auto;
   z-index: 1;
+  font-size: 14px;
+  min-height: 38px;
+  padding: 0 16px;
+  white-space: nowrap;
+  
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    font-size: max(16px, 1.0416666667vw);
+    min-height: max(42px, 2.6041666667vw);
+    padding: 0 max(20px, 1.5625vw);
+    min-width: max(160px, 12.5vw);
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    font-size: max(18px, 1.0416666667vw);
+    min-height: max(54px, 3.6458333333vw);
+    min-width: max(200px, 14.375vw);
+  }
+}
+
+/* Bouton Accès Client - Positionné en haut à droite sur desktop (identique à rivemont.ca) */
+/* Valeurs exactes depuis element-analysis.json : width: 276px, height: 70px, borderRadius: 0px 0px 35px 35px */
+#site-header .content .gl-button--client-access {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  
+  /* Mobile/Tablette : caché (affiché dans le menu mobile) */
+  @media only screen and (max-width: 1023px) {
+    display: none !important;
+  }
+  
+  /* Desktop : visible et positionné en haut à droite avec valeurs exactes de rivemont.ca */
+  @media only screen and (min-width: 1024px) {
+    display: flex !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 276px !important;
+    height: 70px !important;
+    min-width: 276px !important;
+    min-height: 70px !important;
+    max-width: 276px !important;
+    max-height: 70px !important;
+    border-radius: 0 0 35px 35px !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 35px !important;
+    border-bottom-right-radius: 35px !important;
+    padding: 0 43px !important;
+    margin: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 20px !important;
+    line-height: 24px !important;
+    font-weight: 400 !important;
+    font-family: peridot-pe-variable, sans-serif !important;
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(24, 64, 104) !important;
+    transition: 0.35s ease !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Hover state identique à rivemont.ca */
+  @media only screen and (min-width: 1024px) {
+    &:hover {
+      background-color: rgb(24, 64, 104) !important;
+      color: rgb(255, 255, 255) !important;
+    }
+  }
 }
 
 #site-header .content .gl-button.gl-button--blue-dark:hover {
@@ -341,50 +609,205 @@ h3, h4, h5, h6 {
 }
 
 #site-header .content .gl-button img {
-  margin-right: max(10px, .78125vw);
-  width: max(12px, .78125vw);
+  margin-right: 8px;
+  width: 12px;
+  height: auto;
+  
+  @media only screen and (min-width: 768px) {
+    margin-right: max(10px, .78125vw);
+    width: max(12px, .78125vw);
+  }
+}
+
+/* Image dans le bouton Accès Client - Valeurs exactes */
+#site-header .content .gl-button--client-access img {
+  @media only screen and (min-width: 1024px) {
+    margin-right: max(10px, .78125vw) !important;
+    width: max(12px, .78125vw) !important;
+    height: auto !important;
+  }
 }
 
 #site-header .content .gl-button:after {
   content: none;
 }
 
-@media only screen and (min-width: 1024px) {
-  #site-header .content .gl-button {
-    display: flex;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  #site-header .content .gl-button {
-    font-size: max(18px, 1.0416666667vw);
-    min-height: max(54px, 3.6458333333vw);
-  }
+#site-header .content .col.col-1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
 }
 
 #site-header .content .col.col-1 .logo-holder {
-  display: block;
-  width: 164px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  max-width: 140px;
+  height: auto;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  
+  @media only screen and (min-width: 568px) {
+    max-width: 160px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   #site-header .content .col.col-1 .logo-holder {
-    width: max(200px, 14.7916666667vw);
+    max-width: 200px;
   }
 }
 
-#site-header .content .col.col-1 .logo-holder img {
-  display: inline !important;
-  height: auto !important;
-  vertical-align: baseline;
-  width: 100% !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+@media only screen and (min-width: 1024px) {
+  #site-header .content .col.col-1 .logo-holder {
+    max-width: 250px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  #site-header .content .col.col-1 .logo-holder {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  #site-header .content .col.col-1 .logo-holder {
+    max-width: 350px;
+  }
+}
+
+/* Logo texte MEYE avec police LA LUXES SERIF (Playfair Display comme alternative) */
+#site-header .content .col.col-1 .logo-holder .logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  line-height: 1;
+}
+
+/* "MEYE" en grand sur une ligne */
+#site-header .content .col.col-1 .logo-holder .logo-text .logo-meye {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffbd59; /* Doré pour fond sombre */
+  display: block;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1;
+  
+  @media only screen and (min-width: 568px) {
+    font-size: 40px;
+  }
+}
+
+/* Sous-titre "ASSET MANAGEMENT" centré en dessous */
+#site-header .content .col.col-1 .logo-holder .logo-text .logo-subtitle {
+  font-size: 7px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffbd59; /* Doré pour fond sombre */
+  margin-top: 1px;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  
+  @media only screen and (min-width: 568px) {
+    font-size: 8px;
+    margin-top: 2px;
+  }
+}
+
+/* Pages avec fond clair : logo doré par défaut */
+#site-header.site-header--light-background .content .col.col-1 .logo-holder .logo-text .logo-meye,
+#site-header.site-header--light-background .content .col.col-1 .logo-holder .logo-text .logo-subtitle {
+  color: #ffbd59;
+}
+
+/* Pages contact, firm-profile et governance : logo bleu */
+#site-header.site-header--contact .content .col.col-1 .logo-holder .logo-text .logo-meye,
+#site-header.site-header--contact .content .col.col-1 .logo-holder .logo-text .logo-subtitle,
+#site-header.site-header--firm-profile .content .col.col-1 .logo-holder .logo-text .logo-meye,
+#site-header.site-header--firm-profile .content .col.col-1 .logo-holder .logo-text .logo-subtitle,
+#site-header.site-header--governance .content .col.col-1 .logo-holder .logo-text .logo-meye,
+#site-header.site-header--governance .content .col.col-1 .logo-holder .logo-text .logo-subtitle {
+  color: rgb(24, 64, 104) !important;
+}
+
+/* Pages avec fond sombre : logo blanc */
+#site-header.site-header--hero .content .col.col-1 .logo-holder .logo-text .logo-meye,
+#site-header.site-header--hero .content .col.col-1 .logo-holder .logo-text .logo-subtitle,
+#site-header.site-header--dark .content .col.col-1 .logo-holder .logo-text .logo-meye,
+#site-header.site-header--dark .content .col.col-1 .logo-holder .logo-text .logo-subtitle {
+  color: #ffffff;
+}
+
+/* Responsive - Tablet */
+@media only screen and (min-width: 768px) {
+  #site-header .content .col.col-1 .logo-holder .logo-text .logo-meye {
+    font-size: 50px;
+  }
+  
+  #site-header .content .col.col-1 .logo-holder .logo-text .logo-subtitle {
+    font-size: 9px;
+    margin-top: 2px;
+  }
+}
+
+/* Responsive - Desktop */
+@media only screen and (min-width: 1024px) {
+  #site-header .content .col.col-1 .logo-holder .logo-text .logo-meye {
+    font-size: 60px;
+  }
+  
+  #site-header .content .col.col-1 .logo-holder .logo-text .logo-subtitle {
+    font-size: 10px;
+    margin-top: 3px;
+  }
+}
+
+/* Responsive - Large Desktop */
+@media only screen and (min-width: 1280px) {
+  #site-header .content .col.col-1 .logo-holder .logo-text .logo-meye {
+    font-size: 70px;
+  }
+  
+  #site-header .content .col.col-1 .logo-holder .logo-text .logo-subtitle {
+    font-size: 11px;
+    margin-top: 4px;
+  }
+}
+
+/* Responsive - XL Desktop */
+@media only screen and (min-width: 1600px) {
+  #site-header .content .col.col-1 .logo-holder .logo-text .logo-meye {
+    font-size: 80px;
+  }
+  
+  #site-header .content .col.col-1 .logo-holder .logo-text .logo-subtitle {
+    font-size: 12px;
+    margin-top: 5px;
+  }
 }
 
 #site-header .content .col.col-2 {
   align-items: center;
   display: flex;
+  gap: 15px;
+  flex-shrink: 0;
+  
+  @media only screen and (min-width: 768px) {
+    gap: 20px;
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    gap: max(45px, 3.125vw);
+  }
 }
 
 #site-header .content .col.col-2 nav {
@@ -399,10 +822,18 @@ h3, h4, h5, h6 {
 
 #site-header .content .col.col-2 nav .menu {
   display: flex;
+  gap: max(20px, 1.5625vw);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  @media only screen and (min-width: 1280px) {
+    gap: max(45px, 3.125vw);
+  }
 }
 
 #site-header .content .col.col-2 nav .menu li {
-  margin-right: max(45px, 3.125vw);
+  margin-right: 0;
 }
 
 #site-header .content .col.col-2 nav .menu li:last-child {
@@ -430,21 +861,66 @@ h3, h4, h5, h6 {
 }
 
 #site-header .content .col.col-2 .hamburger {
-  background-color: #fff0;
+  background-color: transparent;
   border: none;
   cursor: pointer;
-  display: block;
-  margin-left: max(64px, 3.3333333333vw);
-  padding: 0;
-  width: max(27px, 1.40625vw);
+  display: flex; /* Toujours visible, même sur desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  padding: 0; /* Pas de padding pour avoir plus d'espace pour les barres */
+  width: max(29px, 1.5104166667vw); /* Plus large comme rivemont.ca */
+  height: auto; /* Hauteur automatique selon les barres */
+  min-height: 24px;
+  flex-shrink: 0;
+  
+  @media only screen and (min-width: 768px) {
+    margin-left: max(64px, 3.3333333333vw); /* Plus d'espace comme rivemont.ca */
+    width: max(29px, 1.5104166667vw);
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    display: flex; /* Visible sur desktop */
+    margin-left: max(64px, 3.3333333333vw); /* Espacement identique à rivemont.ca */
+    width: max(29px, 1.5104166667vw);
+  }
 }
 
 #site-header .content .col.col-2 .hamburger span {
   background-color: #fff;
   border: none;
   display: block;
-  height: max(2px, .1041666667vw);
-  margin-bottom: max(6px, .3125vw);
+  height: max(2px, .1041666667vw); /* Épaisseur identique à rivemont.ca */
+  width: 100%; /* Prend toute la largeur du bouton pour des barres plus longues */
+  margin-bottom: max(8px, .4166666667vw); /* Plus d'espace entre les barres */
+  transition: all 0.3s ease;
+  
+  @media only screen and (min-width: 768px) {
+    height: max(2px, .1041666667vw);
+    margin-bottom: max(8px, .4166666667vw);
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    height: max(2px, .1041666667vw);
+    margin-bottom: max(8px, .4166666667vw);
+  }
+}
+
+#site-header .content .col.col-2 .hamburger.active span:first-child,
+#site-header .content .col.col-2 .hamburger.hamburger--active span:first-child {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  transform-origin: center;
+}
+
+#site-header .content .col.col-2 .hamburger.active span:nth-child(2),
+#site-header .content .col.col-2 .hamburger.hamburger--active span:nth-child(2) {
+  opacity: 0;
+}
+
+#site-header .content .col.col-2 .hamburger.active span:last-child,
+#site-header .content .col.col-2 .hamburger.hamburger--active span:last-child {
+  transform: rotate(45deg) translate(-5px, -6px);
+  transform-origin: center;
 }
 
 #site-header .content .col.col-2 .hamburger span:last-child {
@@ -507,14 +983,14 @@ h3, h4, h5, h6 {
   cursor: pointer;
   display: none;
   font-family: peridot-pe-variable, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   justify-content: center;
   line-height: 1.2em;
   min-height: 42px;
-  min-width: max(178px, 17.8125vw);
-  padding: 0 max(24px, 2.2395833333vw);
+  min-width: max(150px, 14.375vw);
+  padding: 0 max(20px, 1.5625vw);
   position: fixed;
   right: 0;
   top: 50%;
@@ -525,6 +1001,17 @@ h3, h4, h5, h6 {
   text-transform: none;
   transition: all .35s ease 0ms;
   z-index: 8;
+  
+  @media only screen and (min-width: 968px) {
+    display: flex;
+    font-size: 16px;
+    min-width: max(178px, 17.8125vw);
+    padding: 0 max(24px, 2.2395833333vw);
+  }
+  
+  @media only screen and (max-width: 967px) {
+    display: none !important;
+  }
 
   &::after {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNyIgaGVpZ2h0PSIyNS4yNDMiIHZpZXdCb3g9IjAgMCAyNyAyNS4yNDMiPgogIDxwYXRoIGlkPSJJY29uX2FrYXItYXJyb3ctcmlnaHQiIGRhdGEtbmFtZT0iSWNvbiBha2FyLWFycm93LXJpZ2h0IiBkPSJNNiwxOEgzME0xOS41LDcuNSwzMCwxOCwxOS41LDI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00LjUgLTUuMzc5KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K);
@@ -570,7 +1057,7 @@ h3, h4, h5, h6 {
 
 .menu-toggle,
 .hamburger {
-  display: none;
+  display: flex; /* Toujours visible sur toutes les tailles d'écran */
   background: none;
   border: none;
   cursor: pointer;
@@ -580,10 +1067,6 @@ h3, h4, h5, h6 {
   position: relative;
   flex-direction: column;
   justify-content: space-between;
-  
-  @media (max-width: 1024px) {
-    display: flex;
-  }
   
   span {
     display: block;
@@ -610,7 +1093,7 @@ h3, h4, h5, h6 {
   }
 }
 
-/* Action Button - Sidebar "Passez à l'action" (identique à Rivemont) */
+/* Action Button - Sidebar "Passez à l'action" (identique à MEYE ASSET MANAGER) */
 .action-button {
   position: fixed !important;
   right: 0 !important;
@@ -661,9 +1144,10 @@ h3, h4, h5, h6 {
   }
 }
 
-/* Hero Section - Identique à Rivemont */
+/* Hero Section - Identique à MEYE ASSET MANAGER */
 .hero-section,
-.section-hero {
+.section-hero,
+.template-part-hero {
   position: relative;
   min-height: 70px;
   height: 945px;
@@ -675,6 +1159,16 @@ h3, h4, h5, h6 {
   overflow: hidden;
   margin-top: 0;
   padding: 0px 17px;
+  
+  /* Hero commence à 0 sur toutes les tailles - header superposé en absolute */
+  margin-top: 0 !important;
+  
+  /* Le contenu du hero est centré verticalement */
+  .content {
+    position: relative;
+    z-index: 7;
+  }
+  
   transition: all;
   
   img.gl-responsive-background,
@@ -779,7 +1273,7 @@ h3, h4, h5, h6 {
   }
 }
 
-/* Link with Arrow - Identique à Rivemont */
+/* Link with Arrow - Identique à MEYE ASSET MANAGER */
 .link-with-arrow {
   display: inline-flex;
   align-items: center;
@@ -821,7 +1315,7 @@ h3, h4, h5, h6 {
   }
 }
 
-/* Styles globaux pour gl-text-editor - Identique à Rivemont */
+/* Styles globaux pour gl-text-editor - Identique à MEYE ASSET MANAGER */
 .gl-text-editor {
   * {
     margin-bottom: max(20px, 1.3020833333vw);
@@ -858,12 +1352,12 @@ h3, h4, h5, h6 {
   }
 }
 
-/* Mission Section - Identique à Rivemont */
+/* Mission Section - Identique à MEYE ASSET MANAGER */
 .template-part-desc-image {
   box-sizing: border-box;
   padding-left: 14px;
   padding-right: 14px;
-  padding-top: 0px;
+  padding-top: 0px; /* Le padding-top est géré par main#main-content */
   margin-bottom: 225px;
   margin-top: 0px;
   background: rgba(0, 0, 0, 0);
@@ -875,9 +1369,7 @@ h3, h4, h5, h6 {
     padding-right: 35px;
   }
   
-  @media only screen and (min-width: 1024px) {
-    padding-top: 260px; /* Compense le header en position absolute */
-  }
+  /* SUPPRIMÉ : padding-top: 260px car maintenant géré globalement par main#main-content */
   
   @media only screen and (min-width: 1280px) {
     padding-left: 80px;
@@ -1112,18 +1604,11 @@ h3, h4, h5, h6 {
   @extend .template-part-desc-image;
 }
 
-/* Template Governance Page Container - Identique à Rivemont */
+/* Template Governance Page Container - Identique à MEYE ASSET MANAGER */
+/* Le padding-top est maintenant géré globalement par main#main-content */
 .template-gouvernance-page-container {
-  padding-top: 80px; /* Compense le header fixe sur mobile */
+  padding-top: 0; /* Le padding-top est géré par main#main-content */
   margin-top: 0;
-  
-  @media only screen and (min-width: 768px) {
-    padding-top: 100px; /* Compense le header fixe sur tablette */
-  }
-  
-  @media only screen and (min-width: 1024px) {
-    padding-top: 260px; /* Compense le header en position fixed sur desktop */
-  }
   
   .sections {
     display: block;
@@ -1184,7 +1669,7 @@ h3, h4, h5, h6 {
   }
 }
 
-/* Description Section - Identique à Rivemont */
+/* Description Section - Identique à MEYE ASSET MANAGER */
 .description-section {
   padding: 0px;
   margin-bottom: 0px;
@@ -1271,10 +1756,26 @@ h3, h4, h5, h6 {
         font-size: 60px;
         line-height: 62.4px;
         
+        @media (max-width: 1024px) {
+          font-size: 50px;
+          line-height: 52px;
+        }
+        
         @media (max-width: 768px) {
           font-size: 45px;
           line-height: 48px;
           margin-bottom: 40px;
+        }
+        
+        @media (max-width: 568px) {
+          font-size: 36px;
+          line-height: 40px;
+          margin-bottom: 30px;
+        }
+        
+        @media (max-width: 320px) {
+          font-size: 28px;
+          line-height: 32px;
         }
       }
       
@@ -1282,10 +1783,26 @@ h3, h4, h5, h6 {
         font-size: 60px;
         line-height: 62.4px;
         
+        @media (max-width: 1024px) {
+          font-size: 40px;
+          line-height: 44px;
+        }
+        
         @media (max-width: 768px) {
           font-size: 30px;
           line-height: 33px;
           margin-bottom: 30px;
+        }
+        
+        @media (max-width: 568px) {
+          font-size: 26px;
+          line-height: 30px;
+          margin-bottom: 25px;
+        }
+        
+        @media (max-width: 320px) {
+          font-size: 22px;
+          line-height: 26px;
         }
       }
       
@@ -1313,6 +1830,17 @@ h3, h4, h5, h6 {
             margin-bottom: 0;
           }
         }
+        
+        @media (max-width: 568px) {
+          font-size: 16px;
+          line-height: 22px;
+          margin-bottom: 20px;
+        }
+        
+        @media (max-width: 320px) {
+          font-size: 15px;
+          line-height: 20px;
+        }
       }
     }
     
@@ -1332,6 +1860,15 @@ h3, h4, h5, h6 {
         border-radius: 24px;
       }
       
+      @media (max-width: 568px) {
+        padding: 30px 20px;
+        border-radius: 20px;
+      }
+      
+      @media (max-width: 320px) {
+        padding: 25px 15px;
+      }
+      
       .banner-title {
         font-family: peridot-pe-variable, sans-serif;
         font-size: 32px;
@@ -1344,10 +1881,28 @@ h3, h4, h5, h6 {
         text-decoration: none;
         text-align: center;
         
+        @media (max-width: 1024px) {
+          font-size: 28px;
+          line-height: 30px;
+          margin-bottom: 50px;
+        }
+        
         @media (max-width: 768px) {
           font-size: 25px;
           line-height: 26px;
           margin-bottom: 30px;
+        }
+        
+        @media (max-width: 568px) {
+          font-size: 22px;
+          line-height: 24px;
+          margin-bottom: 25px;
+        }
+        
+        @media (max-width: 320px) {
+          font-size: 20px;
+          line-height: 22px;
+          margin-bottom: 20px;
         }
       }
       
@@ -1365,28 +1920,57 @@ h3, h4, h5, h6 {
   }
 }
 
-/* Section CTA - Identique à Rivemont (pour firm-profile et autres pages) */
+/* Section CTA - Identique à MEYE ASSET MANAGER (pour firm-profile et autres pages) */
 .section-cta {
   position: relative;
   padding: 0px;
   margin-bottom: 0px;
   overflow: hidden;
+  width: 100%;
   
   .content {
     position: relative;
     max-width: 1920px;
     margin: 0 auto;
     padding: 0px;
+    width: 100%;
     
     .image-holder {
       background-color: #000;
       border-radius: 0 0 24px 24px;
-      overflow: hidden;
+      overflow: hidden; /* Cacher le débordement de l'image */
       padding-top: 45.6%;
       position: relative;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      width: 100%;
       
       @media only screen and (min-width: 768px) {
         border-radius: 0 0 max(50px, 3.6458333333vw) max(50px, 3.6458333333vw);
+      }
+      
+      /* Augmenter le padding-top sur mobile/tablette pour avoir plus d'espace pour le bouton */
+      @media only screen and (max-width: 1023px) {
+        padding-top: 55%; /* Plus d'espace pour le bouton sur mobile/tablette */
+        padding-bottom: 50px; /* Espace pour le bouton qui dépasse légèrement */
+        margin-bottom: 0;
+      }
+      
+      @media only screen and (max-width: 767px) {
+        padding-top: 60%; /* Encore plus d'espace sur petits écrans */
+        padding-bottom: 60px; /* Plus d'espace pour le bouton */
+      }
+      
+      @media only screen and (max-width: 567px) {
+        padding-top: 65%; /* Maximum d'espace sur très petits écrans */
+        padding-bottom: 70px; /* Maximum d'espace pour le bouton */
+      }
+      
+      /* Desktop : garder le ratio original mais s'assurer qu'il y a assez d'espace */
+      @media only screen and (min-width: 1024px) {
+        padding-top: 45.6%;
+        padding-bottom: 0;
+        min-height: 400px; /* Hauteur minimum pour s'assurer qu'il y a assez d'espace */
       }
       
       img.background {
@@ -1396,23 +1980,64 @@ h3, h4, h5, h6 {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
         z-index: 0;
+        max-width: 100%;
+        min-height: 100%;
+        display: block;
+        
+        /* S'assurer que l'image couvre bien le conteneur sur tous les écrans */
+        @media only screen and (max-width: 767px) {
+          object-position: center center;
+        }
       }
       
       .button-holder {
         bottom: 0;
-        justify-content: space-between;
+        justify-content: center;
         left: 50%;
         position: absolute;
         transform: translate(-50%, 50%);
         white-space: nowrap;
         z-index: 1;
+        width: auto;
+        max-width: calc(100% - 40px); /* Éviter que le bouton dépasse sur les côtés */
         
+        /* Mobile/Tablette : centrer le bouton et s'assurer qu'il ne dépasse pas de l'image */
+        @media only screen and (max-width: 1023px) {
+          bottom: 25px; /* Position fixe depuis le bas - dans l'espace padding-bottom */
+          transform: translateX(-50%); /* Seulement centrer horizontalement */
+          left: 50%;
+          right: auto;
+          width: calc(100% - 40px);
+          max-width: 400px; /* Limiter la largeur max sur mobile/tablette */
+        }
+        
+        @media only screen and (max-width: 767px) {
+          bottom: 30px; /* Plus d'espace sur petits écrans */
+          width: calc(100% - 30px);
+          max-width: 350px;
+        }
+        
+        @media only screen and (max-width: 567px) {
+          bottom: 35px; /* Maximum d'espace sur très petits écrans */
+          width: calc(100% - 20px);
+          max-width: 300px;
+        }
+        
+        /* Desktop : positionner en bas à droite avec assez d'espace */
         @media only screen and (min-width: 1024px) {
-          bottom: 5.9895833333vw;
+          bottom: max(70px, 5.9895833333vw); /* Plus d'espace depuis le bas sur desktop */
           left: auto;
-          right: 5.9895833333vw;
+          right: max(70px, 5.9895833333vw);
           transform: none;
+          max-width: none;
+          width: auto;
+        }
+        
+        @media only screen and (min-width: 1280px) {
+          bottom: max(80px, 6.25vw);
+          right: max(80px, 6.25vw);
         }
         
         .gl-button {
@@ -1429,10 +2054,31 @@ h3, h4, h5, h6 {
           border-radius: 100px;
           padding: 0px 43px;
           height: 70px;
-          min-width: 342px;
-          width: auto;
+          min-width: 280px; /* Réduire min-width sur mobile */
+          width: 100%; /* Prendre toute la largeur disponible sur mobile */
+          max-width: 100%;
           transition: 0.35s;
           text-transform: none;
+          box-sizing: border-box;
+          
+          @media only screen and (max-width: 767px) {
+            font-size: 18px;
+            height: 60px;
+            min-width: 250px;
+            padding: 0px 35px;
+          }
+          
+          @media only screen and (max-width: 567px) {
+            font-size: 16px;
+            height: 55px;
+            min-width: 220px;
+            padding: 0px 30px;
+          }
+          
+          @media only screen and (min-width: 1024px) {
+            min-width: 342px;
+            width: auto;
+          }
           
           &:hover {
             color: rgb(255, 255, 255);
@@ -1444,8 +2090,8 @@ h3, h4, h5, h6 {
   }
 }
 
-/* Team Preview Section - Identique à Rivemont */
-/* Section Team Preview - Full width image with overlaid button (identique à Rivemont) */
+/* Team Preview Section - Identique à MEYE ASSET MANAGER */
+/* Section Team Preview - Full width image with overlaid button (identique à MEYE ASSET MANAGER) */
 .template-home-page-container section.section-info {
   margin: 0 0 164px !important;
   padding: 0 !important;
@@ -1469,11 +2115,36 @@ h3, h4, h5, h6 {
       margin: 0 !important;
       background-color: #000 !important;
       border-radius: 0 0 24px 24px !important;
-      overflow: hidden !important;
+      overflow: hidden !important; /* Cacher le débordement de l'image */
       padding-top: 45.6% !important;
+      padding-bottom: 0 !important;
+      margin-bottom: 0 !important;
+      
+      /* Augmenter le padding-top sur mobile/tablette pour avoir plus d'espace pour le bouton */
+      @media (max-width: 1023px) {
+        padding-top: 55% !important;
+        padding-bottom: 50px !important; /* Espace pour le bouton */
+      }
+      
+      @media (max-width: 767px) {
+        padding-top: 60% !important;
+        padding-bottom: 60px !important;
+      }
+      
+      @media (max-width: 567px) {
+        padding-top: 65% !important;
+        padding-bottom: 70px !important;
+      }
       
       @media (min-width: 768px) {
         border-radius: 0 0 max(50px, 3.6458333333vw) max(50px, 3.6458333333vw) !important;
+      }
+      
+      /* Desktop : garder le ratio original mais s'assurer qu'il y a assez d'espace */
+      @media (min-width: 1024px) {
+        padding-top: 45.6% !important;
+        padding-bottom: 0 !important;
+        min-height: 400px !important; /* Hauteur minimum pour s'assurer qu'il y a assez d'espace */
       }
       
       img {
@@ -1491,8 +2162,8 @@ h3, h4, h5, h6 {
     
     > .gl-button {
       position: absolute !important;
-      bottom: 70px !important;
-      right: 115px !important;
+      bottom: max(60px, 5.9895833333vw) !important; /* Plus d'espace depuis le bas sur desktop */
+      right: max(60px, 5.9895833333vw) !important;
       display: inline-flex !important;
       align-items: center !important;
       justify-content: center !important;
@@ -1508,10 +2179,12 @@ h3, h4, h5, h6 {
       padding: 0px 43px !important;
       height: 70px !important;
       min-width: 342px !important;
-      width: 342px !important;
+      width: auto !important;
+      max-width: calc(100% - 40px) !important; /* Éviter que le bouton dépasse sur les côtés */
       transition: 0.35s !important;
       text-transform: none !important;
       z-index: 5 !important;
+      box-sizing: border-box !important;
       
       &::after {
         content: "" !important;
@@ -1529,11 +2202,46 @@ h3, h4, h5, h6 {
         background-color: rgb(0, 108, 168) !important;
       }
       
-      @media (max-width: 768px) {
-        bottom: 40px !important;
-        right: 20px !important;
-        width: auto !important;
+      /* Mobile/Tablette : centrer le bouton et s'assurer qu'il ne dépasse pas de l'image */
+      @media (max-width: 1023px) {
+        bottom: 25px !important; /* Position fixe depuis le bas - dans l'espace padding-bottom */
+        right: auto !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: calc(100% - 40px) !important;
+        max-width: 400px !important;
         min-width: 280px !important;
+      }
+      
+      @media (max-width: 767px) {
+        bottom: 30px !important; /* Plus d'espace sur petits écrans */
+        width: calc(100% - 30px) !important;
+        max-width: 350px !important;
+        min-width: 250px !important;
+        font-size: 18px !important;
+        height: 60px !important;
+        padding: 0px 35px !important;
+      }
+      
+      @media (max-width: 567px) {
+        bottom: 35px !important; /* Maximum d'espace sur très petits écrans */
+        width: calc(100% - 20px) !important;
+        max-width: 300px !important;
+        min-width: 220px !important;
+        font-size: 16px !important;
+        height: 55px !important;
+        padding: 0px 30px !important;
+      }
+      
+      /* Desktop : positionner en bas à droite avec assez d'espace */
+      @media (min-width: 1024px) {
+        bottom: max(70px, 5.9895833333vw) !important; /* Plus d'espace depuis le bas sur desktop */
+        right: max(70px, 5.9895833333vw) !important;
+      }
+      
+      @media (min-width: 1280px) {
+        bottom: max(80px, 6.25vw) !important;
+        right: max(80px, 6.25vw) !important;
       }
     }
   }
@@ -1544,7 +2252,7 @@ h3, h4, h5, h6 {
   @extend .section-info;
 }
 
-/* Performance Section - Identique à Rivemont */
+/* Performance Section - Identique à MEYE ASSET MANAGER */
 .section-chart {
   padding: 100px 0px;
   margin-bottom: 164px;
@@ -1637,7 +2345,7 @@ h3, h4, h5, h6 {
   @extend .section-chart;
 }
 
-/* Communications Section - Identique à Rivemont avec Swiper */
+/* Communications Section - Identique à MEYE ASSET MANAGER avec Swiper */
 .section-posts {
   padding: 104px 0px 85px;
   background: rgb(234, 243, 253);
@@ -1705,7 +2413,7 @@ h3, h4, h5, h6 {
       }
     }
     
-    /* Pagination verticale à droite - identique à Rivemont */
+    /* Pagination verticale à droite - identique à MEYE ASSET MANAGER */
     .swiper-pagination {
       position: absolute !important;
       right: -60px !important;
@@ -1964,7 +2672,7 @@ h3, h4, h5, h6 {
   @extend .section-posts;
 }
 
-/* Footer - Identique à Rivemont */
+/* Footer - Identique à MEYE ASSET MANAGER */
 #site-footer,
 .site-footer {
   background: rgb(24, 64, 104);
@@ -2064,12 +2772,12 @@ h3, h4, h5, h6 {
             
             input[type="email"] {
               flex: 1;
-              padding: 0px 43px;
-              height: 70px;
+              padding: 0px 20px;
+              height: 56px;
               border: none;
               border-radius: 100px;
               font-family: peridot-pe-variable, sans-serif;
-              font-size: 20px;
+              font-size: 16px;
               font-weight: 400;
               line-height: normal;
               color: rgb(24, 64, 104);
@@ -2079,6 +2787,18 @@ h3, h4, h5, h6 {
               text-transform: none;
               min-width: 0px;
               max-width: none;
+              
+              @media only screen and (min-width: 568px) {
+                padding: 0px 30px;
+                height: 60px;
+                font-size: 18px;
+              }
+              
+              @media only screen and (min-width: 768px) {
+                padding: 0px 43px;
+                height: 70px;
+                font-size: 20px;
+              }
               
               &::placeholder {
                 color: rgb(24, 64, 104);
@@ -2093,15 +2813,16 @@ h3, h4, h5, h6 {
             }
             
             button {
-              padding: 0px 29px;
-              height: 70px;
-              min-width: 200px;
+              padding: 0px 20px;
+              height: 56px;
+              min-width: 140px;
+              width: 100%;
               background: rgb(24, 64, 104);
               color: rgb(255, 255, 255);
               border: none;
               border-radius: 100px;
               font-family: peridot-pe-variable, sans-serif;
-              font-size: 20px;
+              font-size: 16px;
               font-weight: 400;
               line-height: 24px;
               cursor: pointer;
@@ -2111,11 +2832,35 @@ h3, h4, h5, h6 {
               display: flex;
               align-items: center;
               justify-content: center;
-              gap: 10px;
+              gap: 8px;
+              
+              @media only screen and (min-width: 568px) {
+                padding: 0px 25px;
+                height: 60px;
+                min-width: 160px;
+                width: auto;
+                font-size: 18px;
+                gap: 10px;
+              }
+              
+              @media only screen and (min-width: 768px) {
+                padding: 0px 29px;
+                height: 70px;
+                min-width: 200px;
+                font-size: 20px;
+              }
               
               &::after {
                 content: '→';
-                font-size: 20px;
+                font-size: 16px;
+                
+                @media only screen and (min-width: 568px) {
+                  font-size: 18px;
+                }
+                
+                @media only screen and (min-width: 768px) {
+                  font-size: 20px;
+                }
               }
               
               &:hover {
@@ -2142,22 +2887,46 @@ h3, h4, h5, h6 {
             color: rgb(255, 255, 255);
             text-decoration: none;
             font-family: peridot-pe-variable, sans-serif;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 400;
             line-height: 24px;
             background-color: rgb(0, 128, 188);
             border-radius: 100px;
-            padding: 0px 43px;
-            height: 70px;
-            min-width: 342px;
-            width: auto;
+            padding: 0px 24px;
+            height: 56px;
+            min-width: 200px;
+            width: 100%;
             transition: 0.35s;
             text-transform: none;
-            gap: 10px;
+            gap: 8px;
+            
+            @media only screen and (min-width: 568px) {
+              font-size: 18px;
+              padding: 0px 30px;
+              height: 60px;
+              min-width: 250px;
+              width: auto;
+              gap: 10px;
+            }
+            
+            @media only screen and (min-width: 768px) {
+              font-size: 20px;
+              padding: 0px 43px;
+              height: 70px;
+              min-width: 342px;
+            }
             
             &::after {
               content: '→';
-              font-size: 20px;
+              font-size: 16px;
+              
+              @media only screen and (min-width: 568px) {
+                font-size: 18px;
+              }
+              
+              @media only screen and (min-width: 768px) {
+                font-size: 20px;
+              }
             }
             
             &:hover {
@@ -2206,14 +2975,55 @@ h3, h4, h5, h6 {
           align-items: center;
           text-decoration: none;
           
-          img {
-            height: 51px;
-            width: 375px;
-            filter: brightness(0) invert(1);
+          /* Logo texte dans le footer */
+          .logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', 'Georgia', serif;
+            line-height: 1;
+          }
+          
+          .logo-text .logo-meye {
+            font-size: 60px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            display: block;
+            white-space: nowrap;
+            text-align: center;
+          }
+          
+          .logo-text .logo-subtitle {
+            font-size: 9px;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-top: 2px;
+            line-height: 1.2;
+            text-align: center;
+            white-space: nowrap;
+          }
+          
+          @media (max-width: 968px) {
+            .logo-text .logo-meye {
+              font-size: 45px;
+            }
             
-            @media (max-width: 968px) {
-              width: 250px;
-              height: auto;
+            .logo-text .logo-subtitle {
+              font-size: 7px;
+            }
+          }
+          
+          @media (max-width: 768px) {
+            .logo-text .logo-meye {
+              font-size: 40px;
+            }
+            
+            .logo-text .logo-subtitle {
+              font-size: 6px;
             }
           }
         }
@@ -2240,12 +3050,22 @@ h3, h4, h5, h6 {
                 color: rgb(255, 255, 255);
                 text-decoration: none;
                 font-family: peridot-pe-variable, sans-serif;
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 400;
-                line-height: 26px;
+                line-height: 22px;
                 border: none;
                 transition: color 0.3s ease;
                 text-transform: none;
+                
+                @media only screen and (min-width: 568px) {
+                  font-size: 18px;
+                  line-height: 24px;
+                }
+                
+                @media only screen and (min-width: 768px) {
+                  font-size: 20px;
+                  line-height: 26px;
+                }
                 
                 &:hover {
                   color: rgb(81, 178, 214);
@@ -2287,8 +3107,18 @@ h3, h4, h5, h6 {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 36px;
-                height: 36px;
+                width: 32px;
+                height: 32px;
+                
+                @media only screen and (min-width: 568px) {
+                  width: 34px;
+                  height: 34px;
+                }
+                
+                @media only screen and (min-width: 768px) {
+                  width: 36px;
+                  height: 36px;
+                }
                 color: rgb(255, 255, 255);
                 transition: color 0.3s ease;
                 
@@ -2308,37 +3138,68 @@ h3, h4, h5, h6 {
       }
       
       &.col-4 {
+        width: 100%;
+        
+        @media only screen and (min-width: 968px) {
+          width: auto;
+        }
+        
         .gl-button--blue-light {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          gap: 10px;
+          gap: 8px;
           color: rgb(255, 255, 255);
           text-decoration: none;
           font-family: peridot-pe-variable, sans-serif;
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 400;
-          line-height: 24px;
+          line-height: 22px;
           background-color: rgb(81, 178, 214);
           border-radius: 100px;
-          padding: 0px 43px;
-          height: 70px;
-          min-width: 279px;
-          height: 54px;
-          width: auto;
-          min-width: 200px;
+          padding: 0px 24px;
+          height: 50px;
+          min-width: 180px;
+          width: 100%;
           transition: 0.35s ease;
           text-transform: none;
           
+          @media only screen and (min-width: 568px) {
+            font-size: 18px;
+            line-height: 24px;
+            padding: 0px 30px;
+            height: 54px;
+            min-width: 200px;
+            width: auto;
+            gap: 10px;
+          }
+          
+          @media only screen and (min-width: 768px) {
+            font-size: 20px;
+            padding: 0px 43px;
+            height: 70px;
+            min-width: 279px;
+          }
+          
           img {
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
             opacity: 1;
+            
+            @media only screen and (min-width: 568px) {
+              width: 15px;
+              height: 15px;
+            }
+            
+            @media only screen and (min-width: 768px) {
+              width: 16px;
+              height: 16px;
+            }
           }
           
           &:hover {
             color: rgb(255, 255, 255);
-            background-color: rgb(81, 178, 214);
+            background-color: rgb(60, 155, 190);
           }
         }
       }
@@ -2347,8 +3208,20 @@ h3, h4, h5, h6 {
   
   /* Copyright */
   .copyright {
-    padding: 30px 165px;
+    padding: 20px 20px;
     background-color: rgb(15, 33, 64);
+    
+    @media only screen and (min-width: 568px) {
+      padding: 25px 40px;
+    }
+    
+    @media only screen and (min-width: 768px) {
+      padding: 30px 80px;
+    }
+    
+    @media only screen and (min-width: 1280px) {
+      padding: 30px 165px;
+    }
     text-align: center;
     
     @media (max-width: 1200px) {
@@ -2687,7 +3560,7 @@ h3, h4, h5, h6 {
   }
 }
 
-/* Page Team Background - Identique à Rivemont */
+/* Page Team Background - Identique à MEYE ASSET MANAGER */
 .page-team.bg-primary {
   display: block;
   background-color: rgb(24, 64, 104);
@@ -2704,7 +3577,7 @@ main:has(.page-team) {
   background-color: rgb(24, 64, 104);
 }
 
-/* Section Team Page - Identique à Rivemont */
+/* Section Team Page - Identique à MEYE ASSET MANAGER */
 .section-team {
   padding: 0px 165px 272px;
   background: transparent;
@@ -2743,11 +3616,30 @@ main:has(.page-team) {
       padding-top: 200px;
       background: transparent;
       
+      @media (max-width: 1024px) {
+        font-size: 65px;
+        line-height: 68px;
+        padding-top: 180px;
+      }
+      
       @media (max-width: 768px) {
         font-size: 50px;
         line-height: 52px;
         margin-bottom: 50px;
         padding-top: 150px;
+      }
+      
+      @media (max-width: 568px) {
+        font-size: 40px;
+        line-height: 44px;
+        margin-bottom: 40px;
+        padding-top: 120px;
+      }
+      
+      @media (max-width: 320px) {
+        font-size: 32px;
+        line-height: 36px;
+        padding-top: 100px;
       }
     }
     
@@ -2761,8 +3653,13 @@ main:has(.page-team) {
         flex: 0 0 calc(33.333% - 20px);
         margin: 0 10px 40px;
         
-        @media (max-width: 968px) {
+        @media (max-width: 1024px) {
           flex: 0 0 calc(50% - 20px);
+        }
+        
+        @media (max-width: 768px) {
+          flex: 0 0 calc(50% - 10px);
+          margin: 0 5px 30px;
         }
         
         @media (max-width: 568px) {
@@ -2797,13 +3694,21 @@ main:has(.page-team) {
             display: flex;
             align-items: flex-end;
             
-            .member-info {
+              .member-info {
               position: absolute;
               bottom: 0;
               left: 0;
               right: 0;
               padding: 35px;
               text-align: center;
+              
+              @media (max-width: 768px) {
+                padding: 25px 20px;
+              }
+              
+              @media (max-width: 568px) {
+                padding: 20px 15px;
+              }
               
               .member-name {
                 font-family: peridot-pe-variable, sans-serif;
@@ -2815,9 +3720,19 @@ main:has(.page-team) {
                 text-transform: none;
                 text-decoration: none;
                 
+                @media (max-width: 1024px) {
+                  font-size: 26px;
+                  line-height: 28px;
+                }
+                
                 @media (max-width: 768px) {
                   font-size: 24px;
                   line-height: 28px;
+                }
+                
+                @media (max-width: 568px) {
+                  font-size: 20px;
+                  line-height: 24px;
                 }
               }
               
@@ -2834,6 +3749,13 @@ main:has(.page-team) {
                 @media (max-width: 768px) {
                   font-size: 16px;
                   line-height: 20px;
+                  margin-top: 10px;
+                }
+                
+                @media (max-width: 568px) {
+                  font-size: 14px;
+                  line-height: 18px;
+                  margin-top: 8px;
                 }
               }
             }
@@ -2854,7 +3776,7 @@ main:has(.page-team) {
   }
 }
 
-/* Team Grid - Identique à Rivemont (legacy) */
+/* Team Grid - Identique à MEYE ASSET MANAGER (legacy) */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -3093,6 +4015,9 @@ main:has(.page-team) {
 #site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder {
   display: block;
   width: 164px;
+  line-height: 0; /* Éliminer l'espace en dessous des images inline */
+  margin: 0;
+  padding: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3101,9 +4026,59 @@ main:has(.page-team) {
   }
 }
 
-#site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder img {
-  height: auto;
-  width: 100%;
+/* Logo texte dans le menu mobile */
+#site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder {
+  display: block;
+  width: 164px;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder .logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  line-height: 1;
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder .logo-text .logo-meye {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  display: block;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder .logo-text .logo-subtitle {
+  font-size: 7px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 2px;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 768px) {
+  #site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder {
+    width: max(200px, 14.7916666667vw);
+  }
+  
+  #site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder .logo-text .logo-meye {
+    font-size: 48px;
+  }
+  
+  #site-mobile-nav .content .row.row-1 .col.col-1 .logo-holder .logo-text .logo-subtitle {
+    font-size: 9px;
+    margin-top: 3px;
+  }
 }
 
 #site-mobile-nav .content .row.row-1 .col.col-1 .gl-button {
@@ -3441,7 +4416,7 @@ main:has(.page-team) {
   margin-bottom: 2rem;
 }
 
-/* Animations CSS identiques à Rivemont */
+/* Animations CSS identiques à MEYE ASSET MANAGER */
 @keyframes show-content-image {
   0% {
     visibility: hidden;
@@ -3529,7 +4504,31 @@ main:has(.page-team) {
 }
 
 
-/* Back Link - Identique à Rivemont (pour pages dynamiques) */
+/* Back Link - Identique à MEYE ASSET MANAGER (pour pages dynamiques) */
+.back-link-container,
+.post-header-container {
+  padding: 0px 165px;
+  margin-bottom: 40px;
+  
+  @media (max-width: 1400px) {
+    padding: 0px 80px;
+  }
+  
+  @media (max-width: 1024px) {
+    padding: 0px 40px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0px 20px;
+    margin-bottom: 30px;
+  }
+  
+  @media (max-width: 568px) {
+    padding: 0px 15px;
+    margin-bottom: 20px;
+  }
+}
+
 .back-link {
   display: inline-flex;
   align-items: center;
@@ -3544,9 +4543,31 @@ main:has(.page-team) {
   transition: color 0.3s ease;
   text-transform: none;
   
+  @media (max-width: 768px) {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 30px;
+    gap: 8px;
+  }
+  
+  @media (max-width: 568px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
   img {
     width: 24px;
     height: 24px;
+    
+    @media (max-width: 768px) {
+      width: 20px;
+      height: 20px;
+    }
+    
+    @media (max-width: 568px) {
+      width: 18px;
+      height: 18px;
+    }
   }
   
   &:hover {
@@ -3554,7 +4575,7 @@ main:has(.page-team) {
   }
 }
 
-/* Post Header - Identique à Rivemont (pour financial letters) */
+/* Post Header - Identique à MEYE ASSET MANAGER (pour financial letters) */
 .post-header {
   h1 {
     font-family: peridot-pe-variable, sans-serif;
@@ -3566,9 +4587,26 @@ main:has(.page-team) {
     text-transform: none;
     text-decoration: none;
     
+    @media (max-width: 1024px) {
+      font-size: 55px;
+      line-height: 57px;
+    }
+    
     @media (max-width: 768px) {
       font-size: 50px;
       line-height: 52px;
+      margin-bottom: 15px;
+    }
+    
+    @media (max-width: 568px) {
+      font-size: 40px;
+      line-height: 44px;
+      margin-bottom: 12px;
+    }
+    
+    @media (max-width: 320px) {
+      font-size: 32px;
+      line-height: 36px;
     }
   }
   
@@ -3588,7 +4626,7 @@ main:has(.page-team) {
   }
 }
 
-/* Post Content - Identique à Rivemont (pour financial letters) */
+/* Post Content - Identique à MEYE ASSET MANAGER (pour financial letters) */
 .post-content {
   padding: 0px 165px;
   margin-bottom: 100px;
@@ -3597,16 +4635,25 @@ main:has(.page-team) {
     padding: 0px 80px;
   }
   
+  @media (max-width: 1024px) {
+    padding: 0px 40px;
+  }
+  
   @media (max-width: 768px) {
     padding: 0px 20px;
     margin-bottom: 60px;
+  }
+  
+  @media (max-width: 568px) {
+    padding: 0px 15px;
+    margin-bottom: 40px;
   }
   
   .content {
     max-width: 1200px;
     margin: 0 auto;
     
-    .post-description.gl-text-editor {
+      .post-description.gl-text-editor {
       p {
         font-family: peridot-pe-variable, sans-serif;
         font-size: 17px;
@@ -3616,6 +4663,18 @@ main:has(.page-team) {
         margin-bottom: 25px;
         text-transform: none;
         text-decoration: none;
+        
+        @media (max-width: 768px) {
+          font-size: 16px;
+          line-height: 22px;
+          margin-bottom: 20px;
+        }
+        
+        @media (max-width: 568px) {
+          font-size: 15px;
+          line-height: 20px;
+          margin-bottom: 18px;
+        }
       }
       
       h2 {
@@ -3628,9 +4687,21 @@ main:has(.page-team) {
         text-transform: none;
         text-decoration: none;
         
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
           font-size: 45px;
           line-height: 48px;
+        }
+        
+        @media (max-width: 768px) {
+          font-size: 40px;
+          line-height: 44px;
+          margin: 30px 0px 15px;
+        }
+        
+        @media (max-width: 568px) {
+          font-size: 32px;
+          line-height: 36px;
+          margin: 25px 0px 12px;
         }
       }
       
@@ -3643,6 +4714,18 @@ main:has(.page-team) {
         margin: 30px 0px 15px;
         text-transform: none;
         text-decoration: none;
+        
+        @media (max-width: 768px) {
+          font-size: 26px;
+          line-height: 30px;
+          margin: 25px 0px 12px;
+        }
+        
+        @media (max-width: 568px) {
+          font-size: 22px;
+          line-height: 26px;
+          margin: 20px 0px 10px;
+        }
         
         strong {
           font-weight: 700;
@@ -3662,7 +4745,7 @@ main:has(.page-team) {
   }
 }
 
-/* Section Related - Identique à Rivemont (pour financial letters) */
+/* Section Related - Identique à MEYE ASSET MANAGER (pour financial letters) */
 .section-related {
   padding: 100px 165px;
   background: rgb(234, 243, 253);
@@ -3671,8 +4754,16 @@ main:has(.page-team) {
     padding: 80px 80px;
   }
   
+  @media (max-width: 1024px) {
+    padding: 60px 40px;
+  }
+  
   @media (max-width: 768px) {
     padding: 60px 20px;
+  }
+  
+  @media (max-width: 568px) {
+    padding: 40px 15px;
   }
   
   .content {
@@ -3689,10 +4780,21 @@ main:has(.page-team) {
       text-transform: none;
       text-decoration: none;
       
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
         font-size: 45px;
         line-height: 48px;
+      }
+      
+      @media (max-width: 768px) {
+        font-size: 40px;
+        line-height: 44px;
         margin-bottom: 40px;
+      }
+      
+      @media (max-width: 568px) {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 30px;
       }
     }
     
@@ -3718,6 +4820,14 @@ main:has(.page-team) {
         background: rgb(255, 255, 255);
         border-radius: 0px;
         transition: transform 0.3s ease;
+        
+        @media (max-width: 768px) {
+          padding: 25px;
+        }
+        
+        @media (max-width: 568px) {
+          padding: 20px;
+        }
         
         &:hover {
           transform: translateY(-5px);
@@ -3768,7 +4878,47 @@ main:has(.page-team) {
   }
 }
 
-/* Page Content Sidebar - Identique à Rivemont (pour alternative-fund-detail) */
+/* Page Content Sidebar - Identique à MEYE ASSET MANAGER (pour alternative-fund-detail) */
+// Styles pour H1 et Fund Overview Link (hors page-content)
+.content {
+  h1.title,
+  h1:not(.page-content h1) {
+    font-family: peridot-pe-variable, sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 62.4px;
+    color: rgb(24, 64, 104);
+    margin: 0px 0px 40px;
+    text-transform: none;
+    text-decoration: none;
+    
+    @media (max-width: 768px) {
+      font-size: 50px;
+      line-height: 52px;
+    }
+  }
+  
+  .link-holder {
+    margin-bottom: 40px;
+    
+    .fund-overview-link {
+      display: inline-block;
+      font-family: peridot-pe-variable, sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 22.1px;
+      color: rgb(24, 64, 104);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      text-transform: none;
+      
+      &:hover {
+        color: rgb(81, 178, 214);
+      }
+    }
+  }
+}
+
 .page-content {
   .content {
     h1 {
@@ -3882,12 +5032,13 @@ main:has(.page-team) {
 /* Les styles globaux ont été supprimés pour éviter les conflits */
 /* Chaque page (private-management, performance, financial-planning) gère ses propres styles */
 
-/* Page Content - Identique à Rivemont (pour private-management) */
+/* Page Content - Identique à MEYE ASSET MANAGER (pour private-management) */
 .page-content {
   display: flex;
   padding: 0px 165px;
   margin-bottom: 160px;
-  gap: 0px;
+  gap: normal;
+  flex-direction: row;
   
   @media (max-width: 1400px) {
     padding: 0px 80px;
@@ -3900,7 +5051,7 @@ main:has(.page-team) {
   }
   
   .page-content__builder {
-    flex: 1;
+    flex: 0 1 auto;
     padding-right: 84px;
     
     @media (max-width: 968px) {
@@ -4038,10 +5189,12 @@ main:has(.page-team) {
   }
   
   .page-content__sidebar {
-    flex: 0 0 300px;
+    flex: 0 0 auto;
+    width: 458px;
     
     @media (max-width: 968px) {
       flex: 1;
+      width: 100%;
     }
     
     .section-sidebar {

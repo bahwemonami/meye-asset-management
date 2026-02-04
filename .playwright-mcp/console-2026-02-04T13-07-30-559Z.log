@@ -1,0 +1,21 @@
+[    2342ms] ReferenceError: wp is not defined
+    at blob:https://rivemont.ca/b2467bc4-3796-43ce-994d-e5fa57e34681:1:1
+[    2343ms] ReferenceError: wp is not defined
+    at blob:https://rivemont.ca/097c3757-f675-4095-b09e-6515d4d074b3:1:144
+    at blob:https://rivemont.ca/097c3757-f675-4095-b09e-6515d4d074b3:1:186
+[    2862ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://rivemont.ca/wp-admin/admin-ajax.php:0
+[    3321ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://rivemont.ca/en/alternative-funds/rivemont-crypto-fund/:0
+[    4021ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://rivemont.ca/en/alternative-funds/rivemont-crypto-fund/?sub-page=what-is-a-cryptocurrency:0
+[    5224ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://rivemont.ca/wp-admin/admin-ajax.php:0
+[    5288ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://rivemont.ca/en/alternative-funds/rivemont-crypto-fund/:0
+[   13979ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://rivemont.ca/en/alternative-funds/rivemont-crypto-fund/?sub-page=advantages-of-investing-in-cryptocurrencies:0
+[   14092ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://rivemont.ca/wp-admin/admin-ajax.php:0
+[   14150ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://rivemont.ca/en/alternative-funds/rivemont-crypto-fund/:0
+[   21492ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://rivemont.ca/en/alternative-funds/rivemont-crypto-fund/?sub-page=the-history-of-the-rivemont-crypto-fund:0
+[   21604ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://rivemont.ca/wp-admin/admin-ajax.php:0
+[   21663ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://rivemont.ca/en/alternative-funds/rivemont-crypto-fund/:0
+[   29145ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://rivemont.ca/en/alternative-funds/rivemont-crypto-fund/?sub-page=the-rivemont-crypto-fund-philosophy:0
+[   29253ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://rivemont.ca/wp-admin/admin-ajax.php:0
+[   29315ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://rivemont.ca/en/alternative-funds/rivemont-crypto-fund/:0
+[   36491ms] [ERROR] Attestation check for Attribution Reporting on https://www.facebook.com failed. @ https://rivemont.ca/en/alternative-funds/rivemont-crypto-fund/:0
+[   36609ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://rivemont.ca/wp-admin/admin-ajax.php:0

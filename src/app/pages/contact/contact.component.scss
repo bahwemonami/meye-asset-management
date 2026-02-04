@@ -13,7 +13,7 @@
   border-radius: 0 0 24px 24px;
   display: block;
   height: auto;
-  margin-bottom: max(53px, 9.7916666667vw);
+  margin-bottom: 0; /* Supprimé pour éliminer l'espace blanc entre les sections */
   padding-left: 0;
   padding-right: 0;
   padding-bottom: max(80px, 8.3333333333vw);
@@ -112,10 +112,12 @@
           font-weight: 700;
           line-height: 1.04em;
           margin-bottom: max(28px, 3.8541666667vw);
+          margin-top: 0;
           text-transform: none;
           
           @media only screen and (min-width: 768px) {
             font-size: max(45px, 4.1666666667vw);
+            line-height: 1.04em;
           }
         }
         
@@ -140,9 +142,11 @@
             letter-spacing: 0;
             line-height: 1.3em;
             margin-bottom: max(28px, 2.4479166667vw);
+            margin-top: 0;
             
             @media only screen and (min-width: 768px) {
               font-size: max(17px, 1.0416666667vw);
+              line-height: 1.3em;
             }
             
             &:hover {
@@ -227,21 +231,33 @@
 
 /* Section Contact */
 .template-contact-page-container .section-contact {
-  margin-bottom: max(80px, 13.3333333333vw);
+  margin-bottom: 0; /* Supprimé pour éliminer l'espace blanc sous le formulaire */
+  background-color: #eaf3fd; /* Bleu clair de la charte graphique */
+  padding: max(60px, 5.2083333333vw) 0;
+  border-radius: 24px;
+  
+  @media only screen and (min-width: 768px) {
+    padding: max(80px, 6.25vw) 0;
+    border-radius: max(50px, 3.6458333333vw);
+  }
   
   .content {
     box-sizing: border-box;
     padding-left: 14px;
     padding-right: 14px;
+    max-width: 1200px; /* Limiter la largeur pour un meilleur rendu */
+    margin: 0 auto;
     
     @media only screen and (min-width: 768px) {
       padding-left: 35px;
       padding-right: 35px;
+      max-width: 1400px;
     }
     
     @media only screen and (min-width: 1280px) {
       padding-left: 80px;
       padding-right: 80px;
+      max-width: 1600px;
     }
     
     @media only screen and (min-width: 1600px) {
@@ -252,16 +268,17 @@
     .title {
       color: #184068;
       font-family: peridot-pe-variable, sans-serif;
-      font-size: 32px;
+      font-size: 36px;
       font-style: normal;
       font-weight: 700;
       line-height: 1.04em;
-      margin-bottom: max(28px, 2.6041666667vw);
+      margin-bottom: max(40px, 3.125vw);
       text-transform: none;
       
       @media only screen and (min-width: 768px) {
-        font-size: max(40px, 3.3854166667vw);
+        font-size: max(48px, 4.1666666667vw);
         text-align: center;
+        margin-bottom: max(50px, 4.1666666667vw);
       }
     }
   }
@@ -272,70 +289,117 @@
   .gl-form-holder,
   .gl-form {
     width: 100%;
+    max-width: 1000px; /* Limiter la largeur du formulaire pour meilleure lisibilité */
+    margin: 0 auto;
   }
 
   .gl-form-controls {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -9.75px;
-    margin-right: -9.75px;
+    margin-left: -12px;
+    margin-right: -12px;
+    
+    @media only screen and (min-width: 768px) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
   }
 
   .gl-form-controls--two-col .gl-form-control {
     box-sizing: border-box;
-    margin-bottom: 26px;
-    padding: 0 9.75px;
+    margin-bottom: 32px;
+    padding: 0 12px;
     width: 50%;
+    
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 40px;
+      padding: 0 15px;
+    }
   }
 
   .gl-form-control {
     box-sizing: border-box;
     width: 100%;
+    margin-bottom: 32px;
+    
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 40px;
+    }
   }
 
   .gl-input {
-    background-color: #eaf3fd;
-    border: 0;
+    background-color: #ffffff; /* Fond blanc pour contraster avec le bleu clair */
+    border: 2px solid #eaf3fd;
     border-radius: 52.5px;
     color: #184068;
     font-family: peridot-pe-variable, sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 400;
-    height: 52.5px;
-    line-height: 22.1px;
-    padding: 0 31.5px;
+    height: 60px;
+    line-height: 24px;
+    padding: 0 35px;
     width: 100%;
+    transition: border-color 0.3s ease;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 20px;
+      height: 65px;
+      line-height: 26px;
+      padding: 0 40px;
+    }
+
+    &:focus {
+      border-color: #51b2d6;
+      outline: none;
+    }
 
     &::placeholder {
       color: #184068;
-      opacity: 1;
+      opacity: 0.7;
     }
   }
 
   .gl-textarea {
-    background-color: #eaf3fd;
-    border: 0;
+    background-color: #ffffff; /* Fond blanc pour contraster avec le bleu clair */
+    border: 2px solid #eaf3fd;
     border-radius: 25px;
     color: #184068;
     font-family: peridot-pe-variable, sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 400;
-    height: 230px;
-    line-height: 22.1px;
-    padding: 30px 31.5px 0;
+    height: 250px;
+    line-height: 26px;
+    padding: 35px 35px 0;
     resize: none;
     width: 100%;
+    transition: border-color 0.3s ease;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 20px;
+      height: 280px;
+      line-height: 28px;
+      padding: 40px 40px 0;
+    }
+
+    &:focus {
+      border-color: #51b2d6;
+      outline: none;
+    }
 
     &::placeholder {
       color: #184068;
-      opacity: 1;
+      opacity: 0.7;
     }
   }
 
   .gl-form-control--submit {
     display: flex;
     justify-content: center;
-    margin-top: 48px;
+    margin-top: 50px;
+    
+    @media only screen and (min-width: 768px) {
+      margin-top: 60px;
+    }
   }
 
   .gl-form-control--submit .gl-button {
@@ -345,12 +409,25 @@
     border-radius: 100px;
     color: #fff;
     display: inline-flex;
-    font-size: 18px;
-    height: 54px;
+    font-size: 20px;
+    height: 60px;
     justify-content: center;
-    line-height: 21.6px;
-    min-width: 256.5px;
-    padding: 0 32.25px;
+    line-height: 24px;
+    min-width: 280px;
+    padding: 0 40px;
+    transition: background-color 0.3s ease;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 22px;
+      height: 65px;
+      line-height: 26px;
+      min-width: 320px;
+      padding: 0 45px;
+    }
+
+    &:hover {
+      background-color: #51b2d6;
+    }
   }
 
   .gl-form-control--submit .gl-button::after {
@@ -372,37 +449,42 @@
     }
 
     .gl-form-controls--two-col .gl-form-control {
-      margin-bottom: 12px;
+      margin-bottom: 24px;
       padding: 0;
       width: 100%;
     }
 
+    .gl-form-control {
+      margin-bottom: 24px;
+    }
+
     .gl-input {
       border-radius: 52px;
-      font-size: 16px;
-      height: 52px;
-      line-height: 20.8px;
-      padding: 0 16px;
+      font-size: 17px;
+      height: 56px;
+      line-height: 22px;
+      padding: 0 20px;
     }
 
     .gl-textarea {
       border-radius: 25px;
-      font-size: 16px;
-      line-height: 20.8px;
-      padding: 20px 16px 0;
+      font-size: 17px;
+      line-height: 24px;
+      padding: 25px 20px 0;
+      height: 220px;
     }
 
     .gl-form-control--submit {
       justify-content: flex-start;
-      margin-top: 24px;
+      margin-top: 30px;
     }
 
     .gl-form-control--submit .gl-button {
-      font-size: 16px;
-      height: 42px;
-      line-height: 19.2px;
-      min-width: 178px;
-      padding: 0 24px;
+      font-size: 18px;
+      height: 56px;
+      line-height: 22px;
+      min-width: 200px;
+      padding: 0 28px;
       width: 100%;
     }
 

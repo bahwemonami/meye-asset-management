@@ -1,0 +1,362 @@
+/* ============================================================================
+   ALTERNATIVE FUND DETAIL PAGE - Styles basés sur crypto fund
+   ============================================================================ */
+
+/* Hero Section with Links */
+.template-builder-page-container .template-part-hero.hero-has-btn {
+  background-color: #000;
+  border-radius: 0 0 24px 24px;
+  box-sizing: border-box;
+  display: block;
+  height: 300px;
+  margin-bottom: 60px;
+  
+  @media only screen and (min-width: 568px) {
+    margin-bottom: 70px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 80px;
+  }
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+
+  @media only screen and (min-width: 1024px) {
+    height: 543px;
+    border-radius: 0 0 max(50px, 3.6458333333vw) max(50px, 3.6458333333vw);
+    margin-bottom: max(120px, 8.5416666667vw);
+  }
+
+  @media only screen and (max-width: 1189px) {
+    margin-bottom: 40px;
+  }
+
+  &:after {
+    background: linear-gradient(180deg, #184068, transparent);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .content {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 120px 14px 40px;
+    position: relative;
+    text-align: center;
+    z-index: 7;
+    
+    @media only screen and (min-width: 568px) {
+      padding: 140px 14px 50px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      padding: 160px 35px 60px;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      padding: 260px 165px 100px;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
+    @media only screen and (min-width: 1600px) {
+      padding-left: 8.59375vw;
+      padding-right: 8.59375vw;
+    }
+
+    .title {
+      color: #fff;
+      font-family: peridot-pe-variable, sans-serif;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.04em;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      z-index: 6;
+      margin-bottom: max(40px, 2.6041666667vw);
+
+      @media only screen and (min-width: 768px) {
+        font-size: max(45px, 3.125vw);
+      }
+    }
+  }
+
+  img.gl-responsive-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+}
+
+/* Page Content */
+.template-builder-page-container .page-content {
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 80px;
+  padding-left: 14px;
+  padding-right: 14px;
+
+  @media only screen and (min-width: 768px) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    padding-left: 8.59375vw;
+    padding-right: 8.59375vw;
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: max(140px, 8.3333333333vw);
+  }
+}
+
+.template-builder-page-container .page-content .page-content__builder {
+  box-sizing: border-box;
+  width: 100%;
+
+  @media only screen and (min-width: 1190px) {
+    padding-right: 4.375vw;
+  }
+
+  .page-filter {
+    margin-bottom: 40px;
+
+    @media only screen and (min-width: 1190px) {
+      display: none;
+    }
+
+    .gl-select {
+      width: 100%;
+      padding: max(15px, 1.0416666667vw);
+      border: 1px solid #ccc;
+      border-radius: max(10px, 0.5208333333vw);
+      font-size: 16px;
+      font-family: peridot-pe-variable, sans-serif;
+    }
+  }
+
+  .title {
+    color: #184068;
+    font-family: peridot-pe-variable, sans-serif;
+    font-size: 50px !important;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px !important;
+    margin-bottom: 30px !important;
+    text-transform: none;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 60px !important;
+      line-height: 62.4px !important;
+      margin-bottom: 36px !important;
+    }
+  }
+
+  .builder-sections {
+    section {
+      margin: max(64px, 3.3854166667vw) 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .section-description {
+      .content {
+        .description.gl-text-editor {
+          p {
+            font-family: peridot-pe-variable, sans-serif !important;
+            font-size: 20px !important;
+            font-weight: 400 !important;
+            line-height: 26px !important;
+            color: rgb(24, 64, 104) !important;
+            margin-bottom: 25px !important;
+            text-transform: none !important;
+            text-decoration: none !important;
+
+            &:last-child {
+              margin-bottom: 0 !important;
+            }
+
+            em {
+              font-style: italic;
+            }
+          }
+
+          h3 {
+            font-family: peridot-pe-variable, sans-serif !important;
+            font-size: 32px !important;
+            font-weight: 700 !important;
+            line-height: 33.28px !important;
+            color: rgb(24, 64, 104) !important;
+            margin-top: 40px !important;
+            margin-bottom: 20px !important;
+            text-transform: none !important;
+
+            &:first-child {
+              margin-top: 0 !important;
+            }
+
+            @media (max-width: 768px) {
+              font-size: 24px !important;
+              line-height: 25px !important;
+            }
+          }
+
+          ol {
+            list-style: decimal;
+            margin: 30px 0;
+            padding-left: 30px;
+
+            li {
+              font-family: peridot-pe-variable, sans-serif !important;
+              font-size: 20px !important;
+              font-weight: 400 !important;
+              line-height: 26px !important;
+              color: rgb(24, 64, 104) !important;
+              margin-bottom: 15px !important;
+              text-transform: none !important;
+
+              &:last-child {
+                margin-bottom: 0 !important;
+              }
+            }
+          }
+
+          dl {
+            margin: 0;
+            padding: 0;
+
+            div {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 25px;
+              padding-bottom: 25px;
+              border-bottom: 1px solid rgba(24, 64, 104, 0.1);
+
+              &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+              }
+
+              dt {
+                font-family: peridot-pe-variable, sans-serif !important;
+                font-size: 20px !important;
+                font-weight: 700 !important;
+                line-height: 26px !important;
+                color: rgb(24, 64, 104) !important;
+                margin-bottom: 10px !important;
+                text-transform: none !important;
+              }
+
+              dd {
+                font-family: peridot-pe-variable, sans-serif !important;
+                font-size: 20px !important;
+                font-weight: 400 !important;
+                line-height: 26px !important;
+                color: rgb(24, 64, 104) !important;
+                margin: 0 !important;
+                text-transform: none !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Sidebar */
+.template-builder-page-container .page-content .page-content__sidebar {
+  box-sizing: border-box;
+  display: none;
+  flex-shrink: 0;
+  width: max(400px, 23.8541666667vw);
+
+  @media only screen and (min-width: 1190px) {
+    display: block;
+  }
+}
+
+.template-builder-page-container .page-content .page-content__sidebar .section-sidebar {
+  background-color: #eaf3fd;
+  border-radius: max(20px, 1.0416666667vw);
+  box-sizing: border-box;
+  padding: max(80px, 5.46875vw) max(30px, 2.8125vw);
+
+  .content {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-bottom: max(30px, 3.4375vw);
+        text-align: center;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.active a {
+          color: #51b2d6;
+          text-decoration: underline;
+        }
+
+        a {
+          color: #184068;
+          font-family: peridot-pe-variable, sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 1.04em;
+          background-color: transparent;
+          display: inline;
+          padding: 0;
+          text-transform: none;
+          text-decoration: none;
+          transition: all 0.35s ease 0ms;
+
+          @media only screen and (min-width: 768px) {
+            font-size: max(22px, 1.25vw);
+          }
+
+          &:hover {
+            color: #51b2d6;
+          }
+        }
+      }
+    }
+  }
+}

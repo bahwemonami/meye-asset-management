@@ -38,7 +38,7 @@
     "alternativeFunds": "Fonds alternatifs",
     "contact": "Contact",
     "login": "Connexion",
-    "copyright": "© {{year}}, Les investissements Rivemont. Tous droits réservés."
+    "copyright": "© {{year}}, MEYE ASSET MANAGER. Tous droits réservés."
   },
   "home": {
     "heroTitle": "Passion. Rigueur. Résultats.",
@@ -66,7 +66,7 @@
         "Des institutions et des entreprises privées.",
         "Des épargnants efficaces."
       ],
-      "offeringTitle": "La gestion privée chez Rivemont vous offre :",
+      "offeringTitle": "La gestion privée chez MEYE ASSET MANAGER vous offre :",
       "offering": [
         "Une gestion professionnelle",
         "Un alignement sur une politique de placement précise",
@@ -91,7 +91,7 @@
     },
     "philosophy": {
       "title": "Philosophie de gestion",
-      "text1": "Chez Rivemont, nous croyons que le prix d'un actif n'est pas toujours égal à sa valeur intrinsèque et qu'il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs.",
+      "text1": "Chez MEYE ASSET MANAGER, nous croyons que le prix d'un actif n'est pas toujours égal à sa valeur intrinsèque et qu'il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs.",
       "text2": "Puisque ces biais sont connus et qu'ils se répètent dans le temps, il est possible de prendre des décisions d'investissement basées sur ces comportements récurrents.",
       "text3": "Nous nous appuyons sur des stratégies basées sur l'effet momentum, dont l'analyse technique et le suivi de tendance. Le gestionnaire utilise une approche de type descendante en établissant en premier lieu les secteurs dont le potentiel à la hausse est le plus important."
     },
@@ -117,8 +117,8 @@
       ]
     },
     "why": {
-      "title": "Pourquoi Rivemont ?",
-      "text": "Pourquoi Rivemont ?",
+      "title": "Pourquoi MEYE ASSET MANAGER ?",
+      "text": "Pourquoi MEYE ASSET MANAGER ?",
       "points": [
         "Plus de 15 ans d'expérience éprouvée",
         "Service personnalisé avec accès direct aux gestionnaires",
@@ -142,7 +142,7 @@
   },
   "firmProfile": {
     "title": "Profil de la firme",
-    "text1": "Fondé en 2010, Rivemont est une firme de gestion de portefeuille offrant des stratégies de placement à la fois traditionnelles et novatrices aux investisseurs.",
+    "text1": "Fondé en 2010, MEYE ASSET MANAGER est une firme de gestion de portefeuille offrant des stratégies de placement à la fois traditionnelles et novatrices aux investisseurs.",
     "text2": "Notre objectif est de maximiser le rendement potentiel selon le profil de risque de chaque client, tout en gardant une attention particulière à la gestion efficace de la volatilité des marchés.",
     "text3": "Nous offrons également un service complet de planification financière afin d'assurer l'atteinte des objectifs ainsi que la protection du patrimoine.",
     "text4": "Contactez-nous afin de profitez pleinement d'une réelle gestion active de vos placements.",
@@ -160,7 +160,7 @@
     "equities": "Actions",
     "asOf": "Au 31 décembre 2025",
     "description": "Description",
-    "descriptionText": "Chez Rivemont, nous croyons que le prix d'un actif n'est pas toujours égal à sa valeur intrinsèque et qu'il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs. Puisque ces biais sont connus et qu'ils se répètent dans le temps, il est possible de prendre des décisions d'investissement basées sur ces comportements récurrents. Nous nous appuyons sur des stratégies basées sur l'effet momentum, dont l'analyse technique et le suivi de tendance. Le gestionnaire utilise une approche de type descendante en établissant en premier lieu les secteurs dont le potentiel à la hausse est le plus important pour ensuite sélectionner les titres spécifiques parmi ces secteurs.",
+    "descriptionText": "Chez MEYE ASSET MANAGER, nous croyons que le prix d'un actif n'est pas toujours égal à sa valeur intrinsèque et qu'il est influencé par une multitude de facteurs, notamment les biais cognitifs des investisseurs. Puisque ces biais sont connus et qu'ils se répètent dans le temps, il est possible de prendre des décisions d'investissement basées sur ces comportements récurrents. Nous nous appuyons sur des stratégies basées sur l'effet momentum, dont l'analyse technique et le suivi de tendance. Le gestionnaire utilise une approche de type descendante en établissant en premier lieu les secteurs dont le potentiel à la hausse est le plus important pour ensuite sélectionner les titres spécifiques parmi ces secteurs.",
     "investmentObjective": "Objectif de placement",
     "investmentObjectiveText": "L'objectif de placement de la classe d'actifs Actions est de générer un rendement supérieur à son indice de référence.",
     "performanceTable": "Rendements",
@@ -176,7 +176,7 @@
     "equitiesLabel": "Action",
     "benchmark": "Indice de reference",
     "explanatoryNotes": "Notes explicatives",
-    "explanatoryNotesText": "Les rendements proviennent du composé de toutes les actions détenues par les clients de Rivemont en gestion privée sous le code de représentant Q2F2 et ils sont bruts des frais. Avant le 1 janvier 2019, l'indice de référence est composé à 100 % de l'indice S&P/TSX et, par la suite, à 80% de l'indice S&P/TSX et 20 % de l'indice S&P 500. Les résultats futurs vont différer de ceux du passé. Ce document ne constitue pas une recommandation ni un conseil lié à un investissement et est présenté à titre d'information seulement.",
+    "explanatoryNotesText": "Les rendements proviennent du composé de toutes les actions détenues par les clients de MEYE ASSET MANAGER en gestion privée sous le code de représentant Q2F2 et ils sont bruts des frais. Avant le 1 janvier 2019, l'indice de référence est composé à 100 % de l'indice S&P/TSX et, par la suite, à 80% de l'indice S&P/TSX et 20 % de l'indice S&P 500. Les résultats futurs vont différer de ceux du passé. Ce document ne constitue pas une recommandation ni un conseil lié à un investissement et est présenté à titre d'information seulement.",
     "overview": "Aperçu",
     "inceptionDate": "Date de création",
     "inceptionDateValue": "1 septembre 2010",
@@ -187,9 +187,9 @@
     "topHoldings": "Principaux titres individuels",
     "activitySectors": "Secteurs d'activité",
     "manager": "Gestionnaire",
-    "managerText": "Martin Lalonde, MBA, CFA, est le gestionnaire de portefeuille responsable des décisions de placements. Il possède plusieurs années d'expérience comme intervenant sur les marchés financiers et a œuvré, avant de fonder Rivemont, comme analyste principal aux investissements et aux fusions et acquisitions pour un important organisme canadien.",
-    "aboutRivemont": "À propos de Rivemont",
-    "aboutRivemontText": "Fondée en 2010, Rivemont est une firme de gestion de portefeuille québécoise avec environ 153 millions $ en actifs sous gestion. La firme offre des stratégies de placement performantes à une clientèle de gestion privée, de conseillers, de courtiers et de planificateurs financiers."
+    "managerText": "Martin Lalonde, MBA, CFA, est le gestionnaire de portefeuille responsable des décisions de placements. Il possède plusieurs années d'expérience comme intervenant sur les marchés financiers et a œuvré, avant de fonder MEYE ASSET MANAGER, comme analyste principal aux investissements et aux fusions et acquisitions pour un important organisme canadien.",
+    "aboutRivemont": "À propos de MEYE ASSET MANAGER",
+    "aboutRivemontText": "Fondée en 2010, MEYE ASSET MANAGER est une firme de gestion de portefeuille québécoise avec environ 153 millions $ en actifs sous gestion. La firme offre des stratégies de placement performantes à une clientèle de gestion privée, de conseillers, de courtiers et de planificateurs financiers."
   },
   "financialPlanning": {
     "title": "Planification financière",
@@ -197,7 +197,7 @@
     "taxPlanning": "Planification fiscale",
     "businessOwners": "Planification pour les propriétaires d'entreprises",
     "estatePlanning": "Planification successorale",
-    "text1": "Chez Les Investissements Rivemont, nous considérons la planification financière comme un prolongement naturel de notre rôle de gestionnaire de portefeuille.",
+    "text1": "Chez MEYE ASSET MANAGER, nous considérons la planification financière comme un prolongement naturel de notre rôle de gestionnaire de portefeuille.",
     "text1b": "Elle nous permet de vous accompagner dans vos décisions financières importantes.",
     "ourRole": "Notre rôle consiste alors à :",
     "rolePoints": [
@@ -252,9 +252,9 @@
   },
   "alternativeFunds": {
     "title": "Fonds alternatifs",
-    "longShort": "Fonds Rivemont Long Short",
-    "crypto": "Fonds Rivemont Crypto",
-    "microcap": "Fonds Rivemont MicroCap"
+    "longShort": "Fonds MEYE Long Short",
+    "crypto": "Fonds MEYE Crypto",
+    "microcap": "Fonds MEYE MicroCap"
   },
   "communications": {
     "title": "Communications",
@@ -271,6 +271,7 @@
     "registration": "Inscription auprès des autorités",
     "registrationText": "MEYE ASSET MANAGER est inscrite à titre de gestionnaire de portefeuille au Québec, en Ontario, en Colombie-Britannique, en Alberta, en Saskatchewan, au Manitoba et au Nouveau-Brunswick, à titre de gestionnaire de fonds d'investissement au Québec et en Ontario, à titre de gestionnaire de portefeuille de produits dérivés au Québec, à titre de courtier sur marché hors cote au Québec, en Ontario, en Saskatchewan, au Manitoba et au Nouveau-Brunswick, et en planification financière au Québec.",
     "registerLink": "Registre des entreprises et des personnes autorisées à exercer",
+    "registerLinkText": "Vous pouvez consulter le registre des entreprises et des personnes autorisées à exercer par l'Autorité des marchés financiers en visitant le lien suivant :",
     "clickHere": "Cliquez ici",
     "assetProtection": "Protection des actifs",
     "assetProtectionText1": "Les portefeuilles des clients sont gérés par MEYE ASSET MANAGER mais détenus principalement dans des comptes à la Banque Nationale du Canada, plus précisément sa division appelée Réseau indépendant de la Banque Nationale (RIBN). Certains comptes sont détenus chez Interactive Brokers Canada.",
@@ -284,5 +285,340 @@
     "complaintHandling": "Politique de traitement des plaintes",
     "complaintHandlingText": "Nous nous engageons à garantir que toutes les plaintes sont traitées rapidement, équitablement et de manière transparente. Notre objectif est de résoudre efficacement les situations qui sont à l'origine de vos préoccupations.",
     "complaintHandlingSummary": "Résumé de la politique de traitement des plaintes"
+  },
+  "app": {
+    "skipToContent": "Aller au contenu principal"
+  },
+  "accessibility": {
+    "homeLink": "MEYE ASSET MANAGER - Retour à l'accueil",
+    "mainNavigation": "Navigation principale",
+    "footerNavigation": "Navigation pied de page",
+    "socialMedia": "Réseaux sociaux",
+    "facebook": "Facebook",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn"
+  },
+  "financialLetter": {
+    "backToCommunications": "Communications",
+    "category": "Lettre financière",
+    "relatedTitle": "Vous aimerez peut-être",
+    "allCommunications": "Toutes les communications",
+    "letters": {
+      "volume-16-numero-3": {
+        "title": "Volume 16 numéro 3",
+        "date": "Q2 2025",
+        "pdfUrl": "https://rivemont.ca/wp-content/uploads/2025/07/Lettre-financiere-Volume-16-numero-3-1.pdf",
+        "contentParagraphs": [
+          "Bonjour à toutes et à tous,",
+          "Le second trimestre de 2025 aura été, pour nous, l'un des plus intéressants et divertissants des dernières années. Il faut savoir que lorsqu'on fait de la gestion active, l'objectif est d'ajouter de la valeur aux portefeuilles. Plus il y a d'événements externes et macroéconomiques, plus les occasions de se distinguer de l'indice de référence et d'améliorer la performance potentielle se multiplient. Et, disons-le franchement, il s'en est passé des choses au cours des trois derniers mois. Nous allons d'ailleurs en approfondir plusieurs dans la présente communication.",
+          "Mais avant, j'aimerais souhaiter la bienvenue à Julien-Carl Landry, qui se joint à notre organisation. Julien-Carl a œuvré comme planificateur financier à la Banque Nationale au cours des dernières années et représentera sans aucun doute un atout majeur pour notre clientèle. J'en profiterai également pour vous expliquer le virage que MEYE ASSET MANAGER est en train d'amorcer afin de mieux servir une clientèle de plus en plus sophistiquée.",
+          "Comme à l'habitude, nous conclurons en présentant nos perspectives sur les marchés et nos plus importantes positions.",
+          "Bonne lecture !"
+        ]
+      },
+      "volume-16-numero-2": {
+        "title": "Volume 16 numéro 2",
+        "date": "24 avril 2025",
+        "contentParagraphs": [
+          "Avant de plonger dans le vif du sujet, je suis heureux de vous annoncer que c'est le 5 juin prochain qu'aura lieu la première assemblée annuelle des investisseurs, pour la région de Montréal. Cet événement se déroulera au Club St-Denis."
+        ]
+      },
+      "volume-16-numero-1": {
+        "title": "Volume 16 numéro 1",
+        "date": "3 février 2025",
+        "contentParagraphs": [
+          "J'ai retardé le plus possible la rédaction de cette communication afin d'y inclure les tout derniers événements géopolitiques actuels (Mais avant les tarifs malheureusement). Au cours des prochaines années, ceux-ci auront des impacts majeurs sur les stratégies d'investissement qui s'avéreront optimales. En effet, depuis maintenant 15 ans, MEYE ASSET MANAGER a comme objectif de construire des portefeuilles dont le but premier est de maximiser le rendement pour un risque donné."
+        ]
+      }
+    }
+  },
+  "cryptoFund": {
+    "title": "Meye Crypto Assets Fund",
+    "subPages": {
+      "meye-crypto-fund": {
+        "title": "Meye Crypto Assets Fund",
+        "disclaimer": "Les parts du fonds sont offertes par placement privé conformément aux lois et règlements suisses applicables et sont donc réservées exclusivement aux investisseurs qualifiés et professionnels.",
+        "paragraph1": "Le Fonds Meye Crypto Assets est une stratégie d'investissement gérée activement conçue pour offrir aux investisseurs qualifiés une exposition structurée aux actifs numériques et aux technologies basées sur la blockchain. Le fonds cherche à capturer une appréciation du capital à long terme en participant à la croissance et à la maturation de l'écosystème des cryptomonnaies dans un cadre d'investissement discipliné.",
+        "paragraph2": "Le fonds investit dans un portefeuille diversifié de cryptomonnaies et d'actifs numériques de premier plan, sélectionnés en fonction de la liquidité, de la pertinence technologique, de l'adoption du réseau et du potentiel de valeur à long terme. L'univers d'investissement est surveillé en continu et peut évoluer au fil du temps en réponse aux développements du marché, à l'innovation technologique et aux considérations réglementaires, dans le but d'optimiser les rendements ajustés au risque.",
+        "paragraph3": "Les cryptomonnaies et les technologies blockchain représentent un changement transformateur dans l'infrastructure financière mondiale. Depuis leur émergence, les actifs numériques ont démontré le potentiel de générer des rendements significatifs tout en introduisant de nouvelles sources de diversification de portefeuille. Le processus d'investissement du fonds combine une analyse fondamentale approfondie, une évaluation des protocoles sous-jacents et des cas d'utilisation, et des techniques de gestion de portefeuille disciplinées, y compris l'analyse des tendances et les contrôles des risques appliqués au moment de l'investissement, du rééquilibrage et de la sortie.",
+        "paragraph4": "Le Fonds Meye Crypto Assets est destiné aux investisseurs ayant une tolérance au risque élevée et un horizon d'investissement à long terme qui recherchent une exposition à une classe d'actifs en évolution rapide avec un potentiel de rendement élevé. Le fonds peut également servir de composante de diversification stratégique au sein d'un portefeuille plus large, car les actifs numériques ont historiquement présenté une faible corrélation avec les classes d'actifs traditionnelles telles que les actions et les titres à revenu fixe."
+      },
+      "advantages-of-investing-in-cryptocurrencies": {
+        "title": "Avantages d'investir dans les cryptomonnaies",
+        "paragraph1": "Bien que les cryptomonnaies aient connu une croissance significative depuis leur création, le marché global des actifs numériques reste relativement petit par rapport aux marchés financiers traditionnels. Alors que l'adoption continue de s'étendre, le potentiel de développement à long terme du secteur reste substantiel. Le Fonds Meye Crypto Assets cherche à tirer parti de cette opportunité afin d'améliorer les rendements à long terme pour ses investisseurs.",
+        "paragraph2": "Bien que les cryptomonnaies impliquent un niveau de risque plus élevé et que les performances passées ne garantissent pas les résultats futurs, nous croyons que, dans un cadre d'investissement discipliné, certains actifs numériques offrent un potentiel de rendement qui peut dépasser celui des classes d'actifs plus traditionnelles. Les cryptomonnaies sont également généralement considérées comme présentant une faible corrélation avec les investissements conventionnels, contribuant à la diversification du portefeuille."
+      },
+      "the-meye-crypto-fund-philosophy": {
+        "title": "La philosophie du Fonds Meye Crypto Assets",
+        "paragraph1": "Le fonds est géré activement et vise à surperformer un indice large du marché des cryptomonnaies à long terme.",
+        "paragraph2": "En combinant l'analyse fondamentale avec l'analyse technique et des tendances, le fonds est géré activement dans le but de minimiser le risque pour les investisseurs tout en maintenant un fort potentiel de rendement."
+      }
+    },
+    "category": "Stratégie Crypto",
+    "showLess": "Afficher moins",
+    "seeMore": "Voir plus"
+  },
+  "cryptoBulletins": {
+    "424": {
+      "title": "Bulletin Crypto – Semaine 424",
+      "date": "3 février 2026",
+      "excerpt": "Le Bitcoin a traversé une autre phase prononcée de faiblesse, tombant brièvement autour de 74 500 $ pendant le week-end avant de rebondir près de 78 500 $.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-424/",
+      "image": "https://rivemont.ca/wp-content/uploads/2026/02/Clipboard_20260203.png"
+    },
+    "423": {
+      "title": "Bulletin Crypto – Semaine 423",
+      "date": "27 janvier 2026",
+      "excerpt": "Le Bitcoin continue de se négocier en dessous du seuil de 90 000 $ dans un environnement largement prudent avant la prochaine décision de la Réserve fédérale américaine.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-423/",
+      "image": "https://rivemont.ca/wp-content/uploads/2026/01/Clipboard_20260127.png"
+    },
+    "422": {
+      "title": "Bulletin Crypto – Semaine 422",
+      "date": "20 janvier 2026",
+      "excerpt": "Le marché des cryptomonnaies a connu une correction brutale, le bitcoin retombant autour de 91 000 $ après avoir effacé tout le rebond enregistré la semaine précédente.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-422/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/05/Bitcoin-01.jpg"
+    },
+    "419": {
+      "title": "Bulletin Crypto – Semaine 419",
+      "date": "30 décembre 2025",
+      "excerpt": "Le Bitcoin a brièvement franchi la barre des 90 000 $ alors que le Nouvel An approchait, dans un environnement de faible liquidité typique des transactions de fin d'année. Après avoir augmenté d'environ 3 % sur une période de 24 heures, la cryptomonnaie est rapidement retombée en dessous de ce niveau, confirmant le comportement limité qui a caractérisé tout le mois de décembre.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-419/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/12/Clipboard_20251230.png"
+    },
+    "418": {
+      "title": "Bulletin Crypto – Semaine 418",
+      "date": "23 décembre 2025",
+      "excerpt": "Le Bitcoin se négocie en dessous du seuil de 90 000 $ dans un environnement de fin d'année marqué par une liquidité plus faible et un sentiment d'investisseur prudent. Après une tentative de reprise avortée plus tôt dans la semaine, le marché s'est à nouveau replié, entraînant les principales cryptomonnaies à la baisse.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-418/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/12/Clipboard_20251223.png"
+    },
+    "417": {
+      "title": "Bulletin Crypto – Semaine 417",
+      "date": "16 décembre 2025",
+      "excerpt": "Les dernières données sur l'emploi américain confirment un refroidissement graduel du marché du travail alors que l'année tire à sa fin. En novembre, l'économie américaine a ajouté 64 000 emplois, un chiffre légèrement supérieur aux attentes, mais le taux de chômage a grimpé à 4,6 %, son niveau le plus élevé en quatre ans.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-417/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/12/Clipboard_20251216.png"
+    },
+    "416": {
+      "title": "Bulletin Crypto – Semaine 416",
+      "date": "9 décembre 2025",
+      "excerpt": "Le Bitcoin continue de flotter autour de 90 000 $, un niveau qu'il défend depuis plusieurs jours dans un marché prudent attendant la décision politique finale de la Réserve fédérale de l'année.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-416/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/12/27076901-e450-4833-8db9-0ccb1e648b9b.png"
+    },
+    "415": {
+      "title": "Bulletin Crypto – Semaine 415",
+      "date": "2 décembre 2025",
+      "excerpt": "Pendant le week-end, le Bitcoin a connu une chute soudaine d'environ 5 %, tombant brièvement en dessous de 86 000 $. Cette correction brutale est survenue après plusieurs jours de stagnation autour de 91 500 $, un niveau où l'actif semblait se stabiliser à la fin du mois.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-415/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/12/019adf20-2323-7475-af51-8549f6a4e6ee-1024x639.jpg",
+      "hidden": true
+    },
+    "414": {
+      "title": "Bulletin Crypto – Semaines 413-414",
+      "date": "25 novembre 2025",
+      "excerpt": "Au cours de la semaine dernière, le marché du Bitcoin a été secoué par un flux de capitaux exceptionnel : plus de 8 % de toutes les unités en circulation ont changé de mains. Selon Joe Burnett de Semler Scientific, une telle redistribution constitue l'un des événements les plus significatifs de la chaîne dans l'histoire du réseau.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-weeks-413-414/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/11/Clipboard_20251125.png",
+      "hidden": true
+    },
+    "412": {
+      "title": "Bulletin Crypto – Semaine 412",
+      "date": "11 novembre 2025",
+      "excerpt": "La fin imminente de la fermeture du gouvernement américain, qui dure depuis plus de quarante jours, pourrait permettre à la SEC (Securities and Exchange Commission) et à la CFTC (Commodity Futures Trading Commission) de reprendre pleinement leurs activités.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-412/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/11/aac3725b-c473-4033-89b7-11508ba1b2c2.png",
+      "hidden": true
+    },
+    "411": {
+      "title": "Bulletin Crypto – Semaine 411",
+      "date": "4 novembre 2025",
+      "excerpt": "Historiquement, le Bitcoin nous a montré que les meilleures opportunités d'achat émergent lorsque la confiance du marché est à son plus bas. Nous restons confiants que le seuil psychologique de 100 000 $ ne tiendra pas seulement mais pourrait également déclencher un renversement de tendance.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/11/1833065a-cf7a-4bb9-b2da-0b2e7df65ba0.png",
+      "hidden": true
+    },
+    "410": {
+      "title": "Bulletin Crypto – Semaine 410",
+      "date": "28 octobre 2025",
+      "excerpt": "Le marché des cryptomonnaies a rebondi vendredi suite à la publication du rapport sur l'inflation américaine, qui avait été retardé en raison de la fermeture partielle du gouvernement. L'indice des prix à la consommation (IPC) a augmenté de 3 % en glissement annuel en septembre, légèrement en dessous des attentes de 3,1 %.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-410/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/10/Clipboard_20251028.png",
+      "hidden": true
+    },
+    "409": {
+      "title": "Bulletin Crypto – Semaine 409",
+      "date": "21 octobre 2025",
+      "excerpt": "Le Bitcoin est à nouveau tombé autour de 107 000 $, après une brève période de stabilisation après la correction brutale de la semaine dernière. Cette baisse, qui a déclenché la liquidation de nombreuses positions à effet de levier, est maintenant considérée non pas comme un effondrement structurel mais plutôt comme une phase de « nettoyage du marché ».",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-409/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/10/ChatGPT-Image-Oct-21-2025-10_07_50-AM-683x1024.png",
+      "hidden": true
+    },
+    "408": {
+      "title": "Bulletin Crypto – Semaine 408",
+      "date": "14 octobre 2025",
+      "excerpt": "Le marché des cryptomonnaies a subi un autre choc après que la Chine ait riposté aux mesures tarifaires américaines, ravivant les craintes d'une guerre commerciale qui s'intensifie.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-408/",
+      "image": "",
+      "hidden": true
+    },
+    "407": {
+      "title": "Bulletin Crypto – Semaine 407",
+      "date": "7 octobre 2025",
+      "excerpt": "Le Bitcoin vient d'atteindre un nouveau sommet historique au-dessus de 126 000 $, alors que le dollar américain connaît sa pire année depuis 1973. Selon les analystes de The Kobeissi Letter, ce moment marque un véritable tournant macroéconomique. De manière inhabituelle, les actifs refuges comme l'or—approchant 4 000 $ l'once—montent en tandem avec les marchés boursiers, le S&P 500 ayant augmenté de plus de 40 % en six mois.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-407/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/10/Clipboard_20251007.png",
+      "hidden": true
+    },
+    "406": {
+      "title": "Bulletin Crypto – Semaine 406",
+      "date": "30 septembre 2025",
+      "excerpt": "Le marché des cryptomonnaies a retrouvé son élan à la fin de septembre, la capitalisation totale remontant autour de 3,9 billions de dollars. Le Bitcoin a augmenté de 3,5 %, remontant au-dessus de 114 000 $ hier, tandis que Solana s'est consolidé à plus de 113 milliards de dollars de valeur marchande. Près de 95 % des principales cryptomonnaies ont affiché des gains, signe d'une force renouvelée après une semaine difficile marquée par une pression baissière significative.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-406/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/09/Clipboard_20250930.png",
+      "hidden": true
+    },
+    "405": {
+      "title": "Bulletin Crypto – Semaine 405",
+      "date": "23 septembre 2025",
+      "excerpt": "Malgré une semaine de baisses sur le marché des cryptomonnaies, septembre—historiquement un mois baissier—reste en territoire positif jusqu'à présent cette année. Le marché du Bitcoin se maintient autour de 113 000 $ alors que les investisseurs attendent les prochaines déclarations de Jerome Powell et la publication de l'indice PCE de base à la fin de la semaine.",
+      "url": "https://rivemont.ca/en/communication/crypto-bulletin-week-405/",
+      "image": "https://rivemont.ca/wp-content/uploads/2025/09/Clipboard_20250923.png",
+      "hidden": true
+    }
+  },
+  "microcapFund": {
+    "title": "Meye MicroCap Fund",
+    "subPages": {
+      "meye-microcap-fund": {
+        "title": "Meye MicroCap Fund",
+        "disclaimer": "Les parts du fonds sont offertes par placement privé conformément aux lois et règlements suisses applicables et sont donc disponibles exclusivement aux investisseurs qualifiés et professionnels.",
+        "paragraph1": "Le Fonds Meye MicroCap vise à réaliser une appréciation du capital à long terme en investissant dans des sociétés à micro-capitalisation principalement dans les marchés développés, y compris l'Europe et l'Amérique du Nord. L'objectif du fonds est d'identifier des sociétés à fort potentiel à un stade précoce de leur cycle de développement afin de saisir des opportunités de croissance à long terme. Les titres sont sélectionnés en utilisant une approche d'investissement disciplinée basée sur la valeur fondamentale.",
+        "paragraph2": "Le Fonds Meye MicroCap est conçu pour les investisseurs ayant une tolérance au risque élevée recherchant un potentiel de rendement élevé. Le fonds convient également aux investisseurs souhaitant améliorer la diversification du portefeuille grâce à une exposition à un segment qui présente généralement une corrélation plus faible avec les classes d'actifs traditionnelles à grande capitalisation."
+      },
+      "what-are-micro-caps": {
+        "title": "Qu'est-ce que les micro-capitalisations ?",
+        "paragraph1": "Une société à micro-capitalisation (ou micro-cap) est généralement définie comme une société cotée en bourse avec une capitalisation boursière relativement petite, généralement inférieure à 300 millions CHF (ou l'équivalent en devise locale). Les micro-caps représentent le plus petit segment des marchés boursiers publics.",
+        "paragraph2": "À l'échelle mondiale, plusieurs milliers de sociétés entrent dans l'univers des micro-caps, en particulier en Amérique du Nord, en Europe et en Asie. Collectivement, ces sociétés emploient des millions de personnes dans le monde et jouent un rôle vital dans l'innovation, la création d'emplois et la croissance économique—dépassant souvent la main-d'œuvre combinée de nombreuses multinationales bien connues.",
+        "paragraph3": "Beaucoup des sociétés mondiales les plus prospères d'aujourd'hui ont commencé leur parcours sur les marchés publics en tant que micro-caps, notamment des noms tels qu'Apple, Netflix, Walmart et Berkshire Hathaway. De même, un certain nombre d'investisseurs renommés ont construit leurs premiers antécédents en investissant dans des sociétés micro-cap, notamment Warren Buffett, Peter Lynch et Joel Greenblatt."
+      },
+      "how-do-we-identify-attractive-opportunities": {
+        "title": "Comment identifions-nous les opportunités attractives ?",
+        "paragraph1": "Notre équipe d'investissement est active dans l'univers des micro-caps depuis de nombreuses années et maintient une couverture continue de plus de 200 sociétés. Chaque société est surveillée et évaluée en continu pour déterminer sa pertinence et son inclusion potentielle dans le portefeuille.",
+        "paragraph2": "Nous examinons systématiquement les annonces d'entreprises, les dépôts réglementaires et les divulgations de marché dans plusieurs juridictions sur une base quotidienne afin d'identifier les opportunités d'investissement émergentes à un stade précoce.",
+        "paragraph3": "Au fil du temps, nous avons également développé un large réseau international d'investisseurs expérimentés, de spécialistes de l'industrie, d'analystes, de courtiers et de dirigeants d'entreprises. Ce réseau fournit un flux constant d'informations exclusives et nous permet d'identifier des sociétés à fort potentiel bien avant qu'elles n'attirent l'attention du marché au sens large."
+      },
+      "meye-microcap-fund-investment-philosophy": {
+        "title": "Fonds Meye MicroCap – Philosophie d'investissement",
+        "paragraph1": "Le Fonds Meye MicroCap est construit sur les principes de l'investissement axé sur la valeur. Notre objectif est d'identifier des sociétés micro-cap de haute qualité avec un fort potentiel de croissance tout en investissant à des valorisations attractives. Compte tenu de la volatilité inhérente de l'univers des micro-caps, nous accordons une attention particulière au maintien d'une marge de sécurité suffisante afin de limiter le risque de perte de capital temporaire ou permanente.",
+        "paragraph2": "Le processus d'investissement du fonds est ancré dans une analyse fondamentale rigoureuse et une diligence raisonnable approfondie. Chaque fois que possible, cela inclut un engagement direct avec la direction de l'entreprise, les participants de l'industrie et les parties prenantes pertinentes. Notre objectif est de développer une compréhension approfondie de chaque investissement et de distinguer clairement entre le risque fondamental et la volatilité du marché à court terme.",
+        "paragraph3": "Le Fonds Meye MicroCap est conçu pour les investisseurs ayant un horizon d'investissement à long terme et une tolérance élevée au risque. La nature différenciée et sélective de la stratégie fait du fonds une solution d'investissement distinctive avec le potentiel de générer des rendements à long terme attractifs."
+      }
+    }
+  },
+  "alternativeFunds": {
+    "longShort": {
+      "title": "À qui s'adresse le Fonds MEYE Long/Short ?",
+      "disclaimer": "Les parts du fonds sont disponibles exclusivement sous exemptions des exigences d'offre publique, conformément à la Loi suisse sur les services financiers (FinSA) et à la Loi suisse sur les institutions financières (FinIA), et sont donc uniquement disponibles aux investisseurs qualifiés et professionnels tels que définis par la loi suisse.",
+      "paragraph1": "Le Fonds MEYE Long/Short est une stratégie d'investissement alternative conçue pour rechercher des rendements positifs dans divers environnements de marché tout en maintenant une faible corrélation avec les classes d'actifs traditionnelles, telles que les actions et les obligations. Le fonds est disponible aux clients de Meye Asset Management et aux investisseurs éligibles par l'intermédiaire d'intermédiaires, de conseillers ou d'arrangements privés approuvés.",
+      "paragraph2": "Le portefeuille du fonds se compose principalement de titres de participation négociés sur les marchés internationaux développés, y compris les bourses américaines et européennes. La stratégie suit une approche long/short, par laquelle le gestionnaire établit des positions longues sur des titres jugés avoir un potentiel de hausse attractif et des positions courtes sur des titres évalués comme présentant un risque de baisse.",
+      "paragraph3": "Le fonds est particulièrement bien adapté aux investisseurs aisés et sophistiqués recherchant une diversification de portefeuille et une résilience à la baisse. En allouant au fonds dans un portefeuille diversifié ou axé sur les actions, les investisseurs peuvent bénéficier de rendements ajustés au risque améliorés au fil du temps et d'une robustesse accrue pendant les périodes de volatilité, de stress ou de crise du marché.",
+      "paragraph4": "Le Fonds MEYE Long/Short est accessible aux investisseurs qualifiés et aux contreparties professionnelles par le biais d'arrangements de placement privé et de canaux consultatifs approuvés, conformément aux règlements suisses applicables."
+    }
+  },
+  "performance": {
+    "sectors": [
+      { "name": "Biens de consommation de base", "percentage": "0,0 %" },
+      { "name": "Consommation discrétionnaire", "percentage": "0,0 %" },
+      { "name": "Énergie", "percentage": "0,0 %" },
+      { "name": "Services financiers", "percentage": "18,0 %" },
+      { "name": "Soins de santé", "percentage": "6,7 %" },
+      { "name": "Industrie", "percentage": "16,3 %" },
+      { "name": "Technologie de l'information", "percentage": "5,8 %" },
+      { "name": "Matériaux", "percentage": "32,2 %" },
+      { "name": "Immobilier", "percentage": "20,9 %" },
+      { "name": "Services de télécommunication", "percentage": "0,0 %" },
+      { "name": "Services publics", "percentage": "0,0 %" }
+    ]
+  },
+  "teamMember": {
+    "backToTeam": "Toute l'équipe",
+    "members": {
+      "julien-carl-landry": {
+        "name": "Julien-Carl Landry, Pl.Fin.",
+        "title": "Planificateur financier",
+        "bioParagraphs": [
+          "Julien-Carl Landry est planificateur financier chez MEYE ASSET MANAGER. Il a œuvré comme planificateur financier à la Banque Nationale au cours des dernières années et représente un atout majeur pour notre clientèle."
+        ]
+      },
+      "martin-lalonde": {
+        "name": "Martin Lalonde, MBA, CFA",
+        "title": "Président et gestionnaire de portefeuille",
+        "bioParagraphs": [
+          "Martin Lalonde est le président-fondateur de MEYE ASSET MANAGER et gestionnaire de portefeuille. Il possède plusieurs années d'expérience comme intervenant sur les marchés financiers et a œuvré, avant de fonder MEYE ASSET MANAGER, comme analyste principal aux investissements et aux fusions et acquisitions pour un important organisme canadien.",
+          "En tant que gestionnaire de portefeuille, M. Lalonde est responsable de l'ensemble des stratégies de la firme. Dans ce rôle, il est responsable de bâtir les portefeuilles incluant la supervision des pondérations parmi les différentes catégories d'actifs ainsi que le choix des titres.",
+          "M. Lalonde est titulaire d'une maitrise en administration des affaires (MBA) de l'Université d'Ottawa et d'une spécialisation en commerce international de l'École supérieure de commerce de Reims, en France. Il détient le titre de CFA (Chartered Financial Analyst)."
+        ]
+      },
+      "jeffrey-veilleux": {
+        "name": "Jeffrey Veilleux, M.Sc., CIM®",
+        "title": "Gestionnaire de portefeuille",
+        "bioParagraphs": [
+          "Jeffrey Veilleux, M.Sc., CIM®, est gestionnaire de portefeuille chez MEYE ASSET MANAGER. Il apporte une rigueur analytique et une connaissance approfondie des marchés à la gestion de portefeuille."
+        ]
+      },
+      "david-blouin": {
+        "name": "David Blouin",
+        "title": "Directeur des relations aux clients",
+        "bioParagraphs": [
+          "David Blouin dirige les relations aux clients chez MEYE ASSET MANAGER, veillant à ce que chaque client reçoive une attention personnalisée et un service exceptionnel."
+        ]
+      },
+      "martin-piche": {
+        "name": "Martin Piché",
+        "title": "Analyste, administration et conformité",
+        "bioParagraphs": [
+          "Martin Piché supervise les fonctions d'administration et de conformité, veillant à ce que toutes les opérations respectent les exigences réglementaires et les meilleures pratiques de l'industrie."
+        ]
+      },
+      "mathieu-martin": {
+        "name": "Mathieu Martin, CFA",
+        "title": "Gestionnaire de portefeuille, Fonds MEYE MicroCap",
+        "bioParagraphs": [
+          "Mathieu Martin, CFA, gère le Fonds MEYE MicroCap, spécialisé dans l'identification d'opportunités d'investissement à petite capitalisation à fort potentiel."
+        ]
+      },
+      "philippe-jette": {
+        "name": "Philippe Jetté",
+        "title": "Analyste principal, Fonds MEYE Crypto",
+        "bioParagraphs": [
+          "Philippe Jetté est l'analyste principal du Fonds MEYE Crypto, apportant son expertise en actifs numériques et en technologie blockchain."
+        ]
+      }
+    }
+  },
+  "communications": {
+    "articles": {
+      "volume-16-numero-3": {
+        "category": "Lettre financière",
+        "title": "Volume 16 numéro 3",
+        "excerpt": "Le deuxième trimestre de 2025 a été, pour nous, l'un des plus intéressants et divertissants des dernières années.",
+        "type": "letter"
+      },
+      "volume-16-numero-2": {
+        "category": "Lettre financière",
+        "title": "Volume 16 numéro 2",
+        "excerpt": "La première rencontre annuelle des investisseurs pour la région de Montréal aura lieu le 5 juin.",
+        "type": "letter"
+      },
+      "volume-16-numero-1": {
+        "category": "Lettre financière",
+        "title": "Volume 16 numéro 1",
+        "excerpt": "Les événements géopolitiques auront des impacts majeurs sur les stratégies de placement.",
+        "type": "letter"
+      }
+    }
   }
 }

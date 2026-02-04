@@ -39,7 +39,7 @@ import { LanguageService } from '../../services/language.service';
                   </div>
                   <div class="contact">
                     <div class="contact-title">{{ t.get('contact.email') }} &nbsp;</div>
-                    <div class="contact-text"><a href="mailto:info@rivemont.ca">info@rivemont.ca</a></div>
+                    <div class="contact-text"><a href="mailto:info@meyeassetmanager.com">info@meyeassetmanager.com</a></div>
                   </div>
                 </div>
               </div>
@@ -57,7 +57,7 @@ import { LanguageService } from '../../services/language.service';
                   </div>
                   <div class="contact">
                     <div class="contact-title">{{ t.get('contact.email') }} &nbsp;</div>
-                    <div class="contact-text"><a href="mailto:info@rivemont.ca">info@rivemont.ca</a></div>
+                    <div class="contact-text"><a href="mailto:info@meyeassetmanager.com">info@meyeassetmanager.com</a></div>
                   </div>
                 </div>
               </div>

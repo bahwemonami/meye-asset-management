@@ -54,6 +54,16 @@ const internalRoutes: Routes = [
     title: 'Alternative Funds | MEYE ASSET MANAGER'
   },
   {
+    path: 'alternative-funds/fonds-meye-crypto',
+    loadComponent: () => import('./pages/crypto-fund/crypto-fund.component').then(m => m.CryptoFundComponent),
+    title: 'MEYE Crypto Fund | MEYE ASSET MANAGER'
+  },
+  {
+    path: 'alternative-funds/fonds-meye-microcap',
+    loadComponent: () => import('./pages/microcap-fund/microcap-fund.component').then(m => m.MicrocapFundComponent),
+    title: 'MEYE MicroCap Fund | MEYE ASSET MANAGER'
+  },
+  {
     path: 'alternative-funds/:slug',
     loadComponent: () => import('./pages/alternative-fund-detail/alternative-fund-detail.component').then(m => m.AlternativeFundDetailComponent),
     title: 'Fund Details | MEYE ASSET MANAGER'

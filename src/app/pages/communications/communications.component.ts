@@ -1,4 +1,4 @@
-import { Component, signal, ChangeDetectionStrategy, inject, computed } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy, inject, computed, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslationService } from '../../services/translation.service';
@@ -56,6 +56,16 @@ import { LanguageService } from '../../services/language.service';
       gap: 15px;
       margin-bottom: 50px;
       flex-wrap: wrap;
+      
+      @media (max-width: 768px) {
+        gap: 10px;
+        margin-bottom: 40px;
+      }
+      
+      @media (max-width: 568px) {
+        gap: 8px;
+        margin-bottom: 30px;
+      }
     }
     
     .filter-btn {
@@ -67,6 +77,16 @@ import { LanguageService } from '../../services/language.service';
       color: var(--meye-text);
       cursor: pointer;
       transition: all 0.3s ease;
+      
+      @media (max-width: 768px) {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+      
+      @media (max-width: 568px) {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+      }
       
       &:hover,
       &.active {
@@ -80,12 +100,18 @@ import { LanguageService } from '../../services/language.service';
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
       
-      @media (max-width: 968px) {
+      @media (max-width: 1024px) {
         grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+      }
+      
+      @media (max-width: 768px) {
+        gap: 20px;
       }
       
       @media (max-width: 568px) {
         grid-template-columns: 1fr;
+        gap: 20px;
       }
     }
     
@@ -99,6 +125,16 @@ import { LanguageService } from '../../services/language.service';
       gap: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       transition: all 0.3s ease;
+      
+      @media (max-width: 768px) {
+        padding: 25px;
+        gap: 10px;
+      }
+      
+      @media (max-width: 568px) {
+        padding: 20px;
+        gap: 8px;
+      }
       
       &:hover {
         transform: translateY(-5px);
@@ -116,6 +152,10 @@ import { LanguageService } from '../../services/language.service';
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.1em;
+      
+      @media (max-width: 568px) {
+        font-size: 0.75rem;
+      }
     }
     
     .article-title {
@@ -123,12 +163,25 @@ import { LanguageService } from '../../services/language.service';
       font-size: 1.3rem;
       color: var(--meye-primary);
       transition: color 0.3s ease;
+      
+      @media (max-width: 768px) {
+        font-size: 1.2rem;
+      }
+      
+      @media (max-width: 568px) {
+        font-size: 1.1rem;
+      }
     }
     
     .article-excerpt {
       font-size: 0.95rem;
       color: var(--meye-text-light);
       line-height: 1.6;
+      
+      @media (max-width: 568px) {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
     }
   `]
 })
@@ -144,37 +197,25 @@ export class CommunicationsComponent {
     { id: 'media', label: this.t.get('communications.media') }
   ]);
 
-  articles = [
-    {
-      slug: 'volume-16-numero-3',
-      category: 'Lettre financière',
-      title: 'Volume 16 numéro 3',
-      excerpt: 'Le deuxième trimestre de 2025 a été, pour nous, l\'un des plus intéressants et divertissants des dernières années.',
-      type: 'letter',
-      externalUrl: ''
-    },
-    {
-      slug: 'volume-16-numero-2',
-      category: 'Lettre financière',
-      title: 'Volume 16 numéro 2',
-      excerpt: 'La première rencontre annuelle des investisseurs pour la région de Montréal aura lieu le 5 juin.',
-      type: 'letter',
-      externalUrl: ''
-    },
-    {
-      slug: 'volume-16-numero-1',
-      category: 'Lettre financière',
-      title: 'Volume 16 numéro 1',
-      excerpt: 'Les événements géopolitiques auront des impacts majeurs sur les stratégies de placement.',
-      type: 'letter',
-      externalUrl: ''
-    }
-  ];
+  articles = computed(() => {
+    const articlesData = this.t.get('communications.articles') as any;
+    if (!articlesData) return [];
+    
+    return Object.keys(articlesData).map(slug => ({
+      slug,
+      category: articlesData[slug].category,
+      title: articlesData[slug].title,
+      excerpt: articlesData[slug].excerpt,
+      type: articlesData[slug].type,
+      externalUrl: articlesData[slug].externalUrl || ''
+    }));
+  });
 
-  filteredArticles() {
+  filteredArticles = computed(() => {
+    const articles = this.articles();
     if (this.currentFilter() === 'all') {
-      return this.articles;
+      return articles;
     }
-    return this.articles.filter(article => article.type === this.currentFilter());
-  }
+    return articles.filter(article => article.type === this.currentFilter());
+  });
 }

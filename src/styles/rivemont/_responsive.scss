@@ -423,3 +423,222 @@
     padding: 0 20px;
   }
 }
+
+// ============================================================================
+// FORMULAIRE RESPONSIVE
+// ============================================================================
+@media only screen and (max-width: $breakpoint-mobile) {
+  .gl-form-controls--two-col {
+    flex-direction: column;
+    
+    .gl-form-control {
+      width: 100% !important;
+      margin-bottom: 24px;
+      padding: 0 !important;
+    }
+  }
+  
+  .gl-form-control {
+    margin-bottom: 24px;
+  }
+  
+  .gl-input,
+  .gl-textarea {
+    font-size: 16px !important;
+    padding: 0 20px !important;
+    
+    &.gl-textarea {
+      padding: 20px !important;
+      height: 200px !important;
+    }
+  }
+  
+  .gl-form-control--submit {
+    .gl-button {
+      width: 100%;
+      min-width: auto;
+    }
+  }
+}
+
+// ============================================================================
+// HERO SECTIONS RESPONSIVE (Toutes les pages)
+// ============================================================================
+@media only screen and (max-width: $breakpoint-xs) {
+  .section-hero,
+  .template-part-hero {
+    height: 400px !important;
+    min-height: 400px !important;
+    
+    .content {
+      padding: 100px 14px 40px !important;
+      
+      .title,
+      h1 {
+        font-size: 32px !important;
+        line-height: 36px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  .section-hero,
+  .template-part-hero {
+    height: 500px !important;
+    min-height: 500px !important;
+    
+    .content {
+      padding: 120px 14px 50px !important;
+      
+      .title,
+      h1 {
+        font-size: 40px !important;
+        line-height: 44px !important;
+      }
+    }
+  }
+}
+
+// ============================================================================
+// PAGE CONTENT RESPONSIVE (Sidebar stack sur mobile)
+// ============================================================================
+@media only screen and (max-width: $breakpoint-md) {
+  .page-content {
+    flex-direction: column !important;
+    
+    .page-content__builder {
+      width: 100% !important;
+      padding-right: 0 !important;
+      margin-bottom: 40px;
+    }
+    
+    .page-content__sidebar {
+      width: 100% !important;
+      display: block !important;
+    }
+  }
+}
+
+// ============================================================================
+// GRID RESPONSIVE (Cartes, posts, etc.)
+// ============================================================================
+@media only screen and (max-width: $breakpoint-mobile) {
+  .posts,
+  .communication-items,
+  [class*="grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+  .posts,
+  .communication-items,
+  [class*="grid"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+// ============================================================================
+// TYPOGRAPHY RESPONSIVE
+// ============================================================================
+@media only screen and (max-width: $breakpoint-xs) {
+  h1 {
+    font-size: 32px !important;
+    line-height: 36px !important;
+  }
+  
+  h2 {
+    font-size: 28px !important;
+    line-height: 32px !important;
+  }
+  
+  h3 {
+    font-size: 22px !important;
+    line-height: 26px !important;
+  }
+  
+  body,
+  p {
+    font-size: 15px !important;
+    line-height: 20px !important;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+  h1 {
+    font-size: 40px !important;
+    line-height: 44px !important;
+  }
+  
+  h2 {
+    font-size: 36px !important;
+    line-height: 40px !important;
+  }
+  
+  h3 {
+    font-size: 24px !important;
+    line-height: 28px !important;
+  }
+}
+
+// ============================================================================
+// CONTAINER PADDING RESPONSIVE (Global)
+// ============================================================================
+@media only screen and (max-width: $breakpoint-xs) {
+  .template-part-desc-image,
+  .section-chart,
+  .section-posts,
+  .section-info,
+  .section-intro,
+  .section-description,
+  .section-form,
+  .section-contact {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}
+
+// ============================================================================
+// IMAGES RESPONSIVE (Global)
+// ============================================================================
+img,
+video,
+iframe {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.gl-responsive-background {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+// ============================================================================
+// OVERFLOW PROTECTION (Global)
+// ============================================================================
+body {
+  overflow-x: hidden !important;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+// ============================================================================
+// TABLE RESPONSIVE (Global)
+// ============================================================================
+@media only screen and (max-width: $breakpoint-mobile) {
+  .table-holder,
+  [class*="table"] {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    
+    table,
+    .table {
+      min-width: 600px !important;
+    }
+  }
+}

@@ -181,26 +181,50 @@
   flex-wrap: wrap;
 }
 
-.gl-form-holder form .gl-form-controls.gl-form-controls--two-col .gl-form-control {
-  width: 100%;
+.gl-form-holder form .gl-form-controls.gl-form-controls--two-col {
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .gl-form-control {
+    width: 100%;
 
-  @media only screen and (min-width: 768px) {
-    width: 50%;
+    @media only screen and (min-width: 768px) {
+      width: 50%;
+    }
   }
 }
 
 .gl-form-holder form .gl-form-controls.gl-form-controls--radio-submit {
-  align-items: center;
-  justify-content: space-between;
-}
-
-.gl-form-holder form .gl-form-controls.gl-form-controls--radio-submit .gl-form-control {
-  width: auto;
-}
-
-@media only screen and (max-width: 767px) {
-  .gl-form-holder form .gl-form-controls.gl-form-controls--radio-submit .gl-button {
-    margin-top: 30px;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  
+  @media only screen and (min-width: 768px) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+  
+  .gl-form-control {
+    width: 100%;
+    
+    @media only screen and (min-width: 768px) {
+      width: auto;
+    }
+  }
+  
+  .gl-button {
+    width: 100%;
+    margin-top: 0;
+    
+    @media only screen and (min-width: 768px) {
+      width: auto;
+      margin-top: 0;
+    }
   }
 }
 
@@ -258,22 +282,30 @@
 .gl-form-holder form .gl-form-control textarea {
   background-color: #eaf3fd;
   border: none;
-  border-radius: max(52px, 3.6458333333vw);
+  border-radius: 52px;
   box-sizing: border-box;
   color: #184068;
   font-family: peridot-pe-variable, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  height: max(52px, 3.6458333333vw);
+  height: 52px;
   letter-spacing: 0;
   line-height: 1.3em;
   outline: none;
-  padding: 0 max(16px, 2.1875vw);
+  padding: 0 20px;
   width: 100%;
+
+  @media only screen and (min-width: 568px) {
+    padding: 0 24px;
+    height: 56px;
+  }
 
   @media only screen and (min-width: 768px) {
     font-size: max(17px, 1.0416666667vw);
+    height: max(52px, 3.6458333333vw);
+    padding: 0 max(16px, 2.1875vw);
+    border-radius: max(52px, 3.6458333333vw);
   }
 }
 
@@ -284,13 +316,33 @@
 }
 
 .gl-form-holder form .gl-form-control textarea {
-  border-radius: max(25px, 1.3020833333vw);
-  padding-top: max(20px, 2.0833333333vw);
+  border-radius: 25px;
+  padding-top: 20px;
+  height: 120px;
   resize: none;
+  
+  @media only screen and (min-width: 568px) {
+    padding-top: 24px;
+    height: 140px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    border-radius: max(25px, 1.3020833333vw);
+    padding-top: max(20px, 2.0833333333vw);
+    height: max(120px, 7.0833333333vw);
+  }
 }
 
 .gl-form-holder form .gl-form-control textarea.small {
-  height: max(120px, 7.0833333333vw);
+  height: 100px;
+  
+  @media only screen and (min-width: 568px) {
+    height: 120px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    height: max(120px, 7.0833333333vw);
+  }
 }
 
 .gl-form-holder form .wpcf7-form-control-wrap .wpcf7-form-control.wpcf7-radio {
@@ -348,16 +400,32 @@
   color: #fff;
   display: inline-flex;
   font-family: peridot-pe-variable, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  height: 54px;
+  height: 50px;
   justify-content: center;
-  line-height: 21.6px;
+  line-height: 20px;
   margin: 0;
-  min-width: 256.5px;
-  padding: 0 32.25px;
+  min-width: 200px;
+  padding: 0 24px;
   text-decoration: none;
-  width: auto;
+  width: 100%;
+  
+  @media only screen and (min-width: 568px) {
+    font-size: 17px;
+    height: 52px;
+    min-width: 220px;
+    width: auto;
+    padding: 0 28px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    font-size: 18px;
+    height: 54px;
+    min-width: 256.5px;
+    padding: 0 32.25px;
+    line-height: 21.6px;
+  }
 }
 
 .template-form-page-container .section-form .gl-button::after {

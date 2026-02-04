@@ -52,7 +52,7 @@ import { LanguageService } from '../../services/language.service';
       <section class="section-cta">
         <div class="content">
           <div class="image-holder">
-            <img [src]="imageService.getImage('team-2')" alt="" width="1920" height="620" class="background" decoding="async" />
+            <img [src]="imageService.getImage('team-2')" alt="" class="background" decoding="async" loading="lazy" />
             <div class="button-holder">
               <a [routerLink]="langService.buildUrl('our-team')" class="gl-button" target="_self">
                 {{ t.get('firmProfile.discoverTeam') }}

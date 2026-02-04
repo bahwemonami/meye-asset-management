@@ -1,4 +1,4 @@
-import { Component, inject, AfterViewInit, ElementRef, ViewChild, CUSTOM_ELEMENTS_SCHEMA, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
+import { Component, inject, AfterViewInit, ElementRef, ViewChild, CUSTOM_ELEMENTS_SCHEMA, ChangeDetectionStrategy, ViewEncapsulation, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
@@ -27,9 +27,9 @@ register();
         <div class="title-holder">
           <h1>{{ t.get('home.heroTitle') }}</h1>
         </div>
-        <a [routerLink]="langService.buildUrl('firm-profile')" class="gl-button" target="_self" [attr.aria-label]="t.get('common.learnMore') + ' sur MEYE ASSET MANAGER'">
-          {{ t.get('common.learnMore') }}
-        </a>
+            <a [routerLink]="langService.buildUrl('firm-profile')" class="gl-button" target="_self" [attr.aria-label]="t.get('common.learnMore')">
+              {{ t.get('common.learnMore') }}
+            </a>
       </div>
     </section>
 
@@ -108,10 +108,10 @@ register();
             navigation="true"
             loop="true" 
             centered-slides="true"
-            aria-label="Carrousel des communications">
-            @for (letter of financialLetters; track letter.slug) {
-              <swiper-slide class="swiper-slide" role="group" [attr.aria-label]="'Slide ' + ($index + 1) + ' sur ' + financialLetters.length">
-                <a [routerLink]="['/communications', letter.slug]" class="post" [title]="letter.title" [attr.aria-label]="'Lire ' + letter.title">
+            [attr.aria-label]="t.get('home.communications')">
+            @for (letter of financialLetters(); track letter.slug) {
+              <swiper-slide class="swiper-slide" role="group" [attr.aria-label]="t.get('common.learnMore') + ' - ' + letter.title">
+                <a [routerLink]="[langService.buildUrl('communications'), letter.slug]" class="post" [title]="letter.title" [attr.aria-label]="t.get('common.learnMore') + ' - ' + letter.title">
                   <div class="post-background">
                     <img class="post-image" [src]="imageService.getImage('home-hero')" alt="" loading="lazy" />
                   </div>
@@ -179,18 +179,13 @@ export class HomeComponent implements AfterViewInit {
     }
   }
   
-  financialLetters = [
-    {
-      slug: 'volume-16-numero-3',
-      title: 'Volume 16 numéro 3'
-    },
-    {
-      slug: 'volume-16-numero-2',
-      title: 'Volume 16 numéro 2'
-    },
-    {
-      slug: 'volume-16-numero-1',
-      title: 'Volume 16 numéro 1'
-    }
-  ];
+  financialLetters = computed(() => {
+    const letters = this.t.get('financialLetter.letters') as any;
+    if (!letters) return [];
+    
+    return Object.keys(letters).map(slug => ({
+      slug,
+      title: letters[slug].title
+    }));
+  });
 }

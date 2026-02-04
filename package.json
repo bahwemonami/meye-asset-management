@@ -14,6 +14,7 @@
     "test-all-pages": "node scripts/test-all-pages.js",
     "test-interactions": "node scripts/test-interactions.js",
     "test-responsive": "node scripts/test-responsive.js",
+    "test-responsive-automated": "node scripts/test-responsive-automated.js",
     "test-accessibility": "node scripts/test-accessibility.js",
     "test-performance": "node scripts/test-performance.js",
     "analyze-critical": "node scripts/analyze-critical-differences.js"

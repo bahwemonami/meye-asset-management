@@ -22,7 +22,7 @@ import { LanguageService } from '../../services/language.service';
                 <h1>{{ t.get('governance.registration') }}</h1>
                 <p>{{ t.get('governance.registrationText') }}</p>
                 <p>
-                  You can consult the register of firms and individuals authorized to practice by the Autorité des marchés financiers by visiting the following link:&nbsp;<a href="https://lautorite.qc.ca/en/general-public/registers/register-of-firms-and-individuals-authorized-to-practice" target="_blank" rel="noopener noreferrer">https://lautorite.qc.ca/en/general-public/registers/register-of-firms-and-individuals-authorized-to-practice</a>
+                  {{ t.get('governance.registerLinkText') }}&nbsp;<a href="https://lautorite.qc.ca/en/general-public/registers/register-of-firms-and-individuals-authorized-to-practice" target="_blank" rel="noopener noreferrer">https://lautorite.qc.ca/en/general-public/registers/register-of-firms-and-individuals-authorized-to-practice</a>
                 </p>
               </div>
               <div class="button-holder" data-aos="fade-up">

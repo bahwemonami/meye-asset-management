@@ -1,4 +1,4 @@
-import { Component, inject, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy, ViewEncapsulation, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ImageMappingService } from '../../services/image-mapping.service';
@@ -22,32 +22,23 @@ import { LanguageService } from '../../services/language.service';
       </div>
     </section>
 
-    <!-- Intro Section - Identique à Rivemont -->
-    <section class="section-intro">
-      <div class="content">
-        <div class="description">
-          <h2>{{ t.get('performance.equities') }}</h2>
-          <p>{{ t.get('performance.asOf') }}</p>
-        </div>
-        <div class="image-holder">
-          <img [src]="imageService.getImage('clipboard-1')" alt="" />
-        </div>
-      </div>
-    </section>
-
     <!-- Description Section - Identique à Rivemont -->
     <section class="description-section">
       <div class="content">
-        <div class="col">
-          <div class="description">
-            <p>{{ t.get('performance.descriptionText') }}</p>
+        <div class="content-grid">
+          <div class="col col-text">
+            <div class="description">
+              <h2>{{ t.get('performance.equities') }}</h2>
+              <p class="date">{{ t.get('performance.asOf') }}</p>
+              <p>{{ t.get('performance.descriptionText') }}</p>
+            </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="banner">
-            <div class="banner-description">
-              <h2>{{ t.get('performance.investmentObjective') }}</h2>
-              <p>{{ t.get('performance.investmentObjectiveText') }}</p>
+          <div class="col col-banner">
+            <div class="banner">
+              <div class="banner-description">
+                <h2>{{ t.get('performance.investmentObjective') }}</h2>
+                <p>{{ t.get('performance.investmentObjectiveText') }}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -129,7 +120,7 @@ import { LanguageService } from '../../services/language.service';
                 <div class="col">13.1%</div>
                 <div class="col">2.7%</div>
                 <div class="col">23.1%</div>
-                <div class="col">20.8</div>
+                <div class="col">20.8%</div>
               </div>
               <div class="row">
                 <div class="col">{{ t.get('performance.benchmark') }}</div>
@@ -175,7 +166,7 @@ import { LanguageService } from '../../services/language.service';
               </div>
               <div class="row">
                 <div class="col">{{ t.get('performance.benchmark') }}</div>
-                <div class="col">25.6</div>
+                <div class="col">25.6%</div>
                 <div class="col">-7.2%</div>
                 <div class="col">13.9%</div>
                 <div class="col">24.4%</div>
@@ -195,32 +186,16 @@ import { LanguageService } from '../../services/language.service';
       </div>
     </section>
 
-    <!-- Info Section - Identique à Rivemont -->
-    <section class="section-info">
+    <!-- Top Holdings Section -->
+    <section class="section-holdings">
       <div class="content">
-        <div class="col">
-          <div class="banner">
-            <img [src]="imageService.getImage('image-1')" class="banner-image" alt="" />
-            <div class="banner-content">
-              <h2>{{ t.get('performance.overview') }}</h2>
-              <h3>{{ t.get('performance.inceptionDate') }}</h3>
-              <p>{{ t.get('performance.inceptionDateValue') }}</p>
-              <h3>{{ t.get('performance.managementStyle') }}</h3>
-              <p>{{ t.get('performance.managementStyleValue') }}</p>
-              <h3>{{ t.get('performance.firmAssets') }}</h3>
-              <p>{{ t.get('performance.firmAssetsValue') }}</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="description gl-text-editor">
-            <h2>{{ t.get('performance.topHoldings') }}</h2>
-            <ul>
-              @for (holding of topHoldings; track holding) {
-                <li>{{ holding }}</li>
-              }
-            </ul>
-          </div>
+        <div class="description gl-text-editor">
+          <h2>{{ t.get('performance.topHoldings') }}</h2>
+          <ul>
+            @for (holding of topHoldings; track holding) {
+              <li>{{ holding }}</li>
+            }
+          </ul>
         </div>
       </div>
     </section>
@@ -230,7 +205,7 @@ import { LanguageService } from '../../services/language.service';
       <div class="content">
         <h2 class="title">{{ t.get('performance.activitySectors') }}</h2>
         <div class="list">
-          @for (sector of sectors; track sector.name) {
+          @for (sector of sectors(); track sector.name) {
             <div class="row">
               <div class="col">{{ sector.name }}</div>
               <div class="col">{{ sector.percentage }}</div>
@@ -526,17 +501,15 @@ export class PerformanceComponent {
     'Manulife Financial International'
   ];
 
-  sectors = [
-    { name: 'Biens de consommation de base', percentage: '0,0 %' },
-    { name: 'Consommation discrétionnaire', percentage: '0,0 %' },
-    { name: 'Énergie', percentage: '0,0 %' },
-    { name: 'Finance', percentage: '18,0 %' },
-    { name: 'Immobilier', percentage: '20,9 %' },
-    { name: 'Industriel', percentage: '16,3 %' },
-    { name: 'Matériaux', percentage: '32,2 %' },
-    { name: 'Services de télécommunication', percentage: '0,0 %' },
-    { name: 'Services publics', percentage: '0,0 %' },
-    { name: 'Soins de la santé', percentage: '6,7 %' },
-    { name: 'Technologies de l\'information', percentage: '5,8 %' }
-  ];
+  sectors = computed(() => {
+    const translatedSectors = this.t.get('performance.sectors') as any[];
+    if (!translatedSectors || !Array.isArray(translatedSectors)) {
+      return [];
+    }
+    
+    return translatedSectors.map(sector => ({
+      name: sector.name,
+      percentage: sector.percentage
+    }));
+  });
 }
